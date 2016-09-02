@@ -8,14 +8,29 @@
 
 #import "GameSceneGroupCellUnitView.h"
 
-@implementation GameSceneGroupCellUnitView
+@implementation GameSceneGroupCellUnitView{
+    BOOL _isSpecial;
+}
 
-- (void)setBackgroundImage:(UIImage *)image{
-    
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addTarget:self action:@selector(cellClickEvent:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
 }
 
 - (void)setToBeSpecialView{
     self.backgroundColor = [UIColor blackColor];
+    _isSpecial = YES;
+}
+
+- (void)cellClickEvent:(id)sender{
+    if (_isSpecial) {
+        
+    }
+    
+    NSLog(@"block click");
 }
 
 @end

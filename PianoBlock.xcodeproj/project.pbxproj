@@ -207,13 +207,7 @@
 		2E2EBABC1D781EF700550761 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
-				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
-				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
-				2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */,
-				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
-				2EB309D51D791555006C7D9F /* GameSceneView.h */,
-				2EB309D61D791555006C7D9F /* GameSceneView.m */,
+				2EB30B241D7985F6006C7D9F /* GameScene */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -246,6 +240,20 @@
 				2EB30B231D796D2C006C7D9F /* GameMacro.h */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		2EB30B241D7985F6006C7D9F /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
+				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
+				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
+				2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */,
+				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
+				2EB309D51D791555006C7D9F /* GameSceneView.h */,
+				2EB309D61D791555006C7D9F /* GameSceneView.m */,
+			);
+			name = GameScene;
 			sourceTree = "<group>";
 		};
 		2EB89C0F1D78608800870536 /* DeviceInfo */ = {

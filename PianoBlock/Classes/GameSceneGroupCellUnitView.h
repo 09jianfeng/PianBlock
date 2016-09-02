@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameSceneGroupCellUnitView : UIView
+@interface GameSceneGroupCellUnitView : UIButton
 
 - (void)setToBeSpecialView;
 
