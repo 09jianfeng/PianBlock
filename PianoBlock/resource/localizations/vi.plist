@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>Chúc mừng năm mới</string>
+	<key>Piano Tiles</key>
+	<string>Phím Piano (Không nhấn phím trắng)</string>
+	<key>Classic</key>
+	<string>Cổ điển</string>
+	<key>Arcade</key>
+	<string>Trò chơi điện tử</string>
+	<key>Arcade - 2</key>
+	<string>T|r|ò| c|h|ơ|i| đ|i|ệ|n| t|ử</string>
+	<key>Zen</key>
+	<string>Zen</string>
+	<key>Rush</key>
+	<string>Nhanh</string>
+	<key>Relay</key>
+	<string>Trễ</string>
+	<key>More</key>
+	<string>Khác</string>
+	<key>Leaderboard</key>
+	<string>Bảng xếp hạng</string>
+	<key>Rate</key>
+	<string>Xếp loại</string>
+	<key>More Game</key>
+	<string>Trò chơi khác</string>
+	<key>Failed!</key>
+	<string>Thất bại!</string>
+	<key>Classic Mode</key>
+	<string>Chế độ cổ điển</string>
+	<key>Arcade Mode</key>
+	<string>Chế độ trò chơi điện tử</string>
+	<key>Zen Mode</key>
+	<string>Chế độ zen</string>
+	<key>Rush Mode</key>
+	<string>Chế độ nhanh</string>
+	<key>Relay Mode</key>
+	<string>Chế độ trễ</string>
+	<key>NEW BEST</key>
+	<string>TỐT NHẤT MỚI</string>
+	<key>BEST</key>
+	<string>TỐT NHẤT</string>
+	<key>Again</key>
+	<string>Lại</string>
+	<key>Share</key>
+	<string>Chia sẻ</string>
+	<key>Exit</key>
+	<string>Thoát</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s, %s %s! Ai có thể đánh bại tôi trong @PianoTiles?</string>
+	<key>pts</key>
+	<string>Điểm</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>Ứng dụng không thể kết nối với Facebook vào lúc này vì không thể giao tiếp với máy chủ Facebook hoặc bạn không có tài khoản Facebook được kết hợp với thiết bị này</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Phím Piano</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>Oops</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>Trước tiên bạn phải cài đặt WeChat</string>
+	<key>Dismiss</key>
+	<string>Bỏ</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>Hủy</string>
+	<key>Save</key>
+	<string>Lưu</string>
+	<key>Time Out</key>
+	<string>Hết giờ</string>
+	<key>Tutorial: ON</key>
+	<string>Hướng dẫn: BẬT</string>
+	<key>Tutorial: OFF</key>
+	<string>Hướng dẫn: TẮT</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Không chạm vào bất kỳ phím trắng nào!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Nhấn các phím đen thấp nhất và đạt đến 25 càng sớm càng tốt.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Nhấn các phím đen thấp nhất và đạt đến 50 càng sớm càng tốt.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Nhấn các phím đen thấp nhất và không bỏ lỡ phím nào.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Nhấn các phím đen cao nhất và không bỏ lỡ phím nào.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Nhấn các phím đen thấp nhất càng nhiều càng tốt, trong 30 giây.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Nhấn các phím đen thấp nhất càng nhiều càng tốt, trong 15 giây.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>Nhấn vào phím đen thấp nhất và đạt đến 50 trong 10 giây, sau đó bạn sẽ nhận được thêm 10 giây cho 50 phím khác...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>Nhấn vào phím đen thấp nhất và đạt đến 50 trong 8 giây, sau đó bạn sẽ nhận được thêm 8 giây cho 50 phím khác...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>Nhấn vào phím đen thấp nhất và đạt đến 50 trong 12 giây, sau đó bạn sẽ nhận được thêm 12 giây cho 50 phím khác...</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Xếp loại 5 nếu bạn thích trò chơi này.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Xếp hạng 5 cho bản cập nhật mới.</string>
+	<key>Later</key>
+	<string>Để sau</string>
+	<key>toRate</key>
+	<string>Xếp loại</string>
+	<key>Screenshot save failed!</key>
+	<string>Lưu ảnh chụp màn hình không thành công!</string>
+	<key>Screenshot Saved!</key>
+	<string>Đã lưu ảnh chụp màn hình!</string>
+	<key>Start</key>
+	<string>Bắt đầu</string>
+	<key>Sound: Piano</key>
+	<string>Âm thanh: Piano</string>
+	<key>Sound: Default</key>
+	<string>Âm thanh: Tiêu chuẩn</string>
+	<key>Sound: OFF</key>
+	<string>Âm thanh: TẮT</string>
+	<key>Sound: Typewriter</key>
+	<string>Âm thanh: Máy đánh chữ</string>
+	<key>Sound: Guitar</key>
+	<string>Âm thanh: Ghi ta</string>
+	<key>Back</key>
+	<string>Trở về</string>
+	<key>Remove Ad</key>
+	<string>Loại bỏ quảng cáo</string>
+	<key>Tiles Movement</key>
+	<string>Di chuyển phím</string>
+	<key>Rest Reminder</key>
+	<string>Nhắc nghỉ</string>
+	<key>Remove Ad Forever</key>
+	<string>Loại bỏ quảng cáo vĩnh viễn</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Chỉ 0,99 USD.</string>
+	<key>Remove</key>
+	<string>Loại bỏ</string>
+	<key>Restore</key>
+	<string>Khôi phục</string>
+	<key>Faster</key>
+	<string>Nhanh hơn</string>
+	<key>Smoother</key>
+	<string>Mượt hơn</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Nên sử dụng mượt nhất.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Tùy chọn này chỉ ảnh hưởng đến các phím ở chế độ Cổ điển, Zen và Trễ.</string>
+	<key>Zero to disable reminder.</key>
+	<string>Không để tắt nhắc nhở.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Nhắc nhở nghỉ giải lao sau một số trò chơi xác định.</string>
+	<key>Take a break!</key>
+	<string>Nghỉ giải lao!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Bạn có thể tùy chỉnh hoặc đóng popup này trong [Menu chính] -&gt; [Khác] -&gt; [Nhắc nghỉ].</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Mua Loại bỏ quảng cáo vĩnh viễn không thành công</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Mua Loại bỏ quảng cáo vĩnh viễn đã thành công!</string>
+	<key>Congratulations</key>
+	<string>Xin chúc mừng</string>
+	<key>About</key>
+	<string>Giới thiệu</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Theo dõi chúng tôi để có được tin tức mới nhất từ các trò chơi của chúng tôi.</string>
+	<key>Plus</key>
+	<string>Chuyên nghiệp</string>
+	<key>Normal</key>
+	<string>Bình thường</string>
+	<key>Reverse</key>
+	<string>Đảo ngược</string>
+	<key>Slower</key>
+	<string>Chậm hơn</string>
+	<key>Messages</key>
+	<string>Tin nhắn</string>
+	<key>Tap Animation: ON</key>
+	<string>Nhấn hình động: BẬT</string>
+	<key>Tap Animation: OFF</key>
+	<string>Nhấn hình động: TẮT</string>
+	<key>Loading...</key>
+	<string>Đang tải...</string>
+	<key>No Message</key>
+	<string>Không có tin nhắn</string>
+	<key>Check it out</key>
+	<string>Hãy thử xem</string>
+	<key>Are you sure to quit?</key>
+	<string>Bạn có chắc chắn muốn thoát?</string>
+	<key>End Game</key>
+	<string>Kết thúc trò chơi</string>
+	<key>Play On</key>
+	<string>Tiếp tục chơi</string>
+	<key>Shut Down</key>
+	<string>Tắt máy</string>
+	<key>No</key>
+	<string>Không</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Đăng nhập vào dịch vụ trò chơi của Google không thành công, bạn có muốn tắt tính năng tự động đăng nhập không?</string>
+	<key>Ad Removed</key>
+	<string>Đã loại bỏ quảng cáo</string>
+	<key>Reset All</key>
+	<string>Đặt lại tất cả</string>
+	<key>Ad Options</key>
+	<string>Tùy chọn quảng cáo</string>
+	<key>Banner</key>
+	<string>Biểu ngữ</string>
+	<key>Popup</key>
+	<string>Popup</string>
+	<key>About Ad iOS</key>
+	<string>1. Không có quảng cáo nếu mua Loại bỏ; 
+2. Luôn hiển thị quảng cáo trên biểu ngữ dưới cùng; 	
+3. Chỉ hiển thị quảng cáo khi trò chơi kết thúc; 	
+bạn nên sử dụng popup trong Trò chơi điện tử và Nhanh để tránh vô tình nhấn vào quảng cáo.</string>
+	<key>About Ad Android</key>
+	<string>1. Luôn hiển thị quảng cáo trên biểu ngữ dưới cùng; 
+2. Chỉ hiển thị quảng cáo khi trò chơi kết thúc; 	
+bạn nên sử dụng popup trong Trò chơi điện tử và Nhanh để tránh vô tình nhấn vào quảng cáo.</string>
+	<key>Never Show Again</key>
+	<string>Không bao giờ hiển thị lại</string>
+	<key>Preview</key>
+	<string>Xem thử</string>
+	<key>Theme</key>
+	<string>Chủ đề</string>
+	<key>Moments</key>
+	<string>Mốc quan trọng</string>
+	<key>Arcade+</key>
+	<string>Trò chơi điện tử+</string>
+	<key>Arcade+ Mode</key>
+	<string>Chế độ trò chơi điện tử+</string>
+	<key>Lightning</key>
+	<string>Tia sét</string>
+	<key>Bomb</key>
+	<string>Bom</string>
+	<key>Double</key>
+	<string>Đôi</string>
+	<key>Tiles Size</key>
+	<string>Kích cỡ phím</string>
+	<key>Language</key>
+	<string>Ngôn ngữ</string>
+	<key>Confirm</key>
+	<string>Xong</string>
+	<key>Friends</key>
+	<string>Bạn Bè</string>
+	<key>Community</key>
+	<string>Cộng đồng</string>
+	<key>Challenge</key>
+	<string>Thách thức</string>
+	<key>Global</key>
+	<string>Toàn cầu</string>
+	<key>Warning</key>
+	<string>Cảnh báo</string>
+	<key>Don&apos;t play Lightning Mode if you have epilepsy. It may trigger a seizure.</key>
+	<string>Không chơi chế độ Tia sét nếu bạn bị chứng động kinh. Nó có thể gây ra cơn động kinh.</string>
+	<key>Songs</key>
+	<string>Bài hát</string>
+	<key>Add Friends</key>
+	<string>Thêm bạn bè</string>
+	<key>Profile</key>
+	<string>Hồ sơ</string>
+	<key>Log in</key>
+	<string>Đăng nhập</string>
+	<key>Push Notification</key>
+	<string>Thông báo push</string>
+	<key>Restore Purchases</key>
+	<string>Khôi phục mua</string>
+	<key>Tiles Collected</key>
+	<string>Phím được thu thập</string>
+	<key>Games Played</key>
+	<string>Trò chơi đã chơi</string>
+	<key>Reset</key>
+	<string>Đặt lại</string>
+	<key>Bilayer</key>
+	<string>Bilayer</string>
+	<key>Mist</key>
+	<string>Sương mù</string>
+	<key>Unstable</key>
+	<string>Không ổn định</string>
+	<key>Rotatory</key>
+	<string>Xoay</string>
+	<key>Shaky</key>
+	<string>Lắc</string>
+	<key>Cloudy</key>
+	<string>Mây</string>
+	<key>Shift</key>
+	<string>Dịch chuyển</string>
+	<key>Change</key>
+	<string>Thay đổi</string>
+	<key>Unlock</key>
+	<string>Mở khóa</string>
+	<key>Unlock multi-color</key>
+	<string>Mở khóa nhiều màu</string>
+	<key>Not enough tiles</key>
+	<string>Không đủ phím</string>
+	<key>More Tiles Needed</key>
+	<string>Cần thêm phím</string>
+	<key>Playlist</key>
+	<string>Danh sách nhạc</string>
+	<key>me</key>
+	<string>tôi</string>
+	<key>Play more rounds to collect more tiles</key>
+	<string>Chơi nhiều lượt hơn để thu thập nhiều phím hơn</string>
+	<key>You have %d tiles now.</key>
+	<string>Hiện bạn có %d phím. </string>
+	<key>You have %d tile now. </key>
+	<string>Hiện bạn có %d phím.</string>
+	<key>Request Products failed,please try later.</key>
+	<string>Yêu cầu sản phẩm không thành công, vui lòng thử lại sau.</string>
+	<key>products loading...</key>
+	<string>đang tải sản phẩm...</string>
+	<key>You have got %d tiles</key>
+	<string>Bạn có %d phím</string>
+	<key>or purchase some below.</key>
+	<string>hoặc mua một số phím bên dưới.</string>
+	<key>Purchase product failed.</key>
+	<string>Mua sản phẩm không thành công.</string>
+	<key>Shuffle</key>
+	<string>Trộn</string>
+	<key>Wishes</key>
+	<string>Ước muốn</string>
+	<key>ShareWish</key>
+	<string>ShareWish</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Phím Piano</string>
+	<key>New-User Award!</key>
+	<string>Phần thưởng cho người dùng mới!</string>
+	<key>Diamonds</key>
+	<string>Phím</string>
+	<key>PlayOnTips</key>
+	<string>Sử dụng phím để tiếp tục!</string>
+	<key>BoostStartTips</key>
+	<string>Sử dụng phím để nhảy qua %d phím!</string>
+	<key>Watch video and get bonus!</key>
+	<string>Watch video and get bonus!</string>
+	<key>Get it now</key>
+	<string>Get it now</string>
+	<key>Best Wishes</key>
+	<string>Best Wishes</string>
+	<key>share</key>
+	<string>Chia sẻ</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Happy Chinese New Year! </string>
+	<key>NewYearModeDesc</key>
+	<string>Mode will end by 03-05 24:00.Piano Tiles wishes you all the best!</string>
+</dict>
+</plist>

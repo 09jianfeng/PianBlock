@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Piano Tiles</key>
+	<string>Piano Tiles (Don&apos;t tap the white tile)</string>
+	<key>Classic</key>
+	<string>คลาสสิค</string>
+	<key>Arcade</key>
+	<string>อาร์เคด</string>
+	<key>Arcade - 2</key>
+	<string>อ|า|ร์|เ|ค|ด</string>
+	<key>Zen</key>
+	<string>ผ่อนคลาย</string>
+	<key>Rush</key>
+	<string>รีบเร่ง</string>
+	<key>Relay</key>
+	<string>ถ่ายทอด</string>
+	<key>More</key>
+	<string>เพิ่มเติม</string>
+	<key>Leaderboard</key>
+	<string>บอร์ดนำ</string>
+	<key>Rate</key>
+	<string>ให้คะแนน</string>
+	<key>More Game</key>
+	<string>เกมส์เพิ่มเติม</string>
+	<key>More Games</key>
+	<string>เกมส์เพิ่มเติม</string>
+	<key>Setting</key>
+	<string>การตั้งค่า</string>
+	<key>Failed!</key>
+	<string>ล้มเหลว!</string>
+	<key>Classic Mode</key>
+	<string>โหมดคลาสสิค</string>
+	<key>Arcade Mode</key>
+	<string>โหมดอาร์เคด</string>
+	<key>Zen Mode</key>
+	<string>โหมดผ่อนคลาย</string>
+	<key>Rush Mode</key>
+	<string>โหมดรีบเร่ง</string>
+	<key>Relay Mode</key>
+	<string>โหมดถ่ายทอด</string>
+	<key>NEW BEST</key>
+	<string>สถิติใหม่สูงสุด</string>
+	<key>BEST</key>
+	<string>สูงสุด</string>
+	<key>Again</key>
+	<string>อีกครั้ง</string>
+	<key>Share</key>
+	<string>แบ่งปัน</string>
+	<key>Exit</key>
+	<string>ออก</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s, %s %s! ใครจะล้มคะแนนฉัน  @PianoTiles</string>
+	<key>pts</key>
+	<string>แต้ม</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>แอพพลิเคชั่นไม่สามารถส่งข้อมูลไปยังเฟสบุ๊คได้ในขณะนี้ หรือบัญชีผู้ใช้เฟสบุ๊คของคุณอาจไม่ทำงานร่วมกับอุปกรณ์นี้</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>Oops</key>
+	<string>อุ๊ปส์</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Piano Tiles</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>This cannot be done before you install Wechat.</string>
+	<key>Dismiss</key>
+	<string>บอกเลิก</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>ยกเลิก</string>
+	<key>Save</key>
+	<string>บันทึก</string>
+	<key>Time Out</key>
+	<string>Time Out</string>
+	<key>Tutorial: ON</key>
+	<string>แนะนำการเล่น: เปิด</string>
+	<key>Tutorial: OFF</key>
+	<string>แนะนำการเล่น: ปิด</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>อย่าสัมผัสโดนแผ่นกระเบื้องสีขาว!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้ม 25 แผ่นที่อยู่ด้านล่างสุดให้เร็วที่สุดเท่าที่จะเป็นไปได้</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้ม 50 แผ่นที่อยู่ด้านล่างสุดให้เร็วที่สุดเท่าที่จะเป็นไปได้</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มที่อยู่ด้านล่างสุด โดยห้ามพลาดแม้แต่แผ่นเดียว</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มที่อยู่ด้านบนสุด โดยห้ามพลาดแม้แต่แผ่นเดียว</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มให้ได้มากที่สุดภายใน 30 วินาที</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มให้ได้มากที่สุดภายใน 15 วินาที</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มให้ได้ 50 แผ่น ภายใน 10&quot; จากนั้นคุณจะได้อีก 10&quot; เมื่อคุณสามารถแตะกระเบื้องได้ครบ 50 แผ่นอีกไปเรื่อยๆ</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มให้ได้ 50 แผ่น ภายใน 8&quot; จากนั้นคุณจะได้อีก 8&quot; เมื่อคุณสามารถแตะกระเบื้องได้ครบ 50 แผ่นอีกไปเรื่อยๆ</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>แตะแผ่นกระเบื้องสีเข้มให้ได้ 50 แผ่น ภายใน 12&quot; จากนั้นคุณจะได้อีก 12&quot; เมื่อคุณสามารถแตะกระเบื้องได้ครบ 50 แผ่นอีกไปเรื่อยๆ</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Rate 5 if you like the game.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Rate 5 for new update.</string>
+	<key>Later</key>
+	<string>ไว้ทีหลัง</string>
+	<key>toRate</key>
+	<string>ให้คะแนน</string>
+	<key>Screenshot save failed!</key>
+	<string>บันทึกภาพหน้าจอล้มเหลว!</string>
+	<key>Screenshot Saved!</key>
+	<string>บันทึกภาพหน้าจอสำเร็จ!</string>
+	<key>Start</key>
+	<string>เริ่ม</string>
+	<key>Sound: Piano</key>
+	<string>เสียง: เปียโน</string>
+	<key>Sound: Default</key>
+	<string>เสียง: ปกติ</string>
+	<key>Sound: OFF</key>
+	<string>เสียง: ปิด</string>
+	<key>Sound: Typewriter</key>
+	<string>เสียง: เครื่องพิมพ์ดีด</string>
+	<key>Sound: Guitar</key>
+	<string>เสียง: กีต้าร์</string>
+	<key>Back</key>
+	<string>กลับ</string>
+	<key>Remove Ad</key>
+	<string>ลบโฆษณา</string>
+	<key>Tiles Movement</key>
+	<string>การเคลื่อนไหวของแผ่นกระเบื้อง</string>
+	<key>Rest Reminder</key>
+	<string>เตือนความจำส่วนที่เหลือ</string>
+	<key>Remove Ad Forever</key>
+	<string>ลบโฆษณาตลอดชีพ</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Only Cost USD $0.99.</string>
+	<key>Remove</key>
+	<string>ลบ</string>
+	<key>Restore</key>
+	<string>กู้คืน</string>
+	<key>Faster</key>
+	<string>เร็วกว่า</string>
+	<key>Smoother</key>
+	<string>ลื่นกว่า</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>ลื่นที่สุดได้รับการแนะนำให้ใช้เป็นอย่างยิ่ง</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>การตั้งค่านี้มีผลเฉพาะโหมดคลาสสิค, ผ่อนคลาย และถ่ายทอด</string>
+	<key>Zero to disable reminder.</key>
+	<string>ศูนย์เพื่อยกเลิกตัวแจ้งเตือน</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>เตือนให้คุณมีส่วนที่เหลือทุกจำนวนที่ระบุของเกมส์</string>
+	<key>Take a break!</key>
+	<string>พักมือสักหน่อย!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>คุณสามารถปรับค่าหรือปิดป๊อบอัพนี้ได้ใน [เมนูหลัก] -&gt; [เพิ่มเติม] -&gt; [ตัวแจ้งเตือนส่วนที่เหลือ]</string>
+	<key>OK</key>
+	<string>ตกลง</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>ชำระการลบโฆษณาตลอดชีพล้มเหลว</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>ชำระการลบโฆษณาตลอดชีพสำเร็จ</string>
+	<key>Congratulations</key>
+	<string>ขอแสดงความยินดี</string>
+	<key>About</key>
+	<string>เกี่ยวกับเรา</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>ติดตามเราเพื่อรับข่าวสารเกมส์ล่าสุดจากเรา</string>
+	<key>Plus</key>
+	<string>โปร </string>
+	<key>Normal</key>
+	<string>ปกติ</string>
+	<key>Reverse</key>
+	<string>ย้อนศร</string>
+	<key>Slower</key>
+	<string>ช้าลง</string>
+	<key>Messages</key>
+	<string>ข้อความ</string>
+	<key>Tap Animation: ON</key>
+	<string>การตั้งค่า: เปิด</string>
+	<key>Tap Animation: OFF</key>
+	<string>การตั้งค่า:ปิด</string>
+	<key>Loading...</key>
+	<string>กำลังโหลด...</string>
+	<key>No Message</key>
+	<string>ไม่มีข้อความ</string>
+	<key>Check it out</key>
+	<string>ลองเข้าไปดู</string>
+	<key>Are you sure to quit?</key>
+	<string>คุณต้องการจะออกจากเกมส์หรือไม่?</string>
+	<key>End Game</key>
+	<string>ออกจากเกมส์</string>
+	<key>Play On</key>
+	<string>เล่นต่อ</string>
+	<key>Shut Down</key>
+	<string>ปิด</string>
+	<key>No</key>
+	<string>ไม่</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>ลงชื่อเข้าใช้ระบบ Google Game ล้มเหลว, คุณต้องการปิดการใช้งานล็อคอินอัตโนมัติหรือไม่?</string>
+	<key>Ad Removed</key>
+	<string>ลบโฆษณาเรียบร้อยแล้ว</string>
+	<key>Reset All</key>
+	<string>ตั้งค่าใหม่ทั้งหมด</string>
+	<key>Ad Options</key>
+	<string>ตั้งค่าโฆษณา</string>
+	<key>Banner</key>
+	<string>ป้ายประกาศ</string>
+	<key>Popup</key>
+	<string>ป๊อบอัพ</string>
+	<key>About Ad iOS</key>
+	<string>1. ไม่มีโฆษณาหากคุณสั่งซื้อตัวลบโฆษณา;
+2. แสดงป้ายโฆษณาด้านล่างหน้าจอเสมอ;
+3. ป๊อปอัพโฆษณาจะแสดงเมื่อเกมส์สิ้นสุดแล้วเท่านั้น;
+แนะนำให้ใช้ป๊อปอัพโฆษณาในโหมดอาร์เคดและรีบเร่งเพื่อหลีกเลี่ยงการสัมผัสที่ไม่คาดคิดเกี่ยวกับการโฆษณา</string>
+	<key>About Ad Android</key>
+	<string>1. แสดงป้ายโฆษณาด้านล่างหน้าจอเสมอ;
+2. ป๊อปอัพโฆษณาจะแสดงเมื่อเกมส์สิ้นสุดแล้วเท่านั้น;
+แนะนำให้ใช้ป๊อปอัพโฆษณาในโหมดอาร์เคดและรีบเร่งเพื่อหลีกเลี่ยงการสัมผัสที่ไม่คาดคิดเกี่ยวกับการโฆษณา</string>
+	<key>Never Show Again</key>
+	<string>ไม่ต้องแสดงอีก</string>
+	<key>Preview</key>
+	<string>ตัวอย่าง</string>
+	<key>Theme</key>
+	<string>ธีม</string>
+	<key>Moments</key>
+	<string>Moments</string>
+	<key>Arcade+</key>
+	<string>อาร์เคด+</string>
+	<key>Arcade+ Mode</key>
+	<string>โหมดอาร์เคด+</string>
+	<key>Lightning</key>
+	<string>วิชชุ</string>
+	<key>Bomb</key>
+	<string>ลูกระเบิด</string>
+	<key>Double</key>
+	<string>สอง</string>
+	<key>Tiles Size</key>
+	<string>ขนาดของกระเบื้อง</string>
+	<key>Language</key>
+	<string>ภาษา</string>
+	<key>Confirm</key>
+	<string>เสร็จ</string>
+	<key>Friends</key>
+	<string>เพื่อน</string>
+	<key>Community</key>
+	<string>ชุมชน</string>
+	<key>Challenge</key>
+	<string>รายการท้าแข่ง</string>
+	<key>Global</key>
+	<string>ทุกประเทศ</string>
+	<key>Songs</key>
+	<string>เพลง</string>
+	<key>Profile</key>
+	<string>โปรไฟล์</string>
+	<key>Log in</key>
+	<string>ลงชื่อเข้าใช้</string>
+	<key>Push Notification</key>
+	<string>การแจ้งเตือนแบบพุช</string>
+	<key>Restore Purchases</key>
+	<string>กู้คืนการชำระเงิน</string>
+	<key>Tiles Collected</key>
+	<string>กระเบื้องที่เก็บได้</string>
+	<key>Games Played</key>
+	<string>เกมส์ที่เล่นไป</string>
+	<key>Best Score</key>
+	<string>คะแนนที่ดีที่สุด</string>
+	<key>Reset</key>
+	<string>ตั้งค่าใหม่</string>
+	<key>Bilayer</key>
+	<string>ไบเลเยอร์</string>
+	<key>Mist</key>
+	<string>หมอก</string>
+	<key>Unstable</key>
+	<string>ไม่เสถียร</string>
+	<key>Rotatory</key>
+	<string>ซึ่งหมุนเวียน</string>
+	<key>Shaky</key>
+	<string>แผ่นดินไหว</string>
+	<key>Cloudy</key>
+	<string>มีเมฆมาก</string>
+	<key>Shift</key>
+	<string>ย้าย</string>
+	<key>Change</key>
+	<string>เปลี่ยนแปลง</string>
+	<key>Unlock</key>
+	<string>ปลดล็อค</string>
+	<key>Unlock multi-color</key>
+	<string>ปลดล็อค มัลติ-คัลเลอร์</string>
+	<key>Not enough notes</key>
+	<string>จำนวนกระเบื้องไม่เพียงพอ</string>
+	<key>More Notes Needed</key>
+	<string>ต้องการกระเบื้องเพิ่ม</string>
+	<key>Playlist</key>
+	<string>รายการเล่น</string>
+	<key>me</key>
+	<string>ฉัน</string>
+	<key>Shuffle</key>
+	<string>สับเปลี่ยน</string>
+	<key>Wishes</key>
+	<string>ความปรารถนา</string>
+	<key>ShareWish</key>
+	<string>แบ่งปัน</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Piano Tiles</string>
+	<key>New-User Award!</key>
+	<string>New-User Award!</string>
+	<key>Diamonds</key>
+	<string>Diamonds</string>
+	<key>Daily Check-in Award!</key>
+	<string>Daily Check-in Award!</string>
+	<key>Get revived! Get higher!</key>
+	<string>Get revived! Get higher!</string>
+	<key>Come on! U can do better!</key>
+	<string>Come on! U can do better!</string>
+	<key>Go for another new best!</key>
+	<string>Go for another new best!</string>
+	<key>Faster! Faster! Faster!</key>
+	<string>Faster! Faster! Faster!</string>
+	<key>One more shot!</key>
+	<string>One more shot!</string>
+	<key>Superman never die!</key>
+	<string>Superman never die!</string>
+	<key>Never give up!</key>
+	<string>Never give up!</string>
+	<key>Break your limit!</key>
+	<string>Break your limit!</string>
+	<key>Give up</key>
+	<string>Give Up</string>
+	<key>Lucky Notes</key>
+	<string>Lucky Notes</string>
+	<key>BoostStartTips</key>
+	<string>Tap here for exciting start!</string>
+	<key>Feedback</key>
+	<string>ข้อเสนอแนะ</string>
+	<key>Update</key>
+	<string>ปรับปรุง</string>
+	<key>New Version is Coming</key>
+	<string>รุ่นใหม่จะมา</string>
+	<key>update to new version and win 1000 rewards</key>
+	<string>อัปเดตเวอร์ชันใหม่และชนะรางวัล 1000</string>
+	<key>Watch video and get bonus!</key>
+	<string>Watch video and get bonus!</string>
+	<key>Get it now</key>
+	<string>Get it now</string>
+	<key>Best Wishes</key>
+	<string>Best Wishes</string>
+	<key>share</key>
+	<string>แบ่งปัน</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Happy Chinese New Year! </string>
+	<key>NewYearModeDesc</key>
+	<string>Mode will end by 03-05 24:00.Piano Tiles wishes you all the best!</string>
+	<key>Event</key>
+	<string></string>
+	<key>Daily Bonus</key>
+	<string>ทุกวันทีรังวัน</string>
+	<key>Coins</key>
+	<string>เครดิตเพลง</string>
+	<key>Watch videos to earn coins</key>
+	<string>ดูวิดีโอได้เครดิตเพลง</string>
+	<key>Watch Now</key>
+	<string>ตอนนี้ดูเลย</string>
+	<key>You have got 500 coins</key>
+	<string>คุณได้500เครดิตเพลงแล้ว</string>
+	<key>Watch videos to earn more coins</key>
+	<string>ดูวิดีโอต่อไปได้เครดิตเพลง</string>
+	<key>Keep earning</key>
+	<string>สู้สู้ได้รับเครดิตเพลงต่อไป</string>
+	<key>No videos available, try again later</key>
+	<string>ตอนนี้ยังไม่มี</string>
+	<key>Insufficient coins. Watch videos to earn coins</key>
+	<string>เครดิตเพลง</string>
+	<key>Insufficient Coins</key>
+	<string>เครดิตเพลง</string>
+	<key>Earn 500 coins for Free</key>
+	<string>ได้รับฟรีเครดิตเพลง500</string>
+</dict>
+</plist>

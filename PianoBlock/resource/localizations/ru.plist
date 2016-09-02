@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>СНовым Годом!</string>
+	<key>Piano Tiles</key>
+	<string>Piano Tiles (Don&apos;t tap the white tile)</string>
+	<key>Classic</key>
+	<string>Классик</string>
+	<key>Arcade</key>
+	<string>Аркада</string>
+	<key>Arcade - 2</key>
+	<string>А|р|к|а|д|а</string>
+	<key>Zen</key>
+	<string>Дзэн</string>
+	<key>Rush</key>
+	<string>Погоня</string>
+	<key>Relay</key>
+	<string>Эстафета</string>
+	<key>More</key>
+	<string>Ещё</string>
+	<key>Leaderboard</key>
+	<string>Списки лидеров</string>
+	<key>Rate</key>
+	<string>Оценить</string>
+	<key>More Game</key>
+	<string>Больше игр</string>
+	<key>More Games</key>
+	<string>Больше игр</string>
+	<key>Setting</key>
+	<string>Настройки</string>
+	<key>Failed!</key>
+	<string>Не удалось!</string>
+	<key>Classic Mode</key>
+	<string>Классический режим</string>
+	<key>Arcade Mode</key>
+	<string>Аркадный режим</string>
+	<key>Zen Mode</key>
+	<string>Дзэн режим</string>
+	<key>Rush Mode</key>
+	<string>Режим погони</string>
+	<key>Relay Mode</key>
+	<string>Режим эстафеты</string>
+	<key>NEW BEST</key>
+	<string>НОВЫЙ ЛУЧШИЙ</string>
+	<key>BEST</key>
+	<string>ЛУЧШИЙ</string>
+	<key>Again</key>
+	<string>Снова</string>
+	<key>Share</key>
+	<string>Поделиться</string>
+	<key>Exit</key>
+	<string>Выход</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s! %s %s!! Отлично! Кто может побить мой рекорд в @PianoTile</string>
+	<key>pts</key>
+	<string>очков</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>Не удается отправить в Facebook. Возможно отсутствует подключение к Интернету, или Ваша учетная запись в Facebook не связана с данным устройством</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Piano Tiles</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>Ой</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>Для этого должен быть установлен WeChat.</string>
+	<key>Dismiss</key>
+	<string>Закрыть</string>
+	<key>Wechat</key>
+	<string>WeChat</string>
+	<key>Cancel</key>
+	<string>Отмена</string>
+	<key>Save</key>
+	<string>Сохранить</string>
+	<key>Time Out</key>
+	<string>Time Out</string>
+	<key>Tutorial: ON</key>
+	<string>Инструкция: ВКЛ</string>
+	<key>Tutorial: OFF</key>
+	<string>Инструкция: ВЫКЛ</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Не дотрагивайтесь до белых плиток!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Нажмите на нижние черные плитки 25 раз как можно быстрее.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Нажмите на нижние черные плитки 50 раз как можно быстрее.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Нажмите на нижние черные плитки не пропуская ни одной.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Нажмите на верхние черные плитки не пропуская ни одной.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Нажмите на нижние черные плитки как можно больше раз в течение 30 секунд.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Нажмите на нижние черные плитки как можно больше раз в течение 15 секунд.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>У Вас есть 10 секунд, чтобы нажать на 50 нижних черных плиток. Успейте и получите дополнительные 10 секунд.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>У вас есть 8 сек, чтобы нажать на нижние черные плитки 50 раз. Успеете, и Вы получите еще ​​8 секунд, чтобы повторить попытку.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>У вас есть 12 сек, чтобы нажать на нижние черные плитки 50 раз. Успеете, и Вы получите еще ​​12 сек, чтобы повторить попытку.</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Оцените нас, если понравилась игра.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Оцените нас, если понравилась новая версия.</string>
+	<key>Later</key>
+	<string>Позже</string>
+	<key>toRate</key>
+	<string>Оценить</string>
+	<key>Screenshot save failed!</key>
+	<string>Не удалось сохранить скриншот</string>
+	<key>Screenshot Saved!</key>
+	<string>Скриншот сохранен!</string>
+	<key>Start</key>
+	<string>Начать</string>
+	<key>Sound: Piano</key>
+	<string>Звук: фортепьяно</string>
+	<key>Sound: Default</key>
+	<string>Звук: по умолч.</string>
+	<key>Sound: OFF</key>
+	<string>Звук: ВЫКЛ</string>
+	<key>Sound: Typewriter</key>
+	<string>Звук: пишущая машинка</string>
+	<key>Sound: Guitar</key>
+	<string>Звук: гитара</string>
+	<key>Back</key>
+	<string>Назад</string>
+	<key>Remove Ad</key>
+	<string>Убрать рекламу</string>
+	<key>Tiles Movement</key>
+	<string>Перемещение плиток</string>
+	<key>Rest Reminder</key>
+	<string>Напоминание о перерыве</string>
+	<key>Remove Ad Forever</key>
+	<string>Убрать рекламу навсегда</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Всего $0.99</string>
+	<key>Remove</key>
+	<string>Удалить</string>
+	<key>Restore</key>
+	<string>Восстановить</string>
+	<key>Faster</key>
+	<string>Быстрее</string>
+	<key>Smoother</key>
+	<string>Плавнее</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Рекомендуем Плавнее.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Эта опция влияет на движение только в Классическом, Дзен и Эстафета режимах.</string>
+	<key>Zero to disable reminder.</key>
+	<string>Значение 0 отключает напоминание.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Мы напомним Вам о перерыве через определенное количество игр.</string>
+	<key>Take a break!</key>
+	<string>Сделайте перерыв!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Вы можете настроить или отключить всплывающее окно в &apos;Главное Меню&apos; &gt; &apos;Дополнительно&apos; &gt; &apos;Напоминание о перерыве&apos;.</string>
+	<key>OK</key>
+	<string>Ok</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Покупка &apos;Убрать рекламу&apos; не удалась</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Покупка &apos;Убрать рекламу&apos; успешна!</string>
+	<key>Congratulations</key>
+	<string>Поздравляем</string>
+	<key>About</key>
+	<string>О приложении</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Следите за нами, чтобы получать последние новости о наших играх.</string>
+	<key>Plus</key>
+	<string>Pro</string>
+	<key>Normal</key>
+	<string>Нормальный</string>
+	<key>Reverse</key>
+	<string>Реверс</string>
+	<key>Slower</key>
+	<string>Медленнее</string>
+	<key>Messages</key>
+	<string>Сообщения</string>
+	<key>Tap Animation: ON</key>
+	<string>настройки: ВКЛ</string>
+	<key>Tap Animation: OFF</key>
+	<string>настройки: ВЫКЛ</string>
+	<key>Loading...</key>
+	<string>Загрузка...</string>
+	<key>No Message</key>
+	<string>Нет сообщений</string>
+	<key>Check it out</key>
+	<string>Проверить</string>
+	<key>Are you sure to quit?</key>
+	<string>Уверены, что хотите выйти?</string>
+	<key>End Game</key>
+	<string>Конец игры</string>
+	<key>Play On</key>
+	<string>Остаться</string>
+	<key>Shut Down</key>
+	<string>Выключить</string>
+	<key>No</key>
+	<string>Нет</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Не удалось войти в службу игр Google, хотите отключить авто-вход?</string>
+	<key>Ad Removed</key>
+	<string>Реклама убрана</string>
+	<key>Reset All</key>
+	<string>Сбросить все</string>
+	<key>Ad Options</key>
+	<string>Настройка рекламы</string>
+	<key>Banner</key>
+	<string>Баннер</string>
+	<key>Popup</key>
+	<string>Окно</string>
+	<key>About Ad iOS</key>
+	<string>1. Нет рекламы, если вы купили &apos;Убрать рекламу&apos;;
+	2. Реклама отображается снизу;
+	3. Всплывающая реклама только в конце игры;
+	Мы рекомендуем использовать Всплывающую рекламу в Аркаде и Забеге, чтобы избежать случайного касания рекламы и предотвращения лагов.</string>
+	<key>About Ad Android</key>
+	<string>1. Реклама отображается снизу;
+	2. Всплывающая реклама только в конце игры;
+	Мы рекомендуем использовать Всплывающую рекламу в Аркаде и Забеге, чтобы избежать случайного касания рекламы и предотвращения лагов.</string>
+	<key>Never Show Again</key>
+	<string>Не показывать больше</string>
+	<key>Preview</key>
+	<string>анонс</string>
+	<key>Theme</key>
+	<string>тема</string>
+	<key>Moments</key>
+	<string>Moments</string>
+	<key>Arcade+</key>
+	<string>Аркада+</string>
+	<key>Arcade+ Mode</key>
+	<string>Аркадный режим</string>
+	<key>Lightning</key>
+	<string>Mолния</string>
+	<key>Bomb</key>
+	<string>Mина</string>
+	<key>Double</key>
+	<string>Двойник</string>
+	<key>Tiles Size</key>
+	<string>Pазмер плитки</string>
+	<key>Language</key>
+	<string>Язык</string>
+	<key>Confirm</key>
+	<string>Готово</string>
+	<key>Friends</key>
+	<string>Друзья</string>
+	<key>Community</key>
+	<string>Сообщество</string>
+	<key>Challenge</key>
+	<string>Bызов</string>
+	<key>Global</key>
+	<string>Мировой</string>
+	<key>Songs</key>
+	<string>Песни</string>
+	<key>Profile</key>
+	<string>Профиль</string>
+	<key>Bilayer</key>
+	<string>Двойной слой</string>
+	<key>Mist</key>
+	<string>туман</string>
+	<key>Unstable</key>
+	<string>Неустойчивым</string>
+	<key>Rotatory</key>
+	<string>Bращательное</string>
+	<key>Shaky</key>
+	<string>Землетрясение</string>
+	<key>Cloudy</key>
+	<string>Облачно</string>
+	<key>Shift</key>
+	<string>Перемещаться</string>
+	<key>Change</key>
+	<string>Mенять</string>
+	<key>me</key>
+	<string>меня</string>
+	<key>Shuffle</key>
+	<string>Перемешивать</string>
+	<key>Wishes</key>
+	<string>пожелания</string>
+	<key>ShareWish</key>
+	<string>делиться</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Piano Tiles</string>
+	<key>New-User Award!</key>
+	<string>Награды для новых пользователей</string>
+	<key>Diamonds</key>
+	<string>плитка</string>
+	<key>PlayOnTips</key>
+	<string>Продолжай с плитка!</string>
+	<key>BoostStartTips</key>
+	<string>Нажмите здесь для возбуждения начала!</string>
+	<key>Daily Check-in Award!</key>
+	<string>Награда за ежедневную регистрацию.</string>
+	<key>Get revived! Get higher!</key>
+	<string>Получить возродил ! Получить выше!</string>
+	<key>Come on! U can do better!</key>
+	<string>Давай, вы можете сделать лучше!</string>
+	<key>Go for another new best!</key>
+	<string>Добавляйся еще один новый рекорд!</string>
+	<key>Faster! Faster! Faster!</key>
+	<string>Быстрее! Быстрее! Быстрее!</string>
+	<key>One more shot!</key>
+	<string>Еще один выстрел!</string>
+	<key>Superman never die!</key>
+	<string>Супермен никогда не умирают !</string>
+	<key>Never give up!</key>
+	<string>Никогда не сдавайся</string>
+	<key>Break your limit!</key>
+	<string>Давай побить свой рекорд!</string>
+	<key>Give up</key>
+	<string>Отказываюсь</string>
+	<key>Lucky Notes</key>
+	<string>Счастливые заметки</string>
+	<key>Feedback</key>
+	<string>Обратная связь</string>
+	<key>Update</key>
+	<string>Обновление</string>
+	<key>New Version is Coming</key>
+	<string>Новая версия идет!</string>
+	<key>update to new version and win 1000 rewards</key>
+	<string>Обновление до новой версии и выиграй 1000 награды</string>
+	<key>DoubleScore</key>
+	<string>Двойная награда</string>
+	<key>Watch video and get bonus!</key>
+	<string>Просмотрите видео, получите </string>
+	<key>Get it now</key>
+	<string>щас получите!</string>
+	<key>Best Wishes</key>
+	<string>пожелания</string>
+	<key>share</key>
+	<string>Поделиться</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>Don&apos;t tap the white tile - Chinese New Year</key>
+	<string>Не коснись белой плитки-Китайский Новый Год</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>С Наступающим Китайским Новым Годом!</string>
+	<key>NewYearModeDesc</key>
+	<string>Режим закончится 24:00 5 февраля. Фортепиано плитки желает вам всего наилучшего!</string>
+	<key>Spring Festival</key>
+	<string>Какогоцветаплатье</string>
+	<key>The Dress</key>
+	<string>Какогоцветаплатье</string>
+	<key>Event</key>
+	<string>digwyddiad</string>
+	<key>Like us &amp; play without using notes</key>
+	<string>Нажмите &quot;понравилось&quot; и продолжайте играть</string>
+	<key>Piano &amp; no clap</key>
+	<string>Фортепиано и без хлопков</string>
+	<key>You unlocked 2 new songs!</key>
+	<string>Вы скачали 2 песни.</string>
+	<key>Time for the next bonus:</key>
+	<string>Время за следующий подарок:</string>
+	<key>Try now!</key>
+	<string>Играть сейчас!</string>
+	<key>Daily Bonus</key>
+	<string>Ежедневная награда</string>
+	<key>Coins</key>
+	<string>Монеты</string>
+	<key>Watch videos to earn coins</key>
+	<string>получайте монеты</string>
+	<key>Watch Now</key>
+	<string>Смотреть</string>
+	<key>You have got 500 coins</key>
+	<string>Вы получили 500 монет</string>
+	<key>Watch videos to earn more coins</key>
+	<string>получайте монеты</string>
+	<key>Keep earning</key>
+	<string>Продолжить</string>
+	<key>No videos available, try again later</key>
+	<string>Нет доступных видео.Попробуйте позже</string>
+	<key>Insufficient coins. Watch videos to earn coins</key>
+	<string>Недостаточно монет.Смотрите видео, чтобы получить монеты</string>
+	<key>Insufficient Coins</key>
+	<string>Недостаточно монет</string>
+	<key>Earn 500 coins for Free</key>
+	<string>500 монет бесплатно</string>
+	<key>Installed successfully!</key>
+	<string>Установка завершена!</string>
+	<key>Skip</key>
+	<string>Пропустить</string>
+	<key>TRY</key>
+	<string>Попробовать</string>
+</dict>
+</plist>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>Ευτυχισμένο το Νέο Έτος</string>
+	<key>Piano Tiles</key>
+	<string>Πλήκτρα Πιάνου (Μην πατήσετε το λευκό πλήκτρο)</string>
+	<key>Classic</key>
+	<string>Κλασσικό</string>
+	<key>Arcade</key>
+	<string>Arcade</string>
+	<key>Arcade - 2</key>
+	<string>A|r|c|a|d|e</string>
+	<key>Zen</key>
+	<string>Ήρεμο</string>
+	<key>Rush</key>
+	<string>Γρήγορο</string>
+	<key>Relay</key>
+	<string>Σκυταλοδρομία</string>
+	<key>More</key>
+	<string>Περισσότερα</string>
+	<key>Leaderboard</key>
+	<string>Κορυφαίοι παίκτες</string>
+	<key>Rate</key>
+	<string>Βαθμολογήστε</string>
+	<key>More Game</key>
+	<string>Περισσότερα παιχνίδια</string>
+	<key>Failed!</key>
+	<string>Απέτυχε!</string>
+	<key>Classic Mode</key>
+	<string>Κλασική λειτουργία</string>
+	<key>Arcade Mode</key>
+	<string>Λειτουργία arcade</string>
+	<key>Zen Mode</key>
+	<string>Ήρεμη λειτουργία</string>
+	<key>Rush Mode</key>
+	<string>Γρήγορη λειτουργία</string>
+	<key>Relay Mode</key>
+	<string>Λειτουργία σκυταλοδρομίας</string>
+	<key>NEW BEST</key>
+	<string>Ο ΝΕΟΣ ΚΑΛΥΤΕΡΟΣ</string>
+	<key>BEST</key>
+	<string>ΚΑΛΥΤΕΡΟΣ</string>
+	<key>Again</key>
+	<string>Ξανά</string>
+	<key>Share</key>
+	<string>Μοιραστείτε το</string>
+	<key>Exit</key>
+	<string>Έξοδος</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s, %s %s! Ποιος μπορεί να με κερδίσει στο @Πλήκτρα Πιάνου;</string>
+	<key>pts</key>
+	<string>Βαθμοί</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>Η εφαρμογή προς το παρόν δεν μπορεί να συνδεθεί στο Facebook, διότι δεν μπορεί να επικοινωνήσει με τον εξυπηρετητή του Facebook ή δεν υπάρχει συσχετισμένος λογαριασμός Facebook με αυτή τη συσκευή.</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Πλήκτρα Πιάνου</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@Πλήκτρα Πιάνου</string>
+	<key>Oops</key>
+	<string>Ουπς</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>Πρέπει πρώτα να εγκαταστήσετε το WeChat</string>
+	<key>Dismiss</key>
+	<string>Απόρριψη</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>Ακύρωση</string>
+	<key>Save</key>
+	<string>Αποθήκευση</string>
+	<key>Time Out</key>
+	<string>Λήξη χρόνου</string>
+	<key>Tutorial: ON</key>
+	<string>Πρόγραμμα εκμάθησης: ΕΝΕΡΓΟΠΟΙΗΜΕΝΗ</string>
+	<key>Tutorial: OFF</key>
+	<string>Πρόγραμμα εκμάθησης: ΑΠΕΝΕΡΓΟΠΟΙΗΜΕΝΗ</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Μην αγγίξετε κανένα λευκό πλήκτρο!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και φτάστε στο 25 το συντομότερο.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και φτάστε στο 50 το συντομότερο.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και μην χάσετε ούτε ένα.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το πάνω μέρος και μην χάσετε ούτε ένα.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος, όσα περισσότερα μπορείτε σε 30 δευτερόλεπτα.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος, όσα περισσότερα μπορείτε σε 15 δευτερόλεπτα.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και φτάστε στο 50 σε 10&quot;, τότε θα κερδίσετε ακόμα 10&quot; για άλλα 50 πλήκτρα...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και φτάστε στο 50 σε 8&quot;, τότε θα κερδίσετε ακόμα 8&quot; για άλλα 50 πλήκτρα...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>Πατήστε τα μαύρα πλήκτρα ξεκινώντας από το κάτω μέρος και φτάστε στο 50 σε 12&quot;, τότε θα κερδίσετε ακόμα 12&quot; για άλλα 50 πλήκτρα...</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Βαθμολογήστε με 5, αν σας αρέσει το παιχνίδι.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Βαθμολογήστε με 5, αν θέλετε νέα ενημέρωση.</string>
+	<key>Later</key>
+	<string>Αργότερα</string>
+	<key>toRate</key>
+	<string>Βαθμολογήστε</string>
+	<key>Screenshot save failed!</key>
+	<string>Η αποθήκευση του στιγμιότυπου απέτυχε!</string>
+	<key>Screenshot Saved!</key>
+	<string>Το στιγμιότυπο αποθηκεύτηκε!</string>
+	<key>Start</key>
+	<string>Εκκίνηση</string>
+	<key>Sound: Piano</key>
+	<string>Ήχος: Πιάνο</string>
+	<key>Sound: Default</key>
+	<string>Ήχος: Τυπικός</string>
+	<key>Sound: OFF</key>
+	<string>Ήχος: ΑΠΕΝΕΡΓΟΠΟΙΗΜΕΝΗ</string>
+	<key>Sound: Typewriter</key>
+	<string>Ήχος: Γραφομηχανή</string>
+	<key>Sound: Guitar</key>
+	<string>Ήχος: Κιθάρα</string>
+	<key>Back</key>
+	<string>Πίσω</string>
+	<key>Remove Ad</key>
+	<string>Αφαιρέστε τις διαφημίσεις</string>
+	<key>Tiles Movement</key>
+	<string>Κίνηση πλήκτρων</string>
+	<key>Rest Reminder</key>
+	<string>Υπενθύμιση Διακοπής</string>
+	<key>Remove Ad Forever</key>
+	<string>Κατάργηση διαφημίσεων για πάντα</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Μόνο με $0,99.</string>
+	<key>Remove</key>
+	<string>Αφαίρεση</string>
+	<key>Restore</key>
+	<string>Επαναφορά</string>
+	<key>Faster</key>
+	<string>Πιο γρήγορα</string>
+	<key>Smoother</key>
+	<string>Πιο ομαλά</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Η ομαλότερη λειτουργία συνιστάται ανεπιφύλακτα.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Η επιλογή αυτή επηρεάζει μόνο τα πλήκτρα στις λειτουργίες Κλασική, Ήρεμη και Σκυταλοδρομία.</string>
+	<key>Zero to disable reminder.</key>
+	<string>Πιέστε Μηδέν για να απενεργοποιήσετε την υπενθύμιση.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Υπενθύμιση για διακοπή μετά από έναν συγκεκριμένο αριθμό παιχνιδιών.</string>
+	<key>Take a break!</key>
+	<string>Κάντε ένα διάλειμμα!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Μπορείτε να προσαρμόσετε ή να κλείσετε αυτό το αναδυόμενο παράθυρο πηγαίνοντας: [Βασικό Μενού] -&gt; [Περισσότερα] -&gt; [Υπενθύμιση Διακοπής].</string>
+	<key>OK</key>
+	<string>Εντάξει</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Η συναλλαγή για την Κατάργηση Διαφημίσεων για Πάντα απέτυχε</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Η συναλλαγή για την Κατάργηση Διαφημίσεων για Πάντα έγινε επιτυχώς!</string>
+	<key>Congratulations</key>
+	<string>Συγχαρητήρια</string>
+	<key>About</key>
+	<string>Πληροφορίες</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Ακολουθήστε μας, για να λαμβάνετε τα τελευταία νέα σχετικά με τα παιχνίδια μας.</string>
+	<key>Plus</key>
+	<string>Για επαγγελματίες</string>
+	<key>Normal</key>
+	<string>Κανονική</string>
+	<key>Reverse</key>
+	<string>Αντίστροφη</string>
+	<key>Slower</key>
+	<string>Πιο αργή</string>
+	<key>Messages</key>
+	<string>Μηνύματα</string>
+	<key>Tap Animation: ON</key>
+	<string>Κίνηση με το πάτημα: ΕΝΕΡΓΟΠΟΙΗΜΕΝΗ</string>
+	<key>Tap Animation: OFF</key>
+	<string>Κίνηση με το πάτημα: ΑΠΕΝΕΡΓΟΠΟΙΗΜΕΝΗ</string>
+	<key>Loading...</key>
+	<string>Φόρτωση...</string>
+	<key>No Message</key>
+	<string>Δεν υπάρχει μήνυμα</string>
+	<key>Check it out</key>
+	<string>Δείτε το</string>
+	<key>Are you sure to quit?</key>
+	<string>Είστε σίγουροι ότι θέλετε να βγείτε;</string>
+	<key>End Game</key>
+	<string>Τέλος παιχνιδιού</string>
+	<key>Play On</key>
+	<string>Συνεχίστε το παιχνίδι</string>
+	<key>Shut Down</key>
+	<string>Τερματισμός</string>
+	<key>No</key>
+	<string>Όχι</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Η είσοδος στην υπηρεσία παιχνιδιών της Google απέτυχε, θέλετε να απενεργοποιήσετε την αυτόματη σύνδεση;</string>
+	<key>Ad Removed</key>
+	<string>Η διαφήμιση αφαιρέθηκε</string>
+	<key>Reset All</key>
+	<string>Επαναφορά όλων</string>
+	<key>Ad Options</key>
+	<string>Επιλογές διαφημίσεων</string>
+	<key>Banner</key>
+	<string>Πλαίσιο</string>
+	<key>Popup</key>
+	<string>Αναδυόμενο παράθυρο</string>
+	<key>About Ad iOS</key>
+	<string>1. Καμία διαφήμιση, με την αγορά της Αφαίρεσης· 
+2. Οι διαφημίσεις πάντα θα εμφανίζονται στο κάτω πλαίσιο· 	
+3. Οι αναδυόμενες διαφημίσεις εμφανίζονται μόνο όταν τελειώνει το παιχνίδι· 	
+Συνιστάται να τις χρησιμοποιείτε στις λειτουργίες Arcade και Γρήγορη, για να αποφύγετε τα κατά λάθος χτυπήματα σε διαφημίσεις.</string>
+	<key>About Ad Android</key>
+	<string>1. Οι διαφημίσεις πάντα θα εμφανίζονται στο κάτω πλαίσιο· 
+2. Οι αναδυόμενες διαφημίσεις εμφανίζονται μόνο όταν τελειώνει το παιχνίδι· 	
+Συνιστάται να τις χρησιμοποιείτε στις λειτουργίες Arcade και Γρήγορη, για να αποφύγετε τα κατά λάθος χτυπήματα σε διαφημίσεις.</string>
+	<key>Never Show Again</key>
+	<string>Να μην εμφανιστεί ξανά</string>
+	<key>Preview</key>
+	<string>Προεπισκόπηση</string>
+	<key>Theme</key>
+	<string>Θέμα</string>
+	<key>Moments</key>
+	<string>Στιγμές</string>
+	<key>Arcade+</key>
+	<string>Arcade+</string>
+	<key>Arcade+ Mode</key>
+	<string>Λειτουργία Arcade+</string>
+	<key>Lightning</key>
+	<string>Κεραυνός</string>
+	<key>Bomb</key>
+	<string>Βόμβα</string>
+	<key>Double</key>
+	<string>Διπλό</string>
+	<key>Tiles Size</key>
+	<string>Μέγεθος πλήκτρων</string>
+	<key>Language</key>
+	<string>Γλώσσα</string>
+	<key>Confirm</key>
+	<string>Ολοκληρώθηκε</string>
+	<key>Friends</key>
+	<string>Φίλοι</string>
+	<key>Community</key>
+	<string>Κοινότητα</string>
+	<key>Challenge</key>
+	<string>Προκλήσεις</string>
+	<key>Global</key>
+	<string>Παγκόσμιο</string>
+	<key>Warning</key>
+	<string>Προειδοποίηση</string>
+	<key>Don&apos;t play Lightning Mode if you have epilepsy. It may trigger a seizure.</key>
+	<string>Μην παίζετε στη λειτουργία Κεραυνός, αν πάσχετε από επιληψία. Μπορεί να προκαλέσει κρίση.</string>
+	<key>Songs</key>
+	<string>Τραγούδια</string>
+	<key>Add Friends</key>
+	<string>Προσθέστε Φίλους</string>
+	<key>Profile</key>
+	<string>Προφίλ</string>
+	<key>Log in</key>
+	<string>Σύνδεση</string>
+	<key>Push Notification</key>
+	<string>Άμεση Ειδοποίηση (Push)</string>
+	<key>Restore Purchases</key>
+	<string>Επαναφορά αγορών</string>
+	<key>Tiles Collected</key>
+	<string>Πλήκτρα που συλλέχθηκαν</string>
+	<key>Games Played</key>
+	<string>Παιχνίδια που παίχτηκαν</string>
+	<key>Reset</key>
+	<string>Επαναφορά</string>
+	<key>Bilayer</key>
+	<string>Δύο επίπεδα</string>
+	<key>Mist</key>
+	<string>Ομίχλη</string>
+	<key>Unstable</key>
+	<string>Ασταθές</string>
+	<key>Rotatory</key>
+	<string>Περιστροφικό</string>
+	<key>Shaky</key>
+	<string>Τρέμουλο</string>
+	<key>Cloudy</key>
+	<string>Με σύννεφο </string>
+	<key>Shift</key>
+	<string>Μετακίνηση</string>
+	<key>Change</key>
+	<string>Αλλαγή</string>
+	<key>Unlock</key>
+	<string>Ξεκλείδωμα</string>
+	<key>Unlock multi-color</key>
+	<string>Ξεκλειδώστε τα πολύχρωμα</string>
+	<key>Not enough tiles</key>
+	<string>Δεν υπάρχουν αρκετά πλήκτρα</string>
+	<key>More Tiles Needed</key>
+	<string>Χρειάζονται περισσότερα πλήκτρα</string>
+	<key>Playlist</key>
+	<string>Λίστα αναπαραγωγής</string>
+	<key>me</key>
+	<string>εγώ</string>
+	<key>Play more rounds to collect more tiles</key>
+	<string>Παίξτε περισσότερους γύρους, για να συλλέξετε περισσότερα πλακίδια</string>
+	<key>You have %d tiles now.</key>
+	<string>Έχετε %d πλακίδια τώρα. </string>
+	<key>You have %d tile now. </key>
+	<string>Έχετε %d πλακίδιο τώρα.</string>
+	<key>Request Products failed,please try later.</key>
+	<string>Το αίτημα για τα προϊόντα απέτυχε, παρακαλούμε προσπαθήστε αργότερα.</string>
+	<key>products loading...</key>
+	<string>τα προϊόντα φορτώνουν...</string>
+	<key>You have got %d tiles</key>
+	<string>Έχετε %d πλακίδια</string>
+	<key>or purchase some below.</key>
+	<string>ή αποκτήστε μερικά παρακάτω.</string>
+	<key>Purchase product failed.</key>
+	<string>Η αγορά του προϊόντος απέτυχε.</string>
+	<key>Shuffle</key>
+	<string>Ανακάτεμα</string>
+	<key>Wishes</key>
+	<string>Επιθυμίες</string>
+	<key>ShareWish</key>
+	<string>Μοιραστείτε την επιθυμία σας</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Πλήκτρα Πιάνου</string>
+	<key>New-User Award!</key>
+	<string>Βραβείο Νέου Χρήστη!</string>
+	<key>Diamonds</key>
+	<string>Πλήκτρα</string>
+	<key>PlayOnTips</key>
+	<string>Χρησιμοποιήστε τα Πλήκτρα, για να συνεχίσετε!</string>
+	<key>BoostStartTips</key>
+	<string>Χρησιμοποιήστε πλακίδια για να φωτίσετε τα %d πλακίδια!</string>
+	<key>Watch video and get bonus!</key>
+	<string>Watch video and get bonus!</string>
+	<key>Get it now</key>
+	<string>Get it now</string>
+	<key>Best Wishes</key>
+	<string>Best Wishes</string>
+	<key>share</key>
+	<string>Μοιραστείτε το</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Happy Chinese New Year! </string>
+	<key>NewYearModeDesc</key>
+	<string>Mode will end by 03-05 24:00.Piano Tiles wishes you all the best!</string>
+</dict>
+</plist>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>Šťastný nový rok</string>
+	<key>Piano Tiles</key>
+	<string>Pianové dlaždice (Neťuknite na bielu dlaždicu)</string>
+	<key>Classic</key>
+	<string>Klasický</string>
+	<key>Arcade</key>
+	<string>Arkáda</string>
+	<key>Arcade - 2</key>
+	<string>A|r|k|á|d|a</string>
+	<key>Zen</key>
+	<string>Zen</string>
+	<key>Rush</key>
+	<string>Rýchlovka</string>
+	<key>Relay</key>
+	<string>Štafeta</string>
+	<key>More</key>
+	<string>Viac</string>
+	<key>Leaderboard</key>
+	<string>Najlepší hráči</string>
+	<key>Rate</key>
+	<string>Hodnotenie</string>
+	<key>More Game</key>
+	<string>Ďalšie hry</string>
+	<key>Failed!</key>
+	<string>Nepodarilo sa!</string>
+	<key>Classic Mode</key>
+	<string>Režim Klasický</string>
+	<key>Arcade Mode</key>
+	<string>Režim Arkáda</string>
+	<key>Zen Mode</key>
+	<string>Režim Zen</string>
+	<key>Rush Mode</key>
+	<string>Režim Rýchlovka</string>
+	<key>Relay Mode</key>
+	<string>Režim Štafeta</string>
+	<key>NEW BEST</key>
+	<string>NOVÝ REKORD</string>
+	<key>BEST</key>
+	<string>REKORD</string>
+	<key>Again</key>
+	<string>Znovu</string>
+	<key>Share</key>
+	<string>Zdieľať</string>
+	<key>Exit</key>
+	<string>Ukončiť</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s, %s %s! Kto ma porazí v @PianoTiles?</string>
+	<key>pts</key>
+	<string>Body</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>Aplikácia sa momentálne nemôže pripojiť k Facebooku, pretože sa nemožno spojiť so serverom služby Facebook alebo nemáte účet Facebook prepojený s týmto zariadením</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Pianové dlaždice</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>Teda</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>Musíte si najprv nainštalovať aplikáciu WeChat</string>
+	<key>Dismiss</key>
+	<string>Zrušiť</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>Zrušiť</string>
+	<key>Save</key>
+	<string>Uložiť</string>
+	<key>Time Out</key>
+	<string>Časový limit</string>
+	<key>Tutorial: ON</key>
+	<string>Kurz: ZAP.</string>
+	<key>Tutorial: OFF</key>
+	<string>Kurz: VYP.</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Nedotýkaj sa žiadnych bielych dlaždíc!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a čo najskôr sa dostaňte až po 25.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a čo najskôr sa dostaňte až po 50.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a žiadnu nevynechajte.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Dotknite sa najvyšších čiernych dlaždíc a žiadnu nevynechajte.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Dotknite sa čo najviac najnižších čiernych dlaždíc za 30 sekúnd.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Dotknite sa čo najviac najnižších čiernych dlaždíc za 15 sekúnd.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a dosiahnite až 50 za 10 min. Potom získate ďalších 10 min. na ďalších 50 dlaždíc...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a dosiahnite až 50 za 8 min. Potom získate ďalších 8 min. na ďalších 50 dlaždíc...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>Dotknite sa najnižších čiernych dlaždíc a dosiahnite až 50 za 12 min., potom získate ďalších 12 min. na ďalších 50 dlaždíc...</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Ohodnoťte známkou 5, ak sa vám páči táto hra.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Ohodnoťte známkou 5, ak chcete novú aktualizáciu.</string>
+	<key>Later</key>
+	<string>Neskôr</string>
+	<key>toRate</key>
+	<string>Hodnotenie</string>
+	<key>Screenshot save failed!</key>
+	<string>Nepodarilo sa uložiť snímku obrazovky.</string>
+	<key>Screenshot Saved!</key>
+	<string>Snímka obrazovky sa uložila!</string>
+	<key>Start</key>
+	<string>Štart</string>
+	<key>Sound: Piano</key>
+	<string>Zvuk: Piano</string>
+	<key>Sound: Default</key>
+	<string>Zvuk: Štandardný</string>
+	<key>Sound: OFF</key>
+	<string>Zvuk: VYP.</string>
+	<key>Sound: Typewriter</key>
+	<string>Zvuk: Písací stroj</string>
+	<key>Sound: Guitar</key>
+	<string>Zvuk: Gitara</string>
+	<key>Back</key>
+	<string>Späť</string>
+	<key>Remove Ad</key>
+	<string>Odstrániť reklamu</string>
+	<key>Tiles Movement</key>
+	<string>Pohyb dlaždíc</string>
+	<key>Rest Reminder</key>
+	<string>Pripomenutie oddychu</string>
+	<key>Remove Ad Forever</key>
+	<string>Natrvalo odstrániť reklamy</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Len za 0,99 USD.</string>
+	<key>Remove</key>
+	<string>Odstrániť</string>
+	<key>Restore</key>
+	<string>Obnoviť</string>
+	<key>Faster</key>
+	<string>Rýchlejšie</string>
+	<key>Smoother</key>
+	<string>Plynulejšie</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Dôrazne odporúčame možnosť Plynulejšie.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Táto možnosť ovplyvňuje len dlaždice v režimoch Klasický, Zen a Štafeta.</string>
+	<key>Zero to disable reminder.</key>
+	<string>Nulou vypnite pripomenutie.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Pripomenutie oddýchnutia si po určenom počte hier.</string>
+	<key>Take a break!</key>
+	<string>Urob si prestávku!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Toto kontextové okno si môžete prispôsobiť alebo zavrieť v ponuke [Hlavná ponuka] -&gt; [Ďalej] -&gt; [Pripomenutie oddychu].</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Nákup trvalého odstránia reklám bol neúspešný.</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Nákup trvalého odstránia reklám bol úspešný.</string>
+	<key>Congratulations</key>
+	<string>Blahoželáme</string>
+	<key>About</key>
+	<string>O aplikácii</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Sledujte nás a získajte najnovšie informácie o našich hrách.</string>
+	<key>Plus</key>
+	<string>Profesionál</string>
+	<key>Normal</key>
+	<string>Normál</string>
+	<key>Reverse</key>
+	<string>Opačne</string>
+	<key>Slower</key>
+	<string>Pomalšie</string>
+	<key>Messages</key>
+	<string>Správy</string>
+	<key>Tap Animation: ON</key>
+	<string>Animácia ťuknutia: ZAP.</string>
+	<key>Tap Animation: OFF</key>
+	<string>Animácia ťuknutia: VYP.</string>
+	<key>Loading...</key>
+	<string>Načítava sa...</string>
+	<key>No Message</key>
+	<string>Žiadne správy</string>
+	<key>Check it out</key>
+	<string>Pozri si</string>
+	<key>Are you sure to quit?</key>
+	<string>Naozaj chcete skončiť?</string>
+	<key>End Game</key>
+	<string>Ukončiť hru</string>
+	<key>Play On</key>
+	<string>Hrať ďalej</string>
+	<key>Shut Down</key>
+	<string>Vypnúť</string>
+	<key>No</key>
+	<string>Nie</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Prihlásenie do hernej služby Google sa nepodarilo. Chcete vypnúť automatické prihlasovanie?</string>
+	<key>Ad Removed</key>
+	<string>Reklama odstránená</string>
+	<key>Reset All</key>
+	<string>Obnoviť všetko</string>
+	<key>Ad Options</key>
+	<string>Možnosti reklamy</string>
+	<key>Banner</key>
+	<string>panel</string>
+	<key>Popup</key>
+	<string>okno</string>
+	<key>About Ad iOS</key>
+	<string>1. Bez reklamy, ak je zakúpené odstránenie; 
+2. Reklamy sa vždy zobrazujú v spodnom paneli; 	
+3. Reklamy v oknách len po skončení hry; 	
+Odporúčame používať okná v režimoch Arcade a Rush, aby sa zabránilo neočakávaným ťuknutiam na reklamy.</string>
+	<key>About Ad Android</key>
+	<string>1. Reklamy sa vždy zobrazujú v spodnom paneli; 
+2. Reklamy v oknách len po skončení hry; 	
+Odporúčame používať okná v režimoch Arcade a Rush, aby sa zabránilo neočakávaným ťuknutiam na reklamy.</string>
+	<key>Never Show Again</key>
+	<string>Už nikdy nezobrazovať</string>
+	<key>Preview</key>
+	<string>Náhľad</string>
+	<key>Theme</key>
+	<string>Motív</string>
+	<key>Moments</key>
+	<string>Okamihy</string>
+	<key>Arcade+</key>
+	<string>Arkáda+</string>
+	<key>Arcade+ Mode</key>
+	<string>Režim Arkáda+</string>
+	<key>Lightning</key>
+	<string>Bleskovka</string>
+	<key>Bomb</key>
+	<string>Bomba</string>
+	<key>Double</key>
+	<string>Dvojitý</string>
+	<key>Tiles Size</key>
+	<string>Veľkosť dlaždíc</string>
+	<key>Language</key>
+	<string>Jazyk</string>
+	<key>Confirm</key>
+	<string>Hotovo</string>
+	<key>Friends</key>
+	<string>Priatelia</string>
+	<key>Community</key>
+	<string>Komunita</string>
+	<key>Challenge</key>
+	<string>Výzvy</string>
+	<key>Global</key>
+	<string>Celkovo</string>
+	<key>Warning</key>
+	<string>Upozornenie</string>
+	<key>Don&apos;t play Lightning Mode if you have epilepsy. It may trigger a seizure.</key>
+	<string>Nehrajte v režime Bleskovka, ak máte epilepsiu. Môže spustiť záchvat.</string>
+	<key>Songs</key>
+	<string>Skladby</string>
+	<key>Add Friends</key>
+	<string>Pridať priateľov</string>
+	<key>Profile</key>
+	<string>Profil</string>
+	<key>Log in</key>
+	<string>Prihlásiť sa</string>
+	<key>Push Notification</key>
+	<string>Poslať oznámenie</string>
+	<key>Restore Purchases</key>
+	<string>Obnoviť nákupy</string>
+	<key>Tiles Collected</key>
+	<string>Nazbierané dlaždice</string>
+	<key>Games Played</key>
+	<string>Odohrané hry</string>
+	<key>Reset</key>
+	<string>Obnoviť</string>
+	<key>Bilayer</key>
+	<string>Dvojvrstvý</string>
+	<key>Mist</key>
+	<string>Opar</string>
+	<key>Unstable</key>
+	<string>Premenlivý</string>
+	<key>Rotatory</key>
+	<string>Otáčavý</string>
+	<key>Shaky</key>
+	<string>Vratký</string>
+	<key>Cloudy</key>
+	<string>Nejasný</string>
+	<key>Shift</key>
+	<string>Prepnúť</string>
+	<key>Change</key>
+	<string>Zmeniť</string>
+	<key>Unlock</key>
+	<string>Odomknúť</string>
+	<key>Unlock multi-color</key>
+	<string>Odomknúť viacfarebné</string>
+	<key>Not enough tiles</key>
+	<string>Nedostatok dlaždíc</string>
+	<key>More Tiles Needed</key>
+	<string>Potrebujem viac dlaždíc</string>
+	<key>Playlist</key>
+	<string>Zoznam skladieb</string>
+	<key>me</key>
+	<string>ja</string>
+	<key>Play more rounds to collect more tiles</key>
+	<string>Hrať viac kôl, aby som nazbieral viac dlaždíc</string>
+	<key>You have %d tiles now.</key>
+	<string>Aktuálny počet vašich dlaždíc: %d </string>
+	<key>You have %d tile now. </key>
+	<string>Aktuálny počet vašich dlaždíc: %d</string>
+	<key>Request Products failed,please try later.</key>
+	<string>Nepodarilo sa vyžiadať produkty, skúste to znova neskôr.</string>
+	<key>products loading...</key>
+	<string>načítavajú sa produkty...</string>
+	<key>You have got %d tiles</key>
+	<string>Dlaždice, ktoré máte: %d</string>
+	<key>or purchase some below.</key>
+	<string>alebo si kúpte z tých nižšie.</string>
+	<key>Purchase product failed.</key>
+	<string>Zakúpenie produktu sa nepodarilo.</string>
+	<key>Shuffle</key>
+	<string>Náhodne</string>
+	<key>Wishes</key>
+	<string>Želania</string>
+	<key>ShareWish</key>
+	<string>ShareWish</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Pianové dlaždice</string>
+	<key>New-User Award!</key>
+	<string>Cena novému používateľov!</string>
+	<key>Diamonds</key>
+	<string>Dlaždice</string>
+	<key>PlayOnTips</key>
+	<string>Ak chcete pokračovať, hrajte hru Tiles.</string>
+	<key>BoostStartTips</key>
+	<string>Ak chcete nazbierať %d dlaždíc, hrajte hru Tiles.</string>
+	<key>Watch video and get bonus!</key>
+	<string>Watch video and get bonus!</string>
+	<key>Get it now</key>
+	<string>Get it now</string>
+	<key>Best Wishes</key>
+	<string>Best Wishes</string>
+	<key>share</key>
+	<string>Zdieľať</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Happy Chinese New Year! </string>
+	<key>NewYearModeDesc</key>
+	<string>Mode will end by 03-05 24:00.Piano Tiles wishes you all the best!</string>
+</dict>
+</plist>

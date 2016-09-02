@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>Bonne année</string>
+	<key>Piano Tiles_bacup</key>
+	<string>Ne touchez le carrelage blanc (carreaux de Piano)</string>
+	<key>Piano Tiles</key>
+	<string>Piano Tiles (Don&apos;t tap the white tile)</string>
+	<key>Classic</key>
+	<string>Classique</string>
+	<key>Arcade</key>
+	<string>Arcade</string>
+	<key>Arcade - 2</key>
+	<string>A|r|c|a|d|e</string>
+	<key>Zen</key>
+	<string>Zen</string>
+	<key>Rush</key>
+	<string>Rush</string>
+	<key>Relay</key>
+	<string>Relais</string>
+	<key>More</key>
+	<string>Plus d&apos;options</string>
+	<key>Leaderboard</key>
+	<string>Classements</string>
+	<key>Rate</key>
+	<string>Évaluer</string>
+	<key>More Game</key>
+	<string>Plus de jeux</string>
+	<key>More Games</key>
+	<string>Plus de jeux</string>
+	<key>Setting</key>
+	<string>Paramètres</string>
+	<key>Failed!</key>
+	<string>Échoué!</string>
+	<key>Classic Mode</key>
+	<string>Mode Classique</string>
+	<key>Arcade Mode</key>
+	<string>Mode Arcade</string>
+	<key>Zen Mode</key>
+	<string>Mode Zen</string>
+	<key>Rush Mode</key>
+	<string>Mode Rush</string>
+	<key>Relay Mode</key>
+	<string>Mode Relais</string>
+	<key>NEW BEST</key>
+	<string>NOUVEAU RECORD</string>
+	<key>BEST</key>
+	<string>MEILLEUR</string>
+	<key>Again</key>
+	<string>Réessayer</string>
+	<key>Share</key>
+	<string>Partager</string>
+	<key>Exit</key>
+	<string>Quitter</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s! %s %s!! Génial ! Qui peut battre mes scores @PianoTiles</string>
+	<key>pts</key>
+	<string>Points</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>Impossible d&apos;envoyer à Facebook. Vous n&apos;avez aucune connexion internet, ou vous n&apos;avez pas un compte Facebook associé avec ce périphérique</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Piano Tiles</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>Oups</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>WeChat doit être installé au préalable.</string>
+	<key>Dismiss</key>
+	<string>Rejeter</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>Annuler</string>
+	<key>Save</key>
+	<string>Enregistrer</string>
+	<key>Time Out</key>
+	<string>Time Out</string>
+	<key>Tutorial: ON</key>
+	<string>Tutoriel: OUI</string>
+	<key>Tutorial: OFF</key>
+	<string>Tutoriel: NON</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Ne touchez pas les carreaux blancs!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Tapez sur les carreaux noirs plus bas 50 fois plus vite que vous le pouvez.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Tapez sur les carreaux noirs plus bas 50 fois plus vite que vous le pouvez.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Touchez les carreaux noirs les plus bas sans en rater aucun.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Touchez les carreaux noirs les plus bas sans en rater aucun.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Tapez sur les carreaux noirs plus bas autant de fois que vous le pouvez en 30 secondes.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Tapez sur les carreaux noirs plus bas autant de fois que vous le pouvez en 15 secondes.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>Vous avez 10s pour taper les plus bas carreaux noirs 50 fois. Réussissait, et vous obtiendrez 10s pour essayer à nouveau.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>Vous avez 8s pour taper les plus bas carreaux noirs 50 fois. Réussissait, et vous obtiendrez 8s pour essayer à nouveau.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>Vous avez 12s pour taper les plus bas carreaux noirs 50 fois. Réussissait, et vous obtiendrez 12s pour essayer à nouveau.</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Évaluez-nous si vous aimez ce jeu.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Évaluez-nous si vous aimez cette nouvelle version.</string>
+	<key>Later</key>
+	<string>Plus tard</string>
+	<key>toRate</key>
+	<string>Évaluer</string>
+	<key>Screenshot save failed!</key>
+	<string>Impossible d&apos;enregistrer la capture d&apos;écran</string>
+	<key>Screenshot Saved!</key>
+	<string>Capture d&apos;écran enregistrée!</string>
+	<key>Start</key>
+	<string>Démarrer</string>
+	<key>Sound: Piano</key>
+	<string>Son : Piano</string>
+	<key>Sound: Default</key>
+	<string>Son : Par défaut</string>
+	<key>Sound: OFF</key>
+	<string>Son: NON</string>
+	<key>Sound: Typewriter</key>
+	<string>Son: Machine à écrire</string>
+	<key>Sound: Guitar</key>
+	<string>Son: Guitare</string>
+	<key>Back</key>
+	<string>Précédent</string>
+	<key>Remove Ad</key>
+	<string>Supprimer les annonces</string>
+	<key>Tiles Movement</key>
+	<string>Mouvement de carreaux</string>
+	<key>Rest Reminder</key>
+	<string>Rappel de repos</string>
+	<key>Remove Ad Forever</key>
+	<string>Supprimer les publicités pour toujours</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Ne coûte que $ 0,99 USD</string>
+	<key>Remove</key>
+	<string>Supprimer</string>
+	<key>Restore</key>
+	<string>Restaurer</string>
+	<key>Faster</key>
+	<string>Rapide</string>
+	<key>Smoother</key>
+	<string>Régulier</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Être régulier est fortement recommandé.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Cette option affecte uniquement le mouvement dans les modes classique, Zen et Relais.</string>
+	<key>Zero to disable reminder.</key>
+	<string>La valeur zéro pour désactiver le rappel.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Nous vous rappelons de prendre un repos chaque nombre spécifié de jeux.</string>
+	<key>Take a break!</key>
+	<string>Faites une pause !</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Vous pouvez personnaliser ou fermez cette fenêtre dans &apos;Menu principal&apos; -&gt; &apos;Plus&apos; -&gt; &apos;Rappel du reste&apos;.</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Achat de suppression de la pub échoué</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Achat de suppression de la pub réussie!</string>
+	<key>Congratulations</key>
+	<string>Félicitations</string>
+	<key>About</key>
+	<string>À propos</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Suivez-nous pour obtenir les dernières nouvelles sur nos jeux.</string>
+	<key>Plus</key>
+	<string>Pro</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Reverse</key>
+	<string>Inversé</string>
+	<key>Slower</key>
+	<string>Lent</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Tap Animation: ON</key>
+	<string>Paramètres: ON</string>
+	<key>Tap Animation: OFF</key>
+	<string>Paramètres: OFF</string>
+	<key>Loading...</key>
+	<string>Chargement ...</string>
+	<key>No Message</key>
+	<string>Aucun message dès maintenant</string>
+	<key>Check it out</key>
+	<string>Vérifier dehors</string>
+	<key>Are you sure to quit?</key>
+	<string>Êtes-vous certain de vouloir quitter?</string>
+	<key>End Game</key>
+	<string>Fin du jeu</string>
+	<key>Play On</key>
+	<string>Continuer</string>
+	<key>Shut Down</key>
+	<string>Arrêter</string>
+	<key>No</key>
+	<string>Non</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Impossible de se connecter au service de jeu Google, voulez-vous de désactiver la connexion automatique?</string>
+	<key>Ad Removed</key>
+	<string>Annonce retirée</string>
+	<key>Reset All</key>
+	<string>Réinitialiser tout</string>
+	<key>Ad Options</key>
+	<string>Ajouter des options</string>
+	<key>Banner</key>
+	<string>Bannière</string>
+	<key>Popup</key>
+	<string>Pop-up</string>
+	<key>About Ad iOS</key>
+	<string>1. Aucune annonce si vous achetez le retrait; 
+2. Les annonces sont affichées en bas; 
+3. Les annonces Popup apparaissent uniquement à la fin du jeu; 
+Nous vous recommandons d&apos;utiliser les Popup en Arcade et se précipiter pour éviter de toucher accidentellement les annonces et d&apos;améliorer les problèmes de lag.</string>
+	<key>About Ad Android</key>
+	<string>1. Les annonces sont affichées en bas; 
+2 Les annonces Popup apparaissent à la fin du jeu;
+3. Les annonces Popup apparaissent uniquement à la fin du jeu; 
+Nous vous recommandons d&apos;utiliser les Popup en Arcade et se précipiter pour éviter de toucher accidentellement les annonces et d&apos;améliorer les problèmes de lag.</string>
+	<key>Never Show Again</key>
+	<string>Ne plus jamais montrer</string>
+	<key>Preview</key>
+	<string>Aperçu</string>
+	<key>Theme</key>
+	<string>Thème</string>
+	<key>Moments</key>
+	<string>Moments</string>
+	<key>Arcade+</key>
+	<string>Arcade+</string>
+	<key>Arcade+ Mode</key>
+	<string>Mode Arcade+</string>
+	<key>Lightning</key>
+	<string>Foudre</string>
+	<key>Bomb</key>
+	<string>Bombe</string>
+	<key>Double</key>
+	<string>Double</string>
+	<key>Tiles Size</key>
+	<string>Taille de carreaux</string>
+	<key>Language</key>
+	<string>Langue</string>
+	<key>Confirm</key>
+	<string>OK</string>
+	<key>Community</key>
+	<string>Communauté</string>
+	<key>Challenge</key>
+	<string>Défis</string>
+	<key>Friends</key>
+	<string>Amis</string>
+	<key>Global</key>
+	<string>Mondial</string>
+	<key>Songs</key>
+	<string>Chansons</string>
+	<key>Profile</key>
+	<string>Profil</string>
+	<key>Log in</key>
+	<string>Se connecter</string>
+	<key>Push Notification</key>
+	<string>Notifications push</string>
+	<key>Restore Purchases</key>
+	<string>Restaurer achats</string>
+	<key>Tiles Collected</key>
+	<string>Tuiles collectées</string>
+	<key>Games Played</key>
+	<string>Parties jouées</string>
+	<key>Best Score</key>
+	<string>Meilleur score</string>
+	<key>Reset</key>
+	<string>Réinitialiser</string>
+	<key>Bilayer</key>
+	<string>Double couche</string>
+	<key>Mist</key>
+	<string>Brouillard</string>
+	<key>Unstable</key>
+	<string>Instable</string>
+	<key>Rotatory</key>
+	<string>Rotatoire</string>
+	<key>Shaky</key>
+	<string>Séisme</string>
+	<key>Cloudy</key>
+	<string>Nuageux</string>
+	<key>Shift</key>
+	<string>Décaler</string>
+	<key>Change</key>
+	<string>Changer</string>
+	<key>Unlock</key>
+	<string>Déverrouiller</string>
+	<key>Unlock multi-color</key>
+	<string>Debloquer multicolore</string>
+	<key>Not enough notes</key>
+	<string>Pas assez de notes</string>
+	<key>More Notes Needed</key>
+	<string>Plus de notes nécessaires</string>
+	<key>Playlist</key>
+	<string>Playlist</string>
+	<key>me</key>
+	<string>moi</string>
+	<key>Shuffle</key>
+	<string>Aléatoire</string>
+	<key>Wishes</key>
+	<string>vœux</string>
+	<key>ShareWish</key>
+	<string>Partage</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Piano Tiles</string>
+	<key>New-User Award!</key>
+	<string>Nouveau Prix à gagner!</string>
+	<key>Diamonds</key>
+	<string>Tuiles</string>
+	<key>PlayOnTips</key>
+	<string>utilisez les tuiles pour continuer!</string>
+	<key>BoostStartTips</key>
+	<string>Cliquez ici pour un debut excitant!</string>
+	<key>Daily Check-in Award!</key>
+	<string>Prix d&apos;enregistrement quotidien!</string>
+	<key>Get revived! Get higher!</key>
+	<string>Reprenez!obtenez plus!</string>
+	<key>Come on! U can do better!</key>
+	<string>Allez! vous pourriez faire mieux!</string>
+	<key>Go for another new best!</key>
+	<string>Foncez pour un nouveau record!</string>
+	<key>Faster! Faster! Faster!</key>
+	<string>Plus vite !Plus vite!</string>
+	<key>One more shot!</key>
+	<string>Un coup de plus!</string>
+	<key>Superman never die!</key>
+	<string>Superman ne meurt jamais!</string>
+	<key>Never give up!</key>
+	<string>N&apos;abandonnez jamais!</string>
+	<key>Break your limit!</key>
+	<string>Cassez vos limites!</string>
+	<key>Give up</key>
+	<string>abandonner</string>
+	<key>Lucky Notes</key>
+	<string>les notes chanceuses</string>
+	<key>Feedback</key>
+	<string>Commentaires</string>
+	<key>Update</key>
+	<string>mettre à jour</string>
+	<key>New Version is Coming</key>
+	<string>Nouvelle version en approche</string>
+	<key>update to new version and win 1000 rewards</key>
+	<string>Mettez à jour votre jeux et gagnez 1000 récompenses</string>
+	<key>DoubleScore</key>
+	<string>Double Prix</string>
+	<key>Watch video and get bonus!</key>
+	<string>Regardez la vidéo et obtenez des bonus! </string>
+	<key>Get it now</key>
+	<string>Prenez -les maintenant !</string>
+	<key>Best Wishes</key>
+	<string>Vœux</string>
+	<key>share</key>
+	<string>Partager</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>Don&apos;t tap the white tile - Chinese New Year</key>
+	<string>Don&apos;t tap the white tile - Chinese New Year</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Joyeux Nouvel An chinois!</string>
+	<key>NewYearModeDesc</key>
+	<string>Le mode finira le 03-05 24:00. Piano Tiles vous souhaite des meilleurs voeux !</string>
+	<key>The Dress</key>
+	<string>RobeBleuEtNoir</string>
+	<key>Event</key>
+	<string>événement</string>
+	<key>Like us &amp; play without using notes</key>
+	<string>Cliquez sur J&apos;aime et continuez à jouer</string>
+	<key>Piano &amp; no clap</key>
+	<string>Piano et pas d&apos;applaudissement</string>
+	<key>Daily Bonus</key>
+	<string>Bonus quotidien</string>
+	<key>Coins</key>
+	<string>Pièces de monnaie</string>
+	<key>Watch videos to earn coins</key>
+	<string>Gagner des pièces</string>
+	<key>Watch Now</key>
+	<string>Gagner</string>
+	<key>You have got 500 coins</key>
+	<string>Vous avez 500 pièces</string>
+	<key>Watch videos to earn more coins</key>
+	<string>Gagner plus de pièces</string>
+	<key>Keep earning</key>
+	<string>Gagner</string>
+	<key>No videos available, try again later</key>
+	<string>Aucune vidéos disponibles, réessayez plus tard</string>
+	<key>Insufficient coins. Watch videos to earn coins</key>
+	<string>Pièces insuffisantes. Regardez des vidéos pour gagner des pièces</string>
+	<key>Insufficient Coins</key>
+	<string>Pièces insuffisantes</string>
+	<key>Earn 500 coins for Free</key>
+	<string>Gagnez 500 pièces</string>
+	<key>Installed successfully!</key>
+	<string>Installé avec succès!</string>
+	<key>Skip</key>
+	<string>Sauter</string>
+	<key>TRY</key>
+	<string>essayer</string>
+</dict>
+</plist>

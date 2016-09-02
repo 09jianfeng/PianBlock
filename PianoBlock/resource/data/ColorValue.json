@@ -1,0 +1,247 @@
+[
+  {
+    "id": "color_1",
+    "index": 1,
+    "color_red": 254,
+    "color_green": 214,
+    "color_blue": 49
+},
+  {
+    "id": "color_2",
+    "index": 2,
+    "color_red": 253,
+    "color_green": 177,
+    "color_blue": 43
+},
+{
+    "id": "color_3",
+    "index": 3,
+    "color_red": 253,
+    "color_green": 127,
+    "color_blue": 35
+},
+{
+    "id": "color_4",
+    "index": 4,
+    "color_red": 252,
+    "color_green": 90,
+    "color_blue": 42
+},
+{
+    "id": "color_5",
+    "index": 5,
+    "color_red": 252,
+    "color_green": 43,
+    "color_blue": 69
+},
+{
+    "id": "color_6",
+    "index": 6,
+    "color_red": 226,
+    "color_green": 12,
+    "color_blue": 57
+},
+{
+    "id": "color_7",
+    "index": 7,
+    "color_red": 226,
+    "color_green": 17,
+    "color_blue": 103
+},
+{
+    "id": "color_8",
+    "index": 8,
+    "color_red": 189,
+    "color_green": 14,
+    "color_blue": 102
+},
+{
+    "id": "color_9",
+    "index": 9,
+    "color_red": 214,
+    "color_green": 26,
+    "color_blue": 176
+},
+{
+    "id": "color_10",
+    "index": 10,
+    "color_red": 209,
+    "color_green": 43,
+    "color_blue": 251
+},
+{
+    "id": "color_11",
+    "index": 11,
+    "color_red": 152,
+    "color_green": 47,
+    "color_blue": 251
+},
+{
+    "id": "color_12",
+    "index": 12,
+    "color_red": 114,
+    "color_green": 64,
+    "color_blue": 251
+},
+{
+    "id": "color_13",
+    "index": 13,
+    "color_red": 77,
+    "color_green": 63,
+    "color_blue": 251
+},
+{
+    "id": "color_14",
+    "index": 14,
+    "color_red": 26,
+    "color_green": 84,
+    "color_blue": 180
+},
+{
+    "id": "color_15",
+    "index": 15,
+    "color_red": 42,
+    "color_green": 179,
+    "color_blue": 252
+},
+{
+    "id": "color_16",
+    "index": 16,
+    "color_red": 45,
+    "color_green": 209,
+    "color_blue": 227
+},
+{
+    "id": "color_17",
+    "index": 17,
+    "color_red": 46,
+    "color_green": 253,
+    "color_blue": 180
+},
+{
+    "id": "color_18",
+    "index": 18,
+    "color_red": 46,
+    "color_green": 253,
+    "color_blue": 144
+},
+{
+    "id": "color_19",
+    "index": 19,
+    "color_red": 31,
+    "color_green": 202,
+    "color_blue": 106
+},
+{
+    "id": "color_20",
+    "index": 20,
+    "color_red": 39,
+    "color_green": 176,
+    "color_blue": 41
+},
+{
+    "id": "color_21",
+    "index": 21,
+    "color_red": 118,
+    "color_green": 227,
+    "color_blue": 43
+},
+{
+    "id": "color_22",
+    "index": 22,
+    "color_red": 144,
+    "color_green": 253,
+    "color_blue": 52
+},
+{
+    "id": "color_23",
+    "index": 23,
+    "color_red": 234,
+    "color_green": 232,
+    "color_blue": 50
+},
+{
+    "id": "color_24",
+    "index": 24,
+    "color_red": 253,
+    "color_green": 177,
+    "color_blue": 42
+},
+{
+    "id": "color_25",
+    "index": 25,
+    "color_red": 227,
+    "color_green": 148,
+    "color_blue": 35
+},
+{
+    "id": "color_26",
+    "index": 26,
+    "color_red": 190,
+    "color_green": 123,
+    "color_blue": 28
+},
+{
+    "id": "color_27",
+    "index": 27,
+    "color_red": 136,
+    "color_green": 76,
+    "color_blue": 15
+},
+{
+    "id": "color_28",
+    "index": 28,
+    "color_red": 136,
+    "color_green": 53,
+    "color_blue": 34
+},
+{
+    "id": "color_29",
+    "index": 29,
+    "color_red": 158,
+    "color_green": 36,
+    "color_blue": 14
+},
+{
+    "id": "color_30",
+    "index": 30,
+    "color_red": 227,
+    "color_green": 77,
+    "color_blue": 27
+},
+{
+    "id": "color_31",
+    "index": 31,
+    "color_red": 252,
+    "color_green": 102,
+    "color_blue": 33
+},
+{
+    "id": "color_32",
+    "index": 32,
+    "color_red": 190,
+    "color_green": 171,
+    "color_blue": 135
+},
+{
+    "id": "color_33",
+    "index": 33,
+    "color_red": 126,
+    "color_green": 140,
+    "color_blue": 120
+},
+{
+    "id": "color_34",
+    "index": 34,
+    "color_red": 82,
+    "color_green": 102,
+    "color_blue": 86
+},
+{
+    "id": "color_35",
+    "index": 35,
+    "color_red": 32,
+    "color_green": 32,
+    "color_blue": 32
+}
+]

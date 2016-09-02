@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1247A1A73A7FC7B60E24EBC0 /* libPods-PianoBlock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F0DDD16E2D2FFC6EA3ED89 /* libPods-PianoBlock.a */; };
+		2E2EBA861D781A8500550761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBA851D781A8500550761 /* main.m */; };
+		2E2EBA891D781A8500550761 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBA881D781A8500550761 /* AppDelegate.m */; };
+		2E2EBA8F1D781A8500550761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBA8D1D781A8500550761 /* Main.storyboard */; };
+		2E2EBA911D781A8500550761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBA901D781A8500550761 /* Assets.xcassets */; };
+		2E2EBA941D781A8500550761 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EBA921D781A8500550761 /* LaunchScreen.storyboard */; };
+		2E2EBA9F1D781A8500550761 /* PianoBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBA9E1D781A8500550761 /* PianoBlockTests.m */; };
+		2E2EBAAA1D781A8500550761 /* PianoBlockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAA91D781A8500550761 /* PianoBlockUITests.m */; };
+		2E2EBAC11D7824AC00550761 /* GameFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC01D7824AC00550761 /* GameFactory.m */; };
+		2E2EBAC71D7825BC00550761 /* ConcreteGameClassicMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */; };
+		2E2EBACA1D78291C00550761 /* ConcreteGameStreetMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */; };
+		2E2EBAD01D78311D00550761 /* GamePlayingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBACF1D78311D00550761 /* GamePlayingCollectionViewController.m */; };
+		2EB309D71D791556006C7D9F /* GameScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309D61D791555006C7D9F /* GameScreenView.m */; };
+		2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB89C111D7860A800870536 /* OpenIDFA.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E2EBA9B1D781A8500550761 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E2EBA791D781A8500550761 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E2EBA801D781A8500550761;
+			remoteInfo = PianoBlock;
+		};
+		2E2EBAA61D781A8500550761 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E2EBA791D781A8500550761 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E2EBA801D781A8500550761;
+			remoteInfo = PianoBlock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B632DA8E5A9256EEE0FCFFF /* Pods-PianoBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoBlock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PianoBlock/Pods-PianoBlock.debug.xcconfig"; sourceTree = "<group>"; };
+		2E2EBA811D781A8500550761 /* PianoBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PianoBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2EBA851D781A8500550761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E2EBA871D781A8500550761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E2EBA881D781A8500550761 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E2EBA8A1D781A8500550761 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E2EBA8E1D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E2EBA901D781A8500550761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E2EBA931D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E2EBA951D781A8500550761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2EBA9A1D781A8500550761 /* PianoBlockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PianoBlockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2EBA9E1D781A8500550761 /* PianoBlockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PianoBlockTests.m; sourceTree = "<group>"; };
+		2E2EBAA01D781A8500550761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2EBAA51D781A8500550761 /* PianoBlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PianoBlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2EBAA91D781A8500550761 /* PianoBlockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PianoBlockUITests.m; sourceTree = "<group>"; };
+		2E2EBAAB1D781A8500550761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2EBABF1D7824AC00550761 /* GameFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFactory.h; sourceTree = "<group>"; };
+		2E2EBAC01D7824AC00550761 /* GameFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFactory.m; sourceTree = "<group>"; };
+		2E2EBAC21D78252500550761 /* AbstractGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGame.h; sourceTree = "<group>"; };
+		2E2EBAC51D7825BC00550761 /* ConcreteGameClassicMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteGameClassicMode.h; sourceTree = "<group>"; };
+		2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameClassicMode.m; sourceTree = "<group>"; };
+		2E2EBAC81D78291C00550761 /* ConcreteGameStreetMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteGameStreetMode.h; sourceTree = "<group>"; };
+		2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameStreetMode.m; sourceTree = "<group>"; };
+		2E2EBACE1D78311D00550761 /* GamePlayingCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayingCollectionViewController.h; sourceTree = "<group>"; };
+		2E2EBACF1D78311D00550761 /* GamePlayingCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayingCollectionViewController.m; sourceTree = "<group>"; };
+		2EB309D51D791555006C7D9F /* GameScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScreenView.h; sourceTree = "<group>"; };
+		2EB309D61D791555006C7D9F /* GameScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScreenView.m; sourceTree = "<group>"; };
+		2EB89C101D7860A800870536 /* OpenIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenIDFA.h; sourceTree = "<group>"; };
+		2EB89C111D7860A800870536 /* OpenIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenIDFA.m; sourceTree = "<group>"; };
+		605C849BA5D13E9D78E61975 /* Pods-PianoBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoBlock.release.xcconfig"; path = "Pods/Target Support Files/Pods-PianoBlock/Pods-PianoBlock.release.xcconfig"; sourceTree = "<group>"; };
+		B2F0DDD16E2D2FFC6EA3ED89 /* libPods-PianoBlock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoBlock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E2EBA7E1D781A8500550761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1247A1A73A7FC7B60E24EBC0 /* libPods-PianoBlock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBA971D781A8500550761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBAA21D781A8500550761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E2EBA781D781A8500550761 = {
+			isa = PBXGroup;
+			children = (
+				2E2EBA831D781A8500550761 /* PianoBlock */,
+				2E2EBA9D1D781A8500550761 /* PianoBlockTests */,
+				2E2EBAA81D781A8500550761 /* PianoBlockUITests */,
+				2E2EBA821D781A8500550761 /* Products */,
+				ECA141CC04BCD0DFD783653F /* Pods */,
+				89544C2865D0E42883E3A07E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E2EBA821D781A8500550761 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBA811D781A8500550761 /* PianoBlock.app */,
+				2E2EBA9A1D781A8500550761 /* PianoBlockTests.xctest */,
+				2E2EBAA51D781A8500550761 /* PianoBlockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E2EBA831D781A8500550761 /* PianoBlock */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBAB81D781E8E00550761 /* Classes */,
+				2E2EBA871D781A8500550761 /* AppDelegate.h */,
+				2E2EBA881D781A8500550761 /* AppDelegate.m */,
+				2E2EBA8A1D781A8500550761 /* ViewController.h */,
+				2E2EBA8D1D781A8500550761 /* Main.storyboard */,
+				2E2EBA901D781A8500550761 /* Assets.xcassets */,
+				2E2EBA921D781A8500550761 /* LaunchScreen.storyboard */,
+				2E2EBA951D781A8500550761 /* Info.plist */,
+				2E2EBA841D781A8500550761 /* Supporting Files */,
+			);
+			path = PianoBlock;
+			sourceTree = "<group>";
+		};
+		2E2EBA841D781A8500550761 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBA851D781A8500550761 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E2EBA9D1D781A8500550761 /* PianoBlockTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBA9E1D781A8500550761 /* PianoBlockTests.m */,
+				2E2EBAA01D781A8500550761 /* Info.plist */,
+			);
+			path = PianoBlockTests;
+			sourceTree = "<group>";
+		};
+		2E2EBAA81D781A8500550761 /* PianoBlockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBAA91D781A8500550761 /* PianoBlockUITests.m */,
+				2E2EBAAB1D781A8500550761 /* Info.plist */,
+			);
+			path = PianoBlockUITests;
+			sourceTree = "<group>";
+		};
+		2E2EBAB81D781E8E00550761 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2EB89C0F1D78608800870536 /* DeviceInfo */,
+				2E2EBAB91D781EC500550761 /* AudioHandler */,
+				2E2EBABC1D781EF700550761 /* View */,
+				2E2EBABD1D781F0300550761 /* Model */,
+				2E2EBABB1D781EEE00550761 /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2E2EBAB91D781EC500550761 /* AudioHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AudioHandler;
+			sourceTree = "<group>";
+		};
+		2E2EBABB1D781EEE00550761 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBACE1D78311D00550761 /* GamePlayingCollectionViewController.h */,
+				2E2EBACF1D78311D00550761 /* GamePlayingCollectionViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2E2EBABC1D781EF700550761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EB309D51D791555006C7D9F /* GameScreenView.h */,
+				2EB309D61D791555006C7D9F /* GameScreenView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E2EBABD1D781F0300550761 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBABE1D78233C00550761 /* Game Factory */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2E2EBABE1D78233C00550761 /* Game Factory */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBABF1D7824AC00550761 /* GameFactory.h */,
+				2E2EBAC01D7824AC00550761 /* GameFactory.m */,
+				2E2EBAC21D78252500550761 /* AbstractGame.h */,
+				2E2EBAC51D7825BC00550761 /* ConcreteGameClassicMode.h */,
+				2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */,
+				2E2EBAC81D78291C00550761 /* ConcreteGameStreetMode.h */,
+				2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */,
+			);
+			name = "Game Factory";
+			sourceTree = "<group>";
+		};
+		2EB89C0F1D78608800870536 /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2EB89C101D7860A800870536 /* OpenIDFA.h */,
+				2EB89C111D7860A800870536 /* OpenIDFA.m */,
+			);
+			name = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		89544C2865D0E42883E3A07E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F0DDD16E2D2FFC6EA3ED89 /* libPods-PianoBlock.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECA141CC04BCD0DFD783653F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B632DA8E5A9256EEE0FCFFF /* Pods-PianoBlock.debug.xcconfig */,
+				605C849BA5D13E9D78E61975 /* Pods-PianoBlock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E2EBA801D781A8500550761 /* PianoBlock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2EBAAE1D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlock" */;
+			buildPhases = (
+				E716BDB92ADFB25A58071A24 /* [CP] Check Pods Manifest.lock */,
+				2E2EBA7D1D781A8500550761 /* Sources */,
+				2E2EBA7E1D781A8500550761 /* Frameworks */,
+				2E2EBA7F1D781A8500550761 /* Resources */,
+				ADFAB6D95EC3D3208708E4DB /* [CP] Embed Pods Frameworks */,
+				256D9441CA05C5C9A7F383D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PianoBlock;
+			productName = PianoBlock;
+			productReference = 2E2EBA811D781A8500550761 /* PianoBlock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E2EBA991D781A8500550761 /* PianoBlockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2EBAB11D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlockTests" */;
+			buildPhases = (
+				2E2EBA961D781A8500550761 /* Sources */,
+				2E2EBA971D781A8500550761 /* Frameworks */,
+				2E2EBA981D781A8500550761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E2EBA9C1D781A8500550761 /* PBXTargetDependency */,
+			);
+			name = PianoBlockTests;
+			productName = PianoBlockTests;
+			productReference = 2E2EBA9A1D781A8500550761 /* PianoBlockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E2EBAA41D781A8500550761 /* PianoBlockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2EBAB41D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlockUITests" */;
+			buildPhases = (
+				2E2EBAA11D781A8500550761 /* Sources */,
+				2E2EBAA21D781A8500550761 /* Frameworks */,
+				2E2EBAA31D781A8500550761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E2EBAA71D781A8500550761 /* PBXTargetDependency */,
+			);
+			name = PianoBlockUITests;
+			productName = PianoBlockUITests;
+			productReference = 2E2EBAA51D781A8500550761 /* PianoBlockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E2EBA791D781A8500550761 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "陈建峰";
+				TargetAttributes = {
+					2E2EBA801D781A8500550761 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RUDNP34A78;
+					};
+					2E2EBA991D781A8500550761 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2E2EBA801D781A8500550761;
+					};
+					2E2EBAA41D781A8500550761 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2E2EBA801D781A8500550761;
+					};
+				};
+			};
+			buildConfigurationList = 2E2EBA7C1D781A8500550761 /* Build configuration list for PBXProject "PianoBlock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E2EBA781D781A8500550761;
+			productRefGroup = 2E2EBA821D781A8500550761 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E2EBA801D781A8500550761 /* PianoBlock */,
+				2E2EBA991D781A8500550761 /* PianoBlockTests */,
+				2E2EBAA41D781A8500550761 /* PianoBlockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E2EBA7F1D781A8500550761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2EBA941D781A8500550761 /* LaunchScreen.storyboard in Resources */,
+				2E2EBA911D781A8500550761 /* Assets.xcassets in Resources */,
+				2E2EBA8F1D781A8500550761 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBA981D781A8500550761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBAA31D781A8500550761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		256D9441CA05C5C9A7F383D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PianoBlock/Pods-PianoBlock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADFAB6D95EC3D3208708E4DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PianoBlock/Pods-PianoBlock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E716BDB92ADFB25A58071A24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E2EBA7D1D781A8500550761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB309D71D791556006C7D9F /* GameScreenView.m in Sources */,
+				2E2EBA891D781A8500550761 /* AppDelegate.m in Sources */,
+				2E2EBAC11D7824AC00550761 /* GameFactory.m in Sources */,
+				2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */,
+				2E2EBAD01D78311D00550761 /* GamePlayingCollectionViewController.m in Sources */,
+				2E2EBAC71D7825BC00550761 /* ConcreteGameClassicMode.m in Sources */,
+				2E2EBACA1D78291C00550761 /* ConcreteGameStreetMode.m in Sources */,
+				2E2EBA861D781A8500550761 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBA961D781A8500550761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2EBA9F1D781A8500550761 /* PianoBlockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E2EBAA11D781A8500550761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2EBAAA1D781A8500550761 /* PianoBlockUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E2EBA9C1D781A8500550761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E2EBA801D781A8500550761 /* PianoBlock */;
+			targetProxy = 2E2EBA9B1D781A8500550761 /* PBXContainerItemProxy */;
+		};
+		2E2EBAA71D781A8500550761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E2EBA801D781A8500550761 /* PianoBlock */;
+			targetProxy = 2E2EBAA61D781A8500550761 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E2EBA8D1D781A8500550761 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2EBA8E1D781A8500550761 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E2EBA921D781A8500550761 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2EBA931D781A8500550761 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E2EBAAC1D781A8500550761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E2EBAAD1D781A8500550761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E2EBAAF1D781A8500550761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B632DA8E5A9256EEE0FCFFF /* Pods-PianoBlock.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RUDNP34A78;
+				INFOPLIST_FILE = PianoBlock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E2EBAB01D781A8500550761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605C849BA5D13E9D78E61975 /* Pods-PianoBlock.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RUDNP34A78;
+				INFOPLIST_FILE = PianoBlock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E2EBAB21D781A8500550761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PianoBlockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoBlock.app/PianoBlock";
+			};
+			name = Debug;
+		};
+		2E2EBAB31D781A8500550761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PianoBlockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoBlock.app/PianoBlock";
+			};
+			name = Release;
+		};
+		2E2EBAB51D781A8500550761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PianoBlockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PianoBlock;
+			};
+			name = Debug;
+		};
+		2E2EBAB61D781A8500550761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PianoBlockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = feng.PianoBlockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PianoBlock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E2EBA7C1D781A8500550761 /* Build configuration list for PBXProject "PianoBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2EBAAC1D781A8500550761 /* Debug */,
+				2E2EBAAD1D781A8500550761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2EBAAE1D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2EBAAF1D781A8500550761 /* Debug */,
+				2E2EBAB01D781A8500550761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2EBAB11D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2EBAB21D781A8500550761 /* Debug */,
+				2E2EBAB31D781A8500550761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2EBAB41D781A8500550761 /* Build configuration list for PBXNativeTarget "PianoBlockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2EBAB51D781A8500550761 /* Debug */,
+				2E2EBAB61D781A8500550761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E2EBA791D781A8500550761 /* Project object */;
+}

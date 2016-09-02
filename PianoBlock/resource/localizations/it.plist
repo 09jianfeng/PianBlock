@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>Buon anno</string>
+	<key>Piano Tiles</key>
+	<string>Piano Tiles (Don&apos;t tap the white tile)</string>
+	<key>Classic</key>
+	<string>Classico</string>
+	<key>Arcade</key>
+	<string>Arcade</string>
+	<key>Arcade - 2</key>
+	<string>A|r|c|a|d|e</string>
+	<key>Zen</key>
+	<string>Zen</string>
+	<key>Rush</key>
+	<string>Corsa</string>
+	<key>Relay</key>
+	<string>Staffetta</string>
+	<key>More</key>
+	<string>Altro</string>
+	<key>Leaderboard</key>
+	<string>Classifica</string>
+	<key>Rate</key>
+	<string>Vota</string>
+	<key>More Game</key>
+	<string>Piú giochi</string>
+	<key>More Games</key>
+	<string>Più giochi</string>
+	<key>Setting</key>
+	<string>Impostazioni</string>
+	<key>Failed!</key>
+	<string>Mancato!</string>
+	<key>Classic Mode</key>
+	<string>Modalità Classica</string>
+	<key>Arcade Mode</key>
+	<string>Modalità Arcade</string>
+	<key>Zen Mode</key>
+	<string>Modalità Zen</string>
+	<key>Rush Mode</key>
+	<string>Modalità Corsa</string>
+	<key>Relay Mode</key>
+	<string>Modalità Staffetta</string>
+	<key>NEW BEST</key>
+	<string>Nuovo Record</string>
+	<key>BEST</key>
+	<string>Record</string>
+	<key>Again</key>
+	<string>Ancora</string>
+	<key>Share</key>
+	<string>Condividi</string>
+	<key>Exit</key>
+	<string>Esci</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s, %s %s! Chi può battermi a @PianoTiles</string>
+	<key>pts</key>
+	<string>punti</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>L&apos;applicazione al momento non può connettersi a Facebook. Forse non hai un account Facebook associato con questo dispositivo.</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Piano Tiles</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>Oops</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>This cannot be done before you install Wechat.</string>
+	<key>Dismiss</key>
+	<string>Respingi</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>Annulla</string>
+	<key>Save</key>
+	<string>Salva</string>
+	<key>Time Out</key>
+	<string>Time Out</string>
+	<key>Tutorial: ON</key>
+	<string>Tutorial: SI</string>
+	<key>Tutorial: OFF</key>
+	<string>Tutorial: NO</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>Non toccare nessuna casella bianca!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>Schiaccia le caselle nere piú basse e arriva a 25 nel minor tempo possibile.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>Schiaccia le caselle nere piú basse e arriva a 50 nel minor tempo possibile.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>Schiaccia le caselle nere più basse e non mancarne nessuna.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>Schiaccia le casella nere più alte e non mancarne nessuna.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>Schiaccia il maggior numero di caselle nere piú basse in 30 secondi.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>Schiaccia il maggior numero di caselle nere piú basse in 15 secondi.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>Schiaccia le caselle nere piú basse e arriva a 50 in 10&quot;, così avrai altri 10&quot; per altre 50 caselle...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>Schiaccia le caselle nere piú basse e arriva a 50 in 8&quot;, così avrai altri 8&quot; per altre 50 caselle...</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>Schiaccia le caselle nere piú basse e arriva a 50 in 12&quot;, così avrai altri 12&quot; per altre 50 caselle...</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>Rate 5 if you like the game.</string>
+	<key>Rate 5 for new update.</key>
+	<string>Rate 5 for new update.</string>
+	<key>Later</key>
+	<string>Piú tardi</string>
+	<key>toRate</key>
+	<string>Vota</string>
+	<key>Screenshot save failed!</key>
+	<string>Salvataggio dello screenshot fallito!</string>
+	<key>Screenshot Saved!</key>
+	<string>Screenshot Salvato!</string>
+	<key>Start</key>
+	<string>Inizia</string>
+	<key>Sound: Piano</key>
+	<string>Suono: Pianoforte</string>
+	<key>Sound: Default</key>
+	<string>Suono: Default</string>
+	<key>Sound: OFF</key>
+	<string>Suono: NO</string>
+	<key>Sound: Typewriter</key>
+	<string>Suono: Macchina da scrivere</string>
+	<key>Sound: Guitar</key>
+	<string>Suono: Chitarra</string>
+	<key>Back</key>
+	<string>Indietro</string>
+	<key>Remove Ad</key>
+	<string>Rimuovi pubblicità</string>
+	<key>Tiles Movement</key>
+	<string>Movimento delle caselle</string>
+	<key>Rest Reminder</key>
+	<string>Promemoria di riposo</string>
+	<key>Remove Ad Forever</key>
+	<string>Rimuovi la pubblicità per sempre</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>Only Cost USD $0.99.</string>
+	<key>Remove</key>
+	<string>Rimuovi</string>
+	<key>Restore</key>
+	<string>Ripristina</string>
+	<key>Faster</key>
+	<string>Veloce</string>
+	<key>Smoother</key>
+	<string>Fluido</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>Piú fluido è fortemente raccomandato.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>Questa opzione influenza solo le caselle nelle modalità Classica, Zen e Staffetta.</string>
+	<key>Zero to disable reminder.</key>
+	<string>Zero per disattivare promemoria.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>Ricordati di avere una pausa dopo un specificato numero di partite.</string>
+	<key>Take a break!</key>
+	<string>Prendi una pauza!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>Puoi modificare o chiudere questo popup in [Menu Principale] -&gt; [Altro] -&gt; [Promemoria di riposo]. </string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>Rimozione della pubblicità per sempre fallita.</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>Rimozione della pubblicità per sempre avvenuta.</string>
+	<key>Congratulations</key>
+	<string>Congratulazioni</string>
+	<key>About</key>
+	<string>A proposito</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>Seguici per ricevere le ultime notizie dei nostri giochi.</string>
+	<key>Plus</key>
+	<string>Pro</string>
+	<key>Normal</key>
+	<string>Normale</string>
+	<key>Reverse</key>
+	<string>Al contrario</string>
+	<key>Slower</key>
+	<string>Piano</string>
+	<key>Messages</key>
+	<string>Messaggi</string>
+	<key>Tap Animation: ON</key>
+	<string>Notifica: SI</string>
+	<key>Tap Animation: OFF</key>
+	<string>Notifica: NO</string>
+	<key>Loading...</key>
+	<string>Caricamento...</string>
+	<key>No Message</key>
+	<string>Nessun Messaggio</string>
+	<key>Check it out</key>
+	<string>Controlla</string>
+	<key>Are you sure to quit?</key>
+	<string>Sei sicuro di voler uscire?</string>
+	<key>End Game</key>
+	<string>Chiudi</string>
+	<key>Play On</key>
+	<string>Continua</string>
+	<key>Shut Down</key>
+	<string>Fermato</string>
+	<key>No</key>
+	<string>No</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Il servizio di accesso a google è fallita, vorresti disattivare l&apos;auto-login?</string>
+	<key>Ad Removed</key>
+	<string>Pubblicità rimossa</string>
+	<key>Reset All</key>
+	<string>Resetta tutto</string>
+	<key>Ad Options</key>
+	<string>Opzioni pubblicità</string>
+	<key>Banner</key>
+	<string>Banner</string>
+	<key>Popup</key>
+	<string>Popup</string>
+	<key>About Ad iOS</key>
+	<string>1. Nessuna pubblicità se pagamento rimosso;
+2. Mostra sempre pubblicità nel banner;
+3. Pubblicità a popup solo quando finisce la partita;
+È raccomandato di usare il popup in Arcade e Corsa per evitare di toccare le pubblicità inaspettatamente.</string>
+	<key>About Ad Android</key>
+	<string>1. Mostra sempre pubblicità nel banner;
+2. Pubblicità a popup solo quando finisce la partita;
+È raccomandato di usare il popup in Arcade e Corsa per evitare di toccare le pubblicità inaspettatamente.</string>
+	<key>Never Show Again</key>
+	<string>Non mostrare piú</string>
+	<key>Preview</key>
+	<string>Anteprima</string>
+	<key>Theme</key>
+	<string>Tema</string>
+	<key>Moments</key>
+	<string>Moments</string>
+	<key>Arcade+</key>
+	<string>Arcade+</string>
+	<key>Arcade+ Mode</key>
+	<string>Modalità Arcade+</string>
+	<key>Lightning</key>
+	<string>Fulmine</string>
+	<key>Bomb</key>
+	<string>Bomba</string>
+	<key>Double</key>
+	<string>Doppio</string>
+	<key>Tiles Size</key>
+	<string>Grandezza Casella</string>
+	<key>Language</key>
+	<string>Lingua</string>
+	<key>Confirm</key>
+	<string>Fine</string>
+	<key>Friends</key>
+	<string>Amici</string>
+	<key>Community</key>
+	<string>Comunità</string>
+	<key>Challenge</key>
+	<string>Sfide</string>
+	<key>Global</key>
+	<string>Mondiale</string>
+	<key>Songs</key>
+	<string>Canzoni</string>
+	<key>Profile</key>
+	<string>Profilo</string>
+	<key>Bilayer</key>
+	<string>Doppio Strato</string>
+	<key>Mist</key>
+	<string>Nebbia</string>
+	<key>Unstable</key>
+	<string>Instabile</string>
+	<key>Rotatory</key>
+	<string>Rotatorio</string>
+	<key>Shaky</key>
+	<string>Terremoto</string>
+	<key>Cloudy</key>
+	<string>Nuvoloso</string>
+	<key>Shift</key>
+	<string>Muoversi</string>
+	<key>Change</key>
+	<string>Cambiare</string>
+	<key>me</key>
+	<string>lo</string>
+	<key>Shuffle</key>
+	<string>Casuale</string>
+	<key>Wishes</key>
+	<string>auguri</string>
+	<key>ShareWish</key>
+	<string>condividilo</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Piano Tiles</string>
+	<key>New-User Award!</key>
+	<string>New-User Award!</string>
+	<key>Diamonds</key>
+	<string>Tiles</string>
+	<key>PlayOnTips</key>
+	<string>Use Tiles to continue!</string>
+	<key>BoostStartTips</key>
+	<string>Tap here for exciting start!</string>
+	<key>Daily Check-in Award!</key>
+	<string>Daily Check-in Award!</string>
+	<key>Get revived! Get higher!</key>
+	<string>Get revived! Get higher!</string>
+	<key>Come on! U can do better!</key>
+	<string>Come on! U can do better!</string>
+	<key>Go for another new best!</key>
+	<string>Go for another new best!</string>
+	<key>Faster! Faster! Faster!</key>
+	<string>Faster! Faster! Faster!</string>
+	<key>One more shot!</key>
+	<string>One more shot!</string>
+	<key>Superman never die!</key>
+	<string>Superman never die!</string>
+	<key>Never give up!</key>
+	<string>Never give up!</string>
+	<key>Break your limit!</key>
+	<string>Break your limit!</string>
+	<key>Give up</key>
+	<string>Give Up</string>
+	<key>Lucky Notes</key>
+	<string>Lucky Notes</string>
+	<key>Feedback</key>
+	<string>retroazione</string>
+	<key>Update</key>
+	<string>Aggiornamento</string>
+	<key>New Version is Coming</key>
+	<string>La Nuova versione di Arrivo!</string>
+	<key>update to new version and win 1000 rewards</key>
+	<string>Alla Nuova versione aggiornata e vincere un Premio di 1000</string>
+	<key>Watch video and get bonus!</key>
+	<string>Watch video and get bonus!</string>
+	<key>Get it now</key>
+	<string>Get it now</string>
+	<key>Best Wishes</key>
+	<string>Best Wishes</string>
+	<key>share</key>
+	<string>Condividi</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>Happy Chinese New Year! </string>
+	<key>NewYearModeDesc</key>
+	<string>Mode will end by 03-05 24:00.Piano Tiles wishes you all the best!</string>
+	<key>Event</key>
+	<string>evento</string>
+	<key>Daily Bonus</key>
+	<string>Premio giornaliero</string>
+	<key>Coins</key>
+	<string>Denari</string>
+	<key>Watch videos to earn coins</key>
+	<string>Guadagna i denari</string>
+	<key>Watch Now</key>
+	<string>Guarda ora</string>
+	<key>You have got 500 coins</key>
+	<string>Hai ricevuto 500 denari</string>
+	<key>Watch videos to earn more coins</key>
+	<string>Guadagna più denari</string>
+	<key>Keep earning</key>
+	<string>Ottiene</string>
+	<key>No videos available, try again later</key>
+	<string>Nessun video disponibile, riprovi a dopo</string>
+	<key>Insufficient coins. Watch videos to earn coins</key>
+	<string>Denari insufficienti. Guarda i video per guadagnare i denari</string>
+	<key>Insufficient Coins</key>
+	<string>Denari insufficienti</string>
+	<key>Earn 500 coins for Free</key>
+	<string>500 denari a gratis</string>
+	<key>Installed successfully!</key>
+	<string>Installato con successo</string>
+</dict>
+</plist>

@@ -1,0 +1,293 @@
+[
+  {
+    "id": "Classic_25",
+    "mode": "Classic",
+    "sub_mode": "TilesCollected",
+    "value": 25,
+    "serial": 1,
+    "tid": "25",
+    "mode_tid":"Classic Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Classic_50",
+    "mode": "Classic",
+    "sub_mode": "TilesCollected",
+    "value": 50,
+    "serial": 2 ,
+    "tid":"50",
+    "mode_tid":"Classic Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Classic_Plus",
+    "mode": "Classic",
+    "sub_mode": "Plus",
+    "value": 0,
+    "serial": 3,
+    "tid":"Plus",
+    "mode_tid":"Classic Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Classic_5",
+    "mode": "Classic",
+    "sub_mode": "TilesSize",
+    "value": 5,
+    "serial": 4,
+    "tid":"5 x 5",
+    "mode_tid":"Classic Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Classic_6",
+    "mode": "Classic",
+    "sub_mode": "TilesSize",
+    "value": 6,
+    "serial": 5,
+    "tid":"6 x 6",
+    "mode_tid":"Classic Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade_normal",
+    "mode": "Arcade",
+    "sub_mode": "Normal",
+    "value": 1,
+    "serial": 1,
+    "tid": "Normal",
+    "mode_tid":"Arcade Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade_faster",
+    "mode": "Arcade",
+    "sub_mode": "Faster",
+    "value": 2,
+    "serial": 2,
+    "tid": "Faster",
+    "mode_tid":"Arcade Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade_5",
+    "mode": "Arcade",
+    "sub_mode": "TilesSize",
+    "value": 5,
+    "serial": 3,
+    "tid": "5 x 5",
+    "mode_tid":"Arcade Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade_6",
+    "mode": "Arcade",
+    "sub_mode": "TilesSize",
+    "value": 6,
+    "serial": 4,
+    "tid": "6 x 6",
+    "mode_tid":"Arcade Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Zen_15",
+    "mode": "Zen",
+    "sub_mode": "time",
+    "value": 15,
+    "serial": 1,
+    "tid": "15\"",
+    "mode_tid":"Zen Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Zen_30",
+    "mode": "Zen",
+    "sub_mode": "time",
+    "value": 30,
+    "serial": 2,
+    "tid": "30\"",
+    "mode_tid":"Zen Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Zen_Plus",
+    "mode": "Zen",
+    "sub_mode": "Plus",
+    "value": 0,
+    "serial": 3,
+    "tid": "Plus",
+    "mode_tid":"Zen Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Zen_5",
+    "mode": "Zen",
+    "sub_mode": "TilesSize",
+    "value": 5,
+    "serial": 4,
+    "tid": "5 x 5",
+    "mode_tid":"Zen Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Zen_6",
+    "mode": "Zen",
+    "sub_mode": "TilesSize",
+    "value": 6,
+    "serial": 5,
+    "tid": "6 x 6",
+    "mode_tid":"Zen Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Rush_Normal",
+    "mode": "Rush",
+    "sub_mode": "Normal",
+    "value": 1,
+    "serial": 1,
+    "tid": "Normal",
+    "mode_tid":"Rush Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Rush_Plus",
+    "mode": "Rush",
+    "sub_mode": "Plus",
+    "value": 0,
+    "serial": 2,
+    "tid": "Plus",
+    "mode_tid":"Rush Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Rush_5",
+    "mode": "Rush",
+    "sub_mode": "TilesSize",
+    "value": 5,
+    "serial": 3,
+    "tid": "5 x 5",
+    "mode_tid":"Rush Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Rush_6",
+    "mode": "Rush",
+    "sub_mode": "TilesSize",
+    "value": 6,
+    "serial": 4,
+    "tid": "6 x 6",
+    "mode_tid":"Rush Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Relay_8",
+    "mode": "Relay",
+    "sub_mode": "add_time",
+    "value": 8,
+    "serial": 1,
+    "tid": "8\"",
+    "mode_tid":"Relay Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Relay_10",
+    "mode": "Relay",
+    "sub_mode": "add_time",
+    "value": 10,
+    "serial": 2,
+    "tid": "10\"",
+    "mode_tid":"Relay Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Relay_12",
+    "mode": "Relay",
+    "sub_mode": "add_time",
+    "value": 12,
+    "serial": 3,
+    "tid": "12\"",
+    "mode_tid":"Relay Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Relay_5",
+    "mode": "Relay",
+    "sub_mode": "TilesSize",
+    "value": 5,
+    "serial": 4,
+    "tid": "5 x 5",
+    "mode_tid":"Relay Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Relay_6",
+    "mode": "Relay",
+    "sub_mode": "TilesSize",
+    "value": 6,
+    "serial": 5,
+    "tid": "6 x 6",
+    "mode_tid":"Relay Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Bomb",
+    "mode": "Arcade-2",
+    "sub_mode": "Bomb",
+    "value": 0,
+    "serial": 1,
+    "tid": "Bomb",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Double",
+    "mode": "Arcade-2",
+    "sub_mode": "Double",
+    "value": 0,
+    "serial": 2,
+    "tid": "Double",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Bilayer",
+    "mode": "Arcade-2",
+    "sub_mode": "Bilayer",
+    "value": 0,
+    "serial": 3,
+    "tid": "Bilayer",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Mist",
+    "mode": "Arcade-2",
+    "sub_mode": "Mist",
+    "value": 0,
+    "serial": 4,
+    "tid": "Mist",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Unstable",
+    "mode": "Arcade-2",
+    "sub_mode": "Unstable",
+    "value": 1,
+    "serial": 5,
+    "tid": "Unstable",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+},
+{
+	"id": "Arcade-2_Cloudy",
+    "mode": "Arcade-2",
+    "sub_mode": "Cloudy",
+    "value": 0,
+    "serial": 6,
+    "tid": "Cloudy",
+    "mode_tid":"Arcade+ Mode",
+    "sign_icon": 0
+}
+
+]

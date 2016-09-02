@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Happy New Year</key>
+	<string>행복한 2015</string>
+	<key>Piano Tiles</key>
+	<string>Piano Tiles (Don&apos;t tap the white tile)</string>
+	<key>Classic</key>
+	<string>클래식</string>
+	<key>Arcade</key>
+	<string>아케이드</string>
+	<key>Arcade - 2</key>
+	<string>아|케|이|드</string>
+	<key>Zen</key>
+	<string>젠</string>
+	<key>Rush</key>
+	<string>러쉬</string>
+	<key>Relay</key>
+	<string>릴레이</string>
+	<key>More</key>
+	<string>더 보기</string>
+	<key>Leaderboard</key>
+	<string>순위표</string>
+	<key>Rate</key>
+	<string>평가하기</string>
+	<key>More Game</key>
+	<string>더 많은 게임</string>
+	<key>More Games</key>
+	<string>더 많은 게임</string>
+	<key>Setting</key>
+	<string>설치</string>
+	<key>Failed!</key>
+	<string>실패!</string>
+	<key>Classic Mode</key>
+	<string>클래식 모드</string>
+	<key>Arcade Mode</key>
+	<string>아케이드 모드</string>
+	<key>Zen Mode</key>
+	<string>젠 모드</string>
+	<key>Rush Mode</key>
+	<string>러쉬 모드</string>
+	<key>Relay Mode</key>
+	<string>릴레이 모드</string>
+	<key>NEW BEST</key>
+	<string>NEW BEST</string>
+	<key>BEST</key>
+	<string>가장 좋은</string>
+	<key>Again</key>
+	<string>다시</string>
+	<key>Share</key>
+	<string>공유하기</string>
+	<key>Exit</key>
+	<string>종료</string>
+	<key>%s! %s %s!! Awesome! Who can beat me in # Piano Tiles #</key>
+	<string>%s! %s %s!! 멋져요! 누가 나의 @PianoTiles 스코어를 깰 수 있나요?</string>
+	<key>pts</key>
+	<string>pts</string>
+	<key>Cannot send a Facebook at the moment.</key>
+	<string>인터넷 연결이 되지 않아 Facebook에 보낼 수 없습니다, 또는 이 기기와 연결된 계정 정보가 없을 수 있으니 확인 바랍니다.</string>
+	<key>Facebook</key>
+	<string>Facebook</string>
+	<key>Tencent Weibo</key>
+	<string>Tencent Weibo</string>
+	<key>Weibo</key>
+	<string>Weibo</string>
+	<key>Twitter</key>
+	<string>Twitter</string>
+	<key>@PianoTiles_facebook</key>
+	<string>Piano Tiles</string>
+	<key>@PianoTiles_twitter</key>
+	<string>@PianoTiles</string>
+	<key>Oops</key>
+	<string>죄송합니다</string>
+	<key>This cannot be done before you install Wechat.</key>
+	<string>이 기능을 사용하려면 반드시 WeChat을 설치해야 합니다.</string>
+	<key>Dismiss</key>
+	<string>닫기</string>
+	<key>Wechat</key>
+	<string>Wechat</string>
+	<key>Cancel</key>
+	<string>취소</string>
+	<key>Save</key>
+	<string>저장</string>
+	<key>Time Out</key>
+	<string>Time Out</string>
+	<key>Tutorial: ON</key>
+	<string>매뉴얼: ON</string>
+	<key>Tutorial: OFF</key>
+	<string>매뉴얼: OFF</string>
+	<key>Don&apos;t touch any white tile!</key>
+	<string>어떠한 흰색 타일도 누르지마세요!</string>
+	<key>Tap the lowest black tiles and get 25 ones as soon as possible.</key>
+	<string>가장 밑에 있는 검정색 타일부터 가능한 빠르게 25번 눌러주세요.</string>
+	<key>Tap the lowest black tiles and get 50 ones as soon as possible.</key>
+	<string>가장 밑에 있는 검정색 타일부터 가능한 빠르게 50번 눌러주세요.</string>
+	<key>Tap the lowest black tiles and do not miss one.</key>
+	<string>가장 밑에 있는 검정색 타일부터 하나도 놓치지 않고 눌러주세요.</string>
+	<key>Tap the highest black tiles and do not miss one.</key>
+	<string>가장 위에 있는 검정색 타일부터 하나도 놓치지 않고 눌러주세요.</string>
+	<key>Tap the lowest black tiles as many as you can in 30 seconds.</key>
+	<string>30초 동안 가능한 많이 가장 낮은 검정색 타일을 누릅니다.</string>
+	<key>Tap the lowest black tiles as many as you can in 15 seconds.</key>
+	<string>15초 동안 가능한 많이 가장 낮은 검정색 타일을 누릅니다.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 10&quot;, then you will get more 10&quot; for another 50 tiles...</key>
+	<string>10초 동안 50번 가장 낮은 검정색 타일을 누릅니다. 성공하면 또 다른 10초를 얻어 다시 시도할 수 있습니다.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 8&quot;, then you will get more 8&quot; for another 50 tiles...</key>
+	<string>8초 동안 50번 가장 낮은 검정색 타일을 누릅니다. 성공하면 또 다른 8초를 얻어 다시 시도할 수 있습니다.</string>
+	<key>Tap the lowest black tiles and get 50 ones in 12&quot;, then you will get more 12&quot; for another 50 tiles...</key>
+	<string>12초 동안 50번 가장 낮은 검정색 타일을 누릅니다. 성공하면 또 다른 12초를 얻어 다시 시도할 수 있습니다.</string>
+	<key>x</key>
+	<string>x</string>
+	<key>Rate 5 if you like the game.</key>
+	<string>게임 사용에 만족하셨다면 좋은 평가 부탁드립니다.</string>
+	<key>Rate 5 for new update.</key>
+	<string>새로운 버전에 만족하셨다면 좋은 평가 부탁드립니다.</string>
+	<key>Later</key>
+	<string>나중에</string>
+	<key>toRate</key>
+	<string>평가하기</string>
+	<key>Screenshot save failed!</key>
+	<string>스크린샷 저장에 실패했습니다</string>
+	<key>Screenshot Saved!</key>
+	<string>스크린샷을 저장하였습니다!</string>
+	<key>Start</key>
+	<string>시작하기</string>
+	<key>Sound: Piano</key>
+	<string>사운드: 피아노</string>
+	<key>Sound: Default</key>
+	<string>사운드: 기본</string>
+	<key>Sound: OFF</key>
+	<string>사운드: 벗어난</string>
+	<key>Sound: Typewriter</key>
+	<string>사운드: 타이프라이터</string>
+	<key>Sound: Guitar</key>
+	<string>사운드: 기타</string>
+	<key>Back</key>
+	<string>돌아가기</string>
+	<key>Remove Ad</key>
+	<string>광고 제거하기</string>
+	<key>Tiles Movement</key>
+	<string>타일 움직임</string>
+	<key>Rest Reminder</key>
+	<string>휴식시간 알림</string>
+	<key>Remove Ad Forever</key>
+	<string>광고를 영원히 제거하기</string>
+	<key>Only Cost USD $0.99.</key>
+	<string>$0.99로 광고 없는 게임을 즐기실 수 있습니다</string>
+	<key>Remove</key>
+	<string>제거</string>
+	<key>Restore</key>
+	<string>복구</string>
+	<key>Faster</key>
+	<string>빠르게</string>
+	<key>Smoother</key>
+	<string>부드럽게</string>
+	<key>Smoothest is strongly recommended.</key>
+	<string>부드럽게 설정하고 사용하시는 것을 권장드립니다.</string>
+	<key>This option only affects tiles in Classic, Zen and Relay mode.</key>
+	<string>이 옵션은 클래식, 젠, 릴레이 모드 에서만 작동합니다.</string>
+	<key>Zero to disable reminder.</key>
+	<string>알림을 사용하지 않으려면 0으로 설정하세요.</string>
+	<key>Remind you to have a rest every specified number of games.</key>
+	<string>게임을 시작한 지 일정 시간이 지난 후 휴식을 취하도록 알려드립니다.</string>
+	<key>Take a break!</key>
+	<string>휴식이 필요합니다!</string>
+	<key>You can custom this popup in [Main Menu]-&gt;[More]-&gt;[Rest Reminder].</key>
+	<string>&apos;메인 메뉴&apos; -&gt; &apos;더 보기&apos; -&gt; &apos;휴식시간 알림&apos;에서 설정 변경이 가능합니다.</string>
+	<key>OK</key>
+	<string>확인</string>
+	<key>Remove Ad Forever purchase failed</key>
+	<string>무광고 버전 구매에 실패하였습니다</string>
+	<key>Remove Ad Forever succeed!</key>
+	<string>무광고 버전 구매에 성공하였습니다!</string>
+	<key>Congratulations</key>
+	<string>축하합니다!</string>
+	<key>About</key>
+	<string>정보</string>
+	<key>Follow us to get latest news of our games.</key>
+	<string>팔로우하면 게임 최신 뉴스를 받아볼 수 있습니다.</string>
+	<key>Plus</key>
+	<string>프로</string>
+	<key>Normal</key>
+	<string>일반</string>
+	<key>Reverse</key>
+	<string>거꾸로</string>
+	<key>Slower</key>
+	<string>느리게</string>
+	<key>Messages</key>
+	<string>메세지</string>
+	<key>Tap Animation: ON</key>
+	<string>설정: ON</string>
+	<key>Tap Animation: OFF</key>
+	<string>설정: OFF</string>
+	<key>Loading...</key>
+	<string>로드 중...</string>
+	<key>No Message</key>
+	<string>메세지가 없습니다</string>
+	<key>Check it out</key>
+	<string>확인하세요</string>
+	<key>Are you sure to quit?</key>
+	<string>종료하시겠습니까?</string>
+	<key>End Game</key>
+	<string>게임 종료</string>
+	<key>Play On</key>
+	<string>계속</string>
+	<key>Shut Down</key>
+	<string>끝내기</string>
+	<key>No</key>
+	<string>아니오</string>
+	<key>signed in google game service failed,would you like to shutdown autologin?</key>
+	<string>Google game service에 로그인할 수 없습니다, 자동 로그인을 비활성화하도록 설정하시겠습니까?</string>
+	<key>Ad Removed</key>
+	<string>광고 제거됨</string>
+	<key>Reset All</key>
+	<string>모두 다시 설정</string>
+	<key>Ad Options</key>
+	<string>광고 옵션</string>
+	<key>Banner</key>
+	<string>배너</string>
+	<key>Popup</key>
+	<string>팝업</string>
+	<key>About Ad iOS</key>
+	<string>1. 무광고 버전은 광고가 없습니다;
+2. 광고는 화면 아래에 표시됩니다;
+3. 팝업 광고는 게임이 끝났을 때만 표시됩니다;
+실수로 터치하거나 느려짐 문제 방지를 위해 Arcade 및 Rush Mode에서만 팝업을 사용하시길 권장드립니다.</string>
+	<key>About Ad Android</key>
+	<string>1. 광고는 화면 아래에 표시됩니다;
+2. 팝업 광고는 게임이 끝났을 때만 표시됩니다;
+실수로 터치하거나 느려짐 문제 방지를 위해 Arcade 및 Rush Mode에서만 팝업을 사용하시길 권장드립니다.</string>
+	<key>Never Show Again</key>
+	<string>다시 보지 않기</string>
+	<key>Preview</key>
+	<string>시연</string>
+	<key>Theme</key>
+	<string>테마</string>
+	<key>Moments</key>
+	<string>Moments</string>
+	<key>Arcade+</key>
+	<string>아케이드+</string>
+	<key>Arcade+ Mode</key>
+	<string>아케이드+ 모드</string>
+	<key>Lightning</key>
+	<string>번개</string>
+	<key>Bomb</key>
+	<string>폭탄</string>
+	<key>Double</key>
+	<string>더블</string>
+	<key>Tiles Size</key>
+	<string>타일 크기</string>
+	<key>Language</key>
+	<string>언어</string>
+	<key>Confirm</key>
+	<string>완료</string>
+	<key>Friends</key>
+	<string>친구</string>
+	<key>Community</key>
+	<string>커뮤니티</string>
+	<key>Challenge</key>
+	<string>도전</string>
+	<key>Global</key>
+	<string>세계</string>
+	<key>Songs</key>
+	<string>노래</string>
+	<key>Profile</key>
+	<string>프로필로</string>
+	<key>Bilayer</key>
+	<string>이중층</string>
+	<key>Mist</key>
+	<string>안개</string>
+	<key>Unstable</key>
+	<string>롤러 코스터</string>
+	<key>Rotatory</key>
+	<string>회전</string>
+	<key>Shaky</key>
+	<string>지진</string>
+	<key>Shift</key>
+	<string>모바일</string>
+	<key>Change</key>
+	<string>바꿈</string>
+	<key>me</key>
+	<string>나</string>
+	<key>Shuffle</key>
+	<string>임의 재생</string>
+	<key>Wishes</key>
+	<string>소원</string>
+	<key>ShareWish</key>
+	<string>소원 나누기</string>
+	<key>Piano Tiles - Happy New Year</key>
+	<string>Piano Tiles</string>
+	<key>New-User Award!</key>
+	<string>새로운 사용자 상!</string>
+	<key>Diamonds</key>
+	<string>타일</string>
+	<key>PlayOnTips</key>
+	<string>타일를 새용해 곧 부활!</string>
+	<key>BoostStartTips</key>
+	<string>여기 클리크하면 신기 한 시작을 누리세요!</string>
+	<key>Daily Check-in Award!</key>
+	<string>매일 체크인 상!</string>
+	<key>Get revived! Get higher!</key>
+	<string>부활! 더 높게!</string>
+	<key>Come on! U can do better!</key>
+	<string>화이팅! 더 잘할 수 있어요!</string>
+	<key>Go for another new best!</key>
+	<string>새로운 기록에 향해!</string>
+	<key>Faster! Faster! Faster!</key>
+	<string>더 빠르게!</string>
+	<key>One more shot!</key>
+	<string>한번 더!</string>
+	<key>Superman never die!</key>
+	<string>슈퍼맨 죽지 않을 거야!</string>
+	<key>Never give up!</key>
+	<string>포기하지 마!</string>
+	<key>Break your limit!</key>
+	<string>정상에 이르자!</string>
+	<key>Give up</key>
+	<string>포기</string>
+	<key>Lucky Notes</key>
+	<string>행운의 음표</string>
+	<key>Feedback</key>
+	<string>피드백</string>
+	<key>Update</key>
+	<string>업데이트</string>
+	<key>New Version is Coming</key>
+	<string>새 버전 업데이트</string>
+	<key>update to new version and win 1000 rewards</key>
+	<string>새버전은 1000개 음표를 취득할 수 있습니다.</string>
+	<key>DoubleScore</key>
+	<string>더블 상장</string>
+	<key>Watch video and get bonus!</key>
+	<string>비디오를 보고, 보너스 획득!</string>
+	<key>Get it now</key>
+	<string>지금 받으세요!</string>
+	<key>Best Wishes</key>
+	<string>축복</string>
+	<key>share</key>
+	<string>シェア</string>
+	<key>New year tag</key>
+	<string>新年签</string>
+	<key>New year tag1</key>
+	<string>任性</string>
+	<key>New year tag content1</key>
+	<string>不将就 我要的现在就要</string>
+	<key>New year tag2</key>
+	<string>淡定</string>
+	<key>New year tag content2</key>
+	<string>不念过往 不畏将来</string>
+	<key>New year tag3</key>
+	<string>改变</string>
+	<key>New year tag content3</key>
+	<string>每天做更好的自己</string>
+	<key>New year tag4</key>
+	<string>幸运</string>
+	<key>New year tag content4</key>
+	<string>越努力 越幸运</string>
+	<key>New year tag5</key>
+	<string>个性</string>
+	<key>New year tag content5</key>
+	<string>不要变得 和别人一样</string>
+	<key>New year tag6</key>
+	<string>逆袭</string>
+	<key>New year tag content6</key>
+	<string>狂虐高富帅 压倒白富美</string>
+	<key>New year tag7</key>
+	<string>自由</string>
+	<key>New year tag content7</key>
+	<string>心所愿 力必至 无所畏惧</string>
+	<key>Don&apos;t tap the white tile - Chinese New Year</key>
+	<string>Don&apos;t tap the white tile - Spring Festival</string>
+	<key>New year share content</key>
+	<string>收获新年祝福：%d个！我的新年签：%s！@别踩白块儿 新春版</string>
+	<key>NewYearModeTitleDesc</key>
+	<string>새해 복 많이 받으세요!</string>
+	<key>Spring Festival</key>
+	<string>드레스 컬러</string>
+	<key>The Dress</key>
+	<string>드레스 컬러</string>
+	<key>Event</key>
+	<string>행사</string>
+	<key>Like us &amp; play without using notes</key>
+	<string>좋아요를 누르고 게임을 계속 플레이하세요</string>
+	<key>Piano &amp; no clap</key>
+	<string>피아노 &amp; 박수 없음</string>
+	<key>You unlocked 2 new songs!</key>
+	<string>축하!새로 2곡 받았습니다.</string>
+	<key>Time for the next bonus:</key>
+	<string>다음번 선물받을 시간:</string>
+	<key>Try now!</key>
+	<string>바로 체험하기</string>
+	<key>Daily Bonus</key>
+	<string>데일리 보너스</string>
+	<key>Coins</key>
+	<string>코인</string>
+	<key>Watch videos to earn coins</key>
+	<string>비디오보고코인받기</string>
+	<key>Watch Now</key>
+	<string>바로보기</string>
+	<key>You have got 500 coins</key>
+	<string>500코인획득</string>
+	<key>Watch videos to earn more coins</key>
+	<string>계속하여비디오보고코인받기</string>
+	<key>Keep earning</key>
+	<string>계속하여 받기</string>
+	<key>No videos available, try again later</key>
+	<string>비디오가없으니잠시후다시시도해주세요</string>
+	<key>Insufficient coins. Watch videos to earn coins</key>
+	<string>코인부족,비디오보고코인받기</string>
+	<key>Insufficient Coins</key>
+	<string>코인부족</string>
+	<key>Earn 500 coins for Free</key>
+	<string>500코인무료받기</string>
+	<key>Installed successfully!</key>
+	<string>설치 성공</string>
+	<key>Skip</key>
+	<string>스킵</string>
+	<key>TRY</key>
+	<string>해 봐</string>
+</dict>
+</plist>
