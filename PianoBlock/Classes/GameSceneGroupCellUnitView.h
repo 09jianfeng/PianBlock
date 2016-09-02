@@ -1,5 +1,5 @@
 //
-//  GameScreenView.h
+//  GameSceneGroupCellUnitView.h
 //  PianoBlock
 //
 //  Created by 陈建峰 on 16/9/2.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameScreenView : UIView
+@interface GameSceneGroupCellUnitView : UIView
+
+- (void)setToBeSpecialView;
 
 @end
