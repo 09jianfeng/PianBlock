@@ -10,7 +10,7 @@
 #import "GameSceneView.h"
 
 @interface GameSceneControllerViewController ()
-
+@property(nonatomic, strong) GameSceneView *gameScene;
 @end
 
 @implementation GameSceneControllerViewController
@@ -20,8 +20,14 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    GameSceneView *gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
-    [self.view addSubview:gameScene];
+    self.gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
+    self.gameScene.gameSpeed = 4.0;
+    [self.view addSubview:self.gameScene];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.gameScene startGame];
 }
 
 - (void)didReceiveMemoryWarning {

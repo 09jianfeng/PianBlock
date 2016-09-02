@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "GamePlayingCollectionViewController.h"
 #import "Masonry.h"
 #import "OpenIDFA.h"
 #import "GameSceneControllerViewController.h"
@@ -37,7 +36,7 @@
 
 - (void)buttonPressed:(id)sender{
     GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
-    [self presentViewController:gameController animated:YES completion:nil];
+    [self presentViewController:gameController animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

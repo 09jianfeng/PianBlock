@@ -8,6 +8,7 @@
 
 #import "GameSceneView.h"
 #import "GameSceneGroupCell.h"
+#import "GameMacro.h"
 
 @interface GameSceneView()
 
@@ -18,6 +19,8 @@
 @property (nonatomic, assign) CGFloat blockHeigh;
 @property (nonatomic, assign) CGFloat blockWidth;
 @property (nonatomic, assign) NSInteger groupCellsNum;
+
+@property (nonatomic, strong) CADisplayLink *displayLink;
 
 @end
 
@@ -34,6 +37,8 @@
         _blockWidth = frame.size.width / blockNum;
         _blockHeigh = _blockWidth * 1.5;
         _groupCellsNum = ceil(frame.size.height / _blockHeigh) + 1;
+        _gameSpeed = 2.0;
+        _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_groupCellsNum];
         
         for (NSInteger i = 0 ; i < _groupCellsNum ; i++) {
             GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc] initWithUnitCellsNum:blockNum
@@ -63,10 +68,32 @@
 
 #pragma mark - game handle
 
-- (void)gameBegin{
-    
+- (void)startGame{
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-
+- (void)beginScroll{
+    
+//    CADisplayLink *weakDisplayLink = self.displayLink;
+    CGFloat weakSpeed = self.gameSpeed;
+    NSMutableArray *cellPool = self.groupCellPool;
+    [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            GameSceneGroupCell *groupCell = (GameSceneGroupCell *)obj;
+            CGRect cellFrame = groupCell.frame;
+            cellFrame.origin.y += weakSpeed;
+            groupCell.frame = cellFrame;
+            
+            if (cellFrame.origin.y > self.frame.size.height) {
+                GameSceneGroupCell *lastCell = [cellPool lastObject];
+                [cellPool removeObject:groupCell];
+                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + 2;
+                groupCell.frame = cellFrame;
+                [cellPool addObject:groupCell];
+            }
+        });
+    }];
+}
 
 @end
