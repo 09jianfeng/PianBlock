@@ -37,6 +37,7 @@ NSString *GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 - (void)cellClickEvent:(id)sender{
     if (_isSpecial) {
         [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITRIGHT object:nil];
+        [self resetStatue];
         GAMELOG(@"good click");
     }else{
         [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITWRONG object:nil];

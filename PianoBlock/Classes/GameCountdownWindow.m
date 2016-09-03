@@ -115,6 +115,7 @@ static GameCountdownWindow *_instance;
     }
 
     if (_animIndex == 0) {
+        _animIndex = 100;
         if (_completeBlock != nil) {
             self.hidden = true;
             WeakSelf;

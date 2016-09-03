@@ -28,6 +28,10 @@
     [[GameCountdownWindow shareInstance] showWithAnimNum:5 CompleteBlock:^{
         [self.gameScene startGame];
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.gameScene stop];
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated{

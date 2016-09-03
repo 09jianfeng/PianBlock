@@ -68,6 +68,10 @@
 
 #pragma mark - game handle
 
+- (void)stop{
+    [self.displayLink invalidate];
+}
+
 - (void)startGame{
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];

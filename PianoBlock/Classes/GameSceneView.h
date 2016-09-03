@@ -21,4 +21,6 @@
 
 - (void)startGame;
 
+- (void)stop;
+
 @end
