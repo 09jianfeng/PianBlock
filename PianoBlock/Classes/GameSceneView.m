@@ -88,7 +88,7 @@
             if (cellFrame.origin.y > self.frame.size.height) {
                 GameSceneGroupCell *lastCell = [cellPool lastObject];
                 [cellPool removeObject:groupCell];
-                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + 2;
+                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + self.gameSpeed;
                 groupCell.frame = cellFrame;
                 [cellPool addObject:groupCell];
             }

@@ -21,7 +21,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
-    self.gameScene.gameSpeed = 4.0;
+    self.gameScene.gameSpeed = 6.0;
     [self.view addSubview:self.gameScene];
 }
 
