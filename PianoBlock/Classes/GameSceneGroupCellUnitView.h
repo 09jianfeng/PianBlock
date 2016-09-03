@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ *extern NSString *GAMESCENEUNITHITRIGHT ;
+ *extern NSString *GAMESCENEUNITHITWRONG ;
+ */
+
 @interface GameSceneGroupCellUnitView : UIButton
 
 - (void)setToBeSpecialView;

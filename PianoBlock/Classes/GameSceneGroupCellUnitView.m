@@ -7,6 +7,10 @@
 //
 
 #import "GameSceneGroupCellUnitView.h"
+#import "GameMacro.h"
+
+NSString *GAMESCENEUNITHITRIGHT = @"GAMESCENEUNITHITRIGHT";
+NSString *GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 
 @implementation GameSceneGroupCellUnitView{
     BOOL _isSpecial;
@@ -32,10 +36,12 @@
 
 - (void)cellClickEvent:(id)sender{
     if (_isSpecial) {
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITRIGHT object:nil];
+        GAMELOG(@"good click");
+    }else{
+        [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITWRONG object:nil];
+        GAMELOG(@"bad click");
     }
-    
-    NSLog(@"block click");
 }
 
 @end

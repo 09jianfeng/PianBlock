@@ -207,6 +207,7 @@
 		2EC4294E1D7A6DE700B93AF4 /* tick.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2EC428A11D7A6DE700B93AF4 /* tick.m4a */; };
 		2EC4294F1D7A6DE700B93AF4 /* touch.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2EC428A21D7A6DE700B93AF4 /* touch.m4a */; };
 		2EC429501D7A6DE700B93AF4 /* typewriter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2EC428A31D7A6DE700B93AF4 /* typewriter.wav */; };
+		2EC429531D7A74FC00B93AF4 /* GameCountdownWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,6 +463,8 @@
 		2EC428A11D7A6DE700B93AF4 /* tick.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = tick.m4a; sourceTree = "<group>"; };
 		2EC428A21D7A6DE700B93AF4 /* touch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = touch.m4a; sourceTree = "<group>"; };
 		2EC428A31D7A6DE700B93AF4 /* typewriter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = typewriter.wav; sourceTree = "<group>"; };
+		2EC429511D7A74FC00B93AF4 /* GameCountdownWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCountdownWindow.h; sourceTree = "<group>"; };
+		2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCountdownWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +589,8 @@
 		2E2EBABC1D781EF700550761 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EC429511D7A74FC00B93AF4 /* GameCountdownWindow.h */,
+				2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */,
 				2EB30B241D7985F6006C7D9F /* GameScene */,
 			);
 			name = View;
@@ -1242,6 +1247,7 @@
 				2EC426691D7A698C00B93AF4 /* MASLayoutConstraint.m in Sources */,
 				2EC4266F1D7A698C00B93AF4 /* ViewController+MASAdditions.m in Sources */,
 				2EC426681D7A698C00B93AF4 /* MASConstraintMaker.m in Sources */,
+				2EC429531D7A74FC00B93AF4 /* GameCountdownWindow.m in Sources */,
 				2EB30B1E1D796517006C7D9F /* ViewController.m in Sources */,
 				2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */,
 				2E2EBAC71D7825BC00550761 /* ConcreteGameClassicMode.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "GameSceneControllerViewController.h"
 #import "GameSceneView.h"
+#import "GameCountdownWindow.h"
 
 @interface GameSceneControllerViewController ()
 @property(nonatomic, strong) GameSceneView *gameScene;
@@ -23,11 +24,14 @@
     self.gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
     self.gameScene.gameSpeed = 6.0;
     [self.view addSubview:self.gameScene];
+
+    [[GameCountdownWindow shareInstance] showWithAnimNum:5 CompleteBlock:^{
+        [self.gameScene startGame];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.gameScene startGame];
 }
 
 - (void)didReceiveMemoryWarning {
