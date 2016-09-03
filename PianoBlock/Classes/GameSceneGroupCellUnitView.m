@@ -20,6 +20,11 @@
     return self;
 }
 
+- (void)resetStatue{
+    self.backgroundColor = [UIColor whiteColor];
+    _isSpecial = NO;
+}
+
 - (void)setToBeSpecialView{
     self.backgroundColor = [UIColor blackColor];
     _isSpecial = YES;

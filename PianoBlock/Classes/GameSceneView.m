@@ -74,8 +74,6 @@
 }
 
 - (void)beginScroll{
-    
-//    CADisplayLink *weakDisplayLink = self.displayLink;
     CGFloat weakSpeed = self.gameSpeed;
     NSMutableArray *cellPool = self.groupCellPool;
     [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -90,6 +88,7 @@
                 [cellPool removeObject:groupCell];
                 cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + self.gameSpeed;
                 groupCell.frame = cellFrame;
+                [groupCell reuseGroupCell];
                 [cellPool addObject:groupCell];
             }
         });

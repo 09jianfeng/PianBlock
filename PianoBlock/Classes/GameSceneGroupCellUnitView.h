@@ -11,5 +11,6 @@
 @interface GameSceneGroupCellUnitView : UIButton
 
 - (void)setToBeSpecialView;
+- (void)resetStatue;
 
 @end
