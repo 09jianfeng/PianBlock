@@ -8,21 +8,14 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
-#import "OpenIDFA.h"
-#import "GameSceneControllerViewController.h"
-#import "GameCountdownWindow.h"
-#import "GameBeatSongDirector.h"
-#import "GameSongProduct.h"
-#import "GameBeatSongBuilder.h"
+#import "ViewControllerSwitchMediator.h"
 #import "ReactiveCocoa.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController{
-    GameSongProduct *product;
-}
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,13 +24,10 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
     [self.view addSubview:button];
+    
+    __weak typeof(self) weakSelf = self;
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        GameBeatSongDirector *director = [GameBeatSongDirector new];
-        GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
-        
-        GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
-        gameController.song = [builder getSongProductResult];
-        [self presentViewController:gameController animated:NO completion:nil];
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf];
     }];
     
     UIView *superView = self.view;

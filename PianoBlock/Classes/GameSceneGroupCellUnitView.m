@@ -8,6 +8,7 @@
 
 #import "GameSceneGroupCellUnitView.h"
 #import "GameMacro.h"
+#import "ReactiveCocoa.h"
 
 NSString * const GAMESCENEUNITHITRIGHT = @"GAMESCENEUNITHITRIGHT";
 NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
@@ -19,7 +20,16 @@ NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self addTarget:self action:@selector(cellClickEvent:) forControlEvents:UIControlEventTouchUpInside];
+        [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
+            if (_isSpecial) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITRIGHT object:nil];
+                [self resetStatue];
+                GAMELOG(@"good click");
+            }else{
+                [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITWRONG object:nil];
+                GAMELOG(@"bad click");
+            }
+        }];
     }
     return self;
 }
@@ -32,17 +42,6 @@ NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 - (void)setToBeSpecialView{
     self.backgroundColor = [UIColor blackColor];
     _isSpecial = YES;
-}
-
-- (void)cellClickEvent:(id)sender{
-    if (_isSpecial) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITRIGHT object:nil];
-        [self resetStatue];
-        GAMELOG(@"good click");
-    }else{
-        [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITWRONG object:nil];
-        GAMELOG(@"bad click");
-    }
 }
 
 @end

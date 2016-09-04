@@ -9,6 +9,7 @@
 #import "GameSceneControllerViewController.h"
 #import "GameSceneView.h"
 #import "GameCountdownWindow.h"
+#import "ReactiveCocoa.h"
 
 extern NSString *GAMESCENEUNITHITRIGHT ;
 extern NSString *GAMESCENEUNITHITWRONG ;
@@ -36,7 +37,9 @@ extern NSString *GAMESCENEUNITHITWRONG ;
         [self.gameScene startGame];
     }];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(correctClickEvent:) name:GAMESCENEUNITHITRIGHT object:nil];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:GAMESCENEUNITHITRIGHT object:nil] subscribeNext:^(id  _Nullable x) {
+        [_song playNextBeat];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -47,19 +50,5 @@ extern NSString *GAMESCENEUNITHITWRONG ;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)correctClickEvent:(id)sender{
-    [_song playNextBeat];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

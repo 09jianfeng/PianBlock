@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ViewControllerSwitchMediator : NSObject
 
 + (instancetype)shareInstance;
+
+- (void)showGameViewController:(UIViewController *)currentController;
 
 @end
