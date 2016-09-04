@@ -41,24 +41,17 @@
 }
 
 - (void)buttonPressed:(id)sender{
-  //  GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
-  //  [self presentViewController:gameController animated:NO completion:nil];
-    [self testPlaysong];
+    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
+    
+    GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
+    gameController.song = [builder getSongProductResult];
+    [self presentViewController:gameController animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)testPlaysong{
-    GameBeatSongDirector *director = [GameBeatSongDirector new];
-    NSArray *songList = [director gameMusicList];
-    GameBeatSongBuilder *builder = songList[0];
-    product = [builder getSongProductResult];
-    //while (1) {
-    [product playNextBeat];
-    //}
 }
 
 @end

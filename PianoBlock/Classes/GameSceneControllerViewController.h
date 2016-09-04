@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameSongProduct.h"
 
 @interface GameSceneControllerViewController : UIViewController
+@property(nonatomic, strong) GameSongProduct *song;
 
 @end

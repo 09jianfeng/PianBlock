@@ -10,11 +10,18 @@
 #import "GameSceneView.h"
 #import "GameCountdownWindow.h"
 
+extern NSString *GAMESCENEUNITHITRIGHT ;
+extern NSString *GAMESCENEUNITHITWRONG ;
+
 @interface GameSceneControllerViewController ()
 @property(nonatomic, strong) GameSceneView *gameScene;
 @end
 
 @implementation GameSceneControllerViewController
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:GAMESCENEUNITHITRIGHT object:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,13 +32,11 @@
     self.gameScene.gameSpeed = 6.0;
     [self.view addSubview:self.gameScene];
 
-    [[GameCountdownWindow shareInstance] showWithAnimNum:5 CompleteBlock:^{
+    [[GameCountdownWindow shareInstance] showWithAnimNum:3 CompleteBlock:^{
         [self.gameScene startGame];
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.gameScene stop];
-    });
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(correctClickEvent:) name:GAMESCENEUNITHITRIGHT object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -41,6 +46,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)correctClickEvent:(id)sender{
+    [_song playNextBeat];
 }
 
 /*

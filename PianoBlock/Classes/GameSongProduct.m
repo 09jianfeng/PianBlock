@@ -14,6 +14,7 @@
     NSArray<GameMusicPerBeat *> *_beatsForSong;
     NSInteger _beatIndex;
     AVAudioPlayer *_audioPlayer;
+    dispatch_queue_t _audioQueue;
 }
 
 - (instancetype)initWithGameSong:(NSArray<GameMusicPerBeat *> *)beatsArray{
@@ -21,6 +22,7 @@
     if (self) {
         _beatsForSong = beatsArray;
         _beatIndex = 0;
+        _audioQueue = dispatch_queue_create([@"audioqueue" UTF8String], DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -31,20 +33,22 @@
 }
 
 - (void)playNextBeat{
-    GameMusicPerBeat *beat = _beatsForSong[_beatIndex];
-    _beatIndex = (_beatIndex + 1) % _beatsForSong.count;
-    
-    NSString *filePath = [self getBeatFilePath:beat.Tone];
-    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    NSError *error = nil;
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];;
-    if (error) {
-        NSLog(@"<error> %@",error);
-        return;
-    }
-    
-    [_audioPlayer prepareToPlay];
-    [_audioPlayer play];
+    dispatch_async(_audioQueue, ^{
+        GameMusicPerBeat *beat = _beatsForSong[_beatIndex];
+        _beatIndex = (_beatIndex + 1) % _beatsForSong.count;
+        
+        NSString *filePath = [self getBeatFilePath:beat.Tone];
+        NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+        NSError *error = nil;
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];;
+        if (error) {
+            NSLog(@"<error> %@",error);
+            return;
+        }
+        
+        [_audioPlayer prepareToPlay];
+        [_audioPlayer play];
+    });
 }
 
 - (void)cacheAudio{
