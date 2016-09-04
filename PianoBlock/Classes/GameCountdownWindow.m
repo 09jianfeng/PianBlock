@@ -7,6 +7,7 @@
 //
 
 #import "GameCountdownWindow.h"
+#import "Masonry.h"
 
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -43,14 +44,12 @@ static GameCountdownWindow *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [super init];
-        _instance.frame = [UIScreen mainScreen].bounds;
         _instance.backgroundColor = [UIColor blackColor];
         _instance.alpha = 0.7;
-        _instance.animLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 100/2, SCREEN_HEIGHT/2 - 100, 100, 200)];
+        _instance.animLabel = [[UILabel alloc] init];
         _instance.animLabel.textAlignment = NSTextAlignmentCenter;
         _instance.animLabel.textColor = [UIColor whiteColor];
         _instance.animLabel.font = [UIFont systemFontOfSize:120];
-        
         [_instance addSubview:_instance.animLabel];
     });
     return _instance;
@@ -84,7 +83,7 @@ static GameCountdownWindow *_instance;
     [animGroup setDuration:1.0];
     [animGroup setDelegate:self];
     
-    //stap animation statue
+    //stay animation statue
     animGroup.fillMode = kCAFillModeForwards;
     animGroup.removedOnCompletion = NO;
     
@@ -93,17 +92,26 @@ static GameCountdownWindow *_instance;
 
 - (void)startAnimationWithMax:(NSInteger)anim {
     _animLabel.text = [NSString stringWithFormat:@"%ld",(long)anim];
-
     _animIndex = anim;
-    
     [_animLabel.layer addAnimation:[self animationGroup] forKey:nil];
 }
 
 - (void)showWithAnimNum:(NSInteger)anim CompleteBlock:(CompleteBlock)completeBlock{
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    [keyWindow addSubview:[GameCountdownWindow shareInstance]];
-    [GameCountdownWindow shareInstance].completeBlock = completeBlock;
-    [[GameCountdownWindow shareInstance] startAnimationWithMax:anim];
+    [keyWindow addSubview:_instance];
+    
+    [_instance mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.mas_equalTo(keyWindow);
+    }];
+    
+    [_animLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(_instance.mas_height).multipliedBy(0.3);
+        make.width.mas_equalTo(_instance.mas_width).multipliedBy(0.3);
+        make.center.mas_equalTo(_instance);
+    }];
+    
+    _instance.completeBlock = completeBlock;
+    [_instance startAnimationWithMax:anim];
 }
 
 #pragma mark - Animation Delegate
