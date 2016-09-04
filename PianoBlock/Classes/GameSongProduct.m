@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         _beatsForSong = beatsArray;
-        _beatIndex = 5;
+        _beatIndex = 0;
     }
     return self;
 }
@@ -44,8 +44,6 @@
     }
     
     [_audioPlayer prepareToPlay];
-    _audioPlayer.volume = 15;
-    _audioPlayer.numberOfLoops = -1;
     [_audioPlayer play];
 }
 

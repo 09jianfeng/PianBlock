@@ -19,7 +19,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    GameSongProduct *product;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,7 +55,7 @@
     GameBeatSongDirector *director = [GameBeatSongDirector new];
     NSArray *songList = [director gameMusicList];
     GameBeatSongBuilder *builder = songList[0];
-    GameSongProduct *product = [builder getSongProductResult];
+    product = [builder getSongProductResult];
     //while (1) {
     [product playNextBeat];
     //}
