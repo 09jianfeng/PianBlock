@@ -11,7 +11,7 @@
 #import "GameBeatSongDirector.h"
 #import "GameSongProduct.h"
 #import "GameBeatSongBuilder.h"
-#import "GameSceneControllerViewController.h"
+#import "GameSceneController.h"
 
 @implementation ViewControllerSwitchMediator
 
@@ -54,7 +54,7 @@ static ViewControllerSwitchMediator *_instance;
     GameBeatSongDirector *director = [GameBeatSongDirector new];
     GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
     
-    GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
+    GameSceneController *gameController = [[GameSceneController alloc] init];
     gameController.song = [builder getSongProductResult];
     [currentController presentViewController:gameController animated:NO completion:nil];
 

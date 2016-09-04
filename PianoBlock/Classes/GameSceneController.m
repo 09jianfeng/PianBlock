@@ -1,12 +1,12 @@
 //
-//  GameSceneControllerViewController.m
+//  GameSceneController.m
 //  PianoBlock
 //
 //  Created by 陈建峰 on 16/9/2.
 //  Copyright © 2016年 陈建峰. All rights reserved.
 //
 
-#import "GameSceneControllerViewController.h"
+#import "GameSceneController.h"
 #import "GameSceneView.h"
 #import "GameCountdownWindow.h"
 #import "ReactiveCocoa.h"
@@ -14,11 +14,11 @@
 extern NSString *GAMESCENEUNITHITRIGHT ;
 extern NSString *GAMESCENEUNITHITWRONG ;
 
-@interface GameSceneControllerViewController ()
+@interface GameSceneController ()
 @property(nonatomic, strong) GameSceneView *gameScene;
 @end
 
-@implementation GameSceneControllerViewController
+@implementation GameSceneController
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:GAMESCENEUNITHITRIGHT object:nil];

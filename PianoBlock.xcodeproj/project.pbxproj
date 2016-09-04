@@ -24,7 +24,7 @@
 		2EB309DD1D792747006C7D9F /* GameSceneGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */; };
 		2EB309E01D794004006C7D9F /* GameSceneGroupCellUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */; };
 		2EB30B1E1D796517006C7D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B1D1D796517006C7D9F /* ViewController.m */; };
-		2EB30B211D79658F006C7D9F /* GameSceneControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */; };
+		2EB30B211D79658F006C7D9F /* GameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B201D79658F006C7D9F /* GameSceneController.m */; };
 		2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB89C111D7860A800870536 /* OpenIDFA.m */; };
 		2EC426661D7A698C00B93AF4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC425901D7A698C00B93AF4 /* MASCompositeConstraint.m */; };
 		2EC426671D7A698C00B93AF4 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC425931D7A698C00B93AF4 /* MASConstraint.m */; };
@@ -366,8 +366,8 @@
 		2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneGroupCellUnitView.h; sourceTree = "<group>"; };
 		2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneGroupCellUnitView.m; sourceTree = "<group>"; };
 		2EB30B1D1D796517006C7D9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
-		2EB30B1F1D79658F006C7D9F /* GameSceneControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneControllerViewController.h; sourceTree = "<group>"; };
-		2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneControllerViewController.m; sourceTree = "<group>"; };
+		2EB30B1F1D79658F006C7D9F /* GameSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneController.h; sourceTree = "<group>"; };
+		2EB30B201D79658F006C7D9F /* GameSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneController.m; sourceTree = "<group>"; };
 		2EB30B231D796D2C006C7D9F /* GameMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMacro.h; sourceTree = "<group>"; };
 		2EB89C101D7860A800870536 /* OpenIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenIDFA.h; sourceTree = "<group>"; };
 		2EB89C111D7860A800870536 /* OpenIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenIDFA.m; sourceTree = "<group>"; };
@@ -1500,8 +1500,8 @@
 				7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */,
 				2E2EBA8A1D781A8500550761 /* ViewController.h */,
 				2EB30B1D1D796517006C7D9F /* ViewController.m */,
-				2EB30B1F1D79658F006C7D9F /* GameSceneControllerViewController.h */,
-				2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */,
+				2EB30B1F1D79658F006C7D9F /* GameSceneController.h */,
+				2EB30B201D79658F006C7D9F /* GameSceneController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1875,7 +1875,7 @@
 				2EC42A611D7AAD3D00B93AF4 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				2EC42A2A1D7AAD3D00B93AF4 /* NSNotificationCenter+RACSupport.m in Sources */,
 				2EC4266B1D7A698C00B93AF4 /* MASViewConstraint.m in Sources */,
-				2EB30B211D79658F006C7D9F /* GameSceneControllerViewController.m in Sources */,
+				2EB30B211D79658F006C7D9F /* GameSceneController.m in Sources */,
 				2EC42A521D7AAD3D00B93AF4 /* RACQueueScheduler.m in Sources */,
 				2EC4266E1D7A698C00B93AF4 /* View+MASAdditions.m in Sources */,
 				2EC4266D1D7A698C00B93AF4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

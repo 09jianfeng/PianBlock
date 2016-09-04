@@ -1,5 +1,5 @@
 //
-//  GameSceneControllerViewController.h
+//  GameSceneController.h
 //  PianoBlock
 //
 //  Created by 陈建峰 on 16/9/2.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GameSongProduct.h"
 
-@interface GameSceneControllerViewController : UIViewController
+@interface GameSceneController : UIViewController
 @property(nonatomic, strong) GameSongProduct *song;
 
 @end
