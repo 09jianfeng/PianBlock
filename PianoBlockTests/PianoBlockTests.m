@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "GameBeatSongDirector.h"
 #import "GameBeatSongBuilder.h"
+#import "GameSongProduct.h"
 
 #define WAIT                                                                \
 do {                                                                        \
@@ -46,6 +47,16 @@ do {                                                                            
     }
     
     XCTAssertNotNil(songList);
+}
+
+- (void)testPlaysong{
+    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    NSArray *songList = [director gameMusicList];
+    GameBeatSongBuilder *builder = songList[0];
+    GameSongProduct *product = [builder getSongProductResult];
+    //while (1) {
+        [product playNextBeat];
+    //}
 }
 
 - (void)testPerformanceExample {

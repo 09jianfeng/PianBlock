@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class GameMusicPerBeat;
-
 @interface GameSongProduct : NSObject
 
-- (void)playNextTap;
+- (instancetype)initWithGameSong:(NSArray<GameMusicPerBeat *> *)beatsArray NS_DESIGNATED_INITIALIZER;
+
+- (void)playNextBeat;
+
+- (void)cacheAudio;
 
 @end

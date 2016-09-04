@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1BBF111D7C0C8900372932 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1BBF101D7C0C8900372932 /* AVFoundation.framework */; };
+		2E1BBF131D7C0CAE00372932 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1BBF121D7C0CAE00372932 /* Accelerate.framework */; };
 		2E27FCCB1D7BD76F003856D5 /* GameSongProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E27FCCA1D7BD76F003856D5 /* GameSongProduct.m */; };
 		2E27FCCE1D7BD897003856D5 /* GameMusicPerBeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E27FCCD1D7BD897003856D5 /* GameMusicPerBeat.m */; };
 		2E2EBA861D781A8500550761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBA851D781A8500550761 /* main.m */; };
@@ -300,9 +302,7 @@
 		2EC42A7A1D7AAD3D00B93AF4 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42A191D7AAD3D00B93AF4 /* UITableViewHeaderFooterView+RACSignalSupport.m */; };
 		2EC42A7B1D7AAD3D00B93AF4 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42A1B1D7AAD3D00B93AF4 /* UITextField+RACSignalSupport.m */; };
 		2EC42A7C1D7AAD3D00B93AF4 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42A1D1D7AAD3D00B93AF4 /* UITextView+RACSignalSupport.m */; };
-		2EC42A811D7BB13C00B93AF4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC42A801D7BB13C00B93AF4 /* AudioToolbox.framework */; };
 		2EC42A971D7BB5FE00B93AF4 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC42A841D7BB5FE00B93AF4 /* libTheAmazingAudioEngine.a */; };
-		2EC42A9B1D7BB6B100B93AF4 /* GameAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42A9A1D7BB6B100B93AF4 /* GameAudioPlayer.m */; };
 		2EC42AA21D7BB73200B93AF4 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42A9E1D7BB73200B93AF4 /* NSObject+YYModel.m */; };
 		2EC42AA31D7BB73200B93AF4 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA01D7BB73200B93AF4 /* YYClassInfo.m */; };
 		2EC42AA61D7BB93B00B93AF4 /* GameBeatSongBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */; };
@@ -327,6 +327,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E1BBF061D7C0BB800372932 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		2E1BBF081D7C0BC800372932 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		2E1BBF0B1D7C0BFC00372932 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		2E1BBF0D1D7C0C0600372932 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		2E1BBF101D7C0C8900372932 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2E1BBF121D7C0CAE00372932 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		2E27FCC91D7BD76F003856D5 /* GameSongProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSongProduct.h; sourceTree = "<group>"; };
 		2E27FCCA1D7BD76F003856D5 /* GameSongProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongProduct.m; sourceTree = "<group>"; };
 		2E27FCCC1D7BD897003856D5 /* GameMusicPerBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMusicPerBeat.h; sourceTree = "<group>"; };
@@ -776,8 +782,6 @@
 		2EC42A941D7BB5FE00B93AF4 /* AEMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMessageQueue.h; sourceTree = "<group>"; };
 		2EC42A951D7BB5FE00B93AF4 /* AEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEUtilities.h; sourceTree = "<group>"; };
 		2EC42A961D7BB5FE00B93AF4 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheAmazingAudioEngine.h; sourceTree = "<group>"; };
-		2EC42A991D7BB6B100B93AF4 /* GameAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameAudioPlayer.h; sourceTree = "<group>"; };
-		2EC42A9A1D7BB6B100B93AF4 /* GameAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameAudioPlayer.m; sourceTree = "<group>"; };
 		2EC42A9D1D7BB73200B93AF4 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		2EC42A9E1D7BB73200B93AF4 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
 		2EC42A9F1D7BB73200B93AF4 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
@@ -794,8 +798,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1BBF131D7C0CAE00372932 /* Accelerate.framework in Frameworks */,
+				2E1BBF111D7C0C8900372932 /* AVFoundation.framework in Frameworks */,
 				2EC42A971D7BB5FE00B93AF4 /* libTheAmazingAudioEngine.a in Frameworks */,
-				2EC42A811D7BB13C00B93AF4 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +821,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1BBF051D7C0BB800372932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E1BBF121D7C0CAE00372932 /* Accelerate.framework */,
+				2E1BBF101D7C0C8900372932 /* AVFoundation.framework */,
+				2E1BBF0D1D7C0C0600372932 /* CoreAudioKit.framework */,
+				2E1BBF0B1D7C0BFC00372932 /* OpenAL.framework */,
+				2E1BBF081D7C0BC800372932 /* AudioUnit.framework */,
+				2E1BBF061D7C0BB800372932 /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E2EBA781D781A8500550761 = {
 			isa = PBXGroup;
 			children = (
@@ -824,6 +842,7 @@
 				2E2EBA9D1D781A8500550761 /* PianoBlockTests */,
 				2E2EBAA81D781A8500550761 /* PianoBlockUITests */,
 				2E2EBA821D781A8500550761 /* Products */,
+				2E1BBF051D7C0BB800372932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1499,8 +1518,6 @@
 		2EC42A981D7BB69F00B93AF4 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				2EC42A991D7BB6B100B93AF4 /* GameAudioPlayer.h */,
-				2EC42A9A1D7BB6B100B93AF4 /* GameAudioPlayer.m */,
 				2EC42AA71D7BBF9300B93AF4 /* Song_Build_Pattern */,
 			);
 			name = Audio;
@@ -1870,7 +1887,6 @@
 				2E2EBA891D781A8500550761 /* AppDelegate.m in Sources */,
 				2EC426661D7A698C00B93AF4 /* MASCompositeConstraint.m in Sources */,
 				2EC42A6C1D7AAD3D00B93AF4 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
-				2EC42A9B1D7BB6B100B93AF4 /* GameAudioPlayer.m in Sources */,
 				2EC42A201D7AAD3D00B93AF4 /* MKAnnotationView+RACSignalSupport.m in Sources */,
 				2EC42A391D7AAD3D00B93AF4 /* NSUserDefaults+RACSupport.m in Sources */,
 				2EC42A701D7AAD3D00B93AF4 /* UIControl+RACSignalSupportPrivate.m in Sources */,

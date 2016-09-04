@@ -18,7 +18,6 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        _beatsArray = [NSArray array];
     }
     return self;
 }
@@ -47,7 +46,9 @@
 }
 
 - (GameSongProduct *)getSongProductResult{
-    return nil;
+    NSArray *beatsAry = [self getBuildResult];
+    GameSongProduct *song = [[GameSongProduct alloc] initWithGameSong:beatsAry];
+    return song;
 }
 
 #pragma mark - YYModel

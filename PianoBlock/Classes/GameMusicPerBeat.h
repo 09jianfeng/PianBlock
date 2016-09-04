@@ -16,4 +16,5 @@
 @property (nonatomic, copy) NSString *Chord_3;
 @property (nonatomic, copy) NSString *Chord_4;
 @property (nonatomic, copy) NSString *Chord_5;
+
 @end

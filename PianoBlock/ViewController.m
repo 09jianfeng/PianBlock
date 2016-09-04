@@ -11,6 +11,9 @@
 #import "OpenIDFA.h"
 #import "GameSceneControllerViewController.h"
 #import "GameCountdownWindow.h"
+#import "GameBeatSongDirector.h"
+#import "GameSongProduct.h"
+#import "GameBeatSongBuilder.h"
 
 @interface ViewController ()
 
@@ -36,13 +39,24 @@
 }
 
 - (void)buttonPressed:(id)sender{
-    GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
-    [self presentViewController:gameController animated:NO completion:nil];
+  //  GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
+  //  [self presentViewController:gameController animated:NO completion:nil];
+    [self testPlaysong];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)testPlaysong{
+    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    NSArray *songList = [director gameMusicList];
+    GameBeatSongBuilder *builder = songList[0];
+    GameSongProduct *product = [builder getSongProductResult];
+    //while (1) {
+    [product playNextBeat];
+    //}
 }
 
 @end
