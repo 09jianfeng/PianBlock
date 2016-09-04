@@ -9,21 +9,10 @@
 #import "GameBeatSongBuilder.h"
 #import "YYModel.h"
 #import "GameMacro.h"
-
-@implementation GamePerBeat
-
-- (void)encodeWithCoder:(NSCoder *)aCoder { [self yy_modelEncodeWithCoder:aCoder]; }
-- (id)initWithCoder:(NSCoder *)aDecoder { self = [super init]; return [self yy_modelInitWithCoder:aDecoder]; }
-- (id)copyWithZone:(NSZone *)zone { return [self yy_modelCopy]; }
-- (NSUInteger)hash { return [self yy_modelHash]; }
-- (BOOL)isEqual:(id)object { return [self yy_modelIsEqual:object]; }
-- (NSString *)description { return [self yy_modelDescription]; }
-
-@end
-
+#import "GameMusicPerBeat.h"
 
 @implementation GameBeatSongBuilder{
-    NSArray<GamePerBeat *> *_beatsArray;
+    NSArray<GameMusicPerBeat *> *_beatsArray;
 }
 
 - (instancetype)init{
@@ -35,7 +24,7 @@
 }
 
 // lazy load
-- (NSArray<GamePerBeat *> *)getBuildResult{
+- (NSArray<GameMusicPerBeat *> *)getBuildResult{
     
     if (_beatsArray) {
         return _beatsArray;
@@ -47,7 +36,7 @@
         return [NSArray array];
     }
     
-    _beatsArray = [NSArray yy_modelArrayWithClass:[GamePerBeat class] json:[NSData dataWithContentsOfFile:filePath]];
+    _beatsArray = [NSArray yy_modelArrayWithClass:[GameMusicPerBeat class] json:[NSData dataWithContentsOfFile:filePath]];
     
     return _beatsArray;
 }
@@ -56,6 +45,12 @@
     NSString *mainPath = [[NSBundle mainBundle] bundlePath];
     return  [mainPath stringByAppendingPathComponent:songName];
 }
+
+- (GameSongProduct *)getSongProductResult{
+    return nil;
+}
+
+#pragma mark - YYModel
 
 - (void)encodeWithCoder:(NSCoder *)aCoder { [self yy_modelEncodeWithCoder:aCoder]; }
 - (id)initWithCoder:(NSCoder *)aDecoder { self = [super init]; return [self yy_modelInitWithCoder:aDecoder]; }
