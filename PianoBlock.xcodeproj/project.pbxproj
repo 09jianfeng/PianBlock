@@ -902,11 +902,9 @@
 		2E2EBAB81D781E8E00550761 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2EC429571D7AAD3C00B93AF4 /* ReactiveCocoa */,
 				2EC427F11D7A6DE700B93AF4 /* resource */,
 				2EC4258B1D7A698C00B93AF4 /* ThirdPart */,
 				2EB30B221D796D19006C7D9F /* Utility */,
-				2EB89C0F1D78608800870536 /* DeviceInfo */,
 				2E2EBABC1D781EF700550761 /* View */,
 				2E2EBABD1D781F0300550761 /* Model */,
 				2E2EBABB1D781EEE00550761 /* ViewController */,
@@ -959,6 +957,7 @@
 		2EB30B221D796D19006C7D9F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2EB89C0F1D78608800870536 /* DeviceInfo */,
 				2EB30B231D796D2C006C7D9F /* GameMacro.h */,
 			);
 			name = Utility;
@@ -990,6 +989,7 @@
 		2EC4258B1D7A698C00B93AF4 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				2EC429571D7AAD3C00B93AF4 /* ReactiveCocoa */,
 				2EC42A9C1D7BB73200B93AF4 /* YYModel */,
 				2EC42A831D7BB5FE00B93AF4 /* AudioEngine */,
 				2EC4258C1D7A698C00B93AF4 /* Masonry */,
