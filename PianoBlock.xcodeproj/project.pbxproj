@@ -305,6 +305,7 @@
 		2EC42AA31D7BB73200B93AF4 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA01D7BB73200B93AF4 /* YYClassInfo.m */; };
 		2EC42AA61D7BB93B00B93AF4 /* GameBeatSongBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */; };
 		2EC42AAA1D7BC0CD00B93AF4 /* GameBeatSongDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */; };
+		7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,7 +340,7 @@
 		2E2EBA851D781A8500550761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E2EBA871D781A8500550761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E2EBA881D781A8500550761 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E2EBA8A1D781A8500550761 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E2EBA8A1D781A8500550761 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		2E2EBA8E1D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E2EBA901D781A8500550761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2EBA931D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -364,7 +365,7 @@
 		2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneGroupCell.m; sourceTree = "<group>"; };
 		2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneGroupCellUnitView.h; sourceTree = "<group>"; };
 		2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneGroupCellUnitView.m; sourceTree = "<group>"; };
-		2EB30B1D1D796517006C7D9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2EB30B1D1D796517006C7D9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		2EB30B1F1D79658F006C7D9F /* GameSceneControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneControllerViewController.h; sourceTree = "<group>"; };
 		2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneControllerViewController.m; sourceTree = "<group>"; };
 		2EB30B231D796D2C006C7D9F /* GameMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMacro.h; sourceTree = "<group>"; };
@@ -771,6 +772,8 @@
 		2EC42AA81D7BC0CD00B93AF4 /* GameBeatSongDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBeatSongDirector.h; sourceTree = "<group>"; };
 		2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBeatSongDirector.m; sourceTree = "<group>"; };
 		7808CE9C1D7C4604001AFBA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7808CEA01D7C574C001AFBA5 /* ViewControllerSwitchMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSwitchMediator.h; sourceTree = "<group>"; };
+		7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSwitchMediator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -840,8 +843,6 @@
 				2E2EBAB81D781E8E00550761 /* Classes */,
 				2E2EBA871D781A8500550761 /* AppDelegate.h */,
 				2E2EBA881D781A8500550761 /* AppDelegate.m */,
-				2E2EBA8A1D781A8500550761 /* ViewController.h */,
-				2EB30B1D1D796517006C7D9F /* ViewController.m */,
 				2E2EBA8D1D781A8500550761 /* Main.storyboard */,
 				2E2EBA901D781A8500550761 /* Assets.xcassets */,
 				2E2EBA921D781A8500550761 /* LaunchScreen.storyboard */,
@@ -883,27 +884,25 @@
 				2EC427F11D7A6DE700B93AF4 /* resource */,
 				2EC4258B1D7A698C00B93AF4 /* ThirdPart */,
 				2EB30B221D796D19006C7D9F /* Utility */,
-				2E2EBABC1D781EF700550761 /* View */,
 				2E2EBABD1D781F0300550761 /* Model */,
-				2E2EBABB1D781EEE00550761 /* ViewController */,
+				2E2EBABB1D781EEE00550761 /* ViewModel */,
+				2E2EBABC1D781EF700550761 /* View */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		2E2EBABB1D781EEE00550761 /* ViewController */ = {
+		2E2EBABB1D781EEE00550761 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2EB30B1F1D79658F006C7D9F /* GameSceneControllerViewController.h */,
-				2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */,
 			);
-			name = ViewController;
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		2E2EBABC1D781EF700550761 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2EC429511D7A74FC00B93AF4 /* GameCountdownWindow.h */,
-				2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */,
+				7808CE9F1D7C47BD001AFBA5 /* UtilitiesView */,
+				7808CE9E1D7C47A9001AFBA5 /* Controller */,
 				2EB30B241D7985F6006C7D9F /* GameScene */,
 			);
 			name = View;
@@ -1494,6 +1493,28 @@
 			name = Song_Build_Pattern;
 			sourceTree = "<group>";
 		};
+		7808CE9E1D7C47A9001AFBA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7808CEA01D7C574C001AFBA5 /* ViewControllerSwitchMediator.h */,
+				7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */,
+				2E2EBA8A1D781A8500550761 /* ViewController.h */,
+				2EB30B1D1D796517006C7D9F /* ViewController.m */,
+				2EB30B1F1D79658F006C7D9F /* GameSceneControllerViewController.h */,
+				2EB30B201D79658F006C7D9F /* GameSceneControllerViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7808CE9F1D7C47BD001AFBA5 /* UtilitiesView */ = {
+			isa = PBXGroup;
+			children = (
+				2EC429511D7A74FC00B93AF4 /* GameCountdownWindow.h */,
+				2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */,
+			);
+			name = UtilitiesView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1861,6 +1882,7 @@
 				2EC42A7A1D7AAD3D00B93AF4 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				2EC42A361D7AAD3D00B93AF4 /* NSString+RACSupport.m in Sources */,
 				2EC42A3F1D7AAD3D00B93AF4 /* RACCompoundDisposable.m in Sources */,
+				7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */,
 				2EC42A4F1D7AAD3D00B93AF4 /* RACKVOTrampoline.m in Sources */,
 				2EC42A291D7AAD3D00B93AF4 /* NSInvocation+RACTypeParsing.m in Sources */,
 				2EC42A3C1D7AAD3D00B93AF4 /* RACBlockTrampoline.m in Sources */,
