@@ -770,6 +770,7 @@
 		2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBeatSongBuilder.m; sourceTree = "<group>"; };
 		2EC42AA81D7BC0CD00B93AF4 /* GameBeatSongDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBeatSongDirector.h; sourceTree = "<group>"; };
 		2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBeatSongDirector.m; sourceTree = "<group>"; };
+		7808CE9C1D7C4604001AFBA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -801,6 +802,7 @@
 		2E1BBF051D7C0BB800372932 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7808CE9C1D7C4604001AFBA5 /* QuartzCore.framework */,
 				2E1BBF121D7C0CAE00372932 /* Accelerate.framework */,
 				2E1BBF101D7C0C8900372932 /* AVFoundation.framework */,
 				2E1BBF0D1D7C0C0600372932 /* CoreAudioKit.framework */,
