@@ -14,6 +14,7 @@
 #import "GameBeatSongDirector.h"
 #import "GameSongProduct.h"
 #import "GameBeatSongBuilder.h"
+#import "ReactiveCocoa.h"
 
 @interface ViewController ()
 
@@ -29,8 +30,15 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
+        GameBeatSongDirector *director = [GameBeatSongDirector new];
+        GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
+        
+        GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
+        gameController.song = [builder getSongProductResult];
+        [self presentViewController:gameController animated:NO completion:nil];
+    }];
     
     UIView *superView = self.view;
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -40,14 +48,6 @@
     }];
 }
 
-- (void)buttonPressed:(id)sender{
-    GameBeatSongDirector *director = [GameBeatSongDirector new];
-    GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
-    
-    GameSceneControllerViewController *gameController = [[GameSceneControllerViewController alloc] init];
-    gameController.song = [builder getSongProductResult];
-    [self presentViewController:gameController animated:NO completion:nil];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
