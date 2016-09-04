@@ -10,9 +10,10 @@
 #import "Masonry.h"
 #import "ViewControllerSwitchMediator.h"
 #import "ReactiveCocoa.h"
+#import "ViewControllerVM.h"
 
 @interface ViewController ()
-
+@property (nonatomic , strong) ViewControllerVM *viewModel;
 @end
 
 @implementation ViewController
@@ -21,13 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    ViewControllerVM *viewModel = [ViewControllerVM new];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
     [self.view addSubview:button];
     
     __weak typeof(self) weakSelf = self;
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf];
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
     }];
     
     UIView *superView = self.view;

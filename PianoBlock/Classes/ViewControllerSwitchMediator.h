@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "ViewControllerVM.h"
 
 @interface ViewControllerSwitchMediator : NSObject
 
 + (instancetype)shareInstance;
 
-- (void)showGameViewController:(UIViewController *)currentController;
+- (void)showGameViewController:(UIViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel;
 
 @end

@@ -8,9 +8,6 @@
 
 #import "ViewControllerSwitchMediator.h"
 #import "GameCountdownWindow.h"
-#import "GameBeatSongDirector.h"
-#import "GameSongProduct.h"
-#import "GameBeatSongBuilder.h"
 #import "GameSceneController.h"
 
 @implementation ViewControllerSwitchMediator
@@ -50,12 +47,9 @@ static ViewControllerSwitchMediator *_instance;
 
 #pragma mark - controller switch
 
-- (void)showGameViewController:(UIViewController *)currentController{
-    GameBeatSongDirector *director = [GameBeatSongDirector new];
-    GameBeatSongBuilder *builder = [[director gameMusicList] objectAtIndex:0];
+- (void)showGameViewController:(UIViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel{
     
-    GameSceneController *gameController = [[GameSceneController alloc] init];
-    gameController.song = [builder getSongProductResult];
+    GameSceneController *gameController = [[GameSceneController alloc] initWithNibName:nil bundle:nil sceneVM:[viewModel viewModelForGameSceneInSong:0]];
     [currentController presentViewController:gameController animated:NO completion:nil];
 
 }

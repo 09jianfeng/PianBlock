@@ -306,6 +306,8 @@
 		2EC42AA61D7BB93B00B93AF4 /* GameBeatSongBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */; };
 		2EC42AAA1D7BC0CD00B93AF4 /* GameBeatSongDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */; };
 		7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */; };
+		7808CEA51D7C607D001AFBA5 /* ViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */; };
+		7808CEA81D7C61A1001AFBA5 /* GameSceneVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -774,6 +776,10 @@
 		7808CE9C1D7C4604001AFBA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7808CEA01D7C574C001AFBA5 /* ViewControllerSwitchMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSwitchMediator.h; sourceTree = "<group>"; };
 		7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSwitchMediator.m; sourceTree = "<group>"; };
+		7808CEA31D7C607D001AFBA5 /* ViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerVM.h; sourceTree = "<group>"; };
+		7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerVM.m; sourceTree = "<group>"; };
+		7808CEA61D7C61A1001AFBA5 /* GameSceneVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneVM.h; sourceTree = "<group>"; };
+		7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneVM.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -894,6 +900,10 @@
 		2E2EBABB1D781EEE00550761 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7808CEA31D7C607D001AFBA5 /* ViewControllerVM.h */,
+				7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */,
+				7808CEA61D7C61A1001AFBA5 /* GameSceneVM.h */,
+				7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1822,6 +1832,7 @@
 				2EC42A7B1D7AAD3D00B93AF4 /* UITextField+RACSignalSupport.m in Sources */,
 				2EC42A5E1D7AAD3D00B93AF4 /* RACStringSequence.m in Sources */,
 				2EC42A6B1D7AAD3D00B93AF4 /* UIAlertView+RACSignalSupport.m in Sources */,
+				7808CEA81D7C61A1001AFBA5 /* GameSceneVM.m in Sources */,
 				2EC42A3B1D7AAD3D00B93AF4 /* RACBehaviorSubject.m in Sources */,
 				2EC42A461D7AAD3D00B93AF4 /* RACEmptySequence.m in Sources */,
 				2EC42A491D7AAD3D00B93AF4 /* RACEvent.m in Sources */,
@@ -1898,6 +1909,7 @@
 				2EC42A331D7AAD3D00B93AF4 /* NSSet+RACSequenceAdditions.m in Sources */,
 				2EC42A6D1D7AAD3D00B93AF4 /* UIButton+RACCommandSupport.m in Sources */,
 				2EC42A2E1D7AAD3D00B93AF4 /* NSObject+RACKVOWrapper.m in Sources */,
+				7808CEA51D7C607D001AFBA5 /* ViewControllerVM.m in Sources */,
 				2EC42A711D7AAD3D00B93AF4 /* UIDatePicker+RACSignalSupport.m in Sources */,
 				2EC42A4D1D7AAD3D00B93AF4 /* RACKVOChannel.m in Sources */,
 				2EC429531D7A74FC00B93AF4 /* GameCountdownWindow.m in Sources */,

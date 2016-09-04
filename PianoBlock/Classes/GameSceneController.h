@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "GameSongProduct.h"
+#import "ViewControllerVM.h"
+
+@class GameSceneVM;
 
 @interface GameSceneController : UIViewController
-@property(nonatomic, strong) GameSongProduct *song;
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil
+                    sceneVM:(GameSceneVM *)sceneVM;
 
 @end

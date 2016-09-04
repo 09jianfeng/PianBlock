@@ -10,15 +10,31 @@
 #import "GameSceneView.h"
 #import "GameCountdownWindow.h"
 #import "ReactiveCocoa.h"
+#import "GameSceneVM.h"
 
 extern NSString *GAMESCENEUNITHITRIGHT ;
 extern NSString *GAMESCENEUNITHITWRONG ;
 
 @interface GameSceneController ()
 @property(nonatomic, strong) GameSceneView *gameScene;
+@property(nonatomic, strong) GameSceneVM *sceneViewModel;
 @end
 
 @implementation GameSceneController
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil
+                    sceneVM:(GameSceneVM *)sceneVM{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _sceneViewModel = sceneVM;
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    return [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil sceneVM:[GameSceneVM new]];
+}
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:GAMESCENEUNITHITRIGHT object:nil];
@@ -38,7 +54,7 @@ extern NSString *GAMESCENEUNITHITWRONG ;
     }];
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:GAMESCENEUNITHITRIGHT object:nil] subscribeNext:^(id  _Nullable x) {
-        [_song playNextBeat];
+        [_sceneViewModel playSongNextBeat];
     }];
 }
 
@@ -49,6 +65,10 @@ extern NSString *GAMESCENEUNITHITWRONG ;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)buildGameSceneControllerVMWithRootVM:(ViewControllerVM *)rootVM{
+    
 }
 
 @end
