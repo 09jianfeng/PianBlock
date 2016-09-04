@@ -115,24 +115,25 @@ static GameCountdownWindow *_instance;
 
 #pragma mark - Animation Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    if (flag && _animIndex > 0) {
-        _animIndex--;
-        _animLabel.text = [NSString stringWithFormat:@"%ld",(long)_animIndex];
-        [_animLabel.layer addAnimation:[self animationGroup] forKey:nil];
-    }
 
     if (_animIndex == 0) {
-        _animIndex = 100;
+        [_animLabel.layer removeAllAnimations];
+        
         if (_completeBlock != nil) {
             self.hidden = true;
             WeakSelf;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 _completeBlock();
-                [weakSelf.animLabel.layer removeAllAnimations];
                 weakSelf.hidden = false;
                 [weakSelf removeFromSuperview];
             });
         }
+    }
+    
+    if (flag && _animIndex > 0) {
+        _animIndex--;
+        _animLabel.text = [NSString stringWithFormat:@"%ld",(long)_animIndex];
+        [_animLabel.layer addAnimation:[self animationGroup] forKey:nil];
     }
 }
 
