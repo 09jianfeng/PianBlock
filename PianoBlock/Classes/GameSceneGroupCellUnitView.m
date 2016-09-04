@@ -9,8 +9,8 @@
 #import "GameSceneGroupCellUnitView.h"
 #import "GameMacro.h"
 
-NSString *GAMESCENEUNITHITRIGHT = @"GAMESCENEUNITHITRIGHT";
-NSString *GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
+NSString * const GAMESCENEUNITHITRIGHT = @"GAMESCENEUNITHITRIGHT";
+NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 
 @implementation GameSceneGroupCellUnitView{
     BOOL _isSpecial;

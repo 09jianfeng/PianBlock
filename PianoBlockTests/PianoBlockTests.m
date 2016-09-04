@@ -7,6 +7,20 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "GameBeatSongDirector.h"
+#import "GameBeatSongBuilder.h"
+
+#define WAIT                                                                \
+do {                                                                        \
+[self expectationForNotification:@"YMDUnitTest" object:nil handler:nil]; \
+[self waitForExpectationsWithTimeout:60 handler:nil];                   \
+} while(0);
+
+#define NOTIFY                                                                            \
+do {                                                                                      \
+[[NSNotificationCenter defaultCenter] postNotificationName:@"YMDUnitTest" object:nil]; \
+} while(0);
+
 
 @interface PianoBlockTests : XCTestCase
 
@@ -24,9 +38,14 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testSongList {
+    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    NSArray *songList = [director gameMusicList];
+    for (GameBeatSongBuilder *builder in songList) {
+        NSLog(@"buildeder desc %@", [builder description]);
+    }
+    
+    XCTAssertNotNil(songList);
 }
 
 - (void)testPerformanceExample {
