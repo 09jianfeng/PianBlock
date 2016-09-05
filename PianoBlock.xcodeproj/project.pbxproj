@@ -305,6 +305,7 @@
 		2EC42AA31D7BB73200B93AF4 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA01D7BB73200B93AF4 /* YYClassInfo.m */; };
 		2EC42AA61D7BB93B00B93AF4 /* GameBeatSongBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */; };
 		2EC42AAA1D7BC0CD00B93AF4 /* GameBeatSongDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */; };
+		2EF60D8A1D7D217600D94F17 /* GameBLBGFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF60D891D7D217600D94F17 /* GameBLBGFactory.m */; };
 		7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */; };
 		7808CEA51D7C607D001AFBA5 /* ViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */; };
 		7808CEA81D7C61A1001AFBA5 /* GameSceneVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */; };
@@ -775,6 +776,8 @@
 		2EC42AA51D7BB93B00B93AF4 /* GameBeatSongBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBeatSongBuilder.m; sourceTree = "<group>"; };
 		2EC42AA81D7BC0CD00B93AF4 /* GameBeatSongDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBeatSongDirector.h; sourceTree = "<group>"; };
 		2EC42AA91D7BC0CD00B93AF4 /* GameBeatSongDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBeatSongDirector.m; sourceTree = "<group>"; };
+		2EF60D881D7D217600D94F17 /* GameBLBGFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBLBGFactory.h; sourceTree = "<group>"; };
+		2EF60D891D7D217600D94F17 /* GameBLBGFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBLBGFactory.m; sourceTree = "<group>"; };
 		7808CE9C1D7C4604001AFBA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7808CEA01D7C574C001AFBA5 /* ViewControllerSwitchMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSwitchMediator.h; sourceTree = "<group>"; };
 		7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSwitchMediator.m; sourceTree = "<group>"; };
@@ -957,6 +960,7 @@
 		2EB30B241D7985F6006C7D9F /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				2EF60D871D7D1F8300D94F17 /* UnitBL_flyweight */,
 				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
 				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
 				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
@@ -1508,6 +1512,15 @@
 			name = Song_Build_Pattern;
 			sourceTree = "<group>";
 		};
+		2EF60D871D7D1F8300D94F17 /* UnitBL_flyweight */ = {
+			isa = PBXGroup;
+			children = (
+				2EF60D881D7D217600D94F17 /* GameBLBGFactory.h */,
+				2EF60D891D7D217600D94F17 /* GameBLBGFactory.m */,
+			);
+			name = UnitBL_flyweight;
+			sourceTree = "<group>";
+		};
 		7808CE9E1D7C47A9001AFBA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1845,6 +1858,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF60D8A1D7D217600D94F17 /* GameBLBGFactory.m in Sources */,
 				2EC42A7B1D7AAD3D00B93AF4 /* UITextField+RACSignalSupport.m in Sources */,
 				2EC42A5E1D7AAD3D00B93AF4 /* RACStringSequence.m in Sources */,
 				2EC42A6B1D7AAD3D00B93AF4 /* UIAlertView+RACSignalSupport.m in Sources */,
