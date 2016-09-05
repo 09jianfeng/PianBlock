@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameSceneViewDelegate.h"
 
 /*
  *extern NSString *GAMESCENEUNITHITRIGHT ;
@@ -14,7 +15,9 @@
  */
 
 @interface GameSceneGroupCellUnitView : UIButton
+@property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 
+- (void)loadView;
 - (void)setToBeSpecialView;
 - (void)resetStatue;
 

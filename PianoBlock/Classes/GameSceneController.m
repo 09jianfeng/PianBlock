@@ -11,11 +11,13 @@
 #import "GameCountdownWindow.h"
 #import "ReactiveCocoa.h"
 #import "GameSceneVM.h"
+#import "GameSceneViewDelegate.h"
+#import "GameSceneGroupCellUnitView.h"
 
 extern NSString *GAMESCENEUNITHITRIGHT ;
 extern NSString *GAMESCENEUNITHITWRONG ;
 
-@interface GameSceneController ()
+@interface GameSceneController () <GameSceneViewDelegate,GameSceneViewDataSource>
 @property(nonatomic, strong) GameSceneView *gameScene;
 @property(nonatomic, strong) GameSceneVM *sceneViewModel;
 @end
@@ -45,16 +47,15 @@ extern NSString *GAMESCENEUNITHITWRONG ;
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
-    self.gameScene.gameSpeed = 6.0;
+    _gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
+    _gameScene.gameSpeed = 6.0;
+    _gameScene.gameDelegate = self;
+    _gameScene.gameDataSource = self;
+    [_gameScene loadGameScene];
     [self.view addSubview:self.gameScene];
 
     [[GameCountdownWindow shareInstance] showWithAnimNum:3 CompleteBlock:^{
         [self.gameScene startGame];
-    }];
-    
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:GAMESCENEUNITHITRIGHT object:nil] subscribeNext:^(id  _Nullable x) {
-        [_sceneViewModel playSongNextBeat];
     }];
 }
 
@@ -67,8 +68,29 @@ extern NSString *GAMESCENEUNITHITWRONG ;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)buildGameSceneControllerVMWithRootVM:(ViewControllerVM *)rootVM{
-    
+#pragma mark - GameSceneViewDelegate,GameSceneViewDataSource
+/// user did select unit view
+- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock{
+    if (isSpecialBlock) {
+        [_sceneViewModel playSongNextBeat];
+    }
+}
+
+/// use to general group cell unit view
+- (GameSceneGroupCellUnitView *)gameScreenGameCellUnit:(BOOL)isSpecial{
+    GameSceneGroupCellUnitView *unitView = [[GameSceneGroupCellUnitView alloc] init];
+    unitView.backgroundColor = [UIColor blueColor];
+    if (isSpecial) {
+        unitView.backgroundColor = [UIColor blackColor];
+    }
+    //UIImage *image = [UIImage imageNamed:@"black_block"];
+    //self.layer.contents = (__bridge id _Nullable)(image.CGImage);
+    return unitView;
+}
+
+/// number of unit view per line
+- (NSInteger)gameSceneUnitNumPerCell{
+    return 6;
 }
 
 @end

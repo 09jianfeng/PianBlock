@@ -961,11 +961,11 @@
 			isa = PBXGroup;
 			children = (
 				2EF60D871D7D1F8300D94F17 /* UnitBL_flyweight */,
+				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
 				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
 				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
 				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
 				2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */,
-				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
 				2EB309D51D791555006C7D9F /* GameSceneView.h */,
 				2EB309D61D791555006C7D9F /* GameSceneView.m */,
 			);

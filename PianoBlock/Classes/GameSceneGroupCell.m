@@ -35,23 +35,6 @@
         _blockWidth = frame.size.width / blockNums;
         _blockHeigh = frame.size.height;
         _unitCells = [[NSMutableArray alloc] initWithCapacity:blockNums];
-        
-        NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];
-        for (NSInteger i = 0 ; i < _randomColors ; i++) {
-            int randomIndex = arc4random() % _blockNum;
-            [randIndexs addObject:[NSNumber numberWithInt:randomIndex]];
-        }
-        for (int i = 0; i < blockNums ; i++) {
-            GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] initWithFrame:CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh)];
-            unit.layer.borderColor = [UIColor grayColor].CGColor;
-            unit.layer.borderWidth = 1.0;
-            
-            [self addSubview:unit];
-            [_unitCells addObject:unit];
-            if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
-                [unit setToBeSpecialView];
-            }
-        }
     }
     return self;
 }
@@ -71,6 +54,38 @@
     return self;
 }
 
+- (void)loadUnitViews{
+    NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];
+    for (NSInteger i = 0 ; i < _randomColors ; i++) {
+        int randomIndex = arc4random() % _blockNum;
+        [randIndexs addObject:[NSNumber numberWithInt:randomIndex]];
+    }
+    for (int i = 0; i < _blockNum ; i++) {
+        BOOL isBlockSpecial = NO;
+        if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
+            isBlockSpecial = YES;
+        }
+        
+        GameSceneGroupCellUnitView *unit = nil;
+        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
+            unit = [_gameDataSource gameScreenGameCellUnit:isBlockSpecial];
+        }else{
+            unit = [[GameSceneGroupCellUnitView alloc] init];
+            unit.layer.borderColor = [UIColor grayColor].CGColor;
+            unit.layer.borderWidth = 1.0;
+        }
+        unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
+        unit.gameDelegate = _gameDelegate;
+        [unit loadView];
+        
+        if (isBlockSpecial) {
+            [unit setToBeSpecialView];
+        }
+        
+        [self addSubview:unit];
+        [_unitCells addObject:unit];
+    }
+}
 
 - (void)reuseGroupCell{
     NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];

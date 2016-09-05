@@ -19,6 +19,8 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
+- (void)loadGameScene;
+
 - (void)startGame;
 
 - (void)stop;

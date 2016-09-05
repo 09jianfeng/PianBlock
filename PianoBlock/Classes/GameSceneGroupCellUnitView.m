@@ -20,31 +20,24 @@ NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-            if (_isSpecial) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITRIGHT object:nil];
-                [self resetStatue];
-                GAMELOG(@"good click");
-            }else{
-                [[NSNotificationCenter defaultCenter] postNotificationName:GAMESCENEUNITHITWRONG object:nil];
-                GAMELOG(@"bad click");
-            }
-        }];
-        
         [self resetStatue];
     }
     return self;
 }
 
+- (void)loadView{
+    [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
+        if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:)]) {
+            [_gameDelegate gameSceneCellBlockDidSelectedInblock:_isSpecial];
+        }
+    }];
+}
+
 - (void)resetStatue{
-    UIImage *image = [UIImage imageNamed:@"white_block"];
-    self.layer.contents = (__bridge id _Nullable)(image.CGImage);
     _isSpecial = NO;
 }
 
 - (void)setToBeSpecialView{
-    UIImage *image = [UIImage imageNamed:@"black_block"];
-    self.layer.contents = (__bridge id _Nullable)(image.CGImage);
     _isSpecial = YES;
 }
 
