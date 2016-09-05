@@ -30,17 +30,21 @@ NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
                 GAMELOG(@"bad click");
             }
         }];
+        
+        [self resetStatue];
     }
     return self;
 }
 
 - (void)resetStatue{
-    self.backgroundColor = [UIColor whiteColor];
+    UIImage *image = [UIImage imageNamed:@"white_block"];
+    self.layer.contents = (__bridge id _Nullable)(image.CGImage);
     _isSpecial = NO;
 }
 
 - (void)setToBeSpecialView{
-    self.backgroundColor = [UIColor blackColor];
+    UIImage *image = [UIImage imageNamed:@"black_block"];
+    self.layer.contents = (__bridge id _Nullable)(image.CGImage);
     _isSpecial = YES;
 }
 

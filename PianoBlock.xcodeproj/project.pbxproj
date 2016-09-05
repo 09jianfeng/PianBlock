@@ -308,6 +308,8 @@
 		7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */; };
 		7808CEA51D7C607D001AFBA5 /* ViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */; };
 		7808CEA81D7C61A1001AFBA5 /* GameSceneVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */; };
+		784C16751D7CF39500E694C3 /* black_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16731D7CF39500E694C3 /* black_block.png */; };
+		784C16761D7CF39500E694C3 /* white_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16741D7CF39500E694C3 /* white_block.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -780,6 +782,8 @@
 		7808CEA41D7C607D001AFBA5 /* ViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerVM.m; sourceTree = "<group>"; };
 		7808CEA61D7C61A1001AFBA5 /* GameSceneVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneVM.h; sourceTree = "<group>"; };
 		7808CEA71D7C61A1001AFBA5 /* GameSceneVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneVM.m; sourceTree = "<group>"; };
+		784C16731D7CF39500E694C3 /* black_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_block.png; sourceTree = "<group>"; };
+		784C16741D7CF39500E694C3 /* white_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_block.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1037,6 +1041,7 @@
 		2EC427F11D7A6DE700B93AF4 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				784C16721D7CF39500E694C3 /* img */,
 				2EC427F21D7A6DE700B93AF4 /* data */,
 				2EC428121D7A6DE700B93AF4 /* icon */,
 				2EC428261D7A6DE700B93AF4 /* localizations */,
@@ -1525,6 +1530,15 @@
 			name = UtilitiesView;
 			sourceTree = "<group>";
 		};
+		784C16721D7CF39500E694C3 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				784C16731D7CF39500E694C3 /* black_block.png */,
+				784C16741D7CF39500E694C3 /* white_block.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1638,6 +1652,7 @@
 				2EC4294F1D7A6DE700B93AF4 /* touch.m4a in Resources */,
 				2EC428A41D7A6DE700B93AF4 /* AdConfig.json in Resources */,
 				2EC429451D7A6DE700B93AF4 /* low_#5.mp3 in Resources */,
+				784C16751D7CF39500E694C3 /* black_block.png in Resources */,
 				2EC428AB1D7A6DE700B93AF4 /* Piano_ForAlice.json in Resources */,
 				2EC429091D7A6DE700B93AF4 /* Alto_#2.mp3 in Resources */,
 				2EC4292C1D7A6DE700B93AF4 /* Bass_7.mp3 in Resources */,
@@ -1751,6 +1766,7 @@
 				2EC429311D7A6DE700B93AF4 /* C7#.mp3 in Resources */,
 				2EC429291D7A6DE700B93AF4 /* Bass_4.mp3 in Resources */,
 				2EC4293F1D7A6DE700B93AF4 /* F7.mp3 in Resources */,
+				784C16761D7CF39500E694C3 /* white_block.png in Resources */,
 				2EC4290E1D7A6DE700B93AF4 /* Alto_2.mp3 in Resources */,
 				2EC429491D7A6DE700B93AF4 /* low_3.mp3 in Resources */,
 				2EC428CF1D7A6DE700B93AF4 /* AppIcon57x57@2x.png in Resources */,
