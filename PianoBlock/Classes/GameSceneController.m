@@ -16,7 +16,6 @@
 
 @interface GameSceneController () <GameSceneViewDelegate,GameSceneViewDataSource>
 @property(nonatomic, strong) GameSceneView *gameScene;
-@property(nonatomic, strong) GameSceneVM *sceneViewModel;
 @end
 
 @implementation GameSceneController
@@ -41,7 +40,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     _gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
-    _gameScene.gameSpeed = 10.0;
+    _gameScene.gameSpeed = 4.0;
     _gameScene.gameDelegate = self;
     _gameScene.gameDataSource = self;
     [_gameScene loadSubView];
@@ -59,33 +58,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - GameSceneViewDelegate,GameSceneViewDataSource
-/// user did select unit view
-- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
-    if (isSpecialBlock) {
-        [_sceneViewModel playSongNextBeat];
-        gameUnit.backgroundColor = [UIColor whiteColor];
-    }
-}
-
-/// use to general group cell unit view
-- (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
-    gameUnit.layer.borderWidth = 1.0;
-    gameUnit.layer.borderColor = [UIColor grayColor].CGColor;
-    if (isSpecial) {
-        gameUnit.backgroundColor = [UIColor blueColor];
-    }else{
-        gameUnit.backgroundColor = [UIColor whiteColor];
-    }
-    //UIImage *image = [UIImage imageNamed:@"black_block"];
-    //self.layer.contents = (__bridge id _Nullable)(image.CGImage);
-}
-
-/// number of unit view per line
-- (NSInteger)gameSceneUnitNumPerCell{
-    return 4;
 }
 
 @end

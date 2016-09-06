@@ -13,6 +13,7 @@
 @class GameSceneVM;
 
 @interface GameSceneController : UIViewController
+@property(nonatomic, strong) GameSceneVM *sceneViewModel;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil
