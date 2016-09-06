@@ -62,14 +62,26 @@
     return self;
 }
 
-- (void)loadGameScene{
+- (void)setBlockNumPerGroupCell:(NSInteger)blockNum{
+    _blockNumPerGroupCell = blockNum;
+    _blockWidth = self.frame.size.width / blockNum;
+    _blockHeigh = _blockWidth * 1.5;
+    _groupCellsNum = ceil(self.frame.size.height / _blockHeigh) + 1;
+    _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_groupCellsNum];
+}
+
+- (void)loadSubView{
+    if ([_gameDataSource respondsToSelector:@selector(gameSceneUnitNumPerCell)]) {
+        self.blockNumPerGroupCell = [_gameDataSource gameSceneUnitNumPerCell];
+    }
+    
     for (NSInteger i = 0 ; i < _groupCellsNum ; i++) {
         GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc] initWithUnitCellsNum:_blockNumPerGroupCell
                                                                                    frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
                                                                          randomColorsNum:1];
         groupCell.gameDataSource = _gameDataSource;
         groupCell.gameDelegate = _gameDelegate;
-        [groupCell loadUnitViews];
+        [groupCell loadSubView];
         [self addSubview:groupCell];
         [_groupCellPool addObject:groupCell];
     }

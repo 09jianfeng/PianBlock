@@ -10,9 +10,6 @@
 #import "GameMacro.h"
 #import "ReactiveCocoa.h"
 
-NSString * const GAMESCENEUNITHITRIGHT = @"GAMESCENEUNITHITRIGHT";
-NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
-
 @implementation GameSceneGroupCellUnitView{
     BOOL _isSpecial;
 }
@@ -25,10 +22,10 @@ NSString * const GAMESCENEUNITHITWRONG = @"GAMESCENEUNITHITWRONG";
     return self;
 }
 
-- (void)loadView{
+- (void)loadSubview{
     [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:)]) {
-            [_gameDelegate gameSceneCellBlockDidSelectedInblock:_isSpecial];
+        if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
+            [_gameDelegate gameSceneCellBlockDidSelectedInblock:_isSpecial gameUnit:self];
         }
     }];
 }

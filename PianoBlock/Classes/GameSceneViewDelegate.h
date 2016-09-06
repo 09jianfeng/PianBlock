@@ -13,14 +13,14 @@
 @protocol GameSceneViewDelegate  <NSObject>
 
 /// user did select unit view
-- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock;
+- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
 
 @end
 
 @protocol GameSceneViewDataSource  <NSObject>
 
-/// use to general group cell unit view
-- (GameSceneGroupCellUnitView *)gameScreenGameCellUnit:(BOOL)isSpecial;
+/// use to self-define group cell unit view
+- (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
 
 /// number of unit view per line
 - (NSInteger)gameSceneUnitNumPerCell;

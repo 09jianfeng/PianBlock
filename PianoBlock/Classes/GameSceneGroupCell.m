@@ -54,7 +54,7 @@
     return self;
 }
 
-- (void)loadUnitViews{
+- (void)loadSubView{
     NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];
     for (NSInteger i = 0 ; i < _randomColors ; i++) {
         int randomIndex = arc4random() % _blockNum;
@@ -66,22 +66,18 @@
             isBlockSpecial = YES;
         }
         
-        GameSceneGroupCellUnitView *unit = nil;
-        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
-            unit = [_gameDataSource gameScreenGameCellUnit:isBlockSpecial];
-        }else{
-            unit = [[GameSceneGroupCellUnitView alloc] init];
-            unit.layer.borderColor = [UIColor grayColor].CGColor;
-            unit.layer.borderWidth = 1.0;
+        GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
+        unit.gameDelegate = _gameDelegate;
+        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
+            [_gameDataSource gameScreenGameCellUnit:isBlockSpecial gameUnit:unit];
         }
         unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
-        unit.gameDelegate = _gameDelegate;
-        [unit loadView];
         
         if (isBlockSpecial) {
             [unit setToBeSpecialView];
         }
         
+        [unit loadSubview];
         [self addSubview:unit];
         [_unitCells addObject:unit];
     }
@@ -97,7 +93,16 @@
     for (int i = 0 ; i < _unitCells.count ; i++) {
         GameSceneGroupCellUnitView *unit = _unitCells[i];
         [unit resetStatue];
+        
+        BOOL isSpecial = NO;
         if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
+            isSpecial = YES;
+        }
+        
+        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
+            [_gameDataSource gameScreenGameCellUnit:isSpecial gameUnit:unit];
+        }
+        if (isSpecial) {
             [unit setToBeSpecialView];
         }
     }

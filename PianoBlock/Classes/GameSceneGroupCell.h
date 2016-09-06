@@ -18,8 +18,7 @@
                      randomColorsNum:(NSInteger)randomColorsNum __attribute__((objc_designated_initializer));
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
-- (void)loadUnitViews;
-
+- (void)loadSubView;
 - (void)reuseGroupCell;
 
 @end
