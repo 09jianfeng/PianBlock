@@ -15,6 +15,7 @@
 #import "GameSceneGroupCellUnitView.h"
 
 @interface GameSceneController () <GameSceneViewDelegate,GameSceneViewDataSource>
+@property(nonatomic, strong) GameSceneVM *sceneViewModel;
 @property(nonatomic, strong) GameSceneView *gameScene;
 @end
 

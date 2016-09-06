@@ -10,5 +10,6 @@
 #import "GameSceneController.h"
 
 @interface GameSceneController (CellManage)
-
+@property(nonatomic, strong) GameSceneVM *sceneViewModel;
+@property(nonatomic, strong) GameSceneView *gameScene;
 @end

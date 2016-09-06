@@ -10,8 +10,12 @@
 #import "GameSceneGroupCellUnitView.h"
 #import "GameSceneVM.h"
 #import "GameBLBGFactory.h"
+#import "GameSceneView.h"
+
 
 @implementation GameSceneController (CellManage)
+@dynamic sceneViewModel;
+@dynamic gameScene;
 
 #pragma mark - GameSceneViewDelegate,GameSceneViewDataSource
 /// user did select unit view
@@ -19,7 +23,14 @@
     if (isSpecialBlock) {
         [self.sceneViewModel playSongNextBeat];
         gameUnit.layer.contents = (__bridge UIColor * _Nullable)([[self.sceneViewModel getNormalBlockBGImage] CGImage]);
+    }else{
+        [self.gameScene stop];
+        [self dismissViewControllerAnimated:NO completion:nil];
     }
+}
+
+- (void)gameFail{
+    [self.gameScene stop];
 }
 
 /// use to general group cell unit view

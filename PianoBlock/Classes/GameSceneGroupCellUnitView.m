@@ -38,4 +38,8 @@
     _isSpecial = YES;
 }
 
+- (BOOL)isSpecialView{
+    return _isSpecial;
+}
+
 @end

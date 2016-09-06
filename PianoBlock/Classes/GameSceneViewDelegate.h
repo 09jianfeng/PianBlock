@@ -11,13 +11,18 @@
 @class GameSceneGroupCellUnitView;
 
 @protocol GameSceneViewDelegate  <NSObject>
+
+@optional
 /// user did select unit view
 - (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
+- (void)gameFail;
 
 @end
 
 
 @protocol GameSceneViewDataSource  <NSObject>
+
+@optional
 /// use to self-define group cell unit view
 - (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
 

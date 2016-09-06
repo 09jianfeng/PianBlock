@@ -92,6 +92,11 @@
     
     for (int i = 0 ; i < _unitCells.count ; i++) {
         GameSceneGroupCellUnitView *unit = _unitCells[i];
+        if ([unit isSpecialView]) {
+            if ([_gameDelegate respondsToSelector:@selector(gameFail)]) {
+                [_gameDelegate gameFail];
+            }
+        }
         [unit resetStatue];
         
         BOOL isSpecial = NO;

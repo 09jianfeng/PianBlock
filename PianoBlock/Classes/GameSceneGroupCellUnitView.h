@@ -13,7 +13,10 @@
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 
 - (void)loadSubview;
+
 - (void)setToBeSpecialView;
+- (BOOL)isSpecialView;
+
 - (void)resetStatue;
 
 @end
