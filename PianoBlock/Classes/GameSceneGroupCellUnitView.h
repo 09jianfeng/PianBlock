@@ -19,4 +19,6 @@
 
 - (void)resetStatue;
 
+- (void)startAnimate;
+
 @end
