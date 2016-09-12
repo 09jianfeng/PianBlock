@@ -22,9 +22,6 @@
 - (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
     if (isSpecialBlock) {
         [self.sceneViewModel playSongNextBeat];
-        //gameUnit.layer.contents = (__bridge UIColor * _Nullable)([[self.sceneViewModel getNormalBlockBGImage] CGImage]);
-        gameUnit.layer.contents = nil;
-        gameUnit.layer.backgroundColor = [UIColor whiteColor].CGColor;
         [gameUnit startAnimate];
     }else{
         [self.gameScene stop];

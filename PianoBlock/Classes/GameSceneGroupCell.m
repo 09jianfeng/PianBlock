@@ -97,12 +97,12 @@
                 [_gameDelegate gameFail];
             }
         }
+        [unit resetStatue];
         
         BOOL isSpecial = NO;
         if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
             isSpecial = YES;
         }
-        
         if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
             [_gameDataSource gameScreenGameCellUnit:isSpecial gameUnit:unit];
         }
