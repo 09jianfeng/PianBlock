@@ -10,7 +10,7 @@
 #import "GameSceneGroupCell.h"
 #import "GameMacro.h"
 
-@interface GameSceneView()
+@interface GameSceneView() <GameSceneViewDelegate>
 
 @property (nonatomic, strong) UIView *viewGroupForOneLine;
 @property (nonatomic, strong) NSMutableArray *groupCellPool;
@@ -24,7 +24,9 @@
 
 @end
 
-@implementation GameSceneView
+@implementation GameSceneView{
+    BOOL _isAutoScroll;
+}
 
 #pragma mark - game scene init
 
@@ -80,7 +82,7 @@
                                                                                    frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
                                                                          randomColorsNum:1];
         groupCell.gameDataSource = _gameDataSource;
-        groupCell.gameDelegate = _gameDelegate;
+        groupCell.gameDelegate = self;
         [groupCell loadSubView];
         [self addSubview:groupCell];
         [_groupCellPool addObject:groupCell];
@@ -90,34 +92,94 @@
 #pragma mark - game handle
 
 - (void)stop{
-    [self.displayLink invalidate];
+    [self.displayLink setPaused:YES];
 }
 
-- (void)startGame{
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
+- (void)contine{
+    [self.displayLink setPaused:NO];
+}
+
+- (void)startGame:(BOOL)isAutoScroll{
+    _isAutoScroll = isAutoScroll;
+    if (isAutoScroll) {
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
+    }else{
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(rollOneCell)];
+        self.gameSpeed = _blockHeigh / 16;
+        [self stop];
+    }
+    
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)beginScroll{
-    CGFloat weakSpeed = self.gameSpeed;
-    NSMutableArray *cellPool = self.groupCellPool;
+    
+    WeakSelf;
     [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         dispatch_async(dispatch_get_main_queue(), ^{
             GameSceneGroupCell *groupCell = (GameSceneGroupCell *)obj;
             CGRect cellFrame = groupCell.frame;
-            cellFrame.origin.y += weakSpeed;
+            cellFrame.origin.y += weakSelf.gameSpeed;
             groupCell.frame = cellFrame;
             
-            if (cellFrame.origin.y > self.frame.size.height) {
-                GameSceneGroupCell *lastCell = [cellPool lastObject];
-                [cellPool removeObject:groupCell];
-                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + self.gameSpeed;
+            if (cellFrame.origin.y > weakSelf.frame.size.height) {
+                GameSceneGroupCell *lastCell = [weakSelf.groupCellPool lastObject];
+                [weakSelf.groupCellPool removeObject:groupCell];
+                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
                 groupCell.frame = cellFrame;
                 [groupCell reuseGroupCell];
-                [cellPool addObject:groupCell];
+                [weakSelf.groupCellPool addObject:groupCell];
             }
         });
     }];
+}
+
+- (void)rollOneCell{
+    
+    WeakSelf;
+    for (GameSceneGroupCell *groupCell in self.groupCellPool) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CGRect cellFrame = groupCell.frame;
+            cellFrame.origin.y += weakSelf.gameSpeed;
+            groupCell.frame = cellFrame;
+            
+            if (cellFrame.origin.y + cellFrame.size.height >= weakSelf.frame.size.height) {
+                BOOL isContainSpecialUnitView = [groupCell isHaveSpecialUnitView];
+                if (isContainSpecialUnitView) {
+                    [self stop];
+                }
+            }
+            
+            if (cellFrame.origin.y > weakSelf.frame.size.height) {
+                GameSceneGroupCell *lastCell = [weakSelf.groupCellPool lastObject];
+                [weakSelf.groupCellPool removeObject:groupCell];
+                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
+                groupCell.frame = cellFrame;
+                [groupCell reuseGroupCell];
+                [weakSelf.groupCellPool addObject:groupCell];
+            }
+        });
+    }
+}
+
+
+#pragma mark - gameSceneViewDelegate
+- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
+    if (_gameDelegate) {
+        [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecialBlock gameUnit:gameUnit];
+    }
+    
+    if (_isAutoScroll || !isSpecialBlock) {
+        return;
+    }
+    
+    [self contine];
+}
+
+- (void)gameFail{
+    if (_gameDelegate) {
+        [_gameDelegate gameFail];
+    }
 }
 
 @end

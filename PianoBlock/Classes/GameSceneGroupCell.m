@@ -112,4 +112,15 @@
     }
 }
 
+- (BOOL)isHaveSpecialUnitView{
+    BOOL isContainSpecialUnitView = NO;
+    for (GameSceneGroupCellUnitView *unit in _unitCells) {
+        if ([unit isSpecialView]) {
+            isContainSpecialUnitView = YES;
+        }
+    }
+    
+    return isContainSpecialUnitView;
+}
+
 @end

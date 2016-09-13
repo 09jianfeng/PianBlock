@@ -21,4 +21,6 @@
 - (void)loadSubView;
 - (void)reuseGroupCell;
 
+- (BOOL)isHaveSpecialUnitView;
+
 @end

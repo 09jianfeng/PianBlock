@@ -48,7 +48,7 @@
     [self.view addSubview:self.gameScene];
 
     [[GameCountdownWindow shareInstance] showWithAnimNum:3 CompleteBlock:^{
-        [self.gameScene startGame];
+        [self.gameScene startGame:NO];
     }];
 }
 
