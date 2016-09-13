@@ -23,7 +23,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self resetStatue];
+        [self reuseUnitView];
     }
     return self;
 }
@@ -103,7 +103,7 @@
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
 }
 
-- (void)resetStatue{
+- (void)reuseUnitView{
     _isSpecial = NO;
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];

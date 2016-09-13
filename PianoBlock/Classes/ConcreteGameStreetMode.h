@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AbstractGame.h"
+#import "AbstractGameMode.h"
 
-@interface ConcreteGameStreetMode : NSObject <AbstractGame>
+@interface ConcreteGameStreetMode : NSObject <AbstractGameMode>
 
-- (NSArray *)AG_gameDataSource;
+- (ProductGameModeStruct *)AG_gameDataSource;
+- (NSString *)AG_gameModel;
 
 @end

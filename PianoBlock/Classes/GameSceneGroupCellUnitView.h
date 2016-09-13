@@ -17,7 +17,7 @@
 - (void)setToBeSpecialView;
 - (BOOL)isSpecialView;
 
-- (void)resetStatue;
+- (void)reuseUnitView;
 
 - (void)startAnimate;
 
