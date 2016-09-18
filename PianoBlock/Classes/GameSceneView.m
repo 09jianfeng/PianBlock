@@ -10,6 +10,8 @@
 #import "GameSceneGroupCell.h"
 #import "GameMacro.h"
 
+#define GameSpeedNonAutoRoll _blockHeigh / 12
+
 @interface GameSceneView() <GameSceneViewDelegate>
 
 @property (nonatomic, strong) UIView *viewGroupForOneLine;
@@ -105,7 +107,7 @@
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
     }else{
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(rollOneCell)];
-        self.gameSpeed = _blockHeigh / 16;
+        self.gameSpeed = GameSpeedNonAutoRoll;
         [self stop];
     }
     
