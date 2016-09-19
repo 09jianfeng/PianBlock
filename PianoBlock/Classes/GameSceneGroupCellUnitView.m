@@ -11,7 +11,7 @@
 #import "ReactiveCocoa.h"
 #import "Masonry.h"
 
-@interface GameSceneGroupCellUnitView()
+@interface GameSceneGroupCellUnitView() <CAAnimationDelegate>
 @property BOOL isSpecial;
 @end
 
@@ -30,7 +30,7 @@
 
 - (void)loadSubview{
     WeakSelf
-    [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
+    [[self rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
         BOOL isSpecial = self.isSpecial;
         self.isSpecial = NO;
         if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
@@ -77,9 +77,9 @@
     
     if (!_shapeLayer) {
         _shapeLayer = [CAShapeLayer layer];
-        _shapeLayer.strokeColor = [UIColor blackColor].CGColor;
-        _shapeLayer.lineWidth = 1.0;
-        _shapeLayer.fillColor = [UIColor whiteColor].CGColor;
+        _shapeLayer.strokeColor = [UIColor grayColor].CGColor;
+        _shapeLayer.lineWidth = 0.0;
+        _shapeLayer.fillColor = [UIColor grayColor].CGColor;
         _shapeLayer.lineJoin = kCALineJoinRound;
         _shapeLayer.lineCap = kCALineCapRound;
         _shapeLayer.path = path.CGPath;
@@ -90,15 +90,16 @@
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     CATransform3D initialTransform = CATransform3DMakeScale(1, 1, 0);
-    CATransform3D finalTransform = CATransform3DMakeScale(20, 20, 0);
+    CATransform3D finalTransform = CATransform3DMakeScale(8, 8, 0);
     animation.values = @[[NSValue valueWithCATransform3D:initialTransform],[NSValue valueWithCATransform3D:finalTransform]];
     animation.keyTimes = @[@(0),@(1)];
     animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     
-    animation.duration = 1.0;
+    animation.duration = 0.5;
     animation.beginTime = CACurrentMediaTime();
+    animation.delegate = self;
     
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
 }
@@ -118,6 +119,11 @@
 
 - (BOOL)isSpecialView{
     return _isSpecial;
+}
+
+#pragma mark - CAAnimation
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [self reuseUnitView];
 }
 
 @end

@@ -11,6 +11,9 @@
 #import "GameMacro.h"
 
 #define GameSpeedNonAutoRoll _blockHeigh / 12
+#define GameSpeedAutoRollRimit _blockHeigh / 10
+#define GameSpeedIncrementPerInterval 0.2
+#define GameSpeedIncrementInterval 0.2
 
 @interface GameSceneView() <GameSceneViewDelegate>
 
@@ -28,6 +31,8 @@
 
 @implementation GameSceneView{
     BOOL _isAutoScroll;
+    dispatch_source_t _timer;
+    UIGestureRecognizer *_gesture;
 }
 
 #pragma mark - game scene init
@@ -105,6 +110,18 @@
     _isAutoScroll = isAutoScroll;
     if (isAutoScroll) {
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
+        
+        WeakSelf;
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+        dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, GameSpeedIncrementInterval * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+        dispatch_source_set_event_handler(_timer, ^{
+            weakSelf.gameSpeed += GameSpeedIncrementPerInterval;
+            if (weakSelf.gameSpeed > GameSpeedAutoRollRimit) {
+                weakSelf.gameSpeed = GameSpeedAutoRollRimit;
+            }
+        });
+        dispatch_resume(_timer);
     }else{
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(rollOneCell)];
         self.gameSpeed = GameSpeedNonAutoRoll;
@@ -182,6 +199,28 @@
     if (_gameDelegate) {
         [_gameDelegate gameFail];
     }
+}
+
+#pragma mark - hitTest
+- (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event{
+    NSLog(@"----hitTest %@",NSStringFromCGPoint(point));
+    return self;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan %@",touches);
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
+    NSLog(@"touchesMoved %@",touches);
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
+    NSLog(@"touchesEnded %@",touches);
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
+    NSLog(@"touchesCancelled %@",touches);
 }
 
 @end

@@ -20,12 +20,13 @@
 		2E2EBAC11D7824AC00550761 /* GameModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC01D7824AC00550761 /* GameModelFactory.m */; };
 		2E2EBAC71D7825BC00550761 /* ConcreteGameClassicMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */; };
 		2E2EBACA1D78291C00550761 /* ConcreteGameStreetMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */; };
+		2E80A27C1D8F931D00DE781A /* MainGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E80A27B1D8F931D00DE781A /* MainGameScene.m */; };
 		2E822AD21D87954F00CE0D74 /* ProductGameModeStruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E822AD11D87954F00CE0D74 /* ProductGameModeStruct.m */; };
 		2E822AD61D879BA900CE0D74 /* GameDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E822AD51D879BA900CE0D74 /* GameDataStorage.m */; };
 		2EB309D71D791556006C7D9F /* GameSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309D61D791555006C7D9F /* GameSceneView.m */; };
 		2EB309DD1D792747006C7D9F /* GameSceneGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */; };
 		2EB309E01D794004006C7D9F /* GameSceneGroupCellUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */; };
-		2EB30B1E1D796517006C7D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B1D1D796517006C7D9F /* ViewController.m */; };
+		2EB30B1E1D796517006C7D9F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B1D1D796517006C7D9F /* RootViewController.m */; };
 		2EB30B211D79658F006C7D9F /* GameSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30B201D79658F006C7D9F /* GameSceneController.m */; };
 		2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB89C111D7860A800870536 /* OpenIDFA.m */; };
 		2EC426661D7A698C00B93AF4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC425901D7A698C00B93AF4 /* MASCompositeConstraint.m */; };
@@ -348,7 +349,7 @@
 		2E2EBA851D781A8500550761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E2EBA871D781A8500550761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E2EBA881D781A8500550761 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E2EBA8A1D781A8500550761 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		2E2EBA8A1D781A8500550761 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
 		2E2EBA8E1D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E2EBA901D781A8500550761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2EBA931D781A8500550761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -366,6 +367,8 @@
 		2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameClassicMode.m; sourceTree = "<group>"; };
 		2E2EBAC81D78291C00550761 /* ConcreteGameStreetMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteGameStreetMode.h; sourceTree = "<group>"; };
 		2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameStreetMode.m; sourceTree = "<group>"; };
+		2E80A27A1D8F931D00DE781A /* MainGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameScene.h; sourceTree = "<group>"; };
+		2E80A27B1D8F931D00DE781A /* MainGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGameScene.m; sourceTree = "<group>"; };
 		2E822AD01D87954F00CE0D74 /* ProductGameModeStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductGameModeStruct.h; sourceTree = "<group>"; };
 		2E822AD11D87954F00CE0D74 /* ProductGameModeStruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductGameModeStruct.m; sourceTree = "<group>"; };
 		2E822AD41D879BA900CE0D74 /* GameDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataStorage.h; sourceTree = "<group>"; };
@@ -377,7 +380,7 @@
 		2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneGroupCell.m; sourceTree = "<group>"; };
 		2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneGroupCellUnitView.h; sourceTree = "<group>"; };
 		2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneGroupCellUnitView.m; sourceTree = "<group>"; };
-		2EB30B1D1D796517006C7D9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		2EB30B1D1D796517006C7D9F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
 		2EB30B1F1D79658F006C7D9F /* GameSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSceneController.h; sourceTree = "<group>"; };
 		2EB30B201D79658F006C7D9F /* GameSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSceneController.m; sourceTree = "<group>"; };
 		2EB30B231D796D2C006C7D9F /* GameMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMacro.h; sourceTree = "<group>"; };
@@ -927,9 +930,9 @@
 		2E2EBABC1D781EF700550761 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E80A2781D8F92BB00DE781A /* View */,
 				7808CE9F1D7C47BD001AFBA5 /* UtilitiesView */,
 				7808CE9E1D7C47A9001AFBA5 /* Controller */,
-				2EB30B241D7985F6006C7D9F /* GameScene */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -960,6 +963,24 @@
 			name = "Game Mode Factory";
 			sourceTree = "<group>";
 		};
+		2E80A2781D8F92BB00DE781A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E80A2791D8F92ED00DE781A /* MainScene */,
+				2EB30B241D7985F6006C7D9F /* PlayingScene */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E80A2791D8F92ED00DE781A /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				2E80A27A1D8F931D00DE781A /* MainGameScene.h */,
+				2E80A27B1D8F931D00DE781A /* MainGameScene.m */,
+			);
+			name = MainScene;
+			sourceTree = "<group>";
+		};
 		2E822AD31D87992400CE0D74 /* Data_storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,7 +1000,7 @@
 			name = Utility;
 			sourceTree = "<group>";
 		};
-		2EB30B241D7985F6006C7D9F /* GameScene */ = {
+		2EB30B241D7985F6006C7D9F /* PlayingScene */ = {
 			isa = PBXGroup;
 			children = (
 				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
@@ -990,7 +1011,7 @@
 				2EB309D51D791555006C7D9F /* GameSceneView.h */,
 				2EB309D61D791555006C7D9F /* GameSceneView.m */,
 			);
-			name = GameScene;
+			name = PlayingScene;
 			sourceTree = "<group>";
 		};
 		2EB89C0F1D78608800870536 /* DeviceInfo */ = {
@@ -1547,8 +1568,8 @@
 			children = (
 				7808CEA01D7C574C001AFBA5 /* ViewControllerSwitchMediator.h */,
 				7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */,
-				2E2EBA8A1D781A8500550761 /* ViewController.h */,
-				2EB30B1D1D796517006C7D9F /* ViewController.m */,
+				2E2EBA8A1D781A8500550761 /* RootViewController.h */,
+				2EB30B1D1D796517006C7D9F /* RootViewController.m */,
 				2EB30B1F1D79658F006C7D9F /* GameSceneController.h */,
 				2EB30B201D79658F006C7D9F /* GameSceneController.m */,
 				2ECD8BBA1D7E9CFD00ED0831 /* GameSceneController+CellManage.h */,
@@ -1885,6 +1906,7 @@
 				2EC42A7B1D7AAD3D00B93AF4 /* UITextField+RACSignalSupport.m in Sources */,
 				2EC42A5E1D7AAD3D00B93AF4 /* RACStringSequence.m in Sources */,
 				2EC42A6B1D7AAD3D00B93AF4 /* UIAlertView+RACSignalSupport.m in Sources */,
+				2E80A27C1D8F931D00DE781A /* MainGameScene.m in Sources */,
 				7808CEA81D7C61A1001AFBA5 /* GameSceneVM.m in Sources */,
 				2EC42A3B1D7AAD3D00B93AF4 /* RACBehaviorSubject.m in Sources */,
 				2EC42A461D7AAD3D00B93AF4 /* RACEmptySequence.m in Sources */,
@@ -1967,7 +1989,7 @@
 				2EC42A4D1D7AAD3D00B93AF4 /* RACKVOChannel.m in Sources */,
 				2EC429531D7A74FC00B93AF4 /* GameCountdownWindow.m in Sources */,
 				2EC42A5B1D7AAD3D00B93AF4 /* RACSignalProvider.d in Sources */,
-				2EB30B1E1D796517006C7D9F /* ViewController.m in Sources */,
+				2EB30B1E1D796517006C7D9F /* RootViewController.m in Sources */,
 				2EC42A571D7AAD3D00B93AF4 /* RACSequence.m in Sources */,
 				2EC42A541D7AAD3D00B93AF4 /* RACReturnSignal.m in Sources */,
 				2EB89C121D7860A800870536 /* OpenIDFA.m in Sources */,

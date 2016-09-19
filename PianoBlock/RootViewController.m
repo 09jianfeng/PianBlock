@@ -6,23 +6,28 @@
 //  Copyright © 2016年 陈建峰. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 #import "Masonry.h"
 #import "ViewControllerSwitchMediator.h"
 #import "ReactiveCocoa.h"
 #import "ViewControllerVM.h"
+#import "MainGameScene.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 @property (nonatomic , strong) ViewControllerVM *viewModel;
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     ViewControllerVM *viewModel = [ViewControllerVM new];
+    
+    MainGameScene *mainScene = [[MainGameScene alloc] initWithButtonNumPerLine:4 frame:self.view.bounds];
+    [self.view addSubview:mainScene];
+    
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
