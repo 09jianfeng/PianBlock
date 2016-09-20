@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "GameSceneViewDelegate.h"
 
+typedef NS_ENUM(NSInteger,GAMEMODE){
+    GAMEMODE_AUTOROLL,
+    GAMEMODE_AUTOROLLMUTLCLICK,
+    GAMEMODE_MANUALROLL
+};
+
 @interface GameSceneView : UIView
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 @property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
@@ -20,7 +26,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
 - (void)loadSubView;
-- (void)startGame:(BOOL)isAutoScroll;
+- (void)startGame:(GAMEMODE)gameMode;
 - (void)stop;
 
 @end

@@ -12,6 +12,7 @@
 #import "ReactiveCocoa.h"
 #import "ViewControllerVM.h"
 #import "MainGameScene.h"
+#import "GameMacro.h"
 
 @interface RootViewController ()
 @property (nonatomic , strong) ViewControllerVM *viewModel;
@@ -28,12 +29,28 @@
     MainGameScene *mainScene = [[MainGameScene alloc] initWithButtonNumPerLine:4 frame:self.view.bounds];
     [self.view addSubview:mainScene];
     
+    WeakSelf;
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_JINDIAN] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    }];
     
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_LEITING] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    }];
+    
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_SHANBENG] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    }];
+    
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_BAOFENG] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    }];
+    
+    /*
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
     [self.view addSubview:button];
     
-    __weak typeof(self) weakSelf = self;
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
         [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
     }];
@@ -44,6 +61,7 @@
         make.centerX.mas_equalTo(superView.mas_centerX);
         make.topMargin.mas_equalTo(50);
     }];
+     */
 }
 
 

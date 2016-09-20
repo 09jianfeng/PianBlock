@@ -8,7 +8,6 @@
 
 #import "MainGameScene.h"
 #import "GameSceneGroupCellUnitView.h"
-#import "ReactiveCocoa.h"
 
 @implementation MainGameScene{
     NSMutableArray *_buttons;
@@ -40,7 +39,7 @@
             button.layer.borderColor = [UIColor grayColor].CGColor;
             button.layer.borderWidth = 1.0;
             button.frame = CGRectMake(buttonWidth * (i % buttonNum), buttonHeigh * (i / buttonNum), buttonWidth, buttonHeigh);
-            [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
+            [[button rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
                 [button startAnimate];
             }];
             
@@ -78,32 +77,26 @@
     shareButton.backgroundColor = [UIColor blackColor];
     [shareButton setTitle:@"分享" forState:UIControlStateNormal];
     
-    GameSceneGroupCellUnitView *normalMode = [self getButtonByIndex:5];
+    GameSceneGroupCellUnitView *normalMode = [self getButtonByIndex:GAMEMAINMANU_JINDIAN];
     normalMode.backgroundColor = [UIColor blackColor];
     [normalMode setTitle:@"经典" forState:UIControlStateNormal];
-    [[normalMode rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"normal mode");
-    }];
     
-    GameSceneGroupCellUnitView *streetMode = [self getButtonByIndex:6];
+    GameSceneGroupCellUnitView *streetMode = [self getButtonByIndex:GAMEMAINMANU_LEITING];
     streetMode.backgroundColor = [UIColor blackColor];
     [streetMode setTitle:@"雷霆" forState:UIControlStateNormal];
-    [[streetMode rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"street mode");
-    }];
-    GameSceneGroupCellUnitView *chuangkuai = [self getButtonByIndex:9];
+
+    GameSceneGroupCellUnitView *chuangkuai = [self getButtonByIndex:GAMEMAINMANU_SHANBENG];
     chuangkuai.backgroundColor = [UIColor blackColor];
     [chuangkuai setTitle:@"山崩" forState:UIControlStateNormal];
-    [[chuangkuai rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"normal mode");
-    }];
     
-    GameSceneGroupCellUnitView *baofeng = [self getButtonByIndex:10];
+    GameSceneGroupCellUnitView *baofeng = [self getButtonByIndex:GAMEMAINMANU_BAOFENG];
     baofeng.backgroundColor = [UIColor blackColor];
     [baofeng setTitle:@"暴风" forState:UIControlStateNormal];
-    [[baofeng rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"street mode");
-    }];
+}
+
+- (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index{
+    GameSceneGroupCellUnitView *unitView = [self getButtonByIndex:index];
+    return [unitView rac_signalForControlEvents:UIControlEventTouchUpInside];
 }
 
 @end

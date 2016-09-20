@@ -31,7 +31,7 @@
 @end
 
 @implementation GameSceneView{
-    BOOL _isAutoScroll;
+    GAMEMODE _gameMode;
     dispatch_source_t _timer;
     UIGestureRecognizer *_gesture;
     CGPoint _touchingPoint;
@@ -108,9 +108,9 @@
     [self.displayLink setPaused:NO];
 }
 
-- (void)startGame:(BOOL)isAutoScroll{
-    _isAutoScroll = isAutoScroll;
-    if (isAutoScroll) {
+- (void)startGame:(GAMEMODE)gameMode{
+    _gameMode = gameMode;
+    if (gameMode != GAMEMODE_MANUALROLL) {
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
         
         WeakSelf;
@@ -154,8 +154,8 @@
         });
     }];
     
-    //
-    if (CGPointEqualToPoint(_touchingPoint, CGPointZero)) {
+    //如果是模式不允许连击，就不用连击
+    if (CGPointEqualToPoint(_touchingPoint, CGPointZero) || _gameMode != GAMEMODE_AUTOROLLMUTLCLICK) {
         return;
     }
     
@@ -205,7 +205,8 @@
         [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecialBlock gameUnit:gameUnit];
     }
     
-    if (_isAutoScroll || !isSpecialBlock) {
+    //  如果是手动滚动的方式才需要continue， 因为手动的动画有时候会被stop。
+    if (_gameMode != GAMEMODE_MANUALROLL || !isSpecialBlock) {
         return;
     }
     

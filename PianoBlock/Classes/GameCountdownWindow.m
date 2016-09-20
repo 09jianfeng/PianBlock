@@ -13,7 +13,7 @@
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define WeakSelf __weak typeof(self) weakSelf = self
 
-@interface GameCountdownWindow() <CAAnimationDelegate>
+@interface GameCountdownWindow()
 @property (nonatomic,strong) UILabel *animLabel;
 @property (nonatomic,assign) NSInteger animIndex;
 @property (nonatomic,copy) CompleteBlock completeBlock;

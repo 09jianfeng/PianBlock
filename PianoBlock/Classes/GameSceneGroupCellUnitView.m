@@ -11,7 +11,7 @@
 #import "ReactiveCocoa.h"
 #import "Masonry.h"
 
-@interface GameSceneGroupCellUnitView() <CAAnimationDelegate>
+@interface GameSceneGroupCellUnitView()
 @property BOOL isSpecial;
 @end
 
@@ -111,7 +111,7 @@
         _shapeLayer = [CAShapeLayer layer];
         _shapeLayer.strokeColor = [UIColor grayColor].CGColor;
         _shapeLayer.lineWidth = 0.0;
-        _shapeLayer.fillColor = [UIColor grayColor].CGColor;
+        _shapeLayer.fillColor = [UIColor colorWithRed:0.4 green:0.8 blue:0.9 alpha:1.0].CGColor;
         _shapeLayer.lineJoin = kCALineJoinRound;
         _shapeLayer.lineCap = kCALineCapRound;
         _shapeLayer.path = path.CGPath;

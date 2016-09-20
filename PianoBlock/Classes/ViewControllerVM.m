@@ -12,9 +12,7 @@
 #import "GameSceneVM.h"
 
 @interface ViewControllerVM()
-
 @property (nonatomic, strong, readwrite) NSArray *songlists;
-
 @end
 
 @implementation ViewControllerVM
@@ -31,6 +29,7 @@
 - (GameSceneVM *)viewModelForGameSceneInSong:(NSInteger )index{
     GameBeatSongBuilder *builder = [_songlists objectAtIndex:index];
     GameSceneVM *sceneVM = [[GameSceneVM alloc] initWithSong:[builder getSongProductResult]];
+    sceneVM.gameMode = self.gameMode;
     return sceneVM;
 }
 

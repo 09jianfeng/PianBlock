@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MainGameScene.h"
 
 @class GameSongProduct;
+
 @interface GameSceneVM : NSObject
+@property(nonatomic, assign) GAMEMAINMANU gameMode;
 
 - (instancetype)initWithSong:(GameSongProduct *)song NS_DESIGNATED_INITIALIZER;
 - (void)playSongNextBeat;
