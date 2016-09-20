@@ -21,4 +21,6 @@
 
 - (void)startAnimate;
 
+- (void)buttonPressedEvent;
+
 @end

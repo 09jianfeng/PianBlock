@@ -10,8 +10,6 @@
 #import "GameSceneGroupCellUnitView.h"
 
 @interface GameSceneGroupCell()
-//cells in per line
-@property(nonatomic, strong) NSMutableArray *unitCells;
 @property(nonatomic, assign) NSInteger selectedIndex;
 @property(nonatomic, assign) NSInteger colorfulIndex;
 

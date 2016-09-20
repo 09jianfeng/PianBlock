@@ -9,6 +9,7 @@
 #import "GameSceneView.h"
 #import "GameSceneGroupCell.h"
 #import "GameMacro.h"
+#import "GameSceneGroupCellUnitView.h"
 
 #define GameSpeedNonAutoRoll _blockHeigh / 12
 #define GameSpeedAutoRollRimit _blockHeigh / 10
@@ -33,6 +34,7 @@
     BOOL _isAutoScroll;
     dispatch_source_t _timer;
     UIGestureRecognizer *_gesture;
+    CGPoint _touchingPoint;
 }
 
 #pragma mark - game scene init
@@ -151,6 +153,21 @@
             }
         });
     }];
+    
+    //
+    if (CGPointEqualToPoint(_touchingPoint, CGPointZero)) {
+        return;
+    }
+    
+    for (GameSceneGroupCell *cell in self.groupCellPool) {
+        NSArray *unitViews = [cell unitCells];
+        for (GameSceneGroupCellUnitView *unitView in unitViews) {
+            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
+            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
+                [unitView buttonPressedEvent];
+            }
+        }
+    }
 }
 
 - (void)rollOneCell{
@@ -201,26 +218,36 @@
     }
 }
 
-#pragma mark - hitTest
+#pragma mark - touch event catch
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event{
-    NSLog(@"----hitTest %@",NSStringFromCGPoint(point));
     return self;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan %@",touches);
+    NSEnumerator *enumerator = [touches objectEnumerator];
+    UITouch *toucher = enumerator.nextObject;
+    CGPoint location = [toucher locationInView:self];
+    _touchingPoint = location;
+    
+    for (GameSceneGroupCell *cell in self.groupCellPool) {
+        NSArray *unitViews = [cell unitCells];
+        for (GameSceneGroupCellUnitView *unitView in unitViews) {
+            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
+            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
+                [unitView buttonPressedEvent];
+            }
+        }
+    } 
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
-    NSLog(@"touchesMoved %@",touches);
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
-    NSLog(@"touchesEnded %@",touches);
+    _touchingPoint = CGPointZero;
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
-    NSLog(@"touchesCancelled %@",touches);
 }
 
 @end

@@ -12,6 +12,8 @@
 @interface GameSceneGroupCell : UIView
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 @property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
+//cells in per line
+@property(nonatomic, strong) NSMutableArray *unitCells;
 
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame

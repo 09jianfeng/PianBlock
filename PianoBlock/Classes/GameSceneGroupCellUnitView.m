@@ -18,6 +18,7 @@
 @implementation GameSceneGroupCellUnitView{
     CALayer *_maskLayer;
     CAShapeLayer *_shapeLayer;
+    BOOL _clicked;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -31,13 +32,44 @@
 - (void)loadSubview{
     WeakSelf
     [[self rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
-        BOOL isSpecial = self.isSpecial;
-        self.isSpecial = NO;
-        if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
-            [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecial gameUnit:weakSelf];
-        }
+        [weakSelf buttonPressedEvent];
     }];
 }
+
+- (void)reuseUnitView{
+    _clicked = NO;
+    _isSpecial = NO;
+    [_shapeLayer removeAllAnimations];
+    [_shapeLayer removeFromSuperlayer];
+    [self.layer.mask removeAllAnimations];
+    self.layer.mask = nil;
+    self.layer.contents = nil;
+}
+
+- (void)setToBeSpecialView{
+    _isSpecial = YES;
+}
+
+- (BOOL)isSpecialView{
+    return _isSpecial;
+}
+
+#pragma mark - click event
+
+- (void)buttonPressedEvent{
+    if (_clicked) {
+        return;
+    }
+    _clicked = YES;
+    
+    BOOL isSpecial = self.isSpecial;
+    self.isSpecial = NO;
+    if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
+        [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecial gameUnit:self];
+    }
+}
+
+#pragma mark - game animation
 
 - (void)startAnimate{
     [self bezierPathAnimation];
@@ -104,26 +136,11 @@
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
 }
 
-- (void)reuseUnitView{
-    _isSpecial = NO;
-    [_shapeLayer removeAllAnimations];
-    [_shapeLayer removeFromSuperlayer];
-    [self.layer.mask removeAllAnimations];
-    self.layer.mask = nil;
-    self.layer.contents = nil;
-}
-
-- (void)setToBeSpecialView{
-    _isSpecial = YES;
-}
-
-- (BOOL)isSpecialView{
-    return _isSpecial;
-}
-
 #pragma mark - CAAnimation
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    [self reuseUnitView];
+    [_shapeLayer removeAllAnimations];
+    [_shapeLayer removeFromSuperlayer];
+    self.layer.contents = nil;
 }
 
 @end
