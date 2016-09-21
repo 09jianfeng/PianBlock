@@ -135,7 +135,6 @@
     
     animation.duration = 0.5;
     animation.beginTime = CACurrentMediaTime();
-    animation.delegate = self;
     
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
 }
@@ -158,13 +157,6 @@
         }
     });
     dispatch_resume(_timer);
-}
-
-#pragma mark - CAAnimation
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    [_shapeLayer removeAllAnimations];
-    [_shapeLayer removeFromSuperlayer];
-    self.layer.contents = nil;
 }
 
 @end
