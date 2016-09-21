@@ -19,7 +19,7 @@
 
 - (void)reuseUnitView;
 
-- (void)startAnimate:(UIColor *)layerColor;
+- (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer;
 
 - (void)buttonPressedEvent;
 

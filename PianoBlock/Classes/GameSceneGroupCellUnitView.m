@@ -75,8 +75,8 @@
 
 #pragma mark - game animation
 
-- (void)startAnimate:(UIColor *)layerColor{
-    [self bezierPathAnimation:layerColor];
+- (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer{
+    [self bezierPathAnimation:layerColor removeAnimateLayer:(BOOL)removeAniLayer];
 }
 
 - (void)maskLayerAnimation{
@@ -108,7 +108,7 @@
     [self.layer.mask addAnimation:maskAnimation forKey:@"maskAnimation"];
 }
 
-- (void)bezierPathAnimation:(UIColor *)shapeLayerColor{
+- (void)bezierPathAnimation:(UIColor *)shapeLayerColor removeAnimateLayer:(BOOL)removeAniLayer{
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:10 startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
     if (!_shapeLayer) {
@@ -132,9 +132,11 @@
     animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    
     animation.duration = 0.5;
     animation.beginTime = CACurrentMediaTime();
+    if (removeAniLayer) {
+        animation.delegate = self;
+    }
     
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
 }
@@ -157,6 +159,13 @@
         }
     });
     dispatch_resume(_timer);
+}
+
+#pragma mark - CAAnimation
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [_shapeLayer removeAllAnimations];
+    [_shapeLayer removeFromSuperlayer];
+    self.layer.contents = nil;
 }
 
 @end

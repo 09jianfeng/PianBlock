@@ -22,7 +22,7 @@
 - (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
     if (isSpecialBlock) {
         [self.sceneViewModel playSongNextBeat];
-        [gameUnit startAnimate:[UIColor whiteColor]];
+        [gameUnit startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
     }else{
         [self.gameScene stop];
     }
