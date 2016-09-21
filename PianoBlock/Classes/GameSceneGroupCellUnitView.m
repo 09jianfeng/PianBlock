@@ -12,7 +12,8 @@
 #import "Masonry.h"
 
 @interface GameSceneGroupCellUnitView()
-@property BOOL isSpecial;
+@property(nonatomic, assign) BOOL isSpecial;
+@property(nonatomic, strong) dispatch_source_t timer;
 @end
 
 @implementation GameSceneGroupCellUnitView{
@@ -66,13 +67,16 @@
     self.isSpecial = NO;
     if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
         [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecial gameUnit:self];
+        if (!isSpecial) {
+            [self failAnimation];
+        }
     }
 }
 
 #pragma mark - game animation
 
-- (void)startAnimate{
-    [self bezierPathAnimation];
+- (void)startAnimate:(UIColor *)layerColor{
+    [self bezierPathAnimation:layerColor];
 }
 
 - (void)maskLayerAnimation{
@@ -104,14 +108,14 @@
     [self.layer.mask addAnimation:maskAnimation forKey:@"maskAnimation"];
 }
 
-- (void)bezierPathAnimation{
+- (void)bezierPathAnimation:(UIColor *)shapeLayerColor{
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:10 startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
     if (!_shapeLayer) {
         _shapeLayer = [CAShapeLayer layer];
-        _shapeLayer.strokeColor = [UIColor grayColor].CGColor;
+        _shapeLayer.strokeColor = shapeLayerColor.CGColor;
         _shapeLayer.lineWidth = 0.0;
-        _shapeLayer.fillColor = [UIColor colorWithRed:0.4 green:0.8 blue:0.9 alpha:1.0].CGColor;
+        _shapeLayer.fillColor = shapeLayerColor.CGColor;
         _shapeLayer.lineJoin = kCALineJoinRound;
         _shapeLayer.lineCap = kCALineCapRound;
         _shapeLayer.path = path.CGPath;
@@ -134,6 +138,26 @@
     animation.delegate = self;
     
     [_shapeLayer addAnimation:animation forKey:@"transformAnimation"];
+}
+
+- (void)failAnimation{
+    __block int circleTimes = 0;
+    WeakSelf;
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+    dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 0.2 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(_timer, ^{
+        if (circleTimes % 2) {
+            weakSelf.backgroundColor = [UIColor whiteColor];
+        }else{
+            weakSelf.backgroundColor = [UIColor redColor];
+        }
+        
+        circleTimes++;
+        if (circleTimes > 4) {
+            dispatch_cancel(weakSelf.timer);
+        }
+    });
+    dispatch_resume(_timer);
 }
 
 #pragma mark - CAAnimation
