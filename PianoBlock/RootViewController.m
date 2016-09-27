@@ -10,7 +10,7 @@
 #import "Masonry.h"
 #import "ViewControllerSwitchMediator.h"
 #import "ReactiveCocoa.h"
-#import "ViewControllerVM.h"
+#import "RVCViewModel.h"
 #import "MainGameScene.h"
 #import "GameMacro.h"
 #import "BouncePresentAnimation.h"
@@ -18,7 +18,7 @@
 #import "SwipeUpInteractiveTransition.h"
 
 @interface RootViewController ()
-@property (nonatomic , strong) ViewControllerVM *viewModel;
+@property (nonatomic , strong) RVCViewModel *viewModel;
 @end
 
 @implementation RootViewController{
@@ -48,46 +48,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    ViewControllerVM *viewModel = [ViewControllerVM new];
+    RVCViewModel *viewModel = [RVCViewModel new];
     
     MainGameScene *mainScene = [[MainGameScene alloc] initWithButtonNumPerLine:4 frame:self.view.bounds];
     [self.view addSubview:mainScene];
     
     WeakSelf;
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_JINDIAN] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_JINDIAN bindCommand:viewModel.buttonCommandJindian] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_LEITING] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_LEITING bindCommand:viewModel.buttonCommandLeiting] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_SHANBENG] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_SHANBENG bindCommand:viewModel.buttonCommandShanbeng] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_BAOFENG] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_BAOFENG bindCommand:viewModel.buttonCommandBaofeng] subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     
     [_interactiveAnim wireToViewController:self];
-    
-    /*
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setTitle:@"开始游戏" forState:UIControlStateNormal];
-    [self.view addSubview:button];
-    
-    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
-    }];
-    
-    UIView *superView = self.view;
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(100, 50));
-        make.centerX.mas_equalTo(superView.mas_centerX);
-        make.topMargin.mas_equalTo(50);
-    }];
-     */
 }
 
 

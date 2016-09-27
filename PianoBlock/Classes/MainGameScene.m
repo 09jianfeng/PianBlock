@@ -94,9 +94,10 @@
     [baofeng setTitle:@"暴风" forState:UIControlStateNormal];
 }
 
-- (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index{
+- (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index bindCommand:(RACCommand *)raccommand{
     GameSceneGroupCellUnitView *unitView = [self getButtonByIndex:index];
-    return [unitView rac_signalForControlEvents:UIControlEventTouchUpInside];
+    unitView.rac_command = raccommand;
+    return unitView.rac_command.executionSignals;
 }
 
 @end

@@ -1,16 +1,16 @@
 //
-//  ViewControllerVM.m
+//  RVCViewModel.m
 //  PianoBlock
 //
 //  Created by JFChen on 16/9/4.
 //  Copyright © 2016年 陈建峰. All rights reserved.
 //
 
-#import "GameSceneVM.h"
+#import "GSCViewModel.h"
 #import "GameSongProduct.h"
 #import "GameBLBGFactory.h"
 
-@implementation GameSceneVM{
+@implementation GSCViewModel{
     GameSongProduct *_song;
     GameBLBGFactory *_blockBackgroundFactory;
 }

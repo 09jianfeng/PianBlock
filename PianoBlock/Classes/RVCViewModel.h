@@ -1,5 +1,5 @@
 //
-//  GameSceneVM.h
+//  GSCViewModel.h
 //  PianoBlock
 //
 //  Created by JFChen on 16/9/4.
@@ -9,13 +9,19 @@
 
 #import <Foundation/Foundation.h>
 #import "MainGameScene.h"
+#import "ReactiveCocoa.h"
 
 @class GameSongProduct;
-@class GameSceneVM;
+@class GSCViewModel;
 
-@interface ViewControllerVM : NSObject
+@interface RVCViewModel : NSObject
 @property (nonatomic, strong, readonly) NSArray *songlists;
-@property(nonatomic, assign) GAMEMAINMANU gameMode;
+@property (nonatomic, assign) GAMEMAINMANU gameMode;
+
+@property (nonatomic, strong) RACCommand *buttonCommandJindian;
+@property (nonatomic, strong) RACCommand *buttonCommandLeiting;
+@property (nonatomic, strong) RACCommand *buttonCommandShanbeng;
+@property (nonatomic, strong) RACCommand *buttonCommandBaofeng;
 
 - (void)setGameMode:(GAMEMAINMANU)gameMode;
 - (GAMEMAINMANU)gameMode;
@@ -26,7 +32,7 @@
  * Strictly speaking, you should create a view-model for your top view-controller in your app delegate. When presenting a new view controller, or bit of view that’s represented by a view-model, you ask the current view-model to create the child view-model for you.
  * 说明了 viewController切换的时候，对应的VM 切换的问题。 建议 给rootViewController 创建对应的VM，然后rootViewController 切换 子Controller的时候。  对应的 VM 生成 子 VM传给  子Controller。
  */
-- (GameSceneVM *)viewModelForGameSceneInSong:(NSInteger )index;
+- (GSCViewModel *)viewModelForGameSceneInSong:(NSInteger )index;
 
 
 @end

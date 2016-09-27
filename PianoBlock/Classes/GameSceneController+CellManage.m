@@ -8,7 +8,7 @@
 
 #import "GameSceneController+CellManage.h"
 #import "GameSceneGroupCellUnitView.h"
-#import "GameSceneVM.h"
+#import "GSCViewModel.h"
 #import "GameBLBGFactory.h"
 #import "GameSceneView.h"
 #import "ViewControllerSwitchMediator.h"

@@ -10,12 +10,12 @@
 #import "GameSceneView.h"
 #import "GameCountdownWindow.h"
 #import "ReactiveCocoa.h"
-#import "GameSceneVM.h"
+#import "GSCViewModel.h"
 #import "GameSceneViewDelegate.h"
 #import "GameSceneGroupCellUnitView.h"
 
 @interface GameSceneController () <GameSceneViewDelegate,GameSceneViewDataSource>
-@property(nonatomic, strong) GameSceneVM *sceneViewModel;
+@property(nonatomic, strong) GSCViewModel *sceneViewModel;
 @property(nonatomic, strong) GameSceneView *gameScene;
 @end
 
@@ -23,7 +23,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil
-                    sceneVM:(GameSceneVM *)sceneVM{
+                    sceneVM:(GSCViewModel *)sceneVM{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _sceneViewModel = sceneVM;
@@ -32,7 +32,7 @@
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    return [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil sceneVM:[GameSceneVM new]];
+    return [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil sceneVM:[GSCViewModel new]];
 }
 
 - (void)viewDidLoad {

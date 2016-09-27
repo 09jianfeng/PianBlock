@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "ViewControllerVM.h"
+#import "RVCViewModel.h"
 
 @class RootViewController;
 
@@ -16,7 +16,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)showGameViewController:(RootViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel;
+- (void)showGameViewController:(RootViewController *)currentController RVCViewModel:(RVCViewModel *)viewModel;
 
 - (void)dismissCurrentController;
 

@@ -1,5 +1,5 @@
 //
-//  ViewControllerVM.h
+//  RVCViewModel.h
 //  PianoBlock
 //
 //  Created by JFChen on 16/9/4.
@@ -12,7 +12,7 @@
 
 @class GameSongProduct;
 
-@interface GameSceneVM : NSObject
+@interface GSCViewModel : NSObject
 @property(nonatomic, assign) GAMEMAINMANU gameMode;
 
 - (instancetype)initWithSong:(GameSongProduct *)song NS_DESIGNATED_INITIALIZER;

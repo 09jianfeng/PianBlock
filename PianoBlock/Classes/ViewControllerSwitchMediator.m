@@ -50,7 +50,7 @@ static ViewControllerSwitchMediator *_instance;
 
 #pragma mark - controller switch
 
-- (void)showGameViewController:(RootViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel{
+- (void)showGameViewController:(RootViewController *)currentController RVCViewModel:(RVCViewModel *)viewModel{
     
     GameSceneController *gameController = [[GameSceneController alloc] initWithNibName:nil bundle:nil sceneVM:[viewModel viewModelForGameSceneInSong:0]];
     gameController.transitioningDelegate = currentController;

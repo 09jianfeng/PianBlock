@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GameSongProduct.h"
-#import "ViewControllerVM.h"
+#import "RVCViewModel.h"
 #import "GameSceneView.h"
 
-@class GameSceneVM;
+@class GSCViewModel;
 
 @interface GameSceneController : UIViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil
-                    sceneVM:(GameSceneVM *)sceneVM;
+                    sceneVM:(GSCViewModel *)sceneVM;
 
 @end

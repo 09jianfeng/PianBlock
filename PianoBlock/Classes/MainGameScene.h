@@ -22,6 +22,6 @@ typedef NS_ENUM(NSInteger,GAMEMAINMANU){
                                   frame:(CGRect)frame __attribute__((objc_designated_initializer));
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
-- (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index;
+- (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index bindCommand:(RACCommand *)raccommand;
 
 @end
