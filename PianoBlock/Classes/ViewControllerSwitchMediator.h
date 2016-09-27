@@ -10,10 +10,14 @@
 #import <UIKit/UIKit.h>
 #import "ViewControllerVM.h"
 
+@class RootViewController;
+
 @interface ViewControllerSwitchMediator : NSObject
 
 + (instancetype)shareInstance;
 
-- (void)showGameViewController:(UIViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel;
+- (void)showGameViewController:(RootViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel;
+
+- (void)dismissCurrentController;
 
 @end

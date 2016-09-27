@@ -11,7 +11,7 @@
 #import "ReactiveCocoa.h"
 #import "Masonry.h"
 
-@interface GameSceneGroupCellUnitView()
+@interface GameSceneGroupCellUnitView() <CAAnimationDelegate>
 @property(nonatomic, assign) BOOL isSpecial;
 @property(nonatomic, strong) dispatch_source_t timer;
 @end

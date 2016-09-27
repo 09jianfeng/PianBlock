@@ -9,8 +9,11 @@
 #import "ViewControllerSwitchMediator.h"
 #import "GameCountdownWindow.h"
 #import "GameSceneController.h"
+#import "RootViewController.h"
 
-@implementation ViewControllerSwitchMediator
+@implementation ViewControllerSwitchMediator{
+    UIViewController *_fatherController;
+}
 
 
 #pragma mark - 创建单例
@@ -47,12 +50,17 @@ static ViewControllerSwitchMediator *_instance;
 
 #pragma mark - controller switch
 
-- (void)showGameViewController:(UIViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel{
+- (void)showGameViewController:(RootViewController *)currentController viewControllerVM:(ViewControllerVM *)viewModel{
     
     GameSceneController *gameController = [[GameSceneController alloc] initWithNibName:nil bundle:nil sceneVM:[viewModel viewModelForGameSceneInSong:0]];
-    [currentController presentViewController:gameController animated:NO completion:nil];
+    gameController.transitioningDelegate = currentController;
+    [currentController presentViewController:gameController animated:YES completion:nil];
+    _fatherController = currentController;
 
 }
 
+- (void)dismissCurrentController{
+    [_fatherController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

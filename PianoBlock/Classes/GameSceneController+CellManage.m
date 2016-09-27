@@ -11,7 +11,7 @@
 #import "GameSceneVM.h"
 #import "GameBLBGFactory.h"
 #import "GameSceneView.h"
-
+#import "ViewControllerSwitchMediator.h"
 
 @implementation GameSceneController (CellManage)
 @dynamic sceneViewModel;
@@ -25,6 +25,7 @@
         [gameUnit startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
     }else{
         [self.gameScene stop];
+        [[ViewControllerSwitchMediator shareInstance] dismissCurrentController];
     }
 }
 

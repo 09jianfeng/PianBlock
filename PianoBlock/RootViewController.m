@@ -13,12 +13,36 @@
 #import "ViewControllerVM.h"
 #import "MainGameScene.h"
 #import "GameMacro.h"
+#import "BouncePresentAnimation.h"
+#import "NormalDismissAnimation.h"
+#import "SwipeUpInteractiveTransition.h"
 
 @interface RootViewController ()
 @property (nonatomic , strong) ViewControllerVM *viewModel;
 @end
 
-@implementation RootViewController
+@implementation RootViewController{
+    BouncePresentAnimation *_presentAnim;
+    NormalDismissAnimation *_dismissAnim;
+    SwipeUpInteractiveTransition *_interactiveAnim;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _presentAnim = [BouncePresentAnimation new];
+        _dismissAnim = [NormalDismissAnimation new];
+        _interactiveAnim = [SwipeUpInteractiveTransition new];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +70,8 @@
         [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf viewControllerVM:viewModel];
     }];
     
+    [_interactiveAnim wireToViewController:self];
+    
     /*
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"开始游戏" forState:UIControlStateNormal];
@@ -68,6 +94,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - VCAnimateTransition
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return (id <UIViewControllerAnimatedTransitioning>)_presentAnim;
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    return (id <UIViewControllerAnimatedTransitioning>)_dismissAnim;
 }
 
 @end

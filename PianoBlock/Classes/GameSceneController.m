@@ -47,7 +47,7 @@
     [_gameScene loadSubView];
     [self.view addSubview:self.gameScene];
 
-    [[GameCountdownWindow shareInstance] showWithAnimNum:3 CompleteBlock:^{
+    [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
         [self.gameScene startGame:GAMEMODE_AUTOROLL];
     }];
 }
