@@ -12,10 +12,13 @@
 #import "GameBLBGFactory.h"
 #import "GameSceneView.h"
 #import "ViewControllerSwitchMediator.h"
+#import "GameStopView.h"
+#import "Masonry.h"
 
 @implementation GameSceneController (CellManage)
 @dynamic sceneViewModel;
 @dynamic gameScene;
+@dynamic stopView;
 
 #pragma mark - GameSceneViewDelegate,GameSceneViewDataSource
 /// user did select unit view
@@ -24,13 +27,13 @@
         [self.sceneViewModel playSongNextBeat];
         [gameUnit startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
     }else{
-        [self.gameScene stop];
-        [[ViewControllerSwitchMediator shareInstance] dismissCurrentController];
+        [self gameFail];
     }
 }
 
 - (void)gameFail{
     [self.gameScene stop];
+    [self showGameStopView];
 }
 
 /// use to general group cell unit view

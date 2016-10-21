@@ -339,6 +339,7 @@
 		7808CEA81D7C61A1001AFBA5 /* GSCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA71D7C61A1001AFBA5 /* GSCViewModel.m */; };
 		784C16751D7CF39500E694C3 /* black_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16731D7CF39500E694C3 /* black_block.png */; };
 		784C16761D7CF39500E694C3 /* white_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16741D7CF39500E694C3 /* white_block.png */; };
+		78650A8B1DB273C800B313B6 /* GameStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78650A8A1DB273C800B313B6 /* GameStopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -884,6 +885,8 @@
 		7808CEA71D7C61A1001AFBA5 /* GSCViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCViewModel.m; sourceTree = "<group>"; };
 		784C16731D7CF39500E694C3 /* black_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_block.png; sourceTree = "<group>"; };
 		784C16741D7CF39500E694C3 /* white_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_block.png; sourceTree = "<group>"; };
+		78650A891DB273C800B313B6 /* GameStopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStopView.h; sourceTree = "<group>"; };
+		78650A8A1DB273C800B313B6 /* GameStopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStopView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1151,17 +1154,14 @@
 		2EB30B241D7985F6006C7D9F /* PlayingScene */ = {
 			isa = PBXGroup;
 			children = (
+				78650A8C1DB273D300B313B6 /* GameCollection */,
 				2EB30B1F1D79658F006C7D9F /* GameSceneController.h */,
 				2EB30B201D79658F006C7D9F /* GameSceneController.m */,
 				2ECD8BBA1D7E9CFD00ED0831 /* GameSceneController+CellManage.h */,
 				2ECD8BBB1D7E9CFD00ED0831 /* GameSceneController+CellManage.m */,
 				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
-				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
-				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
-				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
-				2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */,
-				2EB309D51D791555006C7D9F /* GameSceneView.h */,
-				2EB309D61D791555006C7D9F /* GameSceneView.m */,
+				78650A891DB273C800B313B6 /* GameStopView.h */,
+				78650A8A1DB273C800B313B6 /* GameStopView.m */,
 			);
 			name = PlayingScene;
 			sourceTree = "<group>";
@@ -1750,6 +1750,19 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		78650A8C1DB273D300B313B6 /* GameCollection */ = {
+			isa = PBXGroup;
+			children = (
+				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
+				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
+				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
+				2EB309DC1D792747006C7D9F /* GameSceneGroupCell.m */,
+				2EB309D51D791555006C7D9F /* GameSceneView.h */,
+				2EB309D61D791555006C7D9F /* GameSceneView.m */,
+			);
+			name = GameCollection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2076,6 +2089,7 @@
 				2EC42A4B1D7AAD3D00B93AF4 /* RACImmediateScheduler.m in Sources */,
 				2EC42A781D7AAD3D00B93AF4 /* UISwitch+RACSignalSupport.m in Sources */,
 				2EC42A501D7AAD3D00B93AF4 /* RACMulticastConnection.m in Sources */,
+				78650A8B1DB273C800B313B6 /* GameStopView.m in Sources */,
 				2EC42A421D7AAD3D00B93AF4 /* RACDisposable.m in Sources */,
 				2EC42A6A1D7AAD3D00B93AF4 /* UIActionSheet+RACSignalSupport.m in Sources */,
 				2EC42A671D7AAD3D00B93AF4 /* RACUnarySequence.m in Sources */,

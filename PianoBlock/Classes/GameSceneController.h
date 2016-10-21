@@ -19,4 +19,5 @@
                          bundle:(NSBundle *)nibBundleOrNil
                     sceneVM:(GSCViewModel *)sceneVM;
 
+- (void)showGameStopView;
 @end

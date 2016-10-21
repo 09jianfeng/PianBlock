@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "GameSceneController.h"
+#import "GameStopView.h"
 
 @interface GameSceneController (CellManage)
 @property(nonatomic, strong) GSCViewModel *sceneViewModel;
 @property(nonatomic, strong) GameSceneView *gameScene;
+@property(nonatomic, strong) GameStopView *stopView;
 @end
