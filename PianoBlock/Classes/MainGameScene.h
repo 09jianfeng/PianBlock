@@ -26,4 +26,7 @@ typedef NS_ENUM(NSInteger,GAMEMAINMANU){
 - (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index bindCommand:(RACCommand *)raccommand;
 - (RACSignal *)gameStarButonCommandBind:(RACCommand *)raccommand;
 
+- (void)beginMainSceneAnimation;
+- (void)stopMainSceneAnimation;
+
 @end

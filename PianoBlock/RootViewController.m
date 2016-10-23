@@ -25,6 +25,7 @@
     BouncePresentAnimation *_presentAnim;
     NormalDismissAnimation *_dismissAnim;
     SwipeUpInteractiveTransition *_interactiveAnim;
+    MainGameScene *_mainScene;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -50,22 +51,33 @@
     
     RVCViewModel *viewModel = [RVCViewModel new];
     
-    MainGameScene *mainScene = [[MainGameScene alloc] initWithButtonNumPerLine:4 frame:self.view.bounds];
-    [self.view addSubview:mainScene];
+    _mainScene = [[MainGameScene alloc] initWithButtonNumPerLine:4 frame:self.view.bounds];
+    [self.view addSubview:_mainScene];
     
     WeakSelf;
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_MusicList bindCommand:viewModel.btnCommandMusicList]
+    [[_mainScene gameRACForButtonAtIndex:GAMEMAINMANU_MusicList bindCommand:viewModel.btnCommandMusicList]
     subscribeNext:^(id  _Nullable x) {
         [[ViewControllerSwitchMediator shareInstance] showMusciListVC:weakSelf RVCViewModel:viewModel];
     }];
     
-    [[mainScene gameStarButonCommandBind:viewModel._btnCommandGameStar] subscribeNext:^(id  _Nullable x) {
+    [[_mainScene gameStarButonCommandBind:viewModel._btnCommandGameStar] subscribeNext:^(id  _Nullable x) {
         [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     
     [_interactiveAnim wireToViewController:self];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [_mainScene beginMainSceneAnimation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+    [_mainScene stopMainSceneAnimation];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

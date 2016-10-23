@@ -11,5 +11,5 @@
 @interface GameStarButton : UIButton
 
 - (void)beginAnimations;
-
+- (void)stopAnimations;
 @end

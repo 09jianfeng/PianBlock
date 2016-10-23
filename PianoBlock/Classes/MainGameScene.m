@@ -97,7 +97,6 @@
     _gameStar.layer.shadowOpacity = 0.5;
     _gameStar.layer.shadowColor = [UIColor redColor].CGColor;
     [self addSubview:_gameStar];
-    [_gameStar beginAnimations];
     
     [_gameStar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(blockWidth);
@@ -114,6 +113,14 @@
     CGFloat centY = (blockLineNum - 1) * _buttonHeigh / 2;
     
     return centY - CGRectGetHeight(self.frame)/2;
+}
+
+- (void)beginMainSceneAnimation{
+    [_gameStar beginAnimations];
+}
+
+- (void)stopMainSceneAnimation{
+    [_gameStar stopAnimations];
 }
 
 #pragma mark - buttonCommand bind

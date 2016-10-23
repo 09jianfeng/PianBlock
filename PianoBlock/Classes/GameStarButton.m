@@ -67,6 +67,11 @@
     [super layoutSubviews];
 }
 
+- (void)stopAnimations{
+    [_shapeLayer removeAllAnimations];
+    [_shapeLayer removeFromSuperlayer];
+}
+
 #pragma mark - CAAnimation
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [_shapeLayer removeFromSuperlayer];

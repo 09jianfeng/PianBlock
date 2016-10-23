@@ -23,4 +23,6 @@
 
 - (void)buttonPressedEvent;
 
+- (void)redrawSublayerWithTouchPosition:(CGPoint)point;
+
 @end

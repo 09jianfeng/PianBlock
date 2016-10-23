@@ -162,6 +162,26 @@
     dispatch_resume(_timer);
 }
 
+- (void)redrawSublayerWithTouchPosition:(CGPoint)point{
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    
+    CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y + 20);
+    CGPoint leftTop = CGPointMake(0, point.y - 20);
+    CGPoint rightTop = CGPointMake(CGRectGetWidth(self.frame), point.y - 20);
+    CGPoint leftBottom = CGPointMake(0, CGRectGetHeight(self.frame));
+    CGPoint rightBottom = CGPointMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    
+    [bezierPath moveToPoint:leftBottom];
+    [bezierPath addLineToPoint:leftTop];
+    [bezierPath addQuadCurveToPoint:rightTop controlPoint:headPoint];
+    [bezierPath addLineToPoint:rightBottom];
+    [bezierPath addLineToPoint:leftBottom];
+    
+    CAShapeLayer *sublayer = [CAShapeLayer layer];
+    sublayer.path = bezierPath.CGPath;
+    
+}
+
 #pragma mark - CAAnimation
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [_shapeLayer removeAllAnimations];
