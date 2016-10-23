@@ -29,6 +29,8 @@
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
 
+@property (nonatomic, assign) char *isSerial;
+
 @end
 
 @implementation GameSceneView{
@@ -40,6 +42,10 @@
 }
 
 #pragma mark - game scene init
+
+- (void)dealloc{
+    free(_isSerial);
+}
 
 - (instancetype)initWithBlockNumPerLine:(NSInteger)blockNum
                                   frame:(CGRect)frame{
@@ -57,6 +63,9 @@
         _groupCellsNum = ceil(frame.size.height / _blockHeigh) + 1;
         _gameSpeed = 2.0;
         _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_groupCellsNum];
+        
+        _isSerial = malloc(sizeof(char)*20);
+        memset_s(_isSerial, 20, 0, 20);
     }
     return self;
 }

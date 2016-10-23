@@ -16,7 +16,6 @@
 @property(nonatomic, assign) NSInteger blockWidth;
 @property(nonatomic, assign) NSInteger blockHeigh;
 @property(nonatomic, assign) NSInteger blockNum;
-@property(nonatomic, assign) NSInteger randomColors;
 
 @end
 
@@ -29,7 +28,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         _blockNum = blockNums;
-        _randomColors = randomColorsNum;
         _blockWidth = frame.size.width / blockNums;
         _blockHeigh = frame.size.height;
         _unitCells = [[NSMutableArray alloc] initWithCapacity:blockNums];
@@ -53,14 +51,11 @@
 }
 
 - (void)loadSubView{
-    NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];
-    for (NSInteger i = 0 ; i < _randomColors ; i++) {
-        int randomIndex = arc4random() % _blockNum;
-        [randIndexs addObject:[NSNumber numberWithInt:randomIndex]];
-    }
+    
+    int randomIndex = arc4random() % _blockNum;
     for (int i = 0; i < _blockNum ; i++) {
         BOOL isBlockSpecial = NO;
-        if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
+        if (i == randomIndex) {
             isBlockSpecial = YES;
         }
         
@@ -82,12 +77,8 @@
 }
 
 - (void)reuseGroupCell{
-    NSMutableArray *randIndexs = [[NSMutableArray alloc] initWithCapacity:_blockNum];
-    for (NSInteger i = 0 ; i < _randomColors ; i++) {
-        int randomIndex = arc4random() % _blockNum;
-        [randIndexs addObject:[NSNumber numberWithInt:randomIndex]];
-    }
     
+    int randomIndex = arc4random() % _blockNum;
     for (int i = 0 ; i < _unitCells.count ; i++) {
         GameSceneGroupCellUnitView *unit = _unitCells[i];
         if ([unit isSpecialView]) {
@@ -98,7 +89,7 @@
         [unit reuseUnitView];
         
         BOOL isSpecial = NO;
-        if ([randIndexs containsObject:[NSNumber numberWithInt:i]]) {
+        if (i == randomIndex) {
             isSpecial = YES;
         }
         if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
