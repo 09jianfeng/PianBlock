@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class RACSignal;
+@class GSCViewModel;
 
 @interface GameStopView : UIView
 @property (nonatomic, strong) RACSignal *backBtnSignal;
 @property (nonatomic, strong) RACSignal *replayBtnSignal;
+@property (nonatomic, strong) RACSignal *continueBtnSignal;
 
-
-- (void)subViewSetup;
-
+- (void)subViewSetupWithSceneVM:(GSCViewModel *)sceneVM;
 @end

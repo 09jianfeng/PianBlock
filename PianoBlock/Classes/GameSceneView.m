@@ -10,6 +10,7 @@
 #import "GameSceneGroupCell.h"
 #import "GameMacro.h"
 #import "GameSceneGroupCellUnitView.h"
+#import "GameCountdownWindow.h"
 
 #define GameSpeedNonAutoRoll _blockHeigh / 12
 #define GameSpeedAutoRollRimit _blockHeigh / 10
@@ -105,7 +106,10 @@
 }
 
 - (void)contine{
-    [self.displayLink setPaused:NO];
+    WeakSelf;
+    [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
+        [weakSelf.displayLink setPaused:NO];
+    }];
 }
 
 - (void)startGame:(GAMEMODE)gameMode{

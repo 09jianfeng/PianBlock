@@ -13,15 +13,14 @@
 
 @class GameSongProduct;
 @class GSCViewModel;
+@class MusicListViewModel;
 
 @interface RVCViewModel : NSObject
 @property (nonatomic, strong, readonly) NSArray *songlists;
 @property (nonatomic, assign) GAMEMAINMANU gameMode;
 
-@property (nonatomic, strong) RACCommand *buttonCommandJindian;
-@property (nonatomic, strong) RACCommand *buttonCommandLeiting;
-@property (nonatomic, strong) RACCommand *buttonCommandShanbeng;
-@property (nonatomic, strong) RACCommand *buttonCommandBaofeng;
+@property (nonatomic, strong) RACCommand *_btnCommandGameStar;
+@property (nonatomic, strong) RACCommand *btnCommandMusicList;
 
 - (void)setGameMode:(GAMEMAINMANU)gameMode;
 - (GAMEMAINMANU)gameMode;
@@ -34,5 +33,6 @@
  */
 - (GSCViewModel *)viewModelForGameSceneInSong:(NSInteger )index;
 
+- (MusicListViewModel *)viewModelForMusicList;
 
 @end

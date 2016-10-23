@@ -8,9 +8,15 @@
 
 #import "MainGameScene.h"
 #import "GameSceneGroupCellUnitView.h"
+#import "Masonry.h"
+#import "GameStarButton.h"
 
 @implementation MainGameScene{
     NSMutableArray *_buttons;
+    CGFloat _buttonWidth;
+    CGFloat _buttonHeigh;
+    CGFloat _rowNum;
+    GameStarButton *_gameStar;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -30,15 +36,17 @@
                                   frame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        CGFloat buttonWidth = CGRectGetWidth(frame) / buttonNum;
-        CGFloat buttonHeigh = buttonWidth * 1.5;
-        NSInteger buttonAllNum = ceil(CGRectGetHeight(frame) / buttonHeigh) * buttonNum;
+        _buttonWidth = CGRectGetWidth(frame) / buttonNum;
+        _buttonHeigh = _buttonWidth * 1.5;
+        _rowNum = buttonNum;
+        
+        NSInteger buttonAllNum = ceil(CGRectGetHeight(frame) / _buttonHeigh) * buttonNum;
         _buttons = [[NSMutableArray alloc] initWithCapacity:buttonAllNum];
         for (NSInteger i = 0 ; i < buttonAllNum ; i++) {
             GameSceneGroupCellUnitView *button = [GameSceneGroupCellUnitView buttonWithType:UIButtonTypeCustom];
             button.layer.borderColor = [UIColor grayColor].CGColor;
-            button.layer.borderWidth = 1.0;
-            button.frame = CGRectMake(buttonWidth * (i % buttonNum), buttonHeigh * (i / buttonNum), buttonWidth, buttonHeigh);
+            button.layer.borderWidth = 0.5;
+            button.frame = CGRectMake(_buttonWidth * (i % buttonNum), _buttonHeigh * (i / buttonNum), _buttonWidth, _buttonHeigh);
             [[button rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
                 [button startAnimate:[UIColor blackColor] removeAnimateLayer:YES];
             }];
@@ -63,36 +71,58 @@
     NSInteger lastButtonIndex = _buttons.count - 1;
     GameSceneGroupCellUnitView *musicThemeButton = [self getButtonByIndex:lastButtonIndex];
     musicThemeButton.backgroundColor = [UIColor blackColor];
-    [musicThemeButton setTitle:@"音乐" forState:UIControlStateNormal];
+    [musicThemeButton setTitle:@"更多" forState:UIControlStateNormal];
     
     GameSceneGroupCellUnitView *playingThemeButton = [self getButtonByIndex:lastButtonIndex - 1];
     playingThemeButton.backgroundColor = [UIColor blackColor];
-    [playingThemeButton setTitle:@"好评" forState:UIControlStateNormal];
+    [playingThemeButton setTitle:@"设置" forState:UIControlStateNormal];
     
     GameSceneGroupCellUnitView *rankButton = [self getButtonByIndex:lastButtonIndex - 2];
     rankButton.backgroundColor = [UIColor blackColor];
-    [rankButton setTitle:@"排行" forState:UIControlStateNormal];
+    [rankButton setTitle:@"钢琴曲" forState:UIControlStateNormal];
+    
     
     GameSceneGroupCellUnitView *shareButton = [self getButtonByIndex:lastButtonIndex - 3];
     shareButton.backgroundColor = [UIColor blackColor];
-    [shareButton setTitle:@"分享" forState:UIControlStateNormal];
+    [shareButton setTitle:@"我的" forState:UIControlStateNormal];
+        
+    _gameStar = [GameStarButton buttonWithType:UIButtonTypeCustom];
+    _gameStar.backgroundColor = [UIColor blackColor];
+    CGFloat centYOffset = [self getBeginBtnCentYOffser];
+    CGFloat blockWidth = _buttonWidth;
+    [_gameStar setTitle:@"开始" forState:UIControlStateNormal];
+    [_gameStar setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    _gameStar.layer.cornerRadius = blockWidth / 2;
+    _gameStar.layer.shadowOffset = CGSizeMake(0.5, 0.5);
+    _gameStar.layer.shadowOpacity = 0.5;
+    _gameStar.layer.shadowColor = [UIColor redColor].CGColor;
+    [self addSubview:_gameStar];
+    [_gameStar beginAnimations];
     
-    GameSceneGroupCellUnitView *normalMode = [self getButtonByIndex:GAMEMAINMANU_JINDIAN];
-    normalMode.backgroundColor = [UIColor blackColor];
-    [normalMode setTitle:@"经典" forState:UIControlStateNormal];
-    
-    GameSceneGroupCellUnitView *streetMode = [self getButtonByIndex:GAMEMAINMANU_LEITING];
-    streetMode.backgroundColor = [UIColor blackColor];
-    [streetMode setTitle:@"雷霆" forState:UIControlStateNormal];
-
-    GameSceneGroupCellUnitView *chuangkuai = [self getButtonByIndex:GAMEMAINMANU_SHANBENG];
-    chuangkuai.backgroundColor = [UIColor blackColor];
-    [chuangkuai setTitle:@"山崩" forState:UIControlStateNormal];
-    
-    GameSceneGroupCellUnitView *baofeng = [self getButtonByIndex:GAMEMAINMANU_BAOFENG];
-    baofeng.backgroundColor = [UIColor blackColor];
-    [baofeng setTitle:@"暴风" forState:UIControlStateNormal];
+    [_gameStar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(blockWidth);
+        make.height.mas_equalTo(blockWidth);
+        make.centerX.mas_equalTo(self);
+        make.centerY.mas_equalTo(self).offset(centYOffset);
+    }];
 }
+
+- (CGFloat)getBeginBtnCentYOffser{
+    NSInteger blockAllNum = _buttons.count;
+    NSInteger blockLineNum =blockAllNum / _rowNum;
+    
+    CGFloat centY = (blockLineNum - 1) * _buttonHeigh / 2;
+    
+    return centY - CGRectGetHeight(self.frame)/2;
+}
+
+#pragma mark - buttonCommand bind
+
+- (RACSignal *)gameStarButonCommandBind:(RACCommand *)raccommand{
+    _gameStar.rac_command = raccommand;
+    return _gameStar.rac_command.executionSignals;
+}
+
 
 - (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index bindCommand:(RACCommand *)raccommand{
     GameSceneGroupCellUnitView *unitView = [self getButtonByIndex:index];

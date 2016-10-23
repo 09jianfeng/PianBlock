@@ -25,6 +25,7 @@
 - (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
     if (isSpecialBlock) {
         [self.sceneViewModel playSongNextBeat];
+        [self.sceneViewModel increaseGameScore:1];
         [gameUnit startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
     }else{
         [self gameFail];
@@ -39,7 +40,7 @@
 /// use to general group cell unit view
 - (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
     
-    gameUnit.layer.borderWidth = 1.0;
+    gameUnit.layer.borderWidth = 0.5;
     gameUnit.layer.borderColor = [UIColor grayColor].CGColor;
     if (isSpecial) {
         gameUnit.layer.contents = (__bridge id _Nullable)([[self.sceneViewModel getSpecialBlockBGImage] CGImage]);

@@ -42,18 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    _gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
-    _gameScene.gameSpeed = 4.0;
-    _gameScene.gameDelegate = self;
-    _gameScene.gameDataSource = self;
-    [_gameScene loadSubView];
-    [self.view addSubview:self.gameScene];
-
-    [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
-        [self.gameScene startGame:GAMEMODE_AUTOROLL];
-    }];
+    [self initialSubviews];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -65,19 +54,61 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 
+#pragma mark - subviews
+
+- (void)initialSubviews{
+    self.view.backgroundColor = [UIColor whiteColor];
+    _gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
+    _gameScene.gameSpeed = 4.0;
+    _gameScene.gameDelegate = self;
+    _gameScene.gameDataSource = self;
+    [_gameScene loadSubView];
+    [self.view addSubview:self.gameScene];
+    
+    [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
+        [self.gameScene startGame:GAMEMODE_AUTOROLL];
+    }];
+    
+    UILabel *gameScoreTips = [[UILabel alloc] init];
+    gameScoreTips.text = @"0";
+    gameScoreTips.textColor = [UIColor redColor];
+    gameScoreTips.font = [UIFont boldSystemFontOfSize:30];
+    gameScoreTips.textAlignment = NSTextAlignmentCenter;
+    gameScoreTips.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:gameScoreTips];
+    [gameScoreTips mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).offset(10);
+        make.centerX.mas_equalTo(self.view);
+        make.width.mas_equalTo(self.view).multipliedBy(0.3);
+        make.height.mas_equalTo(@30);
+    }];
+    
+    [RACObserve(_sceneViewModel,gameScore) subscribeNext:^(NSNumber *score) {
+        gameScoreTips.text = [NSString stringWithFormat:@"%@",score];
+    }];
+}
 
 - (void)showGameStopView{
+    UIView *maskView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:maskView];
+    maskView.backgroundColor = [UIColor blackColor];
+    maskView.alpha = 0.5;
+    maskView.tag = 1001;
+    
     self.stopView = [[GameStopView alloc] init];
     self.stopView.alpha = 1.0;
-    self.stopView.backgroundColor = [UIColor grayColor];
-    [self.stopView subViewSetup];
+    self.stopView.layer.cornerRadius = 10.0;
+    self.stopView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.stopView.layer.borderWidth = 3.0;
+    self.stopView.backgroundColor = [UIColor whiteColor];
+    [self.stopView subViewSetupWithSceneVM:self.sceneViewModel];
+    [self buttonSignalSubscribe];
     [self.view addSubview:self.stopView];
     
     [self.stopView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.view).offset(60);
-        make.top.mas_equalTo(self.view).offset(-200);
-        make.right.mas_equalTo(self.view).offset(-60);
+        make.centerX.mas_equalTo(self.view);
+        make.centerY.mas_equalTo(self.view).offset(-100);
+        make.width.mas_equalTo(self.view).multipliedBy(0.8);
         make.height.mas_equalTo(self.view).multipliedBy(0.6);
     }];
     
@@ -94,15 +125,13 @@
      */
     // UIView animation only re-lays-out the view based on differences between the old and new ones.
     [self.stopView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).offset(100);
+        make.centerY.mas_equalTo(self.view);
     }];
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.3 initialSpringVelocity:0.9 options:UIViewAnimationOptionCurveEaseIn animations:^{
         
         //If using updateConstraintsIfNeeded instead of layoutIfNeeded, animation won't happen.
         [self.view layoutIfNeeded];
     } completion:nil];
-    
-    [self buttonSignalSubscribe];
 }
 
 - (void)buttonSignalSubscribe{
@@ -111,9 +140,31 @@
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    [self.stopView.replayBtnSignal subscribeNext:^(id  _Nullable x) {
-        NSLog(@"返回主页");
+    [self.stopView.continueBtnSignal subscribeNext:^(id  _Nullable x) {
+        [weakSelf continueGame];
     }];
+    
+    [self.stopView.replayBtnSignal subscribeNext:^(id  _Nullable x) {
+        [weakSelf restartGame];
+    }];
+}
+
+- (void)continueGame{
+    [self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    
+    [self initialSubviews];
+
+}
+
+- (void)restartGame{
+    [self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    
+    [self.sceneViewModel clearGameScore];
+    [self initialSubviews];
 }
 
 @end

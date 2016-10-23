@@ -27,6 +27,8 @@ typedef NS_ENUM(NSInteger,GAMEMODE){
 
 - (void)loadSubView;
 - (void)startGame:(GAMEMODE)gameMode;
+
 - (void)stop;
+- (void)contine;
 
 @end

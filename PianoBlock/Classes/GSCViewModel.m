@@ -40,4 +40,20 @@
     return [_blockBackgroundFactory blockBackgroundWithType:BLBackgroundTypeWhite];
 }
 
+- (void)increaseGameScore:(NSInteger)point{
+    self.gameScore += point;
+}
+
+- (void)decreaseGameScore:(NSInteger)point{
+    self.gameScore -= point;
+}
+
+- (void)clearGameScore{
+    self.gameScore = 0;
+}
+
+- (NSInteger)getHistoryBestScore{
+    return 8888;
+}
+
 @end

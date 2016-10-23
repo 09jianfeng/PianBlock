@@ -10,6 +10,8 @@
 #import "GameCountdownWindow.h"
 #import "GameSceneController.h"
 #import "RootViewController.h"
+#import "MusicListViewModel.h"
+#import "MusicListTableViewController.h"
 
 @implementation ViewControllerSwitchMediator{
     UIViewController *_fatherController;
@@ -49,7 +51,7 @@ static ViewControllerSwitchMediator *_instance;
 }
 
 #pragma mark - controller switch
-
+// game playing vc
 - (void)showGameViewController:(RootViewController *)currentController RVCViewModel:(RVCViewModel *)viewModel{
     
     GameSceneController *gameController = [[GameSceneController alloc] initWithNibName:nil bundle:nil sceneVM:[viewModel viewModelForGameSceneInSong:0]];
@@ -57,6 +59,16 @@ static ViewControllerSwitchMediator *_instance;
     [currentController presentViewController:gameController animated:YES completion:nil];
     _fatherController = currentController;
 
+}
+
+// music list controller
+- (void)showMusciListVC:(RootViewController *)currentController RVCViewModel:(RVCViewModel *)viewModel{
+    
+    MusicListTableViewController *musicListVC = [[MusicListTableViewController alloc] init];
+    musicListVC.mlViewModel = [viewModel viewModelForMusicList];
+    musicListVC.transitioningDelegate = currentController;
+    [currentController presentViewController:musicListVC animated:YES completion:nil];
+    _fatherController = currentController;
 }
 
 - (void)dismissCurrentController{

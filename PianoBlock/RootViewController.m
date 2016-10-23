@@ -54,19 +54,12 @@
     [self.view addSubview:mainScene];
     
     WeakSelf;
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_JINDIAN bindCommand:viewModel.buttonCommandJindian] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
+    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_MusicList bindCommand:viewModel.btnCommandMusicList]
+    subscribeNext:^(id  _Nullable x) {
+        [[ViewControllerSwitchMediator shareInstance] showMusciListVC:weakSelf RVCViewModel:viewModel];
     }];
     
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_LEITING bindCommand:viewModel.buttonCommandLeiting] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
-    }];
-    
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_SHANBENG bindCommand:viewModel.buttonCommandShanbeng] subscribeNext:^(id  _Nullable x) {
-        [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
-    }];
-    
-    [[mainScene gameRACForButtonAtIndex:GAMEMAINMANU_BAOFENG bindCommand:viewModel.buttonCommandBaofeng] subscribeNext:^(id  _Nullable x) {
+    [[mainScene gameStarButonCommandBind:viewModel._btnCommandGameStar] subscribeNext:^(id  _Nullable x) {
         [[ViewControllerSwitchMediator shareInstance] showGameViewController:weakSelf RVCViewModel:viewModel];
     }];
     

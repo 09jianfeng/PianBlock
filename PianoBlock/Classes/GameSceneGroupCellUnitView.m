@@ -130,6 +130,7 @@
     animation.values = @[[NSValue valueWithCATransform3D:initialTransform],[NSValue valueWithCATransform3D:finalTransform]];
     animation.keyTimes = @[@(0),@(1)];
     animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    //removedOnCompletion and kCAFillModeForwards keep the final animation state
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     animation.duration = 0.5;

@@ -10,6 +10,7 @@
 #import "GameBeatSongDirector.h"
 #import "GameBeatSongBuilder.h"
 #import "GSCViewModel.h"
+#import "MusicListViewModel.h"
 
 @interface RVCViewModel()
 @property (nonatomic, strong, readwrite) NSArray *songlists;
@@ -28,36 +29,32 @@
 }
 
 - (void)bindButtonClickEvent{
-    _buttonCommandBaofeng = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+    
+    __btnCommandGameStar = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         NSLog(@"select game mode");
         
         return [RACSignal empty];
     }];
     
-    _buttonCommandJindian = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        NSLog(@"select game mode");
-        
-        return [RACSignal empty];
-    }];
-    
-    _buttonCommandShanbeng = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        NSLog(@"select game mode");
-        
-        return [RACSignal empty];
-    }];
-    
-    _buttonCommandLeiting = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        NSLog(@"select game mode");
+    _btnCommandMusicList = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        NSLog(@"show music list");
         
         return [RACSignal empty];
     }];
 }
+
+#pragma mark - 返回子ViewModel
 
 - (GSCViewModel *)viewModelForGameSceneInSong:(NSInteger )index{
     GameBeatSongBuilder *builder = [_songlists objectAtIndex:index];
     GSCViewModel *sceneVM = [[GSCViewModel alloc] initWithSong:[builder getSongProductResult]];
     sceneVM.gameMode = self.gameMode;
     return sceneVM;
+}
+
+- (MusicListViewModel *)viewModelForMusicList{
+    MusicListViewModel *mlViewModel = [[MusicListViewModel alloc] init];
+    return mlViewModel;
 }
 
 @end

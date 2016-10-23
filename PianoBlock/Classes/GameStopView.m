@@ -9,6 +9,7 @@
 #import "GameStopView.h"
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
+#import "GSCViewModel.h"
 
 @implementation GameStopView
 
@@ -20,42 +21,80 @@
 }
 */
 
-- (void)subViewSetup{
-    UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:buttonBack];
+- (void)subViewSetupWithSceneVM:(GSCViewModel *)sceneVM{
     
-    [buttonBack setTitle:@"返回" forState:UIControlStateNormal];
-    [buttonBack mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_lessThanOrEqualTo(self.mas_bottomMargin).offset(-20);
-        make.left.mas_lessThanOrEqualTo(self.mas_left).offset(20);
+    UILabel *gameScoreLabel = [[UILabel alloc] init];
+    gameScoreLabel.textAlignment = NSTextAlignmentCenter;
+    gameScoreLabel.text = [NSString stringWithFormat:@"%td",[sceneVM gameScore]];
+    gameScoreLabel.font = [UIFont boldSystemFontOfSize:30];
+    [self addSubview:gameScoreLabel];
+    [gameScoreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self).offset(50);
+        make.width.mas_equalTo(self);
+        make.height.mas_lessThanOrEqualTo(self).multipliedBy(0.3);
+        make.centerX.mas_equalTo(self);
+    }];
+    
+    UILabel *bestScoreLabel = [[UILabel alloc] init];
+    bestScoreLabel.textAlignment  = NSTextAlignmentCenter;
+    bestScoreLabel.text = [NSString stringWithFormat:@"历史最高：%td",[sceneVM getHistoryBestScore]];
+    bestScoreLabel.font = [UIFont systemFontOfSize:18 weight:18];
+    [self addSubview:bestScoreLabel];
+    [bestScoreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(gameScoreLabel.mas_bottom).offset(30);
+        make.width.mas_equalTo(gameScoreLabel);
+        make.height.mas_equalTo(gameScoreLabel).multipliedBy(0.5);
+        make.centerX.mas_equalTo(self);
+    }];
+    
+    UIButton *buttonMainScene = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:buttonMainScene];
+    [buttonMainScene setTitle:@"主页" forState:UIControlStateNormal];
+    [buttonMainScene setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [buttonMainScene mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_lessThanOrEqualTo(self).offset(-30);
+        make.left.mas_lessThanOrEqualTo(self).offset(20);
         make.width.mas_equalTo(@50);
         make.height.mas_equalTo(@30);
     }];
-    
-    
-    RACCommand *btnBackCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+    RACCommand *btnMainSceneCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [RACSignal empty];
     }];
-    buttonBack.rac_command = btnBackCommand;
-    self.backBtnSignal = btnBackCommand.executionSignals;
+    buttonMainScene.rac_command = btnMainSceneCommand;
+    self.backBtnSignal = btnMainSceneCommand.executionSignals;
     
     
-    UIButton *buttonHome = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:buttonHome];
-    
-    [buttonHome setTitle:@"重玩" forState:UIControlStateNormal];
-    [buttonHome mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottomMargin.mas_lessThanOrEqualTo(self.mas_bottomMargin).offset(-20);
-        make.right.mas_lessThanOrEqualTo(self.mas_right).offset(-20);
+    UIButton *buttonContinue = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:buttonContinue];
+    [buttonContinue setTitle:@"继续" forState:UIControlStateNormal];
+    [buttonContinue setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [buttonContinue mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_lessThanOrEqualTo(self).offset(-30);
+        make.centerX.mas_lessThanOrEqualTo(self);
         make.width.mas_equalTo(@50);
         make.height.mas_equalTo(@30);
     }];
-    
-    RACCommand *btnHomeCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+    RACCommand *btnContinueCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [RACSignal empty];
     }];
-    buttonHome.rac_command = btnHomeCommand;
-    self.replayBtnSignal = btnHomeCommand.executionSignals;
+    buttonContinue.rac_command = btnContinueCommand;
+    self.continueBtnSignal = btnContinueCommand.executionSignals;
+    
+    UIButton *buttonRestart = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:buttonRestart];
+    [buttonRestart setTitle:@"重玩" forState:UIControlStateNormal];
+    [buttonRestart setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [buttonRestart mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_lessThanOrEqualTo(self).offset(-30);
+        make.right.mas_lessThanOrEqualTo(self).offset(-20);
+        make.width.mas_equalTo(@50);
+        make.height.mas_equalTo(@30);
+    }];
+    RACCommand *btnRstCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return [RACSignal empty];
+    }];
+    buttonRestart.rac_command = btnRstCommand;
+    self.replayBtnSignal = btnRstCommand.executionSignals;
 }
 
 @end

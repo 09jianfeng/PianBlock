@@ -13,7 +13,8 @@ typedef NS_ENUM(NSInteger,GAMEMAINMANU){
     GAMEMAINMANU_JINDIAN = 5,
     GAMEMAINMANU_LEITING = 6,
     GAMEMAINMANU_SHANBENG = 9,
-    GAMEMAINMANU_BAOFENG = 10
+    GAMEMAINMANU_BAOFENG = 10,
+    GAMEMAINMANU_MusicList = 19
 };
 
 @interface MainGameScene : UIView
@@ -23,5 +24,6 @@ typedef NS_ENUM(NSInteger,GAMEMAINMANU){
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
 - (RACSignal *)gameRACForButtonAtIndex:(GAMEMAINMANU)index bindCommand:(RACCommand *)raccommand;
+- (RACSignal *)gameStarButonCommandBind:(RACCommand *)raccommand;
 
 @end

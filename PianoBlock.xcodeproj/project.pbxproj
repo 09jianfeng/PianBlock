@@ -337,9 +337,12 @@
 		7808CEA21D7C574C001AFBA5 /* ViewControllerSwitchMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA11D7C574C001AFBA5 /* ViewControllerSwitchMediator.m */; };
 		7808CEA51D7C607D001AFBA5 /* RVCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA41D7C607D001AFBA5 /* RVCViewModel.m */; };
 		7808CEA81D7C61A1001AFBA5 /* GSCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808CEA71D7C61A1001AFBA5 /* GSCViewModel.m */; };
+		783282291DBCA1B300E01736 /* GameStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 783282281DBCA1B300E01736 /* GameStarButton.m */; };
 		784C16751D7CF39500E694C3 /* black_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16731D7CF39500E694C3 /* black_block.png */; };
 		784C16761D7CF39500E694C3 /* white_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 784C16741D7CF39500E694C3 /* white_block.png */; };
 		78650A8B1DB273C800B313B6 /* GameStopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78650A8A1DB273C800B313B6 /* GameStopView.m */; };
+		78AF053F1DBB834F0070BD38 /* MusicListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF053E1DBB834F0070BD38 /* MusicListTableViewController.m */; };
+		78AF05421DBB83B40070BD38 /* MusicListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF05411DBB83B40070BD38 /* MusicListViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -883,10 +886,16 @@
 		7808CEA41D7C607D001AFBA5 /* RVCViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVCViewModel.m; sourceTree = "<group>"; };
 		7808CEA61D7C61A1001AFBA5 /* GSCViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCViewModel.h; sourceTree = "<group>"; };
 		7808CEA71D7C61A1001AFBA5 /* GSCViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCViewModel.m; sourceTree = "<group>"; };
+		783282271DBCA1B300E01736 /* GameStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStarButton.h; sourceTree = "<group>"; };
+		783282281DBCA1B300E01736 /* GameStarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStarButton.m; sourceTree = "<group>"; };
 		784C16731D7CF39500E694C3 /* black_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_block.png; sourceTree = "<group>"; };
 		784C16741D7CF39500E694C3 /* white_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white_block.png; sourceTree = "<group>"; };
 		78650A891DB273C800B313B6 /* GameStopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStopView.h; sourceTree = "<group>"; };
 		78650A8A1DB273C800B313B6 /* GameStopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStopView.m; sourceTree = "<group>"; };
+		78AF053D1DBB834F0070BD38 /* MusicListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListTableViewController.h; sourceTree = "<group>"; };
+		78AF053E1DBB834F0070BD38 /* MusicListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListTableViewController.m; sourceTree = "<group>"; };
+		78AF05401DBB83B40070BD38 /* MusicListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewModel.h; sourceTree = "<group>"; };
+		78AF05411DBB83B40070BD38 /* MusicListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1011,6 +1020,8 @@
 				7808CEA41D7C607D001AFBA5 /* RVCViewModel.m */,
 				7808CEA61D7C61A1001AFBA5 /* GSCViewModel.h */,
 				7808CEA71D7C61A1001AFBA5 /* GSCViewModel.m */,
+				78AF05401DBB83B40070BD38 /* MusicListViewModel.h */,
+				78AF05411DBB83B40070BD38 /* MusicListViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1128,6 +1139,10 @@
 				2EB30B1D1D796517006C7D9F /* RootViewController.m */,
 				2E80A27A1D8F931D00DE781A /* MainGameScene.h */,
 				2E80A27B1D8F931D00DE781A /* MainGameScene.m */,
+				78AF053D1DBB834F0070BD38 /* MusicListTableViewController.h */,
+				78AF053E1DBB834F0070BD38 /* MusicListTableViewController.m */,
+				783282271DBCA1B300E01736 /* GameStarButton.h */,
+				783282281DBCA1B300E01736 /* GameStarButton.m */,
 			);
 			name = MainScene;
 			sourceTree = "<group>";
@@ -2115,6 +2130,7 @@
 				2EC42A391D7AAD3D00B93AF4 /* NSUserDefaults+RACSupport.m in Sources */,
 				2EC42A701D7AAD3D00B93AF4 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				2E2EBAC11D7824AC00550761 /* GameModelFactory.m in Sources */,
+				783282291DBCA1B300E01736 /* GameStarButton.m in Sources */,
 				2EC42A441D7AAD3D00B93AF4 /* RACDynamicSignal.m in Sources */,
 				2EC42A751D7AAD3D00B93AF4 /* UISegmentedControl+RACSignalSupport.m in Sources */,
 				2EC42A4E1D7AAD3D00B93AF4 /* RACKVOProxy.m in Sources */,
@@ -2161,6 +2177,7 @@
 				2EC42A2F1D7AAD3D00B93AF4 /* NSObject+RACLifting.m in Sources */,
 				2EC42A661D7AAD3D00B93AF4 /* RACTupleSequence.m in Sources */,
 				2EC426681D7A698C00B93AF4 /* MASConstraintMaker.m in Sources */,
+				78AF05421DBB83B40070BD38 /* MusicListViewModel.m in Sources */,
 				2EC42A331D7AAD3D00B93AF4 /* NSSet+RACSequenceAdditions.m in Sources */,
 				2EC42A6D1D7AAD3D00B93AF4 /* UIButton+RACCommandSupport.m in Sources */,
 				2E5FE9BF1D921F5900D7620B /* POPPropertyAnimation.mm in Sources */,
@@ -2185,6 +2202,7 @@
 				2EC42A631D7AAD3D00B93AF4 /* RACTargetQueueScheduler.m in Sources */,
 				2EC4266C1D7A698C00B93AF4 /* NSArray+MASAdditions.m in Sources */,
 				2E5FE9B11D921F5900D7620B /* POPAnimatableProperty.mm in Sources */,
+				78AF053F1DBB834F0070BD38 /* MusicListTableViewController.m in Sources */,
 				2EC4266A1D7A698C00B93AF4 /* MASViewAttribute.m in Sources */,
 				2ECD8BBC1D7E9CFD00ED0831 /* GameSceneController+CellManage.m in Sources */,
 				2E822AD61D879BA900CE0D74 /* GameDataStorage.m in Sources */,
