@@ -14,6 +14,7 @@
 @interface GameSceneGroupCellUnitView() <CAAnimationDelegate>
 @property(nonatomic, assign) BOOL isSpecial;
 @property(nonatomic, strong) dispatch_source_t timer;
+@property(nonatomic, assign) BOOL isSerial;
 @end
 
 @implementation GameSceneGroupCellUnitView{
@@ -34,7 +35,7 @@
 - (void)loadSubview{
     WeakSelf
     [[self rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
-        [weakSelf buttonPressedEvent];
+        [weakSelf buttonPressedEventIsSerial:_isSerial];
     }];
 }
 
@@ -43,6 +44,8 @@
     _isSpecial = NO;
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];
+    
+    [_dynamicShapeLayer removeFromSuperlayer];
     [self.layer.mask removeAllAnimations];
     self.layer.mask = nil;
     self.layer.contents = nil;
@@ -58,7 +61,10 @@
 
 #pragma mark - click event
 
-- (void)buttonPressedEvent{
+- (void)buttonPressedEventIsSerial:(BOOL)isSerial{
+    
+    _isSerial = isSerial;
+    
     if (_clicked) {
         return;
     }

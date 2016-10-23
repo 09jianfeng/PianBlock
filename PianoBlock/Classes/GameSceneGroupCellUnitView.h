@@ -21,7 +21,7 @@
 
 - (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer;
 
-- (void)buttonPressedEvent;
+- (void)buttonPressedEventIsSerial:(BOOL)isSerial;
 
 - (void)redrawSublayerWithTouchPosition:(CGPoint)point;
 

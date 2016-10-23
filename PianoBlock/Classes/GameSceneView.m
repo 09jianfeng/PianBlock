@@ -169,14 +169,11 @@
             if ([unitView pointInside:unitViewPoint withEvent:nil]) {
                 
                 if (!unitView.isSpecialView && _isHaveClickRightFirstBlock) {
-                    NSLog(@"_isHaveClick");
                 }else{
                     if (unitView.isSpecialView) {
                         _isHaveClickRightFirstBlock = YES;
-                        NSLog(@"isSpecialView");
                     }
-                    [unitView buttonPressedEvent];
-                    NSLog(@"_isHaveClick NO");
+                    [unitView buttonPressedEventIsSerial:NO];
                 }
             }
         }
@@ -245,14 +242,15 @@
     CGPoint location = [toucher locationInView:self];
     _touchingPoint = location;
     
-    if (_gameMode != GAMEMODE_AUTOROLLMUTLCLICK) {
-        for (GameSceneGroupCell *cell in self.groupCellPool) {
-            NSArray *unitViews = [cell unitCells];
-            for (GameSceneGroupCellUnitView *unitView in unitViews) {
-                CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
-                if ([unitView pointInside:unitViewPoint withEvent:nil]) {
-                    [unitView buttonPressedEvent];
+    for (GameSceneGroupCell *cell in self.groupCellPool) {
+        NSArray *unitViews = [cell unitCells];
+        for (GameSceneGroupCellUnitView *unitView in unitViews) {
+            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
+            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
+                if (unitView.isSpecialView) {
+                    _isHaveClickRightFirstBlock = YES;
                 }
+                [unitView buttonPressedEventIsSerial:NO];
             }
         }
     }
