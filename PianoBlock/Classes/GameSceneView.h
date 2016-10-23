@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger,GAMEMODE){
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 @property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
 @property (nonatomic, assign) CGFloat gameSpeed;
+@property (nonatomic, assign) GAMEMODE gameMode;
 
 - (instancetype)initWithBlockNumPerLine:(NSInteger)blockNum
                                   frame:(CGRect)frame __attribute__((objc_designated_initializer));
@@ -26,7 +27,7 @@ typedef NS_ENUM(NSInteger,GAMEMODE){
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
 - (void)loadSubView;
-- (void)startGame:(GAMEMODE)gameMode;
+- (void)startGame;
 
 - (void)stop;
 - (void)contine;

@@ -62,11 +62,12 @@
     _gameScene.gameSpeed = 4.0;
     _gameScene.gameDelegate = self;
     _gameScene.gameDataSource = self;
+    _gameScene.gameMode = GAMEMODE_AUTOROLLMUTLCLICK;
     [_gameScene loadSubView];
     [self.view addSubview:self.gameScene];
     
     [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
-        [self.gameScene startGame:GAMEMODE_AUTOROLL];
+        [self.gameScene startGame];
     }];
     
     UILabel *gameScoreTips = [[UILabel alloc] init];

@@ -32,10 +32,11 @@
 @end
 
 @implementation GameSceneView{
-    GAMEMODE _gameMode;
     dispatch_source_t _timer;
     UIGestureRecognizer *_gesture;
     CGPoint _touchingPoint;
+    // 连击模式的时候用，因为用这个view派发点击事件，当滚动过快的时候。来不及收手，会点到上面那一块。为了避免这个问题
+    BOOL _isHaveClickRightFirstBlock;
 }
 
 #pragma mark - game scene init
@@ -112,9 +113,8 @@
     }];
 }
 
-- (void)startGame:(GAMEMODE)gameMode{
-    _gameMode = gameMode;
-    if (gameMode != GAMEMODE_MANUALROLL) {
+- (void)startGame{
+    if (_gameMode != GAMEMODE_MANUALROLL) {
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
         
         WeakSelf;
@@ -141,21 +141,19 @@
     
     WeakSelf;
     [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            GameSceneGroupCell *groupCell = (GameSceneGroupCell *)obj;
-            CGRect cellFrame = groupCell.frame;
-            cellFrame.origin.y += weakSelf.gameSpeed;
+        GameSceneGroupCell *groupCell = (GameSceneGroupCell *)obj;
+        CGRect cellFrame = groupCell.frame;
+        cellFrame.origin.y += weakSelf.gameSpeed;
+        groupCell.frame = cellFrame;
+        
+        if (cellFrame.origin.y > weakSelf.frame.size.height) {
+            GameSceneGroupCell *lastCell = [weakSelf.groupCellPool lastObject];
+            [weakSelf.groupCellPool removeObject:groupCell];
+            cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
             groupCell.frame = cellFrame;
-            
-            if (cellFrame.origin.y > weakSelf.frame.size.height) {
-                GameSceneGroupCell *lastCell = [weakSelf.groupCellPool lastObject];
-                [weakSelf.groupCellPool removeObject:groupCell];
-                cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
-                groupCell.frame = cellFrame;
-                [groupCell reuseGroupCell];
-                [weakSelf.groupCellPool addObject:groupCell];
-            }
-        });
+            [groupCell reuseGroupCell];
+            [weakSelf.groupCellPool addObject:groupCell];
+        }
     }];
     
     //如果是模式不允许连击，就不用连击
@@ -163,12 +161,23 @@
         return;
     }
     
+    //连击
     for (GameSceneGroupCell *cell in self.groupCellPool) {
         NSArray *unitViews = [cell unitCells];
         for (GameSceneGroupCellUnitView *unitView in unitViews) {
             CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
             if ([unitView pointInside:unitViewPoint withEvent:nil]) {
-                [unitView buttonPressedEvent];
+                
+                if (!unitView.isSpecialView && _isHaveClickRightFirstBlock) {
+                    NSLog(@"_isHaveClick");
+                }else{
+                    if (unitView.isSpecialView) {
+                        _isHaveClickRightFirstBlock = YES;
+                        NSLog(@"isSpecialView");
+                    }
+                    [unitView buttonPressedEvent];
+                    NSLog(@"_isHaveClick NO");
+                }
             }
         }
     }
@@ -229,20 +238,24 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    _isHaveClickRightFirstBlock = NO;
+    
     NSEnumerator *enumerator = [touches objectEnumerator];
     UITouch *toucher = enumerator.nextObject;
     CGPoint location = [toucher locationInView:self];
     _touchingPoint = location;
     
-    for (GameSceneGroupCell *cell in self.groupCellPool) {
-        NSArray *unitViews = [cell unitCells];
-        for (GameSceneGroupCellUnitView *unitView in unitViews) {
-            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
-            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
-                [unitView buttonPressedEvent];
+    if (_gameMode != GAMEMODE_AUTOROLLMUTLCLICK) {
+        for (GameSceneGroupCell *cell in self.groupCellPool) {
+            NSArray *unitViews = [cell unitCells];
+            for (GameSceneGroupCellUnitView *unitView in unitViews) {
+                CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
+                if ([unitView pointInside:unitViewPoint withEvent:nil]) {
+                    [unitView buttonPressedEvent];
+                }
             }
         }
-    } 
+    }
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{

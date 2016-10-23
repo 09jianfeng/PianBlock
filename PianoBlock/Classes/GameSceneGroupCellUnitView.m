@@ -19,6 +19,7 @@
 @implementation GameSceneGroupCellUnitView{
     CALayer *_maskLayer;
     CAShapeLayer *_shapeLayer;
+    CAShapeLayer *_dynamicShapeLayer;
     BOOL _clicked;
 }
 
@@ -163,6 +164,7 @@
 }
 
 - (void)redrawSublayerWithTouchPosition:(CGPoint)point{
+    
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     
     CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y + 20);
@@ -177,9 +179,13 @@
     [bezierPath addLineToPoint:rightBottom];
     [bezierPath addLineToPoint:leftBottom];
     
-    CAShapeLayer *sublayer = [CAShapeLayer layer];
-    sublayer.path = bezierPath.CGPath;
-    
+    if (!_dynamicShapeLayer) {
+        _dynamicShapeLayer = [CAShapeLayer layer];
+        _dynamicShapeLayer.frame = self.layer.bounds;
+    }
+    [self.layer addSublayer:_dynamicShapeLayer];
+    _dynamicShapeLayer.fillColor = [UIColor colorWithRed:0.3 green:0.2 blue:0.3 alpha:0.5].CGColor;
+    _dynamicShapeLayer.path = bezierPath.CGPath;
 }
 
 #pragma mark - CAAnimation

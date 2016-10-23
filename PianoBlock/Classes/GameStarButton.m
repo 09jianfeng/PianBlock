@@ -12,7 +12,9 @@
 @property(nonatomic, strong) CAShapeLayer *shapeLayer;
 @end
 
-@implementation GameStarButton
+@implementation GameStarButton{
+    BOOL _isStop;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -23,6 +25,8 @@
 */
 
 - (void)beginAnimations{
+    _isStop = NO;
+    
     CAKeyframeAnimation *kfAnimateScale = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     CATransform3D initTransform = CATransform3DMakeScale(1, 1, 0);
     CATransform3D finalTransform = CATransform3DMakeScale(1.5, 1.5, 0);
@@ -68,6 +72,7 @@
 }
 
 - (void)stopAnimations{
+    _isStop = YES;
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];
 }
@@ -75,7 +80,9 @@
 #pragma mark - CAAnimation
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [_shapeLayer removeFromSuperlayer];
-    [self beginAnimations];
+    if (!_isStop) {
+        [self beginAnimations];
+    }
 }
 
 @end
