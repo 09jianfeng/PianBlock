@@ -14,7 +14,7 @@
 
 @optional
 /// user did select unit view
-- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
+- (void)gameSceneCellDidSelectedRightCell:(GameSceneGroupCellUnitView *)gameUnit;
 - (void)gameFail;
 
 @end

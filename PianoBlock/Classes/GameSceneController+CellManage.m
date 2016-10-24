@@ -22,18 +22,12 @@
 
 #pragma mark - GameSceneViewDelegate,GameSceneViewDataSource
 /// user did select unit view
-- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
-    if (isSpecialBlock) {
-        [self.sceneViewModel playSongNextBeat];
-        [self.sceneViewModel increaseGameScore:1];
-        [gameUnit startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
-    }else{
-        [self gameFail];
-    }
+- (void)gameSceneCellDidSelectedRightCell:(GameSceneGroupCellUnitView *)gameUnit{
+    [self.sceneViewModel playSongNextBeat];
+    [self.sceneViewModel increaseGameScore:1];
 }
 
 - (void)gameFail{
-    [self.gameScene stop];
     [self showGameStopView];
 }
 

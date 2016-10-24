@@ -13,7 +13,7 @@
 #import "GameCountdownWindow.h"
 
 #define GameSpeedNonAutoRoll _blockHeigh / 20
-#define GameSpeedAutoRollRimit _blockHeigh / 10
+#define GameSpeedAutoRollRimit _blockHeigh / 20
 #define GameSpeedIncrementPerInterval 0.2
 #define GameSpeedIncrementInterval 0.2
 
@@ -271,13 +271,13 @@
 
 
 #pragma mark - gameSceneViewDelegate
-- (void)gameSceneCellBlockDidSelectedInblock:(BOOL)isSpecialBlock gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
+- (void)gameSceneCellDidSelectedRightCell:(GameSceneGroupCellUnitView *)gameUnit{
     if (_gameDelegate) {
-        [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecialBlock gameUnit:gameUnit];
+        [_gameDelegate gameSceneCellDidSelectedRightCell:gameUnit];
     }
     
     //  如果是手动滚动的方式才需要continue， 因为手动的动画有时候会被stop。
-    if (_gameMode != GAMEMODE_MANUALROLL || !isSpecialBlock) {
+    if (_gameMode != GAMEMODE_MANUALROLL || !gameUnit.isSpecial) {
         return;
     }
     
@@ -288,6 +288,8 @@
     if (_gameDelegate) {
         [_gameDelegate gameFail];
     }
+    
+    [self stop];
 }
 
 #pragma mark - touch event catch

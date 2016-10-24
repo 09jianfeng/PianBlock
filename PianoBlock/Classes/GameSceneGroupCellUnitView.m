@@ -69,13 +69,18 @@
     }
     _clicked = YES;
     
-    BOOL isSpecial = self.isSpecial;
-    self.isSpecial = NO;
-    if ([_gameDelegate respondsToSelector:@selector(gameSceneCellBlockDidSelectedInblock:gameUnit:)]) {
-        [_gameDelegate gameSceneCellBlockDidSelectedInblock:isSpecial gameUnit:self];
-        if (!isSpecial) {
-            [self failAnimation];
+    if (!self.isSpecial) {
+        [self failAnimation];
+        if ([_gameDelegate respondsToSelector:@selector(gameFail)]) {
+            [_gameDelegate gameFail];
         }
+    }else{
+        [self startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
+        if ([_gameDelegate respondsToSelector:@selector(gameSceneCellDidSelectedRightCell:)]) {
+            [_gameDelegate gameSceneCellDidSelectedRightCell:self];
+        }
+        
+        self.isSpecial = NO;
     }
 }
 
@@ -83,7 +88,6 @@
 
 - (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer{
     if (_isSerial) {
-        NSLog(@"isserial return");
         return;
     }
     
@@ -91,7 +95,6 @@
 }
 
 - (void)maskLayerAnimation{
-    
     if (!_maskLayer) {
         _maskLayer = [CALayer layer];
         _maskLayer.borderColor = self.layer.borderColor;
@@ -102,7 +105,6 @@
     }
     
     self.layer.mask = _maskLayer;
-    
     CAKeyframeAnimation *maskAnimation = [CAKeyframeAnimation animationWithKeyPath:@"bounds"];
     maskAnimation.duration = 0.5;
     maskAnimation.beginTime = CACurrentMediaTime();
@@ -174,9 +176,7 @@
 }
 
 - (void)redrawSublayerWithTouchPosition:(CGPoint)point{
-    
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
-    
     CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y - 40);
     CGPoint leftTop = CGPointMake(0, point.y - 20);
     CGPoint rightTop = CGPointMake(CGRectGetWidth(self.frame), point.y - 20);
