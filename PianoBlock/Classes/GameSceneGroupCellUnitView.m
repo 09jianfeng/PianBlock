@@ -77,7 +77,10 @@
             [_gameDelegate gameFail];
         }
     }else{
-        [self startCellAnimation:[UIColor whiteColor] removeAnimateLayer:NO];
+        
+        if (!_isSerial) {
+            [self startCellAnimation:[UIColor whiteColor] removeAnimateLayer:NO];
+        }
         if ([_gameDelegate respondsToSelector:@selector(gameSceneCellDidSelectedRightCell:)]) {
             [_gameDelegate gameSceneCellDidSelectedRightCell:self];
         }

@@ -179,7 +179,7 @@
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-// auto roll
+// auto roll displayLink cycle
 - (void)beginRoll{
     
     WeakSelf;
@@ -189,6 +189,7 @@
         cellFrame.origin.y += weakSelf.gameSpeed;
         groupCell.frame = cellFrame;
         
+        // 重用超出范围的 group cell
         if (cellFrame.origin.y > weakSelf.frame.size.height) {
             GameSceneGroupCell *lastCell = [weakSelf.groupCellPool lastObject];
             [weakSelf.groupCellPool removeObject:groupCell];
@@ -220,8 +221,11 @@
                 
                 //手指还没收起来的时候，触摸点到了非 special区域的点击事件，拦下来。
                 if (!unitView.isSpecialView && _isHaveClickRightFirstBlock) {
-                    NSLog(@"点击事件被拦");
-                    [unitView redrawSublayerWithTouchPosition:unitViewPoint];
+                    
+                    BOOL isSerial = _isSerial[i];
+                    if (isSerial) {
+                        [unitView redrawSublayerWithTouchPosition:unitViewPoint];
+                    }
                 }else{
                     if (unitView.isSpecialView) {
                         _isHaveClickRightFirstBlock = YES;
@@ -229,7 +233,6 @@
                     
                     BOOL isSerial = _isSerial[i];
                     [unitView buttonPressedEventIsSerial:isSerial];
-                    NSLog(@"-----------button is serial %d",isSerial);
                     if (isSerial) {
                         [unitView redrawSublayerWithTouchPosition:unitViewPoint];
                     }
