@@ -114,8 +114,8 @@
         int specialCellIndex = [groupCell loadSubCells];
         [self checkIsSerial:specialCellIndex inLine:_cellLineNum - i - 1];
         
-        [self addSubview:groupCell];
         [_groupCellPool addObject:groupCell];
+        [self insertSubview:groupCell atIndex:0];
     }
 }
 
@@ -168,9 +168,6 @@
         dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, GameSpeedIncrementInterval * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
         dispatch_source_set_event_handler(_timer, ^{
             weakSelf.gameSpeed += GameSpeedIncrementPerInterval;
-            //debug
-            weakSelf.gameSpeed = 1.0;
-            
             if (weakSelf.gameSpeed > GameSpeedAutoRollRimit) {
                 weakSelf.gameSpeed = GameSpeedAutoRollRimit;
             }
@@ -207,6 +204,8 @@
             cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
             groupCell.frame = cellFrame;
             [weakSelf.groupCellPool addObject:groupCell];
+            [groupCell removeFromSuperview];
+            [self insertSubview:groupCell atIndex:0];
             
             // 检查 reuse的那个cell是否有跟上下的block连续
             [self charMoveDown:_isSerial length:CharListLength];
@@ -280,6 +279,8 @@
                 groupCell.frame = cellFrame;
                 [groupCell reuseSubCells];
                 [weakSelf.groupCellPool addObject:groupCell];
+                [groupCell removeFromSuperview];
+                [self insertSubview:groupCell atIndex:0];
             }
         });
     }
@@ -333,11 +334,12 @@
                 
                 BOOL isSerial = _isSerial[_cellLineNum - i -1];
                 [unitView buttonPressedEventIsSerial:isSerial];
+                if (isSerial) {
+                    [self waveLayerAnimation:self.layer point:_touchingPoint];
+                }
             }
         }
     }
-    
-    [self waveLayerAnimation:self.layer point:_touchingPoint];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
@@ -365,7 +367,7 @@
     
     CAKeyframeAnimation *kfAnimateScale = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     CATransform3D initTransform = CATransform3DMakeScale(1, 1, 0);
-    CATransform3D finalTransform = CATransform3DMakeScale(10, 10, 0);
+    CATransform3D finalTransform = CATransform3DMakeScale(6, 6, 0);
     kfAnimateScale.values = @[[NSValue valueWithCATransform3D:initTransform],[NSValue valueWithCATransform3D:finalTransform]];
     kfAnimateScale.keyTimes = @[@0,@1];
     kfAnimateScale.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
@@ -394,8 +396,8 @@
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
     _waveLayer.backgroundColor = [UIColor clearColor].CGColor;
-    _waveLayer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0].CGColor;
-    _waveLayer.borderWidth = 1.0;
+    _waveLayer.borderColor = [UIColor redColor].CGColor;
+    _waveLayer.borderWidth = 6.0;
     _waveLayer.frame = CGRectMake(0, 0, 50, 50);
     _waveLayer.cornerRadius = 25.0;
     _waveLayer.position = point;
@@ -407,7 +409,12 @@
 
 #pragma mark - CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [_waveLayer removeAllAnimations];
     [_waveLayer removeFromSuperlayer];
+    
+    if (!CGPointEqualToPoint(_touchingPoint, CGPointZero)) {
+        [self waveLayerAnimation:self.layer point:_touchingPoint];
+    }
 }
 
 @end

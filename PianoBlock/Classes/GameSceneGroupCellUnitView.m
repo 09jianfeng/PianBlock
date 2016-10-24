@@ -177,12 +177,18 @@
 }
 
 - (void)redrawSublayerWithTouchPosition:(CGPoint)point{
+    
+    if (!_dynamicShapeLayer) {
+        _dynamicShapeLayer = [CAShapeLayer layer];
+        _dynamicShapeLayer.frame = CGRectMake(0, -40, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) + 40);
+    }
+    
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
-    CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y - 40);
+    CGPoint headPoint = CGPointMake(CGRectGetWidth(_dynamicShapeLayer.frame)/2,point.y - 40);
     CGPoint leftTop = CGPointMake(0, point.y - 20);
-    CGPoint rightTop = CGPointMake(CGRectGetWidth(self.frame), point.y - 20);
-    CGPoint leftBottom = CGPointMake(0, CGRectGetHeight(self.frame));
-    CGPoint rightBottom = CGPointMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    CGPoint rightTop = CGPointMake(CGRectGetWidth(_dynamicShapeLayer.frame), point.y - 20);
+    CGPoint leftBottom = CGPointMake(0, CGRectGetHeight(_dynamicShapeLayer.frame));
+    CGPoint rightBottom = CGPointMake(CGRectGetWidth(_dynamicShapeLayer.frame), CGRectGetHeight(_dynamicShapeLayer.frame));
     
     [bezierPath moveToPoint:leftBottom];
     [bezierPath addLineToPoint:leftTop];
@@ -190,11 +196,8 @@
     [bezierPath addLineToPoint:rightBottom];
     [bezierPath addLineToPoint:leftBottom];
     
-    if (!_dynamicShapeLayer) {
-        _dynamicShapeLayer = [CAShapeLayer layer];
-        _dynamicShapeLayer.frame = self.layer.bounds;
-    }
     [self.layer addSublayer:_dynamicShapeLayer];
+    self.layer.masksToBounds = NO;
     _dynamicShapeLayer.fillColor = [UIColor whiteColor].CGColor;
     _dynamicShapeLayer.path = bezierPath.CGPath;
 }
