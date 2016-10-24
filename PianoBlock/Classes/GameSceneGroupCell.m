@@ -50,7 +50,7 @@
     return self;
 }
 
-- (void)loadSubView{
+- (int)loadSubCells{
     
     int randomIndex = arc4random() % _blockNum;
     for (int i = 0; i < _blockNum ; i++) {
@@ -61,22 +61,23 @@
         
         GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
         unit.gameDelegate = _gameDelegate;
-        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
-            [_gameDataSource gameScreenGameCellUnit:isBlockSpecial gameUnit:unit];
-        }
-        unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
-        
         if (isBlockSpecial) {
             [unit setToBeSpecialView];
         }
+        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
+            [_gameDataSource gameScreenGameCellUnit:unit];
+        }
+        unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
         
         [unit loadSubview];
         [self addSubview:unit];
         [_unitCells addObject:unit];
     }
+    
+    return randomIndex;
 }
 
-- (void)reuseGroupCell{
+- (int)reuseSubCells{
     
     int randomIndex = arc4random() % _blockNum;
     for (int i = 0 ; i < _unitCells.count ; i++) {
@@ -92,13 +93,16 @@
         if (i == randomIndex) {
             isSpecial = YES;
         }
-        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:gameUnit:)]) {
-            [_gameDataSource gameScreenGameCellUnit:isSpecial gameUnit:unit];
-        }
+        
         if (isSpecial) {
             [unit setToBeSpecialView];
         }
+        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
+            [_gameDataSource gameScreenGameCellUnit:unit];
+        }
     }
+    
+    return randomIndex;
 }
 
 - (BOOL)isHaveSpecialUnitView{

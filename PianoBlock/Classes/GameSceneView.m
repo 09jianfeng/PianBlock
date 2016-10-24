@@ -12,7 +12,7 @@
 #import "GameSceneGroupCellUnitView.h"
 #import "GameCountdownWindow.h"
 
-#define GameSpeedNonAutoRoll _blockHeigh / 12
+#define GameSpeedNonAutoRoll _blockHeigh / 20
 #define GameSpeedAutoRollRimit _blockHeigh / 10
 #define GameSpeedIncrementPerInterval 0.2
 #define GameSpeedIncrementInterval 0.2
@@ -25,10 +25,11 @@
 @property (nonatomic, assign) NSInteger blockNumPerGroupCell;
 @property (nonatomic, assign) CGFloat blockHeigh;
 @property (nonatomic, assign) CGFloat blockWidth;
-@property (nonatomic, assign) NSInteger groupCellsNum;
+@property (nonatomic, assign) NSInteger cellLineNum;
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
 
+@property (nonatomic, assign) char *specialBlocks;
 @property (nonatomic, assign) char *isSerial;
 
 @end
@@ -60,12 +61,15 @@
         
         _blockWidth = frame.size.width / blockNum;
         _blockHeigh = _blockWidth * 1.5;
-        _groupCellsNum = ceil(frame.size.height / _blockHeigh) + 1;
+        _cellLineNum = ceil(frame.size.height / _blockHeigh) + 1;
         _gameSpeed = 2.0;
-        _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_groupCellsNum];
+        _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_cellLineNum];
         
         _isSerial = malloc(sizeof(char)*20);
-        memset_s(_isSerial, 20, 0, 20);
+        memset(_isSerial, 0, 20);
+        
+        _specialBlocks = malloc(sizeof(char) * 20);
+        memset(_specialBlocks, -1, 20);
     }
     return self;
 }
@@ -88,8 +92,8 @@
     _blockNumPerGroupCell = blockNum;
     _blockWidth = self.frame.size.width / blockNum;
     _blockHeigh = _blockWidth * 1.5;
-    _groupCellsNum = ceil(self.frame.size.height / _blockHeigh) + 1;
-    _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_groupCellsNum];
+    _cellLineNum = ceil(self.frame.size.height / _blockHeigh) + 1;
+    _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_cellLineNum];
 }
 
 - (void)loadSubView{
@@ -97,15 +101,38 @@
         self.blockNumPerGroupCell = [_gameDataSource gameSceneUnitNumPerCell];
     }
     
-    for (NSInteger i = 0 ; i < _groupCellsNum ; i++) {
-        GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc] initWithUnitCellsNum:_blockNumPerGroupCell
-                                                                                   frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
-                                                                         randomColorsNum:1];
+    for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
+        //从最后的cellGroup往上一个一个add
+        GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc]
+                                         initWithUnitCellsNum:_blockNumPerGroupCell
+                                         frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
+                                         randomColorsNum:1];
         groupCell.gameDataSource = _gameDataSource;
         groupCell.gameDelegate = self;
-        [groupCell loadSubView];
+        int specialCellIndex = [groupCell loadSubCells];
+        [self checkIsSerial:specialCellIndex inLine:_cellLineNum - i];
+        
         [self addSubview:groupCell];
         [_groupCellPool addObject:groupCell];
+    }
+}
+
+#pragma mark - 检查是否是连续的block
+
+- (void)checkIsSerial:(NSInteger)index inLine:(NSInteger)line{
+    _specialBlocks[line] = index;
+    
+    NSInteger upIndex = index +1;
+    NSInteger downIndex = index - 1;
+    
+    if (upIndex < _cellLineNum && _specialBlocks[upIndex] == index) {
+        _isSerial[line] = 1;
+        _isSerial[upIndex] = 1;
+    }
+    
+    if (downIndex >= 0 && _specialBlocks[downIndex] == index) {
+        _isSerial[line] = 1;
+        _isSerial[downIndex] = 1;
     }
 }
 
@@ -122,9 +149,11 @@
     }];
 }
 
+#pragma mark - scroll animation
+
 - (void)startGame{
     if (_gameMode != GAMEMODE_MANUALROLL) {
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginScroll)];
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(beginRoll)];
         
         WeakSelf;
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -140,13 +169,18 @@
     }else{
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(rollOneCell)];
         self.gameSpeed = GameSpeedNonAutoRoll;
+        if (self.gameSpeed > GameSpeedAutoRollRimit) {
+            self.gameSpeed = GameSpeedAutoRollRimit;
+        }
+
         [self stop];
     }
     
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)beginScroll{
+// auto roll
+- (void)beginRoll{
     
     WeakSelf;
     [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -160,8 +194,13 @@
             [weakSelf.groupCellPool removeObject:groupCell];
             cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
             groupCell.frame = cellFrame;
-            [groupCell reuseGroupCell];
             [weakSelf.groupCellPool addObject:groupCell];
+            
+            // 检查 reuse的那个cell是否有跟上下的block连续
+            _isSerial[_cellLineNum] = 0;
+            _specialBlocks[_cellLineNum] = -1;
+            NSInteger specialIndex = [groupCell reuseSubCells];
+            [self checkIsSerial:specialIndex inLine:0];
         }
     }];
     
@@ -170,25 +209,38 @@
         return;
     }
     
-    //连击
-    for (GameSceneGroupCell *cell in self.groupCellPool) {
+    //连击判断
+    for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
+        GameSceneGroupCell *cell = _groupCellPool[i];
+        
         NSArray *unitViews = [cell unitCells];
         for (GameSceneGroupCellUnitView *unitView in unitViews) {
             CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
             if ([unitView pointInside:unitViewPoint withEvent:nil]) {
                 
+                //手指还没收起来的时候，触摸点到了非 special区域的点击事件，拦下来。
                 if (!unitView.isSpecialView && _isHaveClickRightFirstBlock) {
+                    NSLog(@"点击事件被拦");
+                    [unitView redrawSublayerWithTouchPosition:unitViewPoint];
                 }else{
                     if (unitView.isSpecialView) {
                         _isHaveClickRightFirstBlock = YES;
                     }
-                    [unitView buttonPressedEventIsSerial:NO];
+                    
+                    BOOL isSerial = _isSerial[i];
+                    [unitView buttonPressedEventIsSerial:isSerial];
+                    NSLog(@"-----------button is serial %d",isSerial);
+                    if (isSerial) {
+                        [unitView redrawSublayerWithTouchPosition:unitViewPoint];
+                    }
                 }
             }
         }
     }
 }
 
+
+// not auto roll
 - (void)rollOneCell{
     
     WeakSelf;
@@ -210,7 +262,7 @@
                 [weakSelf.groupCellPool removeObject:groupCell];
                 cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
                 groupCell.frame = cellFrame;
-                [groupCell reuseGroupCell];
+                [groupCell reuseSubCells];
                 [weakSelf.groupCellPool addObject:groupCell];
             }
         });
@@ -251,7 +303,8 @@
     CGPoint location = [toucher locationInView:self];
     _touchingPoint = location;
     
-    for (GameSceneGroupCell *cell in self.groupCellPool) {
+    for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
+        GameSceneGroupCell *cell = _groupCellPool[i];
         NSArray *unitViews = [cell unitCells];
         for (GameSceneGroupCellUnitView *unitView in unitViews) {
             CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
@@ -259,7 +312,9 @@
                 if (unitView.isSpecialView) {
                     _isHaveClickRightFirstBlock = YES;
                 }
-                [unitView buttonPressedEventIsSerial:NO];
+                
+                BOOL isSerial = _isSerial[i];
+                [unitView buttonPressedEventIsSerial:isSerial];
             }
         }
     }

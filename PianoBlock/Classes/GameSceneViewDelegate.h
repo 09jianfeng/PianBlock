@@ -24,7 +24,7 @@
 
 @optional
 /// use to self-define group cell unit view
-- (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit;
+- (void)gameScreenGameCellUnit:(GameSceneGroupCellUnitView *)gameUnit;
 
 /// number of unit view per line
 - (NSInteger)gameSceneUnitNumPerCell;

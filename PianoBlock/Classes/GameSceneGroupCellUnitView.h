@@ -11,6 +11,8 @@
 
 @interface GameSceneGroupCellUnitView : UIButton
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
+@property(nonatomic, assign) BOOL isSpecial;
+@property(nonatomic, assign) BOOL isSerial;
 
 - (void)loadSubview;
 

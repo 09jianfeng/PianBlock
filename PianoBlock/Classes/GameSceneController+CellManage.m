@@ -38,12 +38,15 @@
 }
 
 /// use to general group cell unit view
-- (void)gameScreenGameCellUnit:(BOOL)isSpecial gameUnit:(GameSceneGroupCellUnitView *)gameUnit{
+- (void)gameScreenGameCellUnit:(GameSceneGroupCellUnitView *)gameUnit{
     
     gameUnit.layer.borderWidth = 0.5;
     gameUnit.layer.borderColor = [UIColor grayColor].CGColor;
-    if (isSpecial) {
-        gameUnit.layer.contents = (__bridge id _Nullable)([[self.sceneViewModel getSpecialBlockBGImage] CGImage]);
+    if (gameUnit.isSpecial) {
+        if (gameUnit.isSerial) {
+            gameUnit.layer.borderWidth = 0.0;
+        }
+        gameUnit.layer.backgroundColor = [UIColor blackColor].CGColor;
     }else{
         gameUnit.layer.backgroundColor = [UIColor whiteColor].CGColor;
     }

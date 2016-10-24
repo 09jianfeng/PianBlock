@@ -12,9 +12,7 @@
 #import "Masonry.h"
 
 @interface GameSceneGroupCellUnitView() <CAAnimationDelegate>
-@property(nonatomic, assign) BOOL isSpecial;
 @property(nonatomic, strong) dispatch_source_t timer;
-@property(nonatomic, assign) BOOL isSerial;
 @end
 
 @implementation GameSceneGroupCellUnitView{
@@ -42,6 +40,7 @@
 - (void)reuseUnitView{
     _clicked = NO;
     _isSpecial = NO;
+    _isSerial = NO;
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];
     
@@ -83,6 +82,11 @@
 #pragma mark - game animation
 
 - (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer{
+    if (_isSerial) {
+        NSLog(@"isserial return");
+        return;
+    }
+    
     [self bezierPathAnimation:layerColor removeAnimateLayer:(BOOL)removeAniLayer];
 }
 
@@ -173,7 +177,7 @@
     
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     
-    CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y + 20);
+    CGPoint headPoint = CGPointMake(CGRectGetWidth(self.frame)/2,point.y - 40);
     CGPoint leftTop = CGPointMake(0, point.y - 20);
     CGPoint rightTop = CGPointMake(CGRectGetWidth(self.frame), point.y - 20);
     CGPoint leftBottom = CGPointMake(0, CGRectGetHeight(self.frame));
@@ -190,7 +194,7 @@
         _dynamicShapeLayer.frame = self.layer.bounds;
     }
     [self.layer addSublayer:_dynamicShapeLayer];
-    _dynamicShapeLayer.fillColor = [UIColor colorWithRed:0.3 green:0.2 blue:0.3 alpha:0.5].CGColor;
+    _dynamicShapeLayer.fillColor = [UIColor whiteColor].CGColor;
     _dynamicShapeLayer.path = bezierPath.CGPath;
 }
 

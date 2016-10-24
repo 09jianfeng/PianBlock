@@ -1174,7 +1174,6 @@
 				2EB30B201D79658F006C7D9F /* GameSceneController.m */,
 				2ECD8BBA1D7E9CFD00ED0831 /* GameSceneController+CellManage.h */,
 				2ECD8BBB1D7E9CFD00ED0831 /* GameSceneController+CellManage.m */,
-				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
 				78650A891DB273C800B313B6 /* GameStopView.h */,
 				78650A8A1DB273C800B313B6 /* GameStopView.m */,
 			);
@@ -1768,6 +1767,7 @@
 		78650A8C1DB273D300B313B6 /* GameCollection */ = {
 			isa = PBXGroup;
 			children = (
+				2EB309D81D7925B0006C7D9F /* GameSceneViewDelegate.h */,
 				2EB309DE1D794004006C7D9F /* GameSceneGroupCellUnitView.h */,
 				2EB309DF1D794004006C7D9F /* GameSceneGroupCellUnitView.m */,
 				2EB309DB1D792747006C7D9F /* GameSceneGroupCell.h */,
