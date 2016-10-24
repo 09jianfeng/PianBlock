@@ -48,7 +48,7 @@
             button.layer.borderWidth = 0.5;
             button.frame = CGRectMake(_buttonWidth * (i % buttonNum), _buttonHeigh * (i / buttonNum), _buttonWidth, _buttonHeigh);
             [[button rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
-                [button startAnimate:[UIColor blackColor] removeAnimateLayer:YES];
+                [button startCellAnimation:[UIColor blackColor] removeAnimateLayer:YES];
             }];
             
             [self addSubview:button];

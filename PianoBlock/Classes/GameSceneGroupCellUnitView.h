@@ -21,7 +21,7 @@
 
 - (void)reuseUnitView;
 
-- (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer;
+- (void)startCellAnimation:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer;
 
 - (void)buttonPressedEventIsSerial:(BOOL)isSerial;
 

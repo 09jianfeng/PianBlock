@@ -62,6 +62,8 @@
 
 - (void)buttonPressedEventIsSerial:(BOOL)isSerial{
     
+    NSLog(@"isSerial %d",isSerial);
+    
     _isSerial = isSerial;
     
     if (_clicked) {
@@ -75,7 +77,7 @@
             [_gameDelegate gameFail];
         }
     }else{
-        [self startAnimate:[UIColor whiteColor] removeAnimateLayer:NO];
+        [self startCellAnimation:[UIColor whiteColor] removeAnimateLayer:NO];
         if ([_gameDelegate respondsToSelector:@selector(gameSceneCellDidSelectedRightCell:)]) {
             [_gameDelegate gameSceneCellDidSelectedRightCell:self];
         }
@@ -86,11 +88,7 @@
 
 #pragma mark - game animation
 
-- (void)startAnimate:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer{
-    if (_isSerial) {
-        return;
-    }
-    
+- (void)startCellAnimation:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer{
     [self bezierPathAnimation:layerColor removeAnimateLayer:(BOOL)removeAniLayer];
 }
 
