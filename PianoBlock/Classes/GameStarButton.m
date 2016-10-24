@@ -35,7 +35,7 @@
     kfAnimateScale.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     kfAnimateScale.duration = 1;
     kfAnimateScale.delegate = self;
-    kfAnimateScale.removedOnCompletion = YES;
+    kfAnimateScale.removedOnCompletion = NO;
     kfAnimateScale.fillMode = kCAFillModeForwards;
     
     CAKeyframeAnimation *kfAnimateAlpha = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
@@ -44,14 +44,14 @@
     kfAnimateAlpha.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     kfAnimateAlpha.duration = 1;
     kfAnimateAlpha.delegate = self;
-    kfAnimateAlpha.removedOnCompletion = YES;
+    kfAnimateAlpha.removedOnCompletion = NO;
     kfAnimateAlpha.fillMode = kCAFillModeForwards;
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.autoreverses = NO;
     group.duration = 1.0;
     group.animations = @[kfAnimateScale,kfAnimateAlpha];
-    group.removedOnCompletion = YES;
+    group.removedOnCompletion = NO;
     group.fillMode = kCAFillModeForwards;
     group.delegate = self;
     

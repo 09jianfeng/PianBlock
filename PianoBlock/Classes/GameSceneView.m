@@ -19,7 +19,7 @@
 
 #define CharListLength 20
 
-@interface GameSceneView() <GameSceneViewDelegate>
+@interface GameSceneView() <GameSceneViewDelegate,CAAnimationDelegate>
 
 @property (nonatomic, strong) UIView *viewGroupForOneLine;
 @property (nonatomic, strong) NSMutableArray *groupCellPool;
@@ -30,6 +30,7 @@
 @property (nonatomic, assign) NSInteger cellLineNum;
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
+@property (nonatomic, strong) CAShapeLayer *waveLayer;
 @end
 
 @implementation GameSceneView{
@@ -167,6 +168,9 @@
         dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, GameSpeedIncrementInterval * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
         dispatch_source_set_event_handler(_timer, ^{
             weakSelf.gameSpeed += GameSpeedIncrementPerInterval;
+            //debug
+            weakSelf.gameSpeed = 1.0;
+            
             if (weakSelf.gameSpeed > GameSpeedAutoRollRimit) {
                 weakSelf.gameSpeed = GameSpeedAutoRollRimit;
             }
@@ -332,6 +336,8 @@
             }
         }
     }
+    
+    [self waveLayerAnimation:self.layer point:_touchingPoint];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
@@ -346,6 +352,62 @@
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
+}
+
+#pragma mark - 点击动画
+- (void)waveLayerAnimation:(CALayer *)layer point:(CGPoint)point{
+    if (!_waveLayer) {
+        _waveLayer = [CAShapeLayer layer];
+    }else{
+        [_waveLayer removeAllAnimations];
+        [_waveLayer removeFromSuperlayer];
+    }
+    
+    CAKeyframeAnimation *kfAnimateScale = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    CATransform3D initTransform = CATransform3DMakeScale(1, 1, 0);
+    CATransform3D finalTransform = CATransform3DMakeScale(10, 10, 0);
+    kfAnimateScale.values = @[[NSValue valueWithCATransform3D:initTransform],[NSValue valueWithCATransform3D:finalTransform]];
+    kfAnimateScale.keyTimes = @[@0,@1];
+    kfAnimateScale.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    kfAnimateScale.duration = 0.2;
+    kfAnimateScale.delegate = self;
+    kfAnimateScale.removedOnCompletion = NO;
+    kfAnimateScale.fillMode = kCAFillModeForwards;
+    
+    CAKeyframeAnimation *kfAnimateAlpha = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    kfAnimateAlpha.values = @[@1.0,@0.0];
+    kfAnimateAlpha.keyTimes = @[@0,@1];
+    kfAnimateAlpha.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    kfAnimateAlpha.duration = 0.2;
+    kfAnimateAlpha.delegate = self;
+    kfAnimateAlpha.removedOnCompletion = NO;
+    kfAnimateAlpha.fillMode = kCAFillModeForwards;
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.autoreverses = NO;
+    group.duration = 0.2;
+    group.animations = @[kfAnimateScale,kfAnimateAlpha];
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
+    group.delegate = self;
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+    _waveLayer.backgroundColor = [UIColor clearColor].CGColor;
+    _waveLayer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0].CGColor;
+    _waveLayer.borderWidth = 1.0;
+    _waveLayer.frame = CGRectMake(0, 0, 50, 50);
+    _waveLayer.cornerRadius = 25.0;
+    _waveLayer.position = point;
+    [CATransaction commit];
+    
+    [layer addSublayer:_waveLayer];
+    [_waveLayer addAnimation:group forKey:@"WaveAnimation"];
+}
+
+#pragma mark - CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [_waveLayer removeFromSuperlayer];
 }
 
 @end
