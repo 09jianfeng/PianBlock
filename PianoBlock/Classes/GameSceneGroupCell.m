@@ -138,10 +138,17 @@
             [unitView redrawSublayerWithTouchPosition:unitViewPoint];
         }
     }else{
-        NSLog(@"isSpecialView %d  isHaveClickRightBlockBefor %d",unitView.isSpecial,isHaveClickRightBlockBefor);
         if (unitView.isSpecialView) {
             touchTheSpecialUnitView = YES;
         }
+        
+        if (!unitView.isSpecial) {
+            if ([_gameDelegate respondsToSelector:@selector(gameFail)]) {
+                [_gameDelegate gameFail];
+                return NO;
+            }
+        }
+        
         [unitView buttonPressedEventIsSerial:serialType];
         if (serialType) {
             [unitView redrawSublayerWithTouchPosition:unitViewPoint];

@@ -52,6 +52,7 @@
     
     _serialType = serialType;
     if (_serialType == SerialTypeNormal) {
+        [self addLineForLayer];
     }else if(_serialType == SerialTypeTop){
         [self addLineForLayer];
     }
