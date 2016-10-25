@@ -11,8 +11,8 @@
 
 typedef NS_ENUM(char,SerialType) {
     SerialTypeNotSerial,
-    SerialTypeSerialNormal,
-    SerialTypeSerialTop
+    SerialTypeNormal,
+    SerialTypeTop
 };
 
 @interface GameSceneGroupCellUnitView : UIButton

@@ -19,6 +19,7 @@
     CALayer *_maskLayer;
     CAShapeLayer *_shapeLayer;
     CAShapeLayer *_dynamicShapeLayer;
+    CALayer *_lineLayer;
     BOOL _clicked;
 }
 
@@ -37,15 +38,39 @@
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];
     
+    [_lineLayer removeFromSuperlayer];
+    
     [_dynamicShapeLayer removeFromSuperlayer];
     [self.layer.mask removeAllAnimations];
     self.layer.mask = nil;
     self.layer.contents = nil;
 }
 
+- (void)setSerialType:(SerialType)serialType{
+    
+    _serialType = serialType;
+    if (_serialType == SerialTypeNormal) {
+    }else if(_serialType == SerialTypeTop){
+        [self addLineForLayer];
+    }
+}
+
 - (void)setToBeSpecialViewWithSerialType:(SerialType)serialType{
     _isSpecial = YES;
-    _serialType = serialType;
+    self.serialType = serialType;
+}
+
+- (void)addLineForLayer{
+    if (!_lineLayer) {
+        _lineLayer = [CALayer layer];
+    }
+    _lineLayer.frame = CGRectMake(0, 0, 5, CGRectGetHeight(self.frame));
+    _lineLayer.position = CGPointMake(CGRectGetWidth(self.frame)/2, CGRectGetHeight(self.frame)/2);
+    _lineLayer.backgroundColor = [UIColor redColor].CGColor;
+    [self.layer addSublayer:_lineLayer];
+}
+
+- (void)addArrowForlayer{
 }
 
 - (BOOL)isSpecialView{

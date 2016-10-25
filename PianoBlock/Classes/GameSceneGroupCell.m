@@ -114,6 +114,11 @@
     return isContainSpecialUnitView;
 }
 
+- (void)updateSpecialUnitViewSerialType:(SerialType)serialType{
+    GameSceneGroupCellUnitView *unitView = _unitCells[_specialBlockIndex];
+    unitView.serialType = serialType;
+}
+
 #pragma mark - touch event
 - (int)indexForTouchPoint:(CGPoint)point{
     return point.x / _blockWidth;

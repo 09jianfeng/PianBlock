@@ -26,4 +26,6 @@
 
 - (BOOL)toucheInPoint:(CGPoint)point isHaveClickRightBlockBefor:(BOOL)isHaveClickRightBlockBefor serialType:(SerialType)serialType;
 
+- (void)updateSpecialUnitViewSerialType:(SerialType)serialType;
+
 @end
