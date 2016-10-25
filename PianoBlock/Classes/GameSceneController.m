@@ -25,6 +25,10 @@
 
 @implementation GameSceneController
 
+- (void)dealloc{
+    NSLog(@"GameSceneController dealloc");
+}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil
                     sceneVM:(GSCViewModel *)sceneVM{
@@ -65,8 +69,9 @@
     [_gameScene loadSubView];
     [self.view addSubview:self.gameScene];
     
+    WeakSelf;
     [[GameCountdownWindow shareInstance] showWithAnimNum:1 CompleteBlock:^{
-        [self.gameScene startGame];
+        [weakSelf.gameScene startGame];
     }];
     
     UILabel *gameScoreTips = [[UILabel alloc] init];
