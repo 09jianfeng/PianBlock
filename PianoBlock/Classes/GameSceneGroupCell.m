@@ -15,8 +15,6 @@
 @property(nonatomic, assign) NSInteger blockWidth;
 @property(nonatomic, assign) NSInteger blockHeigh;
 @property(nonatomic, assign) NSInteger blockNum;
-
-@property(nonatomic, assign) int specialBlockIndex;
 //cells in per line
 @property(nonatomic, strong) NSMutableArray *unitCells;
 
@@ -71,18 +69,12 @@
 
 - (void)loadSubCells:(int)sepcialIndex serialType:(SerialType)serialType{
     for (int i = 0; i < _blockNum ; i++) {
-        BOOL isBlockSpecial = NO;
-        if (i == sepcialIndex) {
-            isBlockSpecial = YES;
-        }
-        
         GameSceneGroupCellUnitView* unit = _unitCells[i];
-        if (isBlockSpecial) {
+        if (i == sepcialIndex) {
             [unit setToBeSpecialViewWithSerialType:serialType];
         }
     }
     
-    _specialBlockIndex = sepcialIndex;
 }
 
 - (void)reuseSubCells:(int)sepcialIndex serialType:(SerialType)serialType{
@@ -105,7 +97,6 @@
         }
     }
     
-    _specialBlockIndex = sepcialIndex;
 }
 
 - (BOOL)isHaveSpecialUnitView{
@@ -119,8 +110,8 @@
     return isContainSpecialUnitView;
 }
 
-- (void)updateSpecialUnitViewSerialType:(SerialType)serialType{
-    GameSceneGroupCellUnitView *unitView = _unitCells[_specialBlockIndex];
+- (void)updateSpecialUnitViewSerialType:(SerialType)serialType specialBlockIndex:(NSInteger)specialBlockIndex{
+    GameSceneGroupCellUnitView *unitView = _unitCells[specialBlockIndex];
     unitView.serialType = serialType;
 }
 

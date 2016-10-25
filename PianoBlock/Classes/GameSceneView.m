@@ -107,23 +107,14 @@
 #pragma mark - 检查是否是连续的block
 - (void)checkserialType:(NSInteger)index inLine:(NSInteger)line poolIndex:(NSInteger)poolIndex{
     _specialBlocks[line] = index;
-    
     NSInteger upLine = line +1;
-    NSInteger downLine = line - 1;
     
     if (upLine < _cellLineNum && _specialBlocks[upLine] == index) {
         _serialType[line] = SerialTypeTop;
         _serialType[upLine] = SerialTypeNormal;
         
-        [_groupCellPool[poolIndex] updateSpecialUnitViewSerialType:SerialTypeTop];
-        [_groupCellPool[poolIndex - 1] updateSpecialUnitViewSerialType:SerialTypeNormal];
-    }
-    
-    if (downLine >= 0 && _specialBlocks[downLine] == index) {
-        _serialType[line] = SerialTypeNormal;
-        _serialType[downLine] = SerialTypeTop;
-        
-        [_groupCellPool[poolIndex] updateSpecialUnitViewSerialType:SerialTypeNormal];
+        [_groupCellPool[poolIndex] updateSpecialUnitViewSerialType:SerialTypeTop specialBlockIndex:index];
+        [_groupCellPool[poolIndex - 1] updateSpecialUnitViewSerialType:SerialTypeNormal specialBlockIndex:index];
     }
 }
 
@@ -211,8 +202,8 @@
             [self charMoveDown:_specialBlocks length:CharListLength];
             _specialBlocks[0] = -1;
             int randomIndex = arc4random() % BlockNumPerLine;
-            [self checkserialType:randomIndex inLine:0 poolIndex:_groupCellPool.count - 1];
             [groupCell reuseSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:0]];
+            [self checkserialType:randomIndex inLine:0 poolIndex:_groupCellPool.count - 1];
         }
     }];
     

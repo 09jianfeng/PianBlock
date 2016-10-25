@@ -64,7 +64,7 @@
 
 - (void)setToBeSpecialViewWithSerialType:(SerialType)serialType{
     _isSpecial = YES;
-    self.serialType = serialType;
+    _serialType = serialType;
     self.layer.backgroundColor = [UIColor blackColor].CGColor;
 }
 
