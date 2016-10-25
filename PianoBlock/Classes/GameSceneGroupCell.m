@@ -53,37 +53,31 @@
     return self;
 }
 
-- (int)loadSubCells{
-    
-    int randomIndex = arc4random() % _blockNum;
+- (void)loadSubCells:(int)sepcialIndex serialType:(SerialType)serialType{
     for (int i = 0; i < _blockNum ; i++) {
         BOOL isBlockSpecial = NO;
-        if (i == randomIndex) {
+        if (i == sepcialIndex) {
             isBlockSpecial = YES;
         }
         
         GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
         unit.gameDelegate = _gameDelegate;
         if (isBlockSpecial) {
-            [unit setToBeSpecialView];
+            [unit setToBeSpecialViewWithSerialType:serialType];
         }
         if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
             [_gameDataSource gameScreenGameCellUnit:unit];
         }
         unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
         
-        [unit loadSubview];
         [self addSubview:unit];
         [_unitCells addObject:unit];
     }
     
-    _specialBlockIndex = randomIndex;
-    return randomIndex;
+    _specialBlockIndex = sepcialIndex;
 }
 
-- (int)reuseSubCells{
-    
-    int randomIndex = arc4random() % _blockNum;
+- (void)reuseSubCells:(int)sepcialIndex serialType:(SerialType)serialType{
     for (int i = 0 ; i < _unitCells.count ; i++) {
         GameSceneGroupCellUnitView *unit = _unitCells[i];
         if ([unit isSpecialView]) {
@@ -94,20 +88,19 @@
         [unit reuseUnitView];
         
         BOOL isSpecial = NO;
-        if (i == randomIndex) {
+        if (i == sepcialIndex) {
             isSpecial = YES;
         }
         
         if (isSpecial) {
-            [unit setToBeSpecialView];
+            [unit setToBeSpecialViewWithSerialType:serialType];
         }
         if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
             [_gameDataSource gameScreenGameCellUnit:unit];
         }
     }
     
-    _specialBlockIndex = randomIndex;
-    return randomIndex;
+    _specialBlockIndex = sepcialIndex;
 }
 
 - (BOOL)isHaveSpecialUnitView{
@@ -129,7 +122,7 @@
 - (BOOL)toucheInPoint:(CGPoint)point isHaveClickRightBlockBefor:(BOOL)isHaveClickRightBlockBefor serialType:(SerialType)serialType{
     int index = [self indexForTouchPoint:point];
     GameSceneGroupCellUnitView *unitView = _unitCells[index];
-    BOOL touchTheSpecialUnitView = NO;
+    BOOL touchTheSpecialUnitView = isHaveClickRightBlockBefor;
     
     CGPoint unitViewPoint = [self convertPoint:point toView:unitView];
     //手指还没收起来的时候，触摸点到了非 special区域的点击事件，拦下来。
@@ -139,6 +132,7 @@
             [unitView redrawSublayerWithTouchPosition:unitViewPoint];
         }
     }else{
+        NSLog(@"isSpecialView %d  isHaveClickRightBlockBefor %d",unitView.isSpecial,isHaveClickRightBlockBefor);
         if (unitView.isSpecialView) {
             touchTheSpecialUnitView = YES;
         }

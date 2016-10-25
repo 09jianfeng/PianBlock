@@ -20,9 +20,7 @@ typedef NS_ENUM(char,SerialType) {
 @property(nonatomic, assign) BOOL isSpecial;
 @property(nonatomic, assign) SerialType serialType;
 
-- (void)loadSubview;
-
-- (void)setToBeSpecialView;
+- (void)setToBeSpecialViewWithSerialType:(SerialType)serialType;
 - (BOOL)isSpecialView;
 
 - (void)reuseUnitView;

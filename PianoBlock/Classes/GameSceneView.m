@@ -111,8 +111,11 @@
                                          randomColorsNum:1];
         groupCell.gameDataSource = _gameDataSource;
         groupCell.gameDelegate = self;
-        int specialCellIndex = [groupCell loadSubCells];
-        [self checkserialType:specialCellIndex inLine:_cellLineNum - i - 1];
+        
+        int randomIndex = arc4random() % _blockNumPerGroupCell;
+        NSInteger lineIndex = _cellLineNum - i - 1;
+        [self checkserialType:randomIndex inLine:lineIndex];
+        [groupCell loadSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:lineIndex]];
         
         [_groupCellPool addObject:groupCell];
         [self insertSubview:groupCell atIndex:0];
@@ -216,8 +219,9 @@
             _serialType[0] = 0;
             [self charMoveDown:_specialBlocks length:CharListLength];
             _specialBlocks[0] = -1;
-            NSInteger specialIndex = [groupCell reuseSubCells];
-            [self checkserialType:specialIndex inLine:0];
+            int randomIndex = arc4random() % _blockNumPerGroupCell;
+            [self checkserialType:randomIndex inLine:0];
+            [groupCell reuseSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:0]];
         }
     }];
     
@@ -260,7 +264,8 @@
                 [weakSelf.groupCellPool removeObject:groupCell];
                 cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
                 groupCell.frame = cellFrame;
-                [groupCell reuseSubCells];
+                int randomIndex = arc4random() % _blockNumPerGroupCell;
+                [groupCell reuseSubCells:randomIndex serialType:SerialTypeNotSerial];
                 [weakSelf.groupCellPool addObject:groupCell];
                 [groupCell removeFromSuperview];
                 [self insertSubview:groupCell atIndex:0];

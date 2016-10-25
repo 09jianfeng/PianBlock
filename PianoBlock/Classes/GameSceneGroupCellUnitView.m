@@ -30,13 +30,6 @@
     return self;
 }
 
-- (void)loadSubview{
-    WeakSelf
-    [[self rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
-        [weakSelf buttonPressedEventIsSerial:_serialType];
-    }];
-}
-
 - (void)reuseUnitView{
     _clicked = NO;
     _isSpecial = NO;
@@ -50,8 +43,9 @@
     self.layer.contents = nil;
 }
 
-- (void)setToBeSpecialView{
+- (void)setToBeSpecialViewWithSerialType:(SerialType)serialType{
     _isSpecial = YES;
+    _serialType = serialType;
 }
 
 - (BOOL)isSpecialView{
@@ -62,7 +56,7 @@
 
 - (void)buttonPressedEventIsSerial:(SerialType)serialType{
     
-    NSLog(@"serialType %d",serialType);
+    NSLog(@"serialType %d",_serialType);
     
     _serialType = serialType;
     

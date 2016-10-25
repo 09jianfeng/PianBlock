@@ -19,8 +19,8 @@
                      randomColorsNum:(NSInteger)randomColorsNum __attribute__((objc_designated_initializer));
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
-- (int)loadSubCells;
-- (int)reuseSubCells;
+- (void)loadSubCells:(int)sepcialIndex serialType:(SerialType)serialType;
+- (void)reuseSubCells:(int)sepcialIndex serialType:(SerialType)serialType;
 
 - (BOOL)isHaveSpecialUnitView;
 
