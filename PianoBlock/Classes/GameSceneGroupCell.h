@@ -12,7 +12,6 @@
 
 @interface GameSceneGroupCell : UIView
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
-@property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
 
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame

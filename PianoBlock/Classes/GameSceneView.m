@@ -18,6 +18,7 @@
 #define GameSpeedIncrementInterval 0.2
 
 #define CharListLength 20
+#define BlockNumPerLine 4
 
 @interface GameSceneView() <GameSceneViewDelegate,CAAnimationDelegate>
 
@@ -55,13 +56,9 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        _blockNumPerGroupCell = blockNum;
+        _blockNumPerGroupCell = BlockNumPerLine;
         
-        if ([_gameDataSource respondsToSelector:@selector(gameSceneUnitNumPerCell)]) {
-            _blockNumPerGroupCell = [_gameDataSource gameSceneUnitNumPerCell];
-        }
-        
-        _blockWidth = frame.size.width / blockNum;
+        _blockWidth = frame.size.width / BlockNumPerLine;
         _blockHeigh = _blockWidth * 1.5;
         _cellLineNum = ceil(frame.size.height / _blockHeigh) + 1;
         _gameSpeed = 2.0;
@@ -77,7 +74,7 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
-    self = [self initWithBlockNumPerLine:4 frame:frame];
+    self = [self initWithBlockNumPerLine:BlockNumPerLine frame:frame];
     if (self) {
     }
     return self;
@@ -99,9 +96,7 @@
 }
 
 - (void)loadSubView{
-    if ([_gameDataSource respondsToSelector:@selector(gameSceneUnitNumPerCell)]) {
-        self.blockNumPerGroupCell = [_gameDataSource gameSceneUnitNumPerCell];
-    }
+    self.blockNumPerGroupCell = BlockNumPerLine;
     
     for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
         //从最后的cellGroup往上一个一个add
@@ -109,7 +104,6 @@
                                          initWithUnitCellsNum:_blockNumPerGroupCell
                                          frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
                                          randomColorsNum:1];
-        groupCell.gameDataSource = _gameDataSource;
         groupCell.gameDelegate = self;
         [_groupCellPool addObject:groupCell];
         
@@ -180,6 +174,7 @@
         dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, GameSpeedIncrementInterval * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
         dispatch_source_set_event_handler(_timer, ^{
             weakSelf.gameSpeed += GameSpeedIncrementPerInterval;
+            
             if (weakSelf.gameSpeed > GameSpeedAutoRollRimit) {
                 weakSelf.gameSpeed = GameSpeedAutoRollRimit;
             }

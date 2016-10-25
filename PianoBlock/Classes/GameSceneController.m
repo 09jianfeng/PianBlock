@@ -17,7 +17,7 @@
 #import "Masonry.h"
 #import "GameMacro.h"
 
-@interface GameSceneController () <GameSceneViewDelegate,GameSceneViewDataSource>
+@interface GameSceneController () <GameSceneViewDelegate>
 @property(nonatomic, strong) GSCViewModel *sceneViewModel;
 @property(nonatomic, strong) GameSceneView *gameScene;
 @property(nonatomic, strong) GameStopView *stopView;
@@ -61,7 +61,6 @@
     _gameScene = [[GameSceneView alloc] initWithBlockNumPerLine:4 frame:self.view.bounds];
     _gameScene.gameSpeed = 4.0;
     _gameScene.gameDelegate = self;
-    _gameScene.gameDataSource = self;
     _gameScene.gameMode = GAMEMODE_AUTOROLLMUTLCLICK;
     [_gameScene loadSubView];
     [self.view addSubview:self.gameScene];

@@ -18,15 +18,3 @@
 - (void)gameFail;
 
 @end
-
-
-@protocol GameSceneViewDataSource  <NSObject>
-
-@optional
-/// use to self-define group cell unit view
-- (void)gameScreenGameCellUnit:(GameSceneGroupCellUnitView *)gameUnit;
-
-/// number of unit view per line
-- (NSInteger)gameSceneUnitNumPerCell;
-
-@end

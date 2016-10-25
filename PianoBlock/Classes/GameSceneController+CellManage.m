@@ -30,25 +30,4 @@
 - (void)gameFail{
     [self showGameStopView];
 }
-
-/// use to general group cell unit view
-- (void)gameScreenGameCellUnit:(GameSceneGroupCellUnitView *)gameUnit{
-    
-    gameUnit.layer.borderWidth = 0.5;
-    gameUnit.layer.borderColor = [UIColor grayColor].CGColor;
-    if (gameUnit.isSpecial) {
-        if (gameUnit.serialType) {
-            gameUnit.layer.borderWidth = 0.0;
-        }
-        gameUnit.layer.backgroundColor = [UIColor blackColor].CGColor;
-    }else{
-        gameUnit.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    }
-}
-
-/// number of unit view per line
-- (NSInteger)gameSceneUnitNumPerCell{
-    return 4;
-}
-
 @end

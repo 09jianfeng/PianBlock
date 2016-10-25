@@ -44,6 +44,8 @@
     [self.layer.mask removeAllAnimations];
     self.layer.mask = nil;
     self.layer.contents = nil;
+    
+    self.layer.backgroundColor = [UIColor whiteColor].CGColor;
 }
 
 - (void)setSerialType:(SerialType)serialType{
@@ -58,6 +60,7 @@
 - (void)setToBeSpecialViewWithSerialType:(SerialType)serialType{
     _isSpecial = YES;
     self.serialType = serialType;
+    self.layer.backgroundColor = [UIColor blackColor].CGColor;
 }
 
 - (void)addLineForLayer{

@@ -17,7 +17,6 @@ typedef NS_ENUM(NSInteger,GAMEMODE){
 
 @interface GameSceneView : UIView
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
-@property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
 @property (nonatomic, assign) CGFloat gameSpeed;
 @property (nonatomic, assign) GAMEMODE gameMode;
 

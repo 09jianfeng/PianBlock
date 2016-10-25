@@ -34,6 +34,18 @@
         _blockWidth = frame.size.width / blockNums;
         _blockHeigh = frame.size.height;
         _unitCells = [[NSMutableArray alloc] initWithCapacity:blockNums];
+        
+        for (int i = 0; i < _blockNum ; i++) {
+            GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
+            unit.gameDelegate = _gameDelegate;
+            unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
+            unit.layer.borderWidth = 0.5;
+            unit.layer.borderColor = [UIColor grayColor].CGColor;
+            
+            [self addSubview:unit];
+            [_unitCells addObject:unit];
+        }
+
     }
     return self;
 }
@@ -60,18 +72,10 @@
             isBlockSpecial = YES;
         }
         
-        GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
-        unit.gameDelegate = _gameDelegate;
+        GameSceneGroupCellUnitView* unit = _unitCells[i];
         if (isBlockSpecial) {
             [unit setToBeSpecialViewWithSerialType:serialType];
         }
-        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
-            [_gameDataSource gameScreenGameCellUnit:unit];
-        }
-        unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
-        
-        [self addSubview:unit];
-        [_unitCells addObject:unit];
     }
     
     _specialBlockIndex = sepcialIndex;
@@ -94,9 +98,6 @@
         
         if (isSpecial) {
             [unit setToBeSpecialViewWithSerialType:serialType];
-        }
-        if ([_gameDataSource respondsToSelector:@selector(gameScreenGameCellUnit:)]) {
-            [_gameDataSource gameScreenGameCellUnit:unit];
         }
     }
     
