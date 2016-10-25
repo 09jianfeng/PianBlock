@@ -28,7 +28,7 @@
 
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame
-                     randomColorsNum:(NSInteger)randomColorsNum{
+                            delegate:(id)delegate{
     
     self = [super initWithFrame:frame];
     if (self) {
@@ -39,10 +39,11 @@
         
         for (int i = 0; i < _blockNum ; i++) {
             GameSceneGroupCellUnitView *unit = [[GameSceneGroupCellUnitView alloc] init];
-            unit.gameDelegate = _gameDelegate;
             unit.frame = CGRectMake(_blockWidth * i, 0 , _blockWidth, _blockHeigh);
             unit.layer.borderWidth = 0.5;
             unit.layer.borderColor = [UIColor grayColor].CGColor;
+            unit.gameDelegate = delegate;
+            self.gameDelegate = delegate;
             
             [self addSubview:unit];
             [_unitCells addObject:unit];
@@ -53,7 +54,7 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
-    self = [self initWithUnitCellsNum:4 frame:CGRectZero randomColorsNum:1];
+    self = [self initWithUnitCellsNum:4 frame:CGRectZero delegate:nil];
     if (self) {
         
     }
@@ -67,14 +68,9 @@
     return self;
 }
 
-- (void)loadSubCells:(int)sepcialIndex serialType:(SerialType)serialType{
-    for (int i = 0; i < _blockNum ; i++) {
-        GameSceneGroupCellUnitView* unit = _unitCells[i];
-        if (i == sepcialIndex) {
-            [unit setToBeSpecialViewWithSerialType:serialType];
-        }
-    }
-    
+- (void)setupSpecialBlock:(int)sepcialIndex serialType:(SerialType)serialType{
+    GameSceneGroupCellUnitView* unit = _unitCells[sepcialIndex];
+    [unit setToBeSpecialViewWithSerialType:serialType];
 }
 
 - (void)reuseSubCells:(int)sepcialIndex serialType:(SerialType)serialType{

@@ -91,14 +91,13 @@
         GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc]
                                          initWithUnitCellsNum:BlockNumPerLine
                                          frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
-                                         randomColorsNum:1];
-        groupCell.gameDelegate = self;
+                                         delegate:self];
         [_groupCellPool addObject:groupCell];
         
         int randomIndex = arc4random() % BlockNumPerLine;
         NSInteger lineIndex = _cellLineNum - i - 1;
         [self checkserialType:randomIndex inLine:lineIndex poolIndex:i];
-        [groupCell loadSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:lineIndex]];
+        [groupCell setupSpecialBlock:randomIndex serialType:[self getBlockSerialTypeByIndex:lineIndex]];
         
         [self insertSubview:groupCell atIndex:0];
     }

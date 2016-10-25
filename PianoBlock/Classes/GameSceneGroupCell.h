@@ -15,10 +15,11 @@
 
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame
-                     randomColorsNum:(NSInteger)randomColorsNum __attribute__((objc_designated_initializer));
+                     delegate:(id)delegate __attribute__((objc_designated_initializer));
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
 
-- (void)loadSubCells:(int)sepcialIndex serialType:(SerialType)serialType;
+- (void)setupSpecialBlock:(int)sepcialIndex serialType:(SerialType)serialType;
 - (void)reuseSubCells:(int)sepcialIndex serialType:(SerialType)serialType;
 
 - (BOOL)isHaveSpecialUnitView;
