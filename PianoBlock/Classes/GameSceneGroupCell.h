@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GameSceneViewDelegate.h"
+#import "GameSceneGroupCellUnitView.h"
 
 @interface GameSceneGroupCell : UIView
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 @property (nonatomic, weak) id<GameSceneViewDataSource> gameDataSource;
-//cells in per line
-@property(nonatomic, strong) NSMutableArray *unitCells;
 
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame
@@ -24,5 +23,7 @@
 - (int)reuseSubCells;
 
 - (BOOL)isHaveSpecialUnitView;
+
+- (BOOL)toucheInPoint:(CGPoint)point isHaveClickRightBlockBefor:(BOOL)isHaveClickRightBlockBefor serialType:(SerialType)serialType;
 
 @end

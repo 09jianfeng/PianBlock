@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "GameSceneViewDelegate.h"
 
+typedef NS_ENUM(char,SerialType) {
+    SerialTypeNotSerial,
+    SerialTypeSerialNormal,
+    SerialTypeSerialTop
+};
+
 @interface GameSceneGroupCellUnitView : UIButton
 @property (nonatomic, weak) id<GameSceneViewDelegate> gameDelegate;
 @property(nonatomic, assign) BOOL isSpecial;
-@property(nonatomic, assign) BOOL isSerial;
+@property(nonatomic, assign) SerialType serialType;
 
 - (void)loadSubview;
 
@@ -23,7 +29,7 @@
 
 - (void)startCellAnimation:(UIColor *)layerColor removeAnimateLayer:(BOOL)removeAniLayer;
 
-- (void)buttonPressedEventIsSerial:(BOOL)isSerial;
+- (void)buttonPressedEventIsSerial:(SerialType)serialType;
 
 - (void)redrawSublayerWithTouchPosition:(CGPoint)point;
 

@@ -38,16 +38,16 @@
     UIGestureRecognizer *_gesture;
     CGPoint _touchingPoint;
     // 连击模式的时候用，因为用这个view派发点击事件，当滚动过快的时候。来不及收手，会点到上面那一块。为了避免这个问题
-    BOOL _isHaveClickRightFirstBlock;
+    BOOL _isHaveClickRightBlockBefor;
     char *_specialBlocks;
-    char *_isSerial;
+    char *_serialType;
 }
 
 #pragma mark - game scene init
 
 - (void)dealloc{
     free(_specialBlocks);
-    free(_isSerial);
+    free(_serialType);
 }
 
 - (instancetype)initWithBlockNumPerLine:(NSInteger)blockNum
@@ -67,8 +67,8 @@
         _gameSpeed = 2.0;
         _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_cellLineNum];
         
-        _isSerial = malloc(sizeof(char)*CharListLength);
-        memset(_isSerial, 0, CharListLength);
+        _serialType = malloc(sizeof(char)*CharListLength);
+        memset(_serialType, 0, CharListLength);
         
         _specialBlocks = malloc(sizeof(char) * CharListLength);
         memset(_specialBlocks, -1, CharListLength);
@@ -112,7 +112,7 @@
         groupCell.gameDataSource = _gameDataSource;
         groupCell.gameDelegate = self;
         int specialCellIndex = [groupCell loadSubCells];
-        [self checkIsSerial:specialCellIndex inLine:_cellLineNum - i - 1];
+        [self checkserialType:specialCellIndex inLine:_cellLineNum - i - 1];
         
         [_groupCellPool addObject:groupCell];
         [self insertSubview:groupCell atIndex:0];
@@ -120,21 +120,25 @@
 }
 
 #pragma mark - 检查是否是连续的block
-- (void)checkIsSerial:(NSInteger)index inLine:(NSInteger)line{
+- (void)checkserialType:(NSInteger)index inLine:(NSInteger)line{
     _specialBlocks[line] = index;
     
     NSInteger upLine = line +1;
     NSInteger downLine = line - 1;
     
     if (upLine < _cellLineNum && _specialBlocks[upLine] == index) {
-        _isSerial[line] = 1;
-        _isSerial[upLine] = 1;
+        _serialType[line] = SerialTypeSerialTop;
+        _serialType[upLine] = SerialTypeSerialNormal;
     }
     
     if (downLine >= 0 && _specialBlocks[downLine] == index) {
-        _isSerial[line] = 1;
-        _isSerial[downLine] = 1;
+        _serialType[line] = SerialTypeSerialNormal;
+        _serialType[downLine] = SerialTypeSerialTop;
     }
+}
+
+- (SerialType)getBlockSerialTypeByIndex:(NSInteger)index{
+    return _serialType[index];
 }
 
 - (void)charMoveDown:(char *)charList length:(NSInteger)length{
@@ -208,12 +212,12 @@
             [self insertSubview:groupCell atIndex:0];
             
             // 检查 reuse的那个cell是否有跟上下的block连续
-            [self charMoveDown:_isSerial length:CharListLength];
-            _isSerial[0] = 0;
+            [self charMoveDown:_serialType length:CharListLength];
+            _serialType[0] = 0;
             [self charMoveDown:_specialBlocks length:CharListLength];
             _specialBlocks[0] = -1;
             NSInteger specialIndex = [groupCell reuseSubCells];
-            [self checkIsSerial:specialIndex inLine:0];
+            [self checkserialType:specialIndex inLine:0];
         }
     }];
     
@@ -222,34 +226,13 @@
         return;
     }
     
-    //连击判断
+    //点击事件传递
     for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
         GameSceneGroupCell *cell = _groupCellPool[i];
-        
-        NSArray *unitViews = [cell unitCells];
-        for (GameSceneGroupCellUnitView *unitView in unitViews) {
-            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
-            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
-                
-                //手指还没收起来的时候，触摸点到了非 special区域的点击事件，拦下来。
-                if (!unitView.isSpecialView && _isHaveClickRightFirstBlock) {
-                    
-                    BOOL isSerial = _isSerial[_cellLineNum - i -1];
-                    if (isSerial) {
-                        [unitView redrawSublayerWithTouchPosition:unitViewPoint];
-                    }
-                }else{
-                    if (unitView.isSpecialView) {
-                        _isHaveClickRightFirstBlock = YES;
-                    }
-                    
-                    BOOL isSerial = _isSerial[_cellLineNum - i -1];
-                    [unitView buttonPressedEventIsSerial:isSerial];
-                    if (isSerial) {
-                        [unitView redrawSublayerWithTouchPosition:unitViewPoint];
-                    }
-                }
-            }
+        CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:cell];
+        if ([cell pointInside:unitViewPoint withEvent:nil]) {
+            SerialType serialType = [self getBlockSerialTypeByIndex:_cellLineNum - i -1];
+            _isHaveClickRightBlockBefor = [cell toucheInPoint:unitViewPoint isHaveClickRightBlockBefor:_isHaveClickRightBlockBefor serialType:serialType];
         }
     }
 }
@@ -315,29 +298,20 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    _isHaveClickRightFirstBlock = NO;
+    _isHaveClickRightBlockBefor = NO;
     
     NSEnumerator *enumerator = [touches objectEnumerator];
     UITouch *toucher = enumerator.nextObject;
     CGPoint location = [toucher locationInView:self];
     _touchingPoint = location;
     
+    //点击事件传递
     for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
         GameSceneGroupCell *cell = _groupCellPool[i];
-        NSArray *unitViews = [cell unitCells];
-        for (GameSceneGroupCellUnitView *unitView in unitViews) {
-            CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:unitView];
-            if ([unitView pointInside:unitViewPoint withEvent:nil]) {
-                if (unitView.isSpecialView) {
-                    _isHaveClickRightFirstBlock = YES;
-                }
-                
-                BOOL isSerial = _isSerial[_cellLineNum - i -1];
-                [unitView buttonPressedEventIsSerial:isSerial];
-                if (isSerial) {
-                    [self waveLayerAnimation:self.layer point:_touchingPoint];
-                }
-            }
+        CGPoint unitViewPoint = [self convertPoint:_touchingPoint toView:cell];
+        if ([cell pointInside:unitViewPoint withEvent:nil]) {
+            SerialType serialType = [self getBlockSerialTypeByIndex:_cellLineNum - i -1];
+            _isHaveClickRightBlockBefor = [cell toucheInPoint:unitViewPoint isHaveClickRightBlockBefor:_isHaveClickRightBlockBefor serialType:serialType];
         }
     }
 }
@@ -411,10 +385,6 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     [_waveLayer removeAllAnimations];
     [_waveLayer removeFromSuperlayer];
-    
-    if (!CGPointEqualToPoint(_touchingPoint, CGPointZero)) {
-        [self waveLayerAnimation:self.layer point:_touchingPoint];
-    }
 }
 
 @end

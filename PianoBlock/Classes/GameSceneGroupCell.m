@@ -7,7 +7,6 @@
 //
 
 #import "GameSceneGroupCell.h"
-#import "GameSceneGroupCellUnitView.h"
 
 @interface GameSceneGroupCell()
 @property(nonatomic, assign) NSInteger selectedIndex;
@@ -16,6 +15,10 @@
 @property(nonatomic, assign) NSInteger blockWidth;
 @property(nonatomic, assign) NSInteger blockHeigh;
 @property(nonatomic, assign) NSInteger blockNum;
+
+@property(nonatomic, assign) int specialBlockIndex;
+//cells in per line
+@property(nonatomic, strong) NSMutableArray *unitCells;
 
 @end
 
@@ -74,6 +77,7 @@
         [_unitCells addObject:unit];
     }
     
+    _specialBlockIndex = randomIndex;
     return randomIndex;
 }
 
@@ -102,6 +106,7 @@
         }
     }
     
+    _specialBlockIndex = randomIndex;
     return randomIndex;
 }
 
@@ -114,6 +119,36 @@
     }
     
     return isContainSpecialUnitView;
+}
+
+#pragma mark - touch event
+- (int)indexForTouchPoint:(CGPoint)point{
+    return point.x / _blockWidth;
+}
+
+- (BOOL)toucheInPoint:(CGPoint)point isHaveClickRightBlockBefor:(BOOL)isHaveClickRightBlockBefor serialType:(SerialType)serialType{
+    int index = [self indexForTouchPoint:point];
+    GameSceneGroupCellUnitView *unitView = _unitCells[index];
+    BOOL touchTheSpecialUnitView = NO;
+    
+    CGPoint unitViewPoint = [self convertPoint:point toView:unitView];
+    //手指还没收起来的时候，触摸点到了非 special区域的点击事件，拦下来。
+    if (!unitView.isSpecialView && isHaveClickRightBlockBefor) {
+        
+        if (serialType) {
+            [unitView redrawSublayerWithTouchPosition:unitViewPoint];
+        }
+    }else{
+        if (unitView.isSpecialView) {
+            touchTheSpecialUnitView = YES;
+        }
+        [unitView buttonPressedEventIsSerial:serialType];
+        if (serialType) {
+            [unitView redrawSublayerWithTouchPosition:unitViewPoint];
+        }
+    }
+    
+    return touchTheSpecialUnitView;
 }
 
 @end

@@ -37,7 +37,7 @@
     gameUnit.layer.borderWidth = 0.5;
     gameUnit.layer.borderColor = [UIColor grayColor].CGColor;
     if (gameUnit.isSpecial) {
-        if (gameUnit.isSerial) {
+        if (gameUnit.serialType) {
             gameUnit.layer.borderWidth = 0.0;
         }
         gameUnit.layer.backgroundColor = [UIColor blackColor].CGColor;

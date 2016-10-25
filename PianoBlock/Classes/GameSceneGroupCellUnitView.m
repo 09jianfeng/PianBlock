@@ -33,14 +33,14 @@
 - (void)loadSubview{
     WeakSelf
     [[self rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id  _Nullable x) {
-        [weakSelf buttonPressedEventIsSerial:_isSerial];
+        [weakSelf buttonPressedEventIsSerial:_serialType];
     }];
 }
 
 - (void)reuseUnitView{
     _clicked = NO;
     _isSpecial = NO;
-    _isSerial = NO;
+    _serialType = NO;
     [_shapeLayer removeAllAnimations];
     [_shapeLayer removeFromSuperlayer];
     
@@ -60,11 +60,11 @@
 
 #pragma mark - click event
 
-- (void)buttonPressedEventIsSerial:(BOOL)isSerial{
+- (void)buttonPressedEventIsSerial:(SerialType)serialType{
     
-    NSLog(@"isSerial %d",isSerial);
+    NSLog(@"serialType %d",serialType);
     
-    _isSerial = isSerial;
+    _serialType = serialType;
     
     if (_clicked) {
         return;
@@ -78,7 +78,7 @@
         }
     }else{
         
-        if (!_isSerial) {
+        if (!_serialType) {
             [self startCellAnimation:[UIColor whiteColor] removeAnimateLayer:NO];
         }
         if ([_gameDelegate respondsToSelector:@selector(gameSceneCellDidSelectedRightCell:)]) {
