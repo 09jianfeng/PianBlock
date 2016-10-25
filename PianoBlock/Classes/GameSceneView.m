@@ -25,7 +25,6 @@
 @property (nonatomic, strong) UIView *viewGroupForOneLine;
 @property (nonatomic, strong) NSMutableArray *groupCellPool;
 
-@property (nonatomic, assign) NSInteger blockNumPerGroupCell;
 @property (nonatomic, assign) CGFloat blockHeigh;
 @property (nonatomic, assign) CGFloat blockWidth;
 @property (nonatomic, assign) NSInteger cellLineNum;
@@ -47,6 +46,9 @@
 #pragma mark - game scene init
 
 - (void)dealloc{
+    
+    NSLog(@"GameSceneView dealloc");
+    
     free(_specialBlocks);
     free(_serialType);
 }
@@ -56,8 +58,6 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        _blockNumPerGroupCell = BlockNumPerLine;
-        
         _blockWidth = frame.size.width / BlockNumPerLine;
         _blockHeigh = _blockWidth * 1.5;
         _cellLineNum = ceil(frame.size.height / _blockHeigh) + 1;
@@ -87,27 +87,17 @@
     return self;
 }
 
-- (void)setBlockNumPerGroupCell:(NSInteger)blockNum{
-    _blockNumPerGroupCell = blockNum;
-    _blockWidth = self.frame.size.width / blockNum;
-    _blockHeigh = _blockWidth * 1.5;
-    _cellLineNum = ceil(self.frame.size.height / _blockHeigh) + 1;
-    _groupCellPool = [[NSMutableArray alloc] initWithCapacity:_cellLineNum];
-}
-
 - (void)loadSubView{
-    self.blockNumPerGroupCell = BlockNumPerLine;
-    
     for (NSInteger i = 0 ; i < _cellLineNum ; i++) {
         //从最后的cellGroup往上一个一个add
         GameSceneGroupCell *groupCell = [[GameSceneGroupCell alloc]
-                                         initWithUnitCellsNum:_blockNumPerGroupCell
+                                         initWithUnitCellsNum:BlockNumPerLine
                                          frame:CGRectMake(0, self.frame.size.height - _blockHeigh * (i+1), self.frame.size.width, _blockHeigh)
                                          randomColorsNum:1];
         groupCell.gameDelegate = self;
         [_groupCellPool addObject:groupCell];
         
-        int randomIndex = arc4random() % _blockNumPerGroupCell;
+        int randomIndex = arc4random() % BlockNumPerLine;
         NSInteger lineIndex = _cellLineNum - i - 1;
         [self checkserialType:randomIndex inLine:lineIndex poolIndex:i];
         [groupCell loadSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:lineIndex]];
@@ -219,7 +209,7 @@
             _serialType[0] = 0;
             [self charMoveDown:_specialBlocks length:CharListLength];
             _specialBlocks[0] = -1;
-            int randomIndex = arc4random() % _blockNumPerGroupCell;
+            int randomIndex = arc4random() % BlockNumPerLine;
             [self checkserialType:randomIndex inLine:0 poolIndex:_groupCellPool.count - 1];
             [groupCell reuseSubCells:randomIndex serialType:[self getBlockSerialTypeByIndex:0]];
         }
@@ -264,7 +254,7 @@
                 [weakSelf.groupCellPool removeObject:groupCell];
                 cellFrame.origin.y = lastCell.frame.origin.y - cellFrame.size.height + weakSelf.gameSpeed;
                 groupCell.frame = cellFrame;
-                int randomIndex = arc4random() % _blockNumPerGroupCell;
+                int randomIndex = arc4random() % BlockNumPerLine;
                 [groupCell reuseSubCells:randomIndex serialType:SerialTypeNotSerial];
                 [weakSelf.groupCellPool addObject:groupCell];
                 [groupCell removeFromSuperview];
