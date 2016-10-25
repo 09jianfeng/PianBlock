@@ -20,6 +20,7 @@
     CAShapeLayer *_shapeLayer;
     CAShapeLayer *_dynamicShapeLayer;
     CALayer *_lineLayer;
+    CALayer *_graphLayer;
     BOOL _clicked;
 }
 
@@ -43,6 +44,7 @@
     [_shapeLayer removeFromSuperlayer];
     
     [_lineLayer removeFromSuperlayer];
+    [_graphLayer removeFromSuperlayer];
     
     [_dynamicShapeLayer removeFromSuperlayer];
     [self.layer.mask removeAllAnimations];
@@ -58,7 +60,7 @@
     if (_serialType == SerialTypeNormal) {
         [self addLineForLayer];
     }else if(_serialType == SerialTypeTop){
-        [self addLineForLayer];
+        [self addArrowForlayer];
     }
 }
 
@@ -72,13 +74,31 @@
     if (!_lineLayer) {
         _lineLayer = [CALayer layer];
     }
-    _lineLayer.frame = CGRectMake(0, 0, 5, CGRectGetHeight(self.frame));
+    _lineLayer.frame = CGRectMake(0, 0, 2, CGRectGetHeight(self.frame));
     _lineLayer.position = CGPointMake(CGRectGetWidth(self.frame)/2, CGRectGetHeight(self.frame)/2);
     _lineLayer.backgroundColor = [UIColor redColor].CGColor;
     [self.layer addSublayer:_lineLayer];
+    
+    [_graphLayer removeFromSuperlayer];
 }
 
 - (void)addArrowForlayer{
+    if (!_graphLayer) {
+        _graphLayer = [CALayer layer];
+    }
+    _graphLayer.frame = CGRectMake(0, 0, 20, 20);
+    _graphLayer.position = CGPointMake(CGRectGetWidth(self.frame)/2, 10);
+    _graphLayer.cornerRadius = 10;
+    _graphLayer.backgroundColor = [UIColor redColor].CGColor;
+    [self.layer addSublayer:_graphLayer];
+    
+    if (!_lineLayer) {
+        _lineLayer = [CALayer layer];
+    }
+    _lineLayer.frame = CGRectMake(0, 0, 2, CGRectGetHeight(self.frame));
+    _lineLayer.position = CGPointMake(CGRectGetWidth(self.frame)/2, CGRectGetHeight(self.frame)/2);
+    _lineLayer.backgroundColor = [UIColor redColor].CGColor;
+    [self.layer addSublayer:_lineLayer];
 }
 
 - (BOOL)isSpecialView{
