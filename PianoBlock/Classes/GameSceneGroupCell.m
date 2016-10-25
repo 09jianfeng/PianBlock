@@ -24,6 +24,10 @@
 
 @implementation GameSceneGroupCell
 
+- (void)dealloc{
+    NSLog(@"GameSceneGroupCell dealloc");
+}
+
 - (instancetype)initWithUnitCellsNum:(NSInteger)blockNums
                                frame:(CGRect)frame
                      randomColorsNum:(NSInteger)randomColorsNum{

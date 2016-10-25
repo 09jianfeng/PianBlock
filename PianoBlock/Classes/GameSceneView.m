@@ -46,9 +46,7 @@
 #pragma mark - game scene init
 
 - (void)dealloc{
-    
     NSLog(@"GameSceneView dealloc");
-    
     free(_specialBlocks);
     free(_serialType);
 }
@@ -143,6 +141,9 @@
 
 - (void)stop{
     [self.displayLink setPaused:YES];
+    [self.displayLink invalidate];
+    self.displayLink = nil;
+    dispatch_source_cancel(_timer);
 }
 
 - (void)contine{
@@ -167,6 +168,7 @@
             
             if (weakSelf.gameSpeed > GameSpeedAutoRollRimit) {
                 weakSelf.gameSpeed = GameSpeedAutoRollRimit;
+                dispatch_source_cancel(_timer);
             }
         });
         dispatch_resume(_timer);
@@ -185,7 +187,6 @@
 
 // auto roll displayLink cycle
 - (void)beginRoll{
-    
     WeakSelf;
     // 检查是否超出屏幕，超出的部分重用
     [self.groupCellPool enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

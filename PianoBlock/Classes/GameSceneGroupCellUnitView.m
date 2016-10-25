@@ -23,6 +23,10 @@
     BOOL _clicked;
 }
 
+- (void)dealloc{
+    NSLog(@"GameSceneGroupCellUnitView dealloc");
+}
+
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
@@ -84,9 +88,6 @@
 #pragma mark - click event
 
 - (void)buttonPressedEventIsSerial:(SerialType)serialType{
-    
-    NSLog(@"serialType %d",_serialType);
-    
     _serialType = serialType;
     
     if (_clicked) {
