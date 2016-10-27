@@ -1,0 +1,99 @@
+type;title;need;reward life;reward coin
+watch video;Watch video %d times.;1;1;50
+watch video;Watch video %d times.;3;1;80
+watch video;Watch video %d times.;10;1;150
+watch video;Watch video %d times.;30;1;250
+watch video;Watch video %d times.;100;1;400
+watch video;Watch video %d times.;500;1;600
+watch video;Watch video %d times.;2500;1;1200
+watch video;Watch video %d times.;10000;1;3000
+buy coin;Total buy %d coins.;500;1;0
+buy coin;Total buy %d coins.;1500;2;0
+buy coin;Total buy %d coins.;4500;5;0
+buy coin;Total buy %d coins.;10000;10;0
+buy coin;Total buy %d coins.;20000;25;0
+buy coin;Total buy %d coins.;50000;60;0
+buy coin;Total buy %d coins.;100000;150;0
+star number;Number of stars:%d.;3;0;10
+star number;Number of stars:%d.;6;0;20
+star number;Number of stars:%d.;10;0;30
+star number;Number of stars:%d.;15;0;50
+star number;Number of stars:%d.;21;0;70
+star number;Number of stars:%d.;28;0;90
+star number;Number of stars:%d.;36;0;120
+star number;Number of stars:%d.;45;0;150
+star number;Number of stars:%d.;55;0;180
+star number;Number of stars:%d.;66;0;220
+star number;Number of stars:%d.;78;0;260
+star number;Number of stars:%d.;91;0;300
+star number;Number of stars:%d.;105;0;350
+star number;Number of stars:%d.;120;0;400
+star number;Number of stars:%d.;136;0;450
+star number;Number of stars:%d.;153;0;510
+star number;Number of stars:%d.;171;0;570
+star number;Number of stars:%d.;190;0;630
+star number;Number of stars:%d.;210;0;700
+star number;Number of stars:%d.;231;0;770
+star number;Number of stars:%d.;253;0;840
+star number;Number of stars:%d.;276;0;920
+star number;Number of stars:%d.;300;0;1000
+star number;Number of stars:%d.;325;0;1080
+star number;Number of stars:%d.;351;0;1170
+star number;Number of stars:%d.;378;0;1260
+star number;Number of stars:%d.;406;0;1350
+crown number;Number of crowns:%d.;1;1;10
+crown number;Number of crowns:%d.;3;1;15
+crown number;Number of crowns:%d.;6;1;30
+crown number;Number of crowns:%d.;10;1;45
+crown number;Number of crowns:%d.;15;1;75
+crown number;Number of crowns:%d.;21;1;105
+crown number;Number of crowns:%d.;28;1;135
+crown number;Number of crowns:%d.;36;1;180
+crown number;Number of crowns:%d.;45;1;225
+crown number;Number of crowns:%d.;55;1;270
+crown number;Number of crowns:%d.;66;1;330
+crown number;Number of crowns:%d.;78;1;390
+crown number;Number of crowns:%d.;91;1;450
+crown number;Number of crowns:%d.;105;1;525
+crown number;Number of crowns:%d.;120;1;600
+crown number;Number of crowns:%d.;136;1;675
+crown number;Number of crowns:%d.;153;1;765
+crown number;Number of crowns:%d.;171;1;855
+crown number;Number of crowns:%d.;190;1;945
+crown number;Number of crowns:%d.;210;1;1050
+crown number;Number of crowns:%d.;231;1;1155
+crown number;Number of crowns:%d.;253;1;1260
+crown number;Number of crowns:%d.;276;1;1380
+crown number;Number of crowns:%d.;300;1;1500
+crown number;Number of crowns:%d.;325;1;1620
+crown number;Number of crowns:%d.;351;1;1755
+crown number;Number of crowns:%d.;378;1;1890
+crown number;Number of crowns:%d.;406;1;2025
+continue game;Continue the game %d times.;1;1;100
+continue game;Continue the game %d times.;3;1;150
+continue game;Continue the game %d times.;9;1;250
+continue game;Continue the game %d times.;30;1;400
+continue game;Continue the game %d times.;100;1;600
+continue game;Continue the game %d times.;250;1;1000
+continue game;Continue the game %d times.;700;1;1300
+continue game;Continue the game %d times.;2000;1;1600
+user coin unlock songs;Unlock %d songs by coins.;1;1;50
+user coin unlock songs;Unlock %d songs by coins.;3;2;100
+user coin unlock songs;Unlock %d songs by coins.;6;3;200
+user coin unlock songs;Unlock %d songs by coins.;10;4;350
+user coin unlock songs;Unlock %d songs by coins.;15;5;500
+user coin unlock songs;Unlock %d songs by coins.;21;6;800
+user coin unlock songs;Unlock %d songs by coins.;28;7;1000
+user coin unlock songs;Unlock %d songs by coins.;36;8;1300
+user coin unlock songs;Unlock %d songs by coins.;45;9;1800
+buy life;Value of life total buy:%d.;5;1;100
+buy life;Value of life total buy:%d.;10;2;200
+buy life;Value of life total buy:%d.;20;3;300
+buy life;Value of life total buy:%d.;40;5;400
+buy life;Value of life total buy:%d.;80;7;500
+buy life;Value of life total buy:%d.;160;10;600
+buy life;Value of life total buy:%d.;320;14;700
+buy life;Value of life total buy:%d.;640;19;800
+buy life;Value of life total buy:%d.;1300;25;900
+buy life;Value of life total buy:%d.;5000;32;1000
+buy life;Value of life total buy:%d.;10000;40;1100

@@ -1,0 +1,132 @@
+id;file;name;author;default beats;acceleration;unlock type;unlock value
+1;Happy New Year;Happy New Year;English Folk Music;0.5;250;level;1
+2;Jingle Bells;Jingle Bells;James Lord Pierpont;0.5;252.7;level;1
+3;Canon;Canon;Johann Pachelbel;0.5;255.4;level;1
+4;3 Ecossaises Op.72 No.3;3 Ecossaises Op.72 No.3;Chopin;0.125;258.1;coin;100
+5;Happy Birthday to You;Happy Birthday to You;American Folk Music;0.5;260.8;level;2
+6;Two Tigers;Two Tigers;French Folk Music;0.5;263.5;level;2
+7;Little Star;Little Star;English Folk Music;0.5;266.2;level;2
+8;Jasmine;Jasmine;Chinese Folk Music;0.5;268.9;coin;200
+9;6 Ecossaises WoO 83;6 Ecossaises WoO 83;Beethoven;0.5;271.6;level;3
+10;Paganini Rhapsody Var.18;Paganini Rhapsody Var.18;Rachmaninoff;0.5;274.3;level;3
+11;Album-leaf Op.12 No.7;Album-leaf Op.12 No.7;Grieg;0.5;277;level;3
+12;American Patrol;American Patrol;Frank Meacham;0.25;279.7;coin;300
+13;Dreaming of Home and Mother;Dreaming of Home and Mother;John Pond Ordway;0.5;282.4;level;4
+14;Bridal Chorus;Bridal Chorus;Wagner;0.5;285.1;level;4
+15;Nocturne Op.9 No.2;Nocturne Op.9 No.2;Chopin;0.5;287.8;level;4
+16;Auld Lang Syne;Auld Lang Syne;Robert Burns;0.5;290.5;coin;400
+17;Heidenroslein;Heidenroslein;Schubert;0.5;293.2;level;5
+18;Flower and Youth;Flower and Youth;Chinese Folk Music;0.5;295.9;level;5
+19;The Swan;The Swan;Saint-Seans;0.25;298.6;level;5
+20;Au clair de la lune;Au clair de la lune;French Folk Music;0.5;301.3;coin;500
+21;Spinner;Spinner;Russian Folk Music;0.5;304;level;6
+22;Yankee Doodle;Yankee Doodle;American Folk Music;1;306.7;level;6
+23;Arirang;Arirang;Korean Folk Music;0.5;309.4;level;6
+24;Birds Worship Phoenix;Birds Worship Phoenix;Chinese Folk Music;0.5;312.1;coin;600
+25;Clouds Chasing The Moon;Clouds Chasing The Moon;Chinese Folk Music;0.5;314.8;level;7
+26;Country Dances;Country Dances;Mozart;0.5;317.5;level;7
+27;Dance of the Little Swans;Dance of the Little Swans;Tchaikovsky;0.5;320.2;level;7
+28;Die Forelle S.564;Die Forelle S.564;Franz Liszt;0.25;322.9;coin;700
+29;Drei Intermezzi;Drei Intermezzi;Johannes Brahms;1;325.6;level;8
+30;Troika;Troika;Russian Folk Music;0.5;328.3;level;8
+31;Espana Cani;Espana Cani;Pascual Marquina;0.5;331;level;8
+32;Craving for the Spring Wind;Craving for the Spring Wind;Yuxian Deng;0.5;333.7;coin;800
+33;Ode An Die Freude;Ode An Die Freude;Beethoven;1;336.4;level;9
+34;The Blue Danube;The Blue Danube;Johann Strauss II;1;339.1;level;9
+35;Evening song of the Fisherman;Evening song of the Fisherman;Chinese Folk Music;0.25;341.8;level;9
+36;Gran Vals;Gran Vals;Francisco Tarrega;1;344.5;coin;900
+37;Wedding March;Wedding March;Mendelssohn;0.5;347.2;level;10
+38;Habanera;Habanera;Bizet;0.25;349.9;level;10
+39;Impromptu Op.142 No.3;Impromptu Op.142 No.3;Schubert;0.5;352.6;level;10
+40;We Wish You a Merry Christmas;We Wish You a Merry Christmas;British carol;0.5;355.3;coin;1000
+41;Minuet in G;Minuet in G;Bach;0.5;358;level;11
+42;Amazing Grace;Amazing Grace;William Cowper;1;360.7;level;11
+43;Three Bears;Three Bears;Korean Folk Music;1;363.4;level;11
+44;Turkish March;Turkish March;Mozart;0.25;366.1;coin;1100
+45;Red River Valley;Red River Valley;Canadian Folk Music;0.5;368.8;level;12
+46;Gertrude's dream waltz;Gertrude's dream waltz;Beethoven;0.5;371.5;level;12
+47;Silent Night;Silent Night;Franz Gruber;0.5;374.2;level;12
+48;Gavotte;Gavotte;Francois Joseph Gossec;0.5;376.9;coin;1200
+49;Vals del Recuerdo;Vals del Recuerdo;Ravel;1;379.6;level;13
+50;The Painter;The Painter;Polish Folk Music;0.5;382.3;level;13
+51;Santa Lucia;Santa Lucia;Italian Folk Music;0.25;385;level;13
+52;Bella Ciao;Bella Ciao;Italian Folk Music;0.5;387.7;coin;1300
+53;Market;Market;Gullit;0.5;390.4;level;14
+54;Piano Sonata No.2;Piano Sonata No.2;Chopin;0.5;393.1;level;14
+55;Johnny Has Gone for a Soldier;Johnny Has Gone for a Soldier;English Folk Music;0.5;395.8;level;14
+56;Golden Snake Dance;Golden Snake Dance;Er Nie;0.5;398.5;coin;1400
+57;Korobeiniki;Korobeiniki;Russian Folk Music;0.25;401.2;level;15
+58;London Bridge Is Falling Down;London Bridge Is Falling Down;Mother Goose;0.5;403.9;level;15
+59;Happy Chinese New Year;Happy Chinese New Year;Gexin Chen;0.5;406.6;level;15
+60;Song of selling newspapers;Song of selling newspapers;Er Nie;0.5;409.3;coin;1500
+61;La Cucaracha;La Cucaracha;Spanish Folk Music;0.25;412;level;16
+62;Angels we have heard on high;Angels we have heard on high;French Folk Music;0.5;414.7;level;16
+63;The Whisper Of West Wind;The Whisper Of West Wind;Zi Huang;0.5;417.4;level;16
+64;Fur Elise;Fur Elise;Beethoven;0.25;420.1;coin;1600
+65;Sakura Sakura;Sakura Sakura;Shimizu;0.5;422.8;level;17
+66;Thanks to God;Thanks to God;August Ludvig Storm;0.5;425.5;level;17
+67;Spanish Dances;Spanish Dances;Shostakovich;0.25;428.2;level;17
+68;Symphony No.40 in g;Symphony No.40 in g;Mozart;0.5;430.9;coin;1700
+69;Carmen Overture;Carmen Overture;Bizet;0.25;433.6;level;18
+70;Aloha 'Oe;Aloha 'Oe;Liliuokalani;0.5;436.3;level;18
+71;The Ruins of Athens No.4;The Ruins of Athens No.4;Beethoven;0.5;439;level;18
+72;Longing for Spring K596;Longing for Spring K596;Mozart;1;441.7;coin;1800
+73;Old Folks at Home;Old Folks at Home;American Folk Music;0.5;444.4;level;19
+74;Loure;Loure;Bach;0.5;447.1;level;19
+75;Horse Racing;Horse Racing;Chinese Folk Music;0.25;449.8;level;19
+76;Peer Gynt Suite Op.46-4;Peer Gynt Suite Op.46-4;Grieg;0.5;452.5;coin;1900
+77;Sonatina Op.36-1;Sonatina Op.36-1;Clementi;0.5;455.2;level;20
+78;Tempest Sonata Mov.3;Tempest Sonata Mov.3;Beethoven;0.5;457.9;level;20
+79;El Reencuentro;El Reencuentro;Raphael;0.5;460.6;level;20
+80;Sonata in E minor Mvt.1;Sonata in E minor Mvt.1;Haydn;0.5;463.3;coin;2000
+81;Seguidilla;Seguidilla;Bizet;1;466;level;21
+82;Penguin's Game;Penguin's Game;Unknown;0.25;468.7;level;21
+83;The music box;The music box;Ede Poldini;0.5;471.4;level;21
+84;Dolls and Bear Dancing;Dolls and Bear Dancing;Polish Folk Music;0.5;474.1;coin;2100
+85;Little Red Riding Hood;Little Red Riding Hood;tonghua;0.5;476.8;level;22
+86;Green Sleeves;Green Sleeves;English Folk Music;0.5;479.5;level;22
+87;The First Noel;The First Noel;English Folk Music;0.5;482.2;level;22
+88;Eine Kleine Nachtmusik;Eine Kleine Nachtmusik;Mozart;0.5;484.9;coin;2200
+89;French Suite No.4-Gigue;French Suite No.4-Gigue;Jacques Offenbach;1;487.6;level;23
+90;Wilde Jagd;Wilde Jagd;Franz Liszt;0.25;490.3;level;23
+91;Waltz in E minor;Waltz in E minor;Chopin;0.5;493;level;23
+92;Etude Op.599 No.55;Etude Op.599 No.55;Czerny;0.25;495.7;coin;2300
+93;L'Arlesienne;L'Arlesienne;Bizet;0.25;498.4;level;24
+94;Bella Figlia Dell'Amore;Bella Figlia Dell'Amore;Giuseppe Verdi;0.5;501.1;level;24
+95;Polka Italienne;Polka Italienne;Rachmaninoff;0.25;503.8;level;24
+96;Der Vogelfaenger bin ich ja;Der Vogelfaenger bin ich ja;Mozart;0.25;506.5;coin;2400
+97;Sonatina in G Major;Sonatina in G Major;Beethoven;1;509.2;level;25
+98;Nel cor piu non mi sento;Nel cor piu non mi sento;Beethoven;1;511.9;level;25
+99;Swan Lake;Swan Lake;Tchaikovsky;0.5;514.6;level;25
+100;Prelude in C Major No.1;Prelude in C Major No.1;J.S. Bach;0.25;517.3;coin;2500
+101;Long, Long Ago;Long, Long Ago;Thomas Haynes Bayly;0.5;520;level;26
+102;Minuet;Minuet;Boccherini;0.5;522.7;level;26
+103;Sonata in C Major K545;Sonata in C Major K545;Mozart;0.25;525.4;level;26
+104;Alles fuhlt der Liebe Freuden;Alles fuhlt der Liebe Freuden;Mozart;0.25;528.1;coin;2600
+105;Sonata in C Major Mvt.2;Sonata in C Major Mvt.2;Mozart;0.25;530.8;level;27
+106;Polka;Polka;Joseph Kuffner;0.25;533.5;level;27
+107;Heather Rose;Heather Rose;G. Lange;0.5;536.2;level;27
+108;La Styrienne;La Styrienne;F. Burgmuller;0.5;538.9;coin;2700
+109;Melody;Melody;Robert Schumann;0.5;541.6;level;28
+110;Sonatina Op.168 No.2;Sonatina Op.168 No.2;Diabelli;0.5;544.3;level;28
+111;Bagpipe Dance;Bagpipe Dance;Mozart;0.5;547;level;28
+112;Cancan;Cancan;Jacques Offenbach;0.5;549.7;coin;2800
+113;Etude No.23;Etude No.23;Cramer;1;552.4;level;29
+114;Clarinet Polka;Clarinet Polka;Prohaska;0.25;555.1;level;29
+115;Goldberg Variations;Goldberg Variations;Bach;0.25;557.8;level;29
+116;Arabesque Op.76 No.9;Arabesque Op.76 No.9;Jean Sibelius;0.5;560.5;coin;2900
+117;Hunter's Chorus;Hunter's Chorus;Weber;0.5;563.2;level;30
+118;When He cometh;When He cometh;George F.Root;0.5;565.9;level;30
+119;Singing I go;Singing I go;William J.Kirkpatrick;1;568.6;level;30
+120;Magic Flute Op.9;Magic Flute Op.9;Mozart;0.5;571.3;coin;3000
+121;Brandenburg Concerto No.2;Brandenburg Concerto No.2;Bach;0.25;574;level;31
+122;Sonata in B-flat Major Mvt.1;Sonata in B-flat Major Mvt.1;Mozart;0.5;576.7;level;31
+123;Forest Polka;Forest Polka;Karl Hans;0.5;579.4;level;31
+124;Beyer No.8;Beyer No.8;Ferdinand Beyer;0.5;582.1;coin;3100
+125;Etude Op.10 No.8;Etude Op.10 No.8;Chopin;0.25;584.8;level;32
+126;Breeze;Breeze;Chinese Folk Music;0.25;587.5;level;32
+127;WTC1 No.3;WTC1 No.3;Bach;0.5;590.2;level;32
+128;Csikos Post;Csikos Post;Hermann Necke;0.5;592.9;coin;3200
+129;The Fountain;The Fountain;Carl Bohm;0.25;595.6;level;33
+130;Deck the Halls;Deck the Halls;Ancient Welsh Music;0.5;598.3;level;33
+131;Rondo A Major;Rondo A Major;Johann Baptist Vanhal;0.5;601;level;33
