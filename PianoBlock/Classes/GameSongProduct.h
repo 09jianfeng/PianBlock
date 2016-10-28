@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SongAbstractFactory.h"
 
 @class GameMusicPerBeat;
-@interface GameSongProduct : NSObject
+@interface GameSongProduct : NSObject <AFSongProductDelegate>
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, copy) NSString *tid;
 @property (nonatomic, copy) NSString *music;

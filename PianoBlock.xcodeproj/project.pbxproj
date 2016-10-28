@@ -25,6 +25,7 @@
 		2E57DAA61DC2F276006BB22A /* GameSongProduct2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAA51DC2F276006BB22A /* GameSongProduct2.m */; };
 		2E57DAA91DC2F505006BB22A /* GameSongDirector2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAA81DC2F505006BB22A /* GameSongDirector2.m */; };
 		2E57DAAC1DC2F52E006BB22A /* GameSongBuilder2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAAB1DC2F52E006BB22A /* GameSongBuilder2.m */; };
+		2E57DAB31DC326CE006BB22A /* GameSongFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAB21DC326CE006BB22A /* GameSongFactory.m */; };
 		2E5FE9AE1D921F5900D7620B /* pop-ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9771D921F5900D7620B /* pop-ios-Info.plist */; };
 		2E5FE9AF1D921F5900D7620B /* pop-osx-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9781D921F5900D7620B /* pop-osx-Info.plist */; };
 		2E5FE9B01D921F5900D7620B /* pop-tvos-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9791D921F5900D7620B /* pop-tvos-Info.plist */; };
@@ -233,6 +234,9 @@
 		2E57DAA81DC2F505006BB22A /* GameSongDirector2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongDirector2.m; sourceTree = "<group>"; };
 		2E57DAAA1DC2F52E006BB22A /* GameSongBuilder2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSongBuilder2.h; sourceTree = "<group>"; };
 		2E57DAAB1DC2F52E006BB22A /* GameSongBuilder2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongBuilder2.m; sourceTree = "<group>"; };
+		2E57DAAE1DC3033B006BB22A /* SongAbstractFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongAbstractFactory.h; sourceTree = "<group>"; };
+		2E57DAB11DC326CE006BB22A /* GameSongFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSongFactory.h; sourceTree = "<group>"; };
+		2E57DAB21DC326CE006BB22A /* GameSongFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongFactory.m; sourceTree = "<group>"; };
 		2E5FE9761D921F5900D7620B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		2E5FE9771D921F5900D7620B /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-ios-Info.plist"; sourceTree = "<group>"; };
 		2E5FE9781D921F5900D7620B /* pop-osx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-osx-Info.plist"; sourceTree = "<group>"; };
@@ -741,6 +745,9 @@
 		2E57DAAD1DC2F698006BB22A /* Abstract_factory */ = {
 			isa = PBXGroup;
 			children = (
+				2E57DAAE1DC3033B006BB22A /* SongAbstractFactory.h */,
+				2E57DAB11DC326CE006BB22A /* GameSongFactory.h */,
+				2E57DAB21DC326CE006BB22A /* GameSongFactory.m */,
 			);
 			name = Abstract_factory;
 			sourceTree = "<group>";
@@ -1435,6 +1442,7 @@
 				2EC42A691D7AAD3D00B93AF4 /* RACValueTransformer.m in Sources */,
 				2EC42A241D7AAD3D00B93AF4 /* NSData+RACSupport.m in Sources */,
 				2EC42A321D7AAD3D00B93AF4 /* NSOrderedSet+RACSequenceAdditions.m in Sources */,
+				2E57DAB31DC326CE006BB22A /* GameSongFactory.m in Sources */,
 				2EC42A741D7AAD3D00B93AF4 /* UIRefreshControl+RACCommandSupport.m in Sources */,
 				2EC42A3A1D7AAD3D00B93AF4 /* RACArraySequence.m in Sources */,
 				2E5FE9B91D921F5900D7620B /* POPCGUtils.mm in Sources */,

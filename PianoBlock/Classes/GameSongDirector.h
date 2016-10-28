@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SongAbstractFactory.h"
 
 @class GameSongProduct;
-@interface GameSongDirector : NSObject
+@interface GameSongDirector : NSObject <AFSongDirectorDelegate>
 
-- (NSArray<GameSongProduct *> *)gameMusicList;
+- (NSArray<id<AFSongProductDelegate>> *)gameMusicList;
 
 @end

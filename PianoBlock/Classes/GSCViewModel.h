@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MainGameScene.h"
-
-@class GameSongProduct;
+#import "SongAbstractFactory.h"
 
 @interface GSCViewModel : NSObject
 @property(nonatomic, assign) GAMEMAINMANU gameMode;
 @property(nonatomic, assign) NSInteger gameScore;
 
-- (instancetype)initWithSong:(GameSongProduct *)song NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSong:(id<AFSongProductDelegate>)song NS_DESIGNATED_INITIALIZER;
 - (void)playSongNextBeat;
 
 - (UIImage *)getSpecialBlockBGImage;

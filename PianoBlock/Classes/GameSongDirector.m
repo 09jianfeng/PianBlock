@@ -17,7 +17,7 @@ NSString * const GameSongListFileName = @"resource1/data/Music.json";
 }
 
 // lazy load
-- (NSArray<GameSongProduct *> *)gameMusicList{
+- (NSArray<id<AFSongProductDelegate>> *)gameMusicList{
     if (_gameMusicList) {
         return _gameMusicList;
     }

@@ -52,8 +52,7 @@ do {                                                                            
 - (void)testPlaysong{
     GameSongDirector *director = [GameSongDirector new];
     NSArray *songList = [director gameMusicList];
-    GameSongBuilder *builder = songList[0];
-    GameSongProduct *product = [builder getSongProductResult];
+    GameSongProduct *product = songList[0];
     [product playNextBeat];
     
     WAIT

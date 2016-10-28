@@ -7,15 +7,14 @@
 //
 
 #import "GSCViewModel.h"
-#import "GameSongProduct.h"
 #import "GameBLBGFactory.h"
 
 @implementation GSCViewModel{
-    GameSongProduct *_song;
+    id<AFSongProductDelegate> _song;
     GameBLBGFactory *_blockBackgroundFactory;
 }
 
-- (instancetype)initWithSong:(GameSongProduct *)song{
+- (instancetype)initWithSong:(id<AFSongProductDelegate>)song{
     self = [super init];
     if (self) {
         _song = song;
