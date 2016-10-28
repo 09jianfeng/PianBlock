@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GameBeatSongDirector.h"
-#import "GameBeatSongBuilder.h"
+#import "GameSongDirector.h"
+#import "GameSongBuilder.h"
 #import "GameSongProduct.h"
 
 #define WAIT                                                                \
@@ -40,9 +40,9 @@ do {                                                                            
 }
 
 - (void)testSongList {
-    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    GameSongDirector *director = [GameSongDirector new];
     NSArray *songList = [director gameMusicList];
-    for (GameBeatSongBuilder *builder in songList) {
+    for (GameSongBuilder *builder in songList) {
         NSLog(@"buildeder desc %@", [builder description]);
     }
     
@@ -50,9 +50,9 @@ do {                                                                            
 }
 
 - (void)testPlaysong{
-    GameBeatSongDirector *director = [GameBeatSongDirector new];
+    GameSongDirector *director = [GameSongDirector new];
     NSArray *songList = [director gameMusicList];
-    GameBeatSongBuilder *builder = songList[0];
+    GameSongBuilder *builder = songList[0];
     GameSongProduct *product = [builder getSongProductResult];
     [product playNextBeat];
     

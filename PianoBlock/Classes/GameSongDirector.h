@@ -1,5 +1,5 @@
 //
-//  GameBeatSongDirector.h
+//  GameSongDirector.h
 //  PianoBlock
 //
 //  Created by 陈建峰 on 16/9/4.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class GameBeatSongBuilder;
-@interface GameBeatSongDirector : NSObject
+@class GameSongProduct;
+@interface GameSongDirector : NSObject
 
-- (NSArray<GameBeatSongBuilder *> *)gameMusicList;
+- (NSArray<GameSongProduct *> *)gameMusicList;
 
 @end

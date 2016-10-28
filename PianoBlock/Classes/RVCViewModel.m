@@ -7,8 +7,8 @@
 //
 
 #import "RVCViewModel.h"
-#import "GameBeatSongDirector.h"
-#import "GameBeatSongBuilder.h"
+#import "GameSongDirector.h"
+#import "GameSongBuilder.h"
 #import "GSCViewModel.h"
 #import "MusicListViewModel.h"
 
@@ -21,7 +21,7 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        GameBeatSongDirector *director = [GameBeatSongDirector new];
+        GameSongDirector *director = [GameSongDirector new];
         _songlists = [director gameMusicList];
         [self bindButtonClickEvent];
     }
@@ -46,8 +46,7 @@
 #pragma mark - 返回子ViewModel
 
 - (GSCViewModel *)viewModelForGameSceneInSong:(NSInteger )index{
-    GameBeatSongBuilder *builder = [_songlists objectAtIndex:index];
-    GameSongProduct *song = [builder getSongProductResult];
+    GameSongProduct *song = [_songlists objectAtIndex:index];
     [song cacheAudio];
     GSCViewModel *sceneVM = [[GSCViewModel alloc] initWithSong:song];
     sceneVM.gameMode = self.gameMode;

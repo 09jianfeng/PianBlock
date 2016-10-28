@@ -7,12 +7,12 @@
 //
 
 #import "MusicListViewModel.h"
-#import "GameBeatSongDirector.h"
+#import "GameSongDirector.h"
 
 @implementation MusicListViewModel
 
 - (NSArray *)mListTableVCDataSource{
-    NSArray *musicList = [[GameBeatSongDirector new] gameMusicList];
+    NSArray *musicList = [[GameSongDirector new] gameMusicList];
     return musicList;
 }
 

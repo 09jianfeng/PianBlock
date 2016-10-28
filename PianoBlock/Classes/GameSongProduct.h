@@ -10,8 +10,10 @@
 
 @class GameMusicPerBeat;
 @interface GameSongProduct : NSObject
-
-- (instancetype)initWithGameSong:(NSArray<GameMusicPerBeat *> *)beatsArray NS_DESIGNATED_INITIALIZER;
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, copy) NSString *tid;
+@property (nonatomic, copy) NSString *music;
+@property (nonatomic, copy) NSString *price;
 
 - (void)playNextBeat;
 

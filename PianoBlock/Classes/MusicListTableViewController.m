@@ -9,14 +9,14 @@
 #import "MusicListTableViewController.h"
 #import "ViewControllerSwitchMediator.h"
 #import "MusicListViewModel.h"
-#import "GameBeatSongBuilder.h"
+#import "GameSongProduct.h"
 
 @interface MusicListTableViewController ()
 
 @end
 
 @implementation MusicListTableViewController{
-    NSArray<GameBeatSongBuilder *> *tableViewDataSource;
+    NSArray<GameSongProduct *> *tableViewDataSource;
 }
 
 - (void)viewDidLoad {
@@ -60,10 +60,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"musicListCellIdentifier" forIndexPath:indexPath];
-    GameBeatSongBuilder *songBuilder = tableViewDataSource[indexPath.row];
+    GameSongProduct *songProduct = tableViewDataSource[indexPath.row];
     
-    cell.textLabel.text = songBuilder.music;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"tid:%@ music:%@ price:%@",songBuilder.tid,songBuilder.music,songBuilder.price];
+    cell.textLabel.text = songProduct.music;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"tid:%@ music:%@ price:%@",songProduct.tid,songProduct.music,songProduct.price];
     
     return cell;
 }

@@ -71,6 +71,8 @@
     [super viewDidAppear:animated];
     
     [_mainScene beginMainSceneAnimation];
+    
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
