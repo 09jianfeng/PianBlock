@@ -10,6 +10,7 @@
 #import "GameSongDirector.h"
 #import "GameSongBuilder.h"
 #import "GameSongProduct.h"
+#import "GameSongDirector2.h"
 
 #define WAIT                                                                \
 do {                                                                        \
@@ -41,21 +42,23 @@ do {                                                                            
 
 - (void)testSongList {
     GameSongDirector *director = [GameSongDirector new];
-    NSArray *songList = [director gameMusicList];
-    for (GameSongBuilder *builder in songList) {
-        NSLog(@"buildeder desc %@", [builder description]);
-    }
-    
-    XCTAssertNotNil(songList);
+    [director gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
+        for (GameSongBuilder *builder in list) {
+            NSLog(@"buildeder desc %@", [builder description]);
+            XCTAssertNotNil(list);
+        }
+    }];
 }
 
 - (void)testPlaysong{
     GameSongDirector *director = [GameSongDirector new];
-    NSArray *songList = [director gameMusicList];
-    GameSongProduct *product = songList[0];
-    [product playNextBeat];
+    [director gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
+        GameSongProduct *product = list[0];
+        [product playNextBeat];
+        
+        WAIT
+    }];
     
-    WAIT
 }
 
 - (void)testPerformanceExample {

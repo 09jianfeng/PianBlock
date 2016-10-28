@@ -23,7 +23,9 @@
     self = [super init];
     if (self) {
         id<AFSongDirectorDelegate> director = [GameSongFactory gameSongFactoryMethod:GameSongDirectorTypeNormal];
-        _songlists = [director gameMusicList];
+         [director gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
+             self.songlists = list;
+        }];
         [self bindButtonClickEvent];
     }
     return self;

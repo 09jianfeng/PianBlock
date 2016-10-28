@@ -20,5 +20,5 @@
 @protocol AFSongDirectorDelegate <NSObject>
 
 @required
-- (NSArray<id<AFSongProductDelegate>> *)gameMusicList;
+- (void)gameMusicList:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock;
 @end

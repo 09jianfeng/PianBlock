@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SongAbstractFactory.h"
 
-@interface GameSongProduct2 : NSObject
+@interface GameSongProduct2 : NSObject <AFSongProductDelegate>
 
 - (void)playNextBeat;
 

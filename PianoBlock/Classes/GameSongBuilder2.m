@@ -9,5 +9,11 @@
 #import "GameSongBuilder2.h"
 
 @implementation GameSongBuilder2
+- (void)buildProductWithJsonData:(NSData *)jsonData{
+    
+}
 
+- (NSArray<GameSongProduct2 *> *)getSongProductList{
+    return nil;
+}
 @end

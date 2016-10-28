@@ -11,9 +11,8 @@
 
 @implementation MusicListViewModel
 
-- (NSArray *)mListTableVCDataSource{
-    NSArray *musicList = [[GameSongDirector new] gameMusicList];
-    return musicList;
+- (void)mListTableVCDataSource:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock{
+    [[GameSongDirector new] gameMusicList:completeBlock];
 }
 
 @end

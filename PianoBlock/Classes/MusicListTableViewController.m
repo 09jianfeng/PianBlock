@@ -41,7 +41,9 @@
 
 - (void)setMlViewModel:(MusicListViewModel *)mlViewModel{
     _mlViewModel = mlViewModel;
-    tableViewDataSource = [_mlViewModel mListTableVCDataSource];
+    [_mlViewModel mListTableVCDataSource:^(NSArray<id<AFSongProductDelegate>> *list) {
+        tableViewDataSource = list;
+    }];
 }
 
 #pragma mark - Table view data source

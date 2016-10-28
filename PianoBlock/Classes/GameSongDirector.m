@@ -10,16 +10,16 @@
 #import "GameSongProduct.h"
 #import "GameSongBuilder.h"
 
-NSString * const GameSongListFileName = @"resource1/data/Music.json";
+static NSString * const GameSongListFileName = @"resource1/data/Music.json";
 
 @implementation GameSongDirector{
     NSArray<GameSongProduct *> *_gameMusicList;
 }
 
-// lazy load
-- (NSArray<id<AFSongProductDelegate>> *)gameMusicList{
+
+- (void)gameMusicList:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock{
     if (_gameMusicList) {
-        return _gameMusicList;
+        completeBlock(_gameMusicList);
     }
     
     NSString *musicListFilePath = [self getMusicListPath];
@@ -27,8 +27,7 @@ NSString * const GameSongListFileName = @"resource1/data/Music.json";
     [songBuilder buildProductWithJsonData:[NSData dataWithContentsOfFile:musicListFilePath]];
     
     _gameMusicList = [songBuilder getSongProductList];
-    
-    return _gameMusicList;
+    completeBlock(_gameMusicList);
 }
 
 - (NSString *)getMusicListPath{

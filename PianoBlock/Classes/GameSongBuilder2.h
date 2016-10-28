@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameSongProduct2.h"
 
 @interface GameSongBuilder2 : NSObject
+
+- (void)buildProductWithJsonData:(NSData *)jsonData;
+
+- (NSArray<GameSongProduct2 *> *)getSongProductList;
 
 @end

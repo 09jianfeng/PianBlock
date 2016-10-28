@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SongAbstractFactory.h"
 
 @interface MusicListViewModel : NSObject
 
-- (NSArray *)mListTableVCDataSource;
+- (void)mListTableVCDataSource:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock;
 
 @end
