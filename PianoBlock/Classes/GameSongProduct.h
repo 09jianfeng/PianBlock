@@ -17,4 +17,6 @@
 
 - (void)cacheAudio;
 
+- (void)playWholSongWithBeats:(int)timeInterval;
+
 @end

@@ -10,7 +10,7 @@
 #import "GameBeatSongBuilder.h"
 #import "YYModel.h"
 
-NSString * const GameSongListFileName = @"Music.json";
+NSString * const GameSongListFileName = @"resource1/data/Music.json";
 
 @implementation GameBeatSongDirector{
     NSArray<GameBeatSongBuilder *> *_gameMusicList;

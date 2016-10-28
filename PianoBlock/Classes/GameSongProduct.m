@@ -12,6 +12,7 @@
 
 @implementation GameSongProduct{
     NSArray<GameMusicPerBeat *> *_beatsForSong;
+    NSMutableArray *_musicDataArray;
     NSInteger _beatIndex;
     AVAudioPlayer *_audioPlayer;
     dispatch_queue_t _audioQueue;
@@ -37,10 +38,16 @@
         GameMusicPerBeat *beat = _beatsForSong[_beatIndex];
         _beatIndex = (_beatIndex + 1) % _beatsForSong.count;
         
-        NSString *filePath = [self getBeatFilePath:beat.Tone];
-        NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+        NSData *musicData = nil;
+        if (_musicDataArray) {
+            musicData = _musicDataArray[_beatIndex];
+        }else{
+            NSString *filePath = [self getBeatFilePath:beat.Tone];
+            musicData = [NSData dataWithContentsOfFile:filePath];
+        }
+        
         NSError *error = nil;
-        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];;
+        _audioPlayer = [[AVAudioPlayer alloc] initWithData:musicData error:&error];
         if (error) {
             NSLog(@"<error> %@",error);
             return;
@@ -52,11 +59,28 @@
 }
 
 - (void)cacheAudio{
+    dispatch_async(_audioQueue, ^{
+        if (_musicDataArray) {
+            return ;
+        }
+        
+        _musicDataArray = [[NSMutableArray alloc] initWithCapacity:_beatsForSong.count];
+        for (GameMusicPerBeat *beat in _beatsForSong) {
+            NSString *filePath = [self getBeatFilePath:beat.Tone];
+            NSData *musicData = [NSData dataWithContentsOfFile:filePath];
+            [_musicDataArray addObject:musicData];
+        }
+    });
+}
+
+- (void)playWholSongWithBeats:(int)timeInterval{
     
 }
 
 - (NSString *)getBeatFilePath:(NSString *)beatName{
-    return [[NSBundle mainBundle] pathForResource:beatName ofType:@"mp3"];
+    NSString *beatPath = [[NSBundle mainBundle] resourcePath];
+    beatPath = [beatPath stringByAppendingFormat:@"/resource1/sounds/Piano_mp3/%@.mp3",beatName];
+    return beatPath;
 }
 
 @end

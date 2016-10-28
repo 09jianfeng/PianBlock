@@ -47,7 +47,9 @@
 
 - (GSCViewModel *)viewModelForGameSceneInSong:(NSInteger )index{
     GameBeatSongBuilder *builder = [_songlists objectAtIndex:index];
-    GSCViewModel *sceneVM = [[GSCViewModel alloc] initWithSong:[builder getSongProductResult]];
+    GameSongProduct *song = [builder getSongProductResult];
+    [song cacheAudio];
+    GSCViewModel *sceneVM = [[GSCViewModel alloc] initWithSong:song];
     sceneVM.gameMode = self.gameMode;
     return sceneVM;
 }

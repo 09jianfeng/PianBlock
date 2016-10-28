@@ -41,8 +41,8 @@
 }
 
 - (NSString *)getSongFilePath:(NSString *)songName{
-    NSString *mainPath = [[NSBundle mainBundle] bundlePath];
-    return  [mainPath stringByAppendingPathComponent:songName];
+    NSString *mainPath = [[NSBundle mainBundle] resourcePath];
+    return  [mainPath stringByAppendingFormat:@"/resource1/data/%@",songName];
 }
 
 - (GameSongProduct *)getSongProductResult{
