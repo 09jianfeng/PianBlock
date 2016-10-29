@@ -25,6 +25,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
     NSString *songListPath = [self getMusicListPath];
     CHCSVParser *csvParser = [[CHCSVParser alloc] initWithContentsOfCSVURL:[NSURL fileURLWithPath:songListPath]];
     csvParser.delegate = self;
+    csvParser.recognizesComments = YES;
     [csvParser parse];
 }
 
@@ -96,7 +97,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param comment The parsed comment
  */
 - (void)parser:(CHCSVParser *)parser didReadComment:(NSString *)comment{
-    
+    NSLog(@"didReadComment %@",comment);
 }
 
 /**

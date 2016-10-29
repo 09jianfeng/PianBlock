@@ -10,19 +10,7 @@
 #import "GameSongDirector.h"
 #import "GameSongBuilder.h"
 #import "GameSongProduct.h"
-#import "GameSongDirector2.h"
-
-#define WAIT                                                                \
-do {                                                                        \
-[self expectationForNotification:@"YMDUnitTest" object:nil handler:nil]; \
-[self waitForExpectationsWithTimeout:60 handler:nil];                   \
-} while(0);
-
-#define NOTIFY                                                                            \
-do {                                                                                      \
-[[NSNotificationCenter defaultCenter] postNotificationName:@"YMDUnitTest" object:nil]; \
-} while(0);
-
+#import "Header.h"
 
 @interface PianoBlockTests : XCTestCase
 

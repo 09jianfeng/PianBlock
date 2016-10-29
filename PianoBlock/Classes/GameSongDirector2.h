@@ -11,6 +11,6 @@
 
 @interface GameSongDirector2 : NSObject <AFSongDirectorDelegate>
 
-- (void)gameMusicList:(void (^)(NSArray<id<AFSongProductDelegate>> *))completeBlock;
+- (void)gameMusicList:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock;
 
 @end

@@ -27,6 +27,7 @@
 		2E57DAAC1DC2F52E006BB22A /* GameSongBuilder2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAAB1DC2F52E006BB22A /* GameSongBuilder2.m */; };
 		2E57DAB31DC326CE006BB22A /* GameSongFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAB21DC326CE006BB22A /* GameSongFactory.m */; };
 		2E57DAB61DC32EFA006BB22A /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAB51DC32EFA006BB22A /* CHCSVParser.m */; };
+		2E57DAB81DC34436006BB22A /* GameSongDirector2TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAB71DC34436006BB22A /* GameSongDirector2TestCase.m */; };
 		2E5FE9AE1D921F5900D7620B /* pop-ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9771D921F5900D7620B /* pop-ios-Info.plist */; };
 		2E5FE9AF1D921F5900D7620B /* pop-osx-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9781D921F5900D7620B /* pop-osx-Info.plist */; };
 		2E5FE9B01D921F5900D7620B /* pop-tvos-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E5FE9791D921F5900D7620B /* pop-tvos-Info.plist */; };
@@ -239,6 +240,8 @@
 		2E57DAB21DC326CE006BB22A /* GameSongFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongFactory.m; sourceTree = "<group>"; };
 		2E57DAB41DC32EFA006BB22A /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		2E57DAB51DC32EFA006BB22A /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		2E57DAB71DC34436006BB22A /* GameSongDirector2TestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongDirector2TestCase.m; sourceTree = "<group>"; };
+		2E57DAB91DC34676006BB22A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		2E5FE9761D921F5900D7620B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		2E5FE9771D921F5900D7620B /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-ios-Info.plist"; sourceTree = "<group>"; };
 		2E5FE9781D921F5900D7620B /* pop-osx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-osx-Info.plist"; sourceTree = "<group>"; };
@@ -652,7 +655,9 @@
 		2E2EBA9D1D781A8500550761 /* PianoBlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E57DAB91DC34676006BB22A /* Header.h */,
 				2E2EBA9E1D781A8500550761 /* PianoBlockTests.m */,
+				2E57DAB71DC34436006BB22A /* GameSongDirector2TestCase.m */,
 				2E2EBAA01D781A8500550761 /* Info.plist */,
 			);
 			path = PianoBlockTests;
@@ -1541,6 +1546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2EBA9F1D781A8500550761 /* PianoBlockTests.m in Sources */,
+				2E57DAB81DC34436006BB22A /* GameSongDirector2TestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
