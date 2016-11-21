@@ -8,15 +8,7 @@
 
 #ifndef Header_h
 #define Header_h
-#define WAIT                                                                \
-do {                                                                        \
-[self expectationForNotification:@"YMDUnitTest" object:nil handler:nil]; \
-[self waitForExpectationsWithTimeout:60 handler:nil];                   \
-} while(0);
-
-#define NOTIFY                                                                            \
-do {                                                                                      \
-[[NSNotificationCenter defaultCenter] postNotificationName:@"YMDUnitTest" object:nil]; \
-} while(0);
-
+#define WAITINIT(x) XCTestExpectation *wait = [self expectationWithDescription:x];
+#define WAITWITHTIME(x) [self waitForExpectationsWithTimeout:x handler:^(NSError * _Nullable error) {NSLog(@"%s end",__FUNCTION__);}];
+#define NOTIFY [wait fulfill];
 #endif /* Header_h */

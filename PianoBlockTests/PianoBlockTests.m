@@ -43,10 +43,7 @@
     [director gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
         GameSongProduct *product = list[0];
         [product playNextBeat];
-        
-        WAIT
     }];
-    
 }
 
 - (void)testPerformanceExample {

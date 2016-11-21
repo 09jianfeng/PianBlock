@@ -19,15 +19,24 @@ static NSString * const filePath = @"resource2/song/Happy New Year.json";
     NSInteger _beatIndex;
 }
 
-- (instancetype)init{
+- (instancetype)initWithValues:(NSArray *)array{
     self = [super init];
     if (self) {
-        NSString *mainPath = [[NSBundle mainBundle] resourcePath];
-        NSString *songPath = [mainPath stringByAppendingPathComponent:filePath];
-        NSData *fileData = [NSData dataWithContentsOfFile:songPath];
-        NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"jsonDic %@",jsonDic);
+        if (array) {
+            _file = array[0];
+            _name = array[1];
+            _author = array[2];
+            _defaultBeats = array[3];
+            _acceleration = array[4];
+            _unlockType = array[5];
+            _unlockValue = array[6];
+        }
     }
+    return self;
+}
+
+- (instancetype)init{
+    self = [self initWithValues:nil];
     return self;
 }
 

@@ -679,11 +679,9 @@
 			isa = PBXGroup;
 			children = (
 				2EC427F11D7A6DE700B93AF4 /* Resource */,
-				2EC4258B1D7A698C00B93AF4 /* ThirdPart */,
-				2EB30B221D796D19006C7D9F /* Utility */,
-				2E2EBABD1D781F0300550761 /* Model */,
-				2E2EBABB1D781EEE00550761 /* ViewModel */,
-				2E2EBABC1D781EF700550761 /* View */,
+				2EC4258B1D7A698C00B93AF4 /* Vendor */,
+				2EB30B221D796D19006C7D9F /* Utils */,
+				2E4EFC971DE28AE000D00AB8 /* GameModels */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -704,7 +702,7 @@
 		2E2EBABC1D781EF700550761 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7808CE9F1D7C47BD001AFBA5 /* UtilitiesView */,
+				7808CE9F1D7C47BD001AFBA5 /* Utils */,
 				2E80A2791D8F92ED00DE781A /* MainScene */,
 				2EB30B241D7985F6006C7D9F /* PlayingScene */,
 			);
@@ -735,6 +733,16 @@
 				2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */,
 			);
 			name = "Game Mode Factory";
+			sourceTree = "<group>";
+		};
+		2E4EFC971DE28AE000D00AB8 /* GameModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E2EBABD1D781F0300550761 /* Model */,
+				2E2EBABB1D781EEE00550761 /* ViewModel */,
+				2E2EBABC1D781EF700550761 /* View */,
+			);
+			name = GameModels;
 			sourceTree = "<group>";
 		};
 		2E57DA7E1DC2DA1B006BB22A /* Song2_Build_Pattern */ = {
@@ -856,13 +864,13 @@
 			name = Data_storage;
 			sourceTree = "<group>";
 		};
-		2EB30B221D796D19006C7D9F /* Utility */ = {
+		2EB30B221D796D19006C7D9F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				2EB30B231D796D2C006C7D9F /* GameMacro.h */,
 				2E822AD31D87992400CE0D74 /* Data_storage */,
 			);
-			name = Utility;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2EB30B241D7985F6006C7D9F /* PlayingScene */ = {
@@ -879,7 +887,7 @@
 			name = PlayingScene;
 			sourceTree = "<group>";
 		};
-		2EC4258B1D7A698C00B93AF4 /* ThirdPart */ = {
+		2EC4258B1D7A698C00B93AF4 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				2E5FE9751D921F5900D7620B /* pop */,
@@ -888,7 +896,7 @@
 				2EC4258C1D7A698C00B93AF4 /* Masonry */,
 				2EC425A91D7A698C00B93AF4 /* MBProgressHUD */,
 			);
-			name = ThirdPart;
+			name = Vendor;
 			path = PianoBlock/ThirdPart;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -1223,7 +1231,7 @@
 			name = UnitBL_flyweight;
 			sourceTree = "<group>";
 		};
-		7808CE9F1D7C47BD001AFBA5 /* UtilitiesView */ = {
+		7808CE9F1D7C47BD001AFBA5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				2EE96E661D9A671F0016D419 /* VCTransitionAnimation */,
@@ -1232,7 +1240,7 @@
 				2EC429511D7A74FC00B93AF4 /* GameCountdownWindow.h */,
 				2EC429521D7A74FC00B93AF4 /* GameCountdownWindow.m */,
 			);
-			name = UtilitiesView;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		78650A8C1DB273D300B313B6 /* GameCollection */ = {

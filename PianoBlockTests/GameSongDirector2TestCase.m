@@ -29,12 +29,16 @@
 - (void)testCSVParsing {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    // 创建XCTestExpectation 对象。可以等待多个expectation。
+    WAITINIT(@"csvParsing");
     GameSongDirector2 *gameSong = [GameSongDirector2 new];
     [gameSong gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
-        
+//        XCTAssertNotNil(list);
+        NOTIFY;
     }];
     
-    WAIT
+    WAITWITHTIME(10);
 }
 
 - (void)testPerformanceExample {

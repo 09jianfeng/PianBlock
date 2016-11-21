@@ -10,23 +10,35 @@
 #import "GameSongBuilder2.h"
 #import "GameSongProduct2.h"
 #import "CHCSVParser.h"
+#import "GameMacro.h"
 
 static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv";
 
 @interface GameSongDirector2()<CHCSVParserDelegate>
-
+@property (nonatomic, copy) void (^csvParseFinishBlock)(NSArray<id<AFSongProductDelegate>> *list);
+@property (nonatomic, strong) CHCSVParser *csvParser;
 @end
 
 @implementation GameSongDirector2 {
-    NSArray<GameSongProduct2 *> *_gameMusicList;
+    NSMutableArray<GameSongProduct2 *> *_gameMusicList;
+}
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _gameMusicList = [NSMutableArray new];
+    }
+    return self;
 }
 
 - (void)gameMusicList:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock{
+    self.csvParseFinishBlock = completeBlock;
+    
     NSString *songListPath = [self getMusicListPath];
-    CHCSVParser *csvParser = [[CHCSVParser alloc] initWithContentsOfCSVURL:[NSURL fileURLWithPath:songListPath]];
-    csvParser.delegate = self;
-    csvParser.recognizesComments = YES;
-    [csvParser parse];
+    _csvParser = [[CHCSVParser alloc] initWithContentsOfDelimitedURL:[NSURL fileURLWithPath:songListPath] delimiter:'@'];
+    _csvParser.delegate = self;
+    _csvParser.recognizesComments = YES;
+    [_csvParser parse];
 }
 
 - (NSString *)getMusicListPath{
@@ -43,7 +55,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param parser The @c CHCSVParser instance
  */
 - (void)parserDidBeginDocument:(CHCSVParser *)parser{
-    
+    NSLog(@"parserDidBeginDocument ");
 }
 
 /**
@@ -54,7 +66,8 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param parser The @c CHCSVParser instance
  */
 - (void)parserDidEndDocument:(CHCSVParser *)parser{
-    
+    NSLog(@"parserDidEndDocument");
+    _csvParseFinishBlock(_gameMusicList);
 }
 
 /**
@@ -64,7 +77,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param recordNumber The 1-based number of the record
  */
 - (void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber{
-    
+    NSLog(@"parser didBeginLine line:%d",recordNumber);
 }
 
 /**
@@ -74,7 +87,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param recordNumber The 1-based number of the record
  */
 - (void)parser:(CHCSVParser *)parser didEndLine:(NSUInteger)recordNumber{
-    
+    NSLog(@"parser didEndLine line:%d",recordNumber);
 }
 
 /**
@@ -85,7 +98,11 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param fieldIndex The 0-based index of the field within the current record
  */
 - (void)parser:(CHCSVParser *)parser didReadField:(NSString *)field atIndex:(NSInteger)fieldIndex{
-    NSLog(@"didReadField: %@ atIndex:%td",field,fieldIndex);
+    if (fieldIndex == 0) {
+        NSArray *values = [field componentsSeparatedByString:@";"];
+        GameSongProduct2 *song = [[GameSongProduct2 alloc] initWithValues:values];
+        [_gameMusicList addObject:song];
+    }
 }
 
 /**
@@ -107,7 +124,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param error  The @c NSError instance
  */
 - (void)parser:(CHCSVParser *)parser didFailWithError:(NSError *)error{
-    
+    NSLog(@"parser didiFailWithError");
 }
 
 
