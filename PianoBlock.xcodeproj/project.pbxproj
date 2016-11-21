@@ -164,6 +164,7 @@
 		2EC42AA61D7BB93B00B93AF4 /* GameSongBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA51D7BB93B00B93AF4 /* GameSongBuilder.m */; };
 		2EC42AAA1D7BC0CD00B93AF4 /* GameSongDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC42AA91D7BC0CD00B93AF4 /* GameSongDirector.m */; };
 		2ECD8BBC1D7E9CFD00ED0831 /* GameSceneController+CellManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECD8BBB1D7E9CFD00ED0831 /* GameSceneController+CellManage.m */; };
+		2EE5DDBD1DDD83C1009A517D /* GameSongProduct2Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE5DDBC1DDD83C1009A517D /* GameSongProduct2Test.m */; };
 		2EE96E691D9A67410016D419 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE96E681D9A67410016D419 /* BouncePresentAnimation.m */; };
 		2EE96E6C1D9A67510016D419 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE96E6B1D9A67510016D419 /* NormalDismissAnimation.m */; };
 		2EE96E6F1D9A676F0016D419 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE96E6E1D9A676F0016D419 /* SwipeUpInteractiveTransition.m */; };
@@ -543,6 +544,7 @@
 		2EC42AA91D7BC0CD00B93AF4 /* GameSongDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongDirector.m; sourceTree = "<group>"; };
 		2ECD8BBA1D7E9CFD00ED0831 /* GameSceneController+CellManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GameSceneController+CellManage.h"; sourceTree = "<group>"; };
 		2ECD8BBB1D7E9CFD00ED0831 /* GameSceneController+CellManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GameSceneController+CellManage.m"; sourceTree = "<group>"; };
+		2EE5DDBC1DDD83C1009A517D /* GameSongProduct2Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSongProduct2Test.m; sourceTree = "<group>"; };
 		2EE96E671D9A67410016D419 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
 		2EE96E681D9A67410016D419 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
 		2EE96E6A1D9A67510016D419 /* NormalDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalDismissAnimation.h; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 				2E2EBA9E1D781A8500550761 /* PianoBlockTests.m */,
 				2E57DAB71DC34436006BB22A /* GameSongDirector2TestCase.m */,
 				2E2EBAA01D781A8500550761 /* Info.plist */,
+				2EE5DDBC1DDD83C1009A517D /* GameSongProduct2Test.m */,
 			);
 			path = PianoBlockTests;
 			sourceTree = "<group>";
@@ -1545,6 +1548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE5DDBD1DDD83C1009A517D /* GameSongProduct2Test.m in Sources */,
 				2E2EBA9F1D781A8500550761 /* PianoBlockTests.m in Sources */,
 				2E57DAB81DC34436006BB22A /* GameSongDirector2TestCase.m in Sources */,
 			);
