@@ -7,12 +7,15 @@
 //
 
 #import "MusicListViewModel.h"
-#import "GameSongDirector.h"
+#import "GameSongDirector2.h"
 
 @implementation MusicListViewModel
 
+// synchronization mode
 - (void)mListTableVCDataSource:(void (^)(NSArray<id<AFSongProductDelegate>> *list))completeBlock{
-    [[GameSongDirector new] gameMusicList:completeBlock];
+    [[GameSongDirector2 new] gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
+        completeBlock(list);
+    }];
 }
 
 @end

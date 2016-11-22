@@ -9,14 +9,15 @@
 #import "MusicListTableViewController.h"
 #import "ViewControllerSwitchMediator.h"
 #import "MusicListViewModel.h"
-#import "GameSongProduct.h"
+#import "GameSongProduct2.h"
+#import "GameMacro.h"
 
 @interface MusicListTableViewController ()
-
+@property (nonatomic ,strong) NSArray<GameSongProduct2 *> *tableViewDataSource;
 @end
 
 @implementation MusicListTableViewController{
-    NSArray<GameSongProduct *> *tableViewDataSource;
+    
 }
 
 - (void)viewDidLoad {
@@ -32,6 +33,14 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     headerView.backgroundColor = [UIColor cyanColor];
     self.tableView.tableHeaderView = headerView;
+    
+    WeakSelf
+    [self.mlViewModel mListTableVCDataSource:^(NSArray<id<AFSongProductDelegate>> *list) {
+        weakSelf.tableViewDataSource = list;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,18 +51,18 @@
 - (void)setMlViewModel:(MusicListViewModel *)mlViewModel{
     _mlViewModel = mlViewModel;
     [_mlViewModel mListTableVCDataSource:^(NSArray<id<AFSongProductDelegate>> *list) {
-        tableViewDataSource = list;
+        _tableViewDataSource = list;
     }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return tableViewDataSource.count;
+    return _tableViewDataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -62,16 +71,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"musicListCellIdentifier" forIndexPath:indexPath];
-    GameSongProduct *songProduct = tableViewDataSource[indexPath.row];
-    
-    cell.textLabel.text = songProduct.music;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"tid:%@ music:%@ price:%@",songProduct.tid,songProduct.music,songProduct.price];
+    GameSongProduct2 *songProduct = _tableViewDataSource[indexPath.row];
+    cell.textLabel.text = songProduct.file;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20;
+    return 30;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -79,6 +86,10 @@
     headerView.backgroundColor = [UIColor purpleColor];
     
     return headerView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

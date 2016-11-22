@@ -1,20 +1,20 @@
 //
-//  GameSongDirector2TestCase.m
+//  AudioBeatsCacheTest.m
 //  PianoBlock
 //
-//  Created by 陈建峰 on 16/10/28.
+//  Created by 陈建峰 on 16/11/22.
 //  Copyright © 2016年 陈建峰. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "GameSongDirector2.h"
+#import "AudioBeatsCache.h"
 #import "Header.h"
 
-@interface GameSongDirector2TestCase : XCTestCase
+@interface AudioBeatsCacheTest : XCTestCase
 
 @end
 
-@implementation GameSongDirector2TestCase
+@implementation AudioBeatsCacheTest
 
 - (void)setUp {
     [super setUp];
@@ -26,18 +26,18 @@
     [super tearDown];
 }
 
-- (void)testCSVParsing {
+- (void)testAudioBeatsCache {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    AudioBeatsCache *beatsCache = [AudioBeatsCache shareInstance];
     
-    // 创建XCTestExpectation 对象。可以等待多个expectation。
+    NSData *beatData = [beatsCache beatDataByName:@"#A-1.mp3"];
+    XCTAssertNotNil(beatData,@"beatData not nil");
+    
     NOTIFYINIT;
-    GameSongDirector2 *gameSong = [GameSongDirector2 new];
-    [gameSong gameMusicList:^(NSArray<id<AFSongProductDelegate>> *list) {
-//        XCTAssertNotNil(list);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NOTIFY;
-    }];
-    
+    });
     WAITWITHTIME(10);
 }
 

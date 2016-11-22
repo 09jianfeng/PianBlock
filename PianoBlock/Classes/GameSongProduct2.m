@@ -8,8 +8,6 @@
 
 #import "GameSongProduct2.h"
 
-static NSString * const filePath = @"resource2/song/Happy New Year.json";
-
 @interface GameSongProduct2()
 
 @end
@@ -17,19 +15,28 @@ static NSString * const filePath = @"resource2/song/Happy New Year.json";
 @implementation GameSongProduct2{
     NSMutableArray *_musicBeatDataAry;
     NSInteger _beatIndex;
+    NSInteger _baseBpm;
+    NSDictionary *_songJson;
 }
 
 - (instancetype)initWithValues:(NSArray *)array{
     self = [super init];
     if (self) {
         if (array) {
-            _file = array[0];
-            _name = array[1];
-            _author = array[2];
-            _defaultBeats = array[3];
-            _acceleration = array[4];
-            _unlockType = array[5];
-            _unlockValue = array[6];
+            _file = array[1];
+            _name = array[2];
+            _author = array[3];
+            _defaultBeats = array[4];
+            _acceleration = array[5];
+            _unlockType = array[6];
+            _unlockValue = array[7];
+            
+            NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:[NSString stringWithFormat:@"/resource2/song/%@.json",_file]];
+            NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+            if (fileData) {
+                _songJson = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingAllowFragments error:nil];
+            }
+            
         }
     }
     return self;
@@ -40,6 +47,11 @@ static NSString * const filePath = @"resource2/song/Happy New Year.json";
     return self;
 }
 
+- (void)setFile:(NSString *)file{
+    _file = file;
+    NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:[NSString stringWithFormat:@"/resource2/song/%@.json",_file]];
+    _songJson = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+}
 
 
 - (void)playNextBeat{
@@ -47,6 +59,9 @@ static NSString * const filePath = @"resource2/song/Happy New Year.json";
 }
 
 - (void)cacheAudio{
+    if (!_file) {
+        return;
+    }
     
 }
 

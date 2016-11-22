@@ -20,6 +20,8 @@
 		2E2EBAC11D7824AC00550761 /* GameModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC01D7824AC00550761 /* GameModelFactory.m */; };
 		2E2EBAC71D7825BC00550761 /* ConcreteGameClassicMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */; };
 		2E2EBACA1D78291C00550761 /* ConcreteGameStreetMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */; };
+		2E4EFC9B1DE2F65100D00AB8 /* AudioBeatsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFC9A1DE2F65100D00AB8 /* AudioBeatsCache.m */; };
+		2E4EFC9D1DE3D9E500D00AB8 /* AudioBeatsCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFC9C1DE3D9E500D00AB8 /* AudioBeatsCacheTest.m */; };
 		2E57DA9E1DC2E6E8006BB22A /* resource1 in Resources */ = {isa = PBXBuildFile; fileRef = 2E57DA9D1DC2E6E8006BB22A /* resource1 */; };
 		2E57DAA01DC2E6ED006BB22A /* resource2 in Resources */ = {isa = PBXBuildFile; fileRef = 2E57DA9F1DC2E6ED006BB22A /* resource2 */; };
 		2E57DAA61DC2F276006BB22A /* GameSongProduct2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E57DAA51DC2F276006BB22A /* GameSongProduct2.m */; };
@@ -228,6 +230,9 @@
 		2E2EBAC61D7825BC00550761 /* ConcreteGameClassicMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameClassicMode.m; sourceTree = "<group>"; };
 		2E2EBAC81D78291C00550761 /* ConcreteGameStreetMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteGameStreetMode.h; sourceTree = "<group>"; };
 		2E2EBAC91D78291C00550761 /* ConcreteGameStreetMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteGameStreetMode.m; sourceTree = "<group>"; };
+		2E4EFC991DE2F65100D00AB8 /* AudioBeatsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioBeatsCache.h; sourceTree = "<group>"; };
+		2E4EFC9A1DE2F65100D00AB8 /* AudioBeatsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioBeatsCache.m; sourceTree = "<group>"; };
+		2E4EFC9C1DE3D9E500D00AB8 /* AudioBeatsCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioBeatsCacheTest.m; sourceTree = "<group>"; };
 		2E57DA9D1DC2E6E8006BB22A /* resource1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = resource1; path = PianoBlock/resource1; sourceTree = SOURCE_ROOT; };
 		2E57DA9F1DC2E6ED006BB22A /* resource2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = resource2; path = PianoBlock/resource2; sourceTree = SOURCE_ROOT; };
 		2E57DAA41DC2F276006BB22A /* GameSongProduct2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSongProduct2.h; sourceTree = "<group>"; };
@@ -662,6 +667,7 @@
 				2E57DAB71DC34436006BB22A /* GameSongDirector2TestCase.m */,
 				2E2EBAA01D781A8500550761 /* Info.plist */,
 				2EE5DDBC1DDD83C1009A517D /* GameSongProduct2Test.m */,
+				2E4EFC9C1DE3D9E500D00AB8 /* AudioBeatsCacheTest.m */,
 			);
 			path = PianoBlockTests;
 			sourceTree = "<group>";
@@ -743,6 +749,15 @@
 				2E2EBABC1D781EF700550761 /* View */,
 			);
 			name = GameModels;
+			sourceTree = "<group>";
+		};
+		2E4EFC981DE2F62800D00AB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E4EFC991DE2F65100D00AB8 /* AudioBeatsCache.h */,
+				2E4EFC9A1DE2F65100D00AB8 /* AudioBeatsCache.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2E57DA7E1DC2DA1B006BB22A /* Song2_Build_Pattern */ = {
@@ -1175,6 +1190,7 @@
 		2EC42A981D7BB69F00B93AF4 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				2E4EFC981DE2F62800D00AB8 /* Utils */,
 				2E57DAAD1DC2F698006BB22A /* Abstract_factory */,
 				2E57DA7E1DC2DA1B006BB22A /* Song2_Build_Pattern */,
 				2EC42AA71D7BBF9300B93AF4 /* Song1_Build_Pattern */,
@@ -1488,6 +1504,7 @@
 				2EC426681D7A698C00B93AF4 /* MASConstraintMaker.m in Sources */,
 				78AF05421DBB83B40070BD38 /* MusicListViewModel.m in Sources */,
 				2EC42A331D7AAD3D00B93AF4 /* NSSet+RACSequenceAdditions.m in Sources */,
+				2E4EFC9B1DE2F65100D00AB8 /* AudioBeatsCache.m in Sources */,
 				2EC42A6D1D7AAD3D00B93AF4 /* UIButton+RACCommandSupport.m in Sources */,
 				2E5FE9BF1D921F5900D7620B /* POPPropertyAnimation.mm in Sources */,
 				2EC42A2E1D7AAD3D00B93AF4 /* NSObject+RACKVOWrapper.m in Sources */,
@@ -1557,6 +1574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EE5DDBD1DDD83C1009A517D /* GameSongProduct2Test.m in Sources */,
+				2E4EFC9D1DE3D9E500D00AB8 /* AudioBeatsCacheTest.m in Sources */,
 				2E2EBA9F1D781A8500550761 /* PianoBlockTests.m in Sources */,
 				2E57DAB81DC34436006BB22A /* GameSongDirector2TestCase.m in Sources */,
 			);

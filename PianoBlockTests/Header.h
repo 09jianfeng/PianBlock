@@ -8,7 +8,7 @@
 
 #ifndef Header_h
 #define Header_h
-#define WAITINIT(x) XCTestExpectation *wait = [self expectationWithDescription:x];
+#define NOTIFYINIT XCTestExpectation *wait = [self expectationWithDescription:@""];
 #define WAITWITHTIME(x) [self waitForExpectationsWithTimeout:x handler:^(NSError * _Nullable error) {NSLog(@"%s end",__FUNCTION__);}];
 #define NOTIFY [wait fulfill];
 #endif /* Header_h */

@@ -23,6 +23,10 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
     NSMutableArray<GameSongProduct2 *> *_gameMusicList;
 }
 
+- (void)dealloc{
+    NSLog(@"GameSongDirector2 dealloc");
+}
+
 - (instancetype)init{
     self = [super init];
     if (self) {
@@ -77,7 +81,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param recordNumber The 1-based number of the record
  */
 - (void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber{
-    NSLog(@"parser didBeginLine line:%d",recordNumber);
+    NSLog(@"parser didBeginLine line:%td",recordNumber);
 }
 
 /**
@@ -87,7 +91,7 @@ static NSString * const GameSongListFileName = @"resource2/DB/songBasicInfo.csv"
  *  @param recordNumber The 1-based number of the record
  */
 - (void)parser:(CHCSVParser *)parser didEndLine:(NSUInteger)recordNumber{
-    NSLog(@"parser didEndLine line:%d",recordNumber);
+    NSLog(@"parser didEndLine line:%td",recordNumber);
 }
 
 /**
