@@ -24,6 +24,10 @@
 
 ![mediator](./img/mediator.png)
 
+工程中切换视图用的是中介者模式，利用一个中介者来统一管理视图的切换。
+
+定义了一个类叫做 `ViewControllerSwitchMediator`
+
 ### 享元模式应用
 享元模式类图
 
